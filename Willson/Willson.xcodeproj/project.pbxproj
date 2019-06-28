@@ -69,6 +69,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6634343D22C67D5400D419EC /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		8AAEB99BB84F1A480BBCC225 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 		D965851822C4E7FA0072CC5E /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				6634343D22C67D5400D419EC /* fonts */,
 				D965850522C4E7E40072CC5E /* AppDelegate.swift */,
 				D965850C22C4E7E60072CC5E /* Assets.xcassets */,
 				D965850E22C4E7E60072CC5E /* LaunchScreen.storyboard */,
