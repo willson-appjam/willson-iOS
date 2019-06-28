@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		46BD78418D4087C1A660D9DE /* Pods_Willson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794B654C502E453FEF56F6A /* Pods_Willson.framework */; };
+		6634344222C67ED500D419EC /* NanumSquareEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344122C67E8300D419EC /* NanumSquareEB.ttf */; };
+		6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344022C67E4500D419EC /* NanumSquareB.ttf */; };
+		6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634343F22C67E2F00D419EC /* NanumSquareR.ttf */; };
+		6634344522C67EE600D419EC /* NanumSquareL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634343E22C67E0E00D419EC /* NanumSquareL.ttf */; };
 		D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965850522C4E7E40072CC5E /* AppDelegate.swift */; };
 		D965850B22C4E7E40072CC5E /* AskerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965850922C4E7E40072CC5E /* AskerMain.storyboard */; };
 		D965850D22C4E7E60072CC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965850C22C4E7E60072CC5E /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		1BAEDD6E774F4EB08452D077 /* Pods-Willson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.release.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.release.xcconfig"; sourceTree = "<group>"; };
+		6634343E22C67E0E00D419EC /* NanumSquareL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.ttf; sourceTree = "<group>"; };
+		6634343F22C67E2F00D419EC /* NanumSquareR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.ttf; sourceTree = "<group>"; };
+		6634344022C67E4500D419EC /* NanumSquareB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareB.ttf; sourceTree = "<group>"; };
+		6634344122C67E8300D419EC /* NanumSquareEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareEB.ttf; sourceTree = "<group>"; };
 		9794B654C502E453FEF56F6A /* Pods_Willson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Willson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF23D3E76D75D4A1670D121 /* Pods-Willson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.debug.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.debug.xcconfig"; sourceTree = "<group>"; };
 		D965850222C4E7E40072CC5E /* Willson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Willson.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +80,10 @@
 		6634343D22C67D5400D419EC /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6634344122C67E8300D419EC /* NanumSquareEB.ttf */,
+				6634344022C67E4500D419EC /* NanumSquareB.ttf */,
+				6634343F22C67E2F00D419EC /* NanumSquareR.ttf */,
+				6634343E22C67E0E00D419EC /* NanumSquareL.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -365,6 +377,8 @@
 				D965853F22C4EBD70072CC5E /* HelperChat.storyboard in Resources */,
 				D965851022C4E7E60072CC5E /* LaunchScreen.storyboard in Resources */,
 				D965852D22C4EB2C0072CC5E /* AskerSignUp.storyboard in Resources */,
+				6634344222C67ED500D419EC /* NanumSquareEB.ttf in Resources */,
+				6634344522C67EE600D419EC /* NanumSquareL.ttf in Resources */,
 				D965853722C4EB890072CC5E /* AskerList.storyboard in Resources */,
 				D965854122C4EBE50072CC5E /* HelperRequest.storyboard in Resources */,
 				D965852F22C4EB430072CC5E /* AskerLogin.storyboard in Resources */,
@@ -375,6 +389,8 @@
 				D965854322C4EBF60072CC5E /* HelperSignUp.storyboard in Resources */,
 				D965853122C4EB4F0072CC5E /* AskerRequest.storyboard in Resources */,
 				D965853B22C4EBC00072CC5E /* HelperMypage.storyboard in Resources */,
+				6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */,
+				6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */,
 				D965853D22C4EBCA0072CC5E /* HelperProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
