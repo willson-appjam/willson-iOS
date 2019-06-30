@@ -20,6 +20,22 @@ class AskerLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        iconTF()
+    }
+    
+    func iconTF() {
+        emailTF.leftViewMode = UITextField.ViewMode.always
+        let imageView = UIImageView(frame: CGRect(x: 21, y: 17, width: 13, height: 14))
+        let image = UIImage(named: "loginImgEmail")
+        imageView.image = image
+        emailTF.leftView = imageView
+        
+        pwTF.leftViewMode = UITextField.ViewMode.always
+        let imageView2 = UIImageView(frame: CGRect(x: 21, y: 17, width: 13, height: 14))
+        let image2 = UIImage(named: "loginImgPassword")
+        imageView2.image = image2
+        pwTF.leftView = imageView2
     }
     
     func viewWillApear(_ animated: Bool) {
