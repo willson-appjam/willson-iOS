@@ -11,6 +11,8 @@ import UIKit
 class AskerSignUpViewController1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var pickerTextField: UITextField!
+   
+    @IBOutlet weak var nextBtn: UIButton!
     
     let salutations = ["20세", "21세","22세","23세","24세","25세","26세","27세","28세","29세","30세","31세","32세","33세","34세","35세","36세"]
 
@@ -20,7 +22,14 @@ class AskerSignUpViewController1: UIViewController, UIPickerViewDataSource, UIPi
         let pickerView = UIPickerView()
         pickerView.delegate = self
         
+    
         pickerTextField.inputView = pickerView
+    }
+    
+    @IBAction func nextBtnAction(_ sender: Any) {
+        let dvc = self.storyboard?.instantiateViewController(withIdentifier: "AskerSignUpViewController2") as! AskerSignUpViewController2
+        
+        self.present(dvc, animated: true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
