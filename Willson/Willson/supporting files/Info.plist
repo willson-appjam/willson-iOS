@@ -2,8 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleURLTypes</key> <array> <dict> <key>CFBundleURLSchemes</key> <array> <string>fb411666676101196</string> </array> </dict> </array> <key>FacebookAppID</key> <string>411666676101196</string> <key>FacebookDisplayName</key>
-    <string>willson</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb411666676101196</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>411666676101196</string>
+	<key>FacebookDisplayName</key>
+	<string>willson</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NanumSquareEB.ttf</string>
@@ -34,7 +45,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>AskerLogin</string>
+	<string>AskerMain</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
