@@ -30,6 +30,10 @@
 		D965853F22C4EBD70072CC5E /* HelperChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965853E22C4EBD70072CC5E /* HelperChat.storyboard */; };
 		D965854122C4EBE50072CC5E /* HelperRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965854022C4EBE50072CC5E /* HelperRequest.storyboard */; };
 		D965854322C4EBF60072CC5E /* HelperSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965854222C4EBF60072CC5E /* HelperSignUp.storyboard */; };
+		D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC222C9F9A300458662 /* AskerListStartViewController.swift */; };
+		D982BCC522CA025200458662 /* Asker0_ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC422CA025200458662 /* Asker0_ListViewController.swift */; };
+		D982BCC722CA0B2A00458662 /* Asker12_ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC622CA0B2A00458662 /* Asker12_ListViewController.swift */; };
+		D982BCC922CA0B3800458662 /* Asker21_ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC822CA0B3800458662 /* Asker21_ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		D965853E22C4EBD70072CC5E /* HelperChat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelperChat.storyboard; sourceTree = "<group>"; };
 		D965854022C4EBE50072CC5E /* HelperRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelperRequest.storyboard; sourceTree = "<group>"; };
 		D965854222C4EBF60072CC5E /* HelperSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelperSignUp.storyboard; sourceTree = "<group>"; };
+		D982BCC222C9F9A300458662 /* AskerListStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerListStartViewController.swift; sourceTree = "<group>"; };
+		D982BCC422CA025200458662 /* Asker0_ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asker0_ListViewController.swift; sourceTree = "<group>"; };
+		D982BCC622CA0B2A00458662 /* Asker12_ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asker12_ListViewController.swift; sourceTree = "<group>"; };
+		D982BCC822CA0B3800458662 /* Asker21_ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asker21_ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +245,10 @@
 		D965852322C4EA060072CC5E /* list */ = {
 			isa = PBXGroup;
 			children = (
+				D982BCC222C9F9A300458662 /* AskerListStartViewController.swift */,
+				D982BCC422CA025200458662 /* Asker0_ListViewController.swift */,
+				D982BCC622CA0B2A00458662 /* Asker12_ListViewController.swift */,
+				D982BCC822CA0B3800458662 /* Asker21_ListViewController.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -453,10 +465,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
 				D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */,
 				6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */,
+				D982BCC922CA0B3800458662 /* Asker21_ListViewController.swift in Sources */,
+				D982BCC522CA025200458662 /* Asker0_ListViewController.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
+				D982BCC722CA0B2A00458662 /* Asker12_ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,6 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
