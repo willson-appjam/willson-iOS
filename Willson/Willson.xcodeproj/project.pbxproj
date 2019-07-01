@@ -15,6 +15,9 @@
 		6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344622C755B500D419EC /* AskerLoginViewController.swift */; };
 		6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344822C7BEE600D419EC /* AskerSignUpViewController1.swift */; };
 		6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344A22C7BF0300D419EC /* AskerSignUpViewController2.swift */; };
+		663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835B422C9BAE3003265C7 /* AskerMainViewController.swift */; };
+		663835B922C9BC30003265C7 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835B822C9BC30003265C7 /* Slide.swift */; };
+		663835BB22C9C82D003265C7 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663835BA22C9C82C003265C7 /* Slide.xib */; };
 		D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965850522C4E7E40072CC5E /* AppDelegate.swift */; };
 		D965850B22C4E7E40072CC5E /* AskerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965850922C4E7E40072CC5E /* AskerMain.storyboard */; };
 		D965850D22C4E7E60072CC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965850C22C4E7E60072CC5E /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 		6634344622C755B500D419EC /* AskerLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerLoginViewController.swift; path = Willson/AskerLoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		6634344822C7BEE600D419EC /* AskerSignUpViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSignUpViewController1.swift; path = "Willson/supporting files/fonts/AskerSignUpViewController1.swift"; sourceTree = SOURCE_ROOT; };
 		6634344A22C7BF0300D419EC /* AskerSignUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSignUpViewController2.swift; path = "Willson/supporting files/fonts/AskerSignUpViewController2.swift"; sourceTree = SOURCE_ROOT; };
+		663835B422C9BAE3003265C7 /* AskerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerMainViewController.swift; path = Willson/AskerMainViewController.swift; sourceTree = SOURCE_ROOT; };
+		663835B822C9BC30003265C7 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slide.swift; path = main/Slide.swift; sourceTree = SOURCE_ROOT; };
+		663835BA22C9C82C003265C7 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Slide.xib; path = main/Slide.xib; sourceTree = SOURCE_ROOT; };
 		9794B654C502E453FEF56F6A /* Pods_Willson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Willson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF23D3E76D75D4A1670D121 /* Pods-Willson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.debug.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.debug.xcconfig"; sourceTree = "<group>"; };
 		D965850222C4E7E40072CC5E /* Willson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Willson.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +236,9 @@
 		D965852222C4E9FC0072CC5E /* main */ = {
 			isa = PBXGroup;
 			children = (
+				663835B422C9BAE3003265C7 /* AskerMainViewController.swift */,
+				663835B822C9BC30003265C7 /* Slide.swift */,
+				663835BA22C9C82C003265C7 /* Slide.xib */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -397,6 +406,7 @@
 				D965853522C4EB6B0072CC5E /* AskerMypage.storyboard in Resources */,
 				D965854322C4EBF60072CC5E /* HelperSignUp.storyboard in Resources */,
 				D965853122C4EB4F0072CC5E /* AskerRequest.storyboard in Resources */,
+				663835BB22C9C82D003265C7 /* Slide.xib in Resources */,
 				D965853B22C4EBC00072CC5E /* HelperMypage.storyboard in Resources */,
 				6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */,
 				6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */,
@@ -456,7 +466,9 @@
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
 				D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */,
 				6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */,
+				663835B922C9BC30003265C7 /* Slide.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
+				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
