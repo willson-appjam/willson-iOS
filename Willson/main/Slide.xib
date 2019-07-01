@@ -27,7 +27,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROf-SA-Hg8">
                             <rect key="frame" x="38" y="133" width="299" height="197"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱잼파이팅 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKz-XP-vY9">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱잼파이팅 헬퍼님" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKz-XP-vY9">
                                     <rect key="frame" x="104" y="47" width="91" height="13"/>
                                     <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                     <color key="textColor" name="black"/>
@@ -52,12 +52,8 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="OZz-0A-Uox" firstAttribute="leading" secondItem="ROf-SA-Hg8" secondAttribute="leading" constant="137.5" id="1li-Ql-n9z"/>
-                                <constraint firstItem="aKz-XP-vY9" firstAttribute="leading" secondItem="ROf-SA-Hg8" secondAttribute="leading" constant="104" id="AZK-UL-DhU"/>
                                 <constraint firstItem="aKz-XP-vY9" firstAttribute="centerX" secondItem="ROf-SA-Hg8" secondAttribute="centerX" id="FBL-o7-JTf"/>
                                 <constraint firstItem="upx-xr-rjL" firstAttribute="top" secondItem="ROf-SA-Hg8" secondAttribute="top" constant="110" id="Flf-v6-roR"/>
-                                <constraint firstAttribute="trailing" secondItem="aKz-XP-vY9" secondAttribute="trailing" constant="104" id="Ogv-3J-4To"/>
-                                <constraint firstAttribute="trailing" secondItem="OZz-0A-Uox" secondAttribute="trailing" constant="137.5" id="S5l-vF-Uqx"/>
                                 <constraint firstAttribute="bottom" secondItem="upx-xr-rjL" secondAttribute="bottom" constant="20" id="XKk-eH-eSS"/>
                                 <constraint firstItem="OZz-0A-Uox" firstAttribute="top" secondItem="ROf-SA-Hg8" secondAttribute="top" constant="74" id="at4-eT-RD7"/>
                                 <constraint firstItem="aKz-XP-vY9" firstAttribute="top" secondItem="ROf-SA-Hg8" secondAttribute="top" constant="47" id="g6A-fO-wuR"/>
