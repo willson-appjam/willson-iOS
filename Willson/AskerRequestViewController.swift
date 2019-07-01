@@ -15,9 +15,11 @@ class AskerRequestViewController: UIViewController {
     //===================================
     //임시 데이터 저장 코드
     var helpers:[HelperCollectionViewCell] = [];
-    var count = 300
+    //var count = 300
+    var count = 10
     var timer = Timer()
     var startTimer = false
+    
     //===================================
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +34,32 @@ class AskerRequestViewController: UIViewController {
     }
     
     @objc func timeLimit() {
+        let dateFormatter = DateFormatter()
+        
         if count > 0 {
             count -= 1
             time.text = "\(count/60):\(count%60)"
+            dateFormatter.dateFormat = "mm:ss"
+            
+            let formattime = dateFormatter.date(from:time.text!)
+            time.text = dateFormatter.string(from: formattime!)
+            
         } else {
             timeLimitStop()
         }
     }
     
     func timeLimitStop() {
-        startTimer = false
+        //startTimer = false
         timer.invalidate()
+        
+        let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier: "bPopUpID") as! PopUpViewController
+        
+        self.addChild(popOverVC)
+        
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
     }
     
     func registerCVC() {
