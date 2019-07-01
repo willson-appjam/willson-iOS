@@ -15,15 +15,34 @@ class AskerRequestViewController: UIViewController {
     //===================================
     //임시 데이터 저장 코드
     var helpers:[HelperCollectionViewCell] = [];
-    
+    var count = 300
+    var timer = Timer()
+    var startTimer = false
     //===================================
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startTimer = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AskerRequestViewController.timeLimit), userInfo: nil, repeats: true)
         
         registerCVC()
         helpers = getHelper()
         helperCollectionView.delegate = self
         helperCollectionView.dataSource = self
+    }
+    
+    @objc func timeLimit() {
+        if count > 0 {
+            count -= 1
+            time.text = "\(count/60):\(count%60)"
+        } else {
+            timeLimitStop()
+        }
+    }
+    
+    func timeLimitStop() {
+        startTimer = false
+        timer.invalidate()
     }
     
     func registerCVC() {
