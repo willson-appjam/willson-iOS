@@ -25,4 +25,14 @@ class HelperCollectionViewCell: UICollectionViewCell {
         detailInfo.sizeToFit()
         reviewNum.sizeToFit()
     }
+    
+    @IBAction func viewProfileBtn(_ sender: Any) {
+        /*let storyboard : UIStoryboard = UIStoryboard(name: "AskerRequest", bundle: Bundle.main)
+        
+        let uvc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController")
+       
+        present(uvc!, animated: true, completion: nil)*/
+
+    }
+
 }

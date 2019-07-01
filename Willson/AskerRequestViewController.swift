@@ -23,7 +23,7 @@ class AskerRequestViewController: UIViewController {
         registerCVC()
         helpers = getHelper()
         helperCollectionView.delegate = self
-        helperCollectionView.dataSource = self as? UICollectionViewDataSource
+        helperCollectionView.dataSource = self
     }
     
     func registerCVC() {
@@ -58,6 +58,34 @@ class AskerRequestViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+}
+
+extension AskerRequestViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return helpers.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HelperCollectionViewCell", for: indexPath) as! HelperCollectionViewCell
+        
+        let helper = helpers[indexPath.row]
+        
+        cell.content.text = helper.content.text
+        cell.name.text = helper.name.text
+        cell.detailInfo.text = helper.detailInfo.text
+        cell.category.text = helper.category.text
+        
+        
+        return cell
+    }
+}
+
+extension AskerRequestViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
 

@@ -131,6 +131,9 @@
                                 <state key="normal" image="loginBtnKakao">
                                     <color key="titleColor" name="darkPurple"/>
                                 </state>
+                                <connections>
+                                    <action selector="kakaotalkBtnAction:" destination="foO-jd-vxx" eventType="touchUpInside" id="PXZ-bQ-n0Q"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="카카오톡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-wt-jtq">
                                 <rect key="frame" x="202" y="564" width="44" height="14"/>
