@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3jb-CB-erK">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztI-z5-BPs">
-                                <rect key="frame" x="0.0" y="88" width="375" height="1412"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-Pb-WHQ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
@@ -54,7 +54,7 @@
                                                                         <rect key="frame" x="38" y="133" width="299" height="197"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱잼파이팅 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPI-d8-bAc">
-                                                                                <rect key="frame" x="96.666666666666657" y="47" width="105.66666666666666" height="16"/>
+                                                                                <rect key="frame" x="96.5" y="47" width="106" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                                                 <color key="textColor" name="black"/>
                                                                                 <nil key="highlightedColor"/>
@@ -119,7 +119,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 고민 매칭해보실래요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJa-h1-3Ar">
-                                                        <rect key="frame" x="21" y="64" width="175" height="53.333333333333343"/>
+                                                        <rect key="frame" x="21" y="64" width="175" height="53.5"/>
                                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="24"/>
                                                         <color key="textColor" name="darkPurple"/>
                                                         <nil key="highlightedColor"/>
@@ -236,8 +236,8 @@
                                                             <constraint firstItem="tXj-ag-qus" firstAttribute="leading" secondItem="1s1-HI-WP2" secondAttribute="leading" constant="24" id="ok1-EB-ryp"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uis-gi-Nb8">
-                                                        <rect key="frame" x="252" y="288" width="79" height="98"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uis-gi-Nb8">
+                                                        <rect key="frame" x="249" y="288" width="79" height="98"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImgCategory06Etc" translatesAutoresizingMaskIntoConstraints="NO" id="Yw8-YS-8jy">
                                                                 <rect key="frame" x="23" y="15" width="35" height="35"/>
@@ -252,11 +252,11 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="5Xo-ts-ihd" firstAttribute="top" secondItem="Yw8-YS-8jy" secondAttribute="bottom" constant="24" id="3mK-9A-spc"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Yw8-YS-8jy" secondAttribute="trailing" constant="58" id="C1E-7S-XHD"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Yw8-YS-8jy" secondAttribute="trailing" constant="21" id="C1E-7S-XHD"/>
                                                             <constraint firstItem="Yw8-YS-8jy" firstAttribute="top" secondItem="uis-gi-Nb8" secondAttribute="top" constant="15" id="a3J-cI-Ijc"/>
                                                             <constraint firstItem="5Xo-ts-ihd" firstAttribute="leading" secondItem="uis-gi-Nb8" secondAttribute="leading" constant="25" id="a4y-ac-kLl"/>
                                                             <constraint firstItem="Yw8-YS-8jy" firstAttribute="leading" secondItem="uis-gi-Nb8" secondAttribute="leading" constant="23" id="c3A-39-3bD"/>
-                                                            <constraint firstAttribute="trailing" secondItem="5Xo-ts-ihd" secondAttribute="trailing" constant="59" id="cFH-yY-Tc6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="5Xo-ts-ihd" secondAttribute="trailing" constant="22" id="cFH-yY-Tc6"/>
                                                             <constraint firstAttribute="bottom" secondItem="5Xo-ts-ihd" secondAttribute="bottom" constant="6" id="wow-bJ-vXw"/>
                                                         </constraints>
                                                     </view>
@@ -271,7 +271,7 @@
                                                     <constraint firstItem="E3P-w2-QXI" firstAttribute="leading" secondItem="sYF-eT-vph" secondAttribute="leading" constant="44" id="Cnb-bS-3jh"/>
                                                     <constraint firstAttribute="trailing" secondItem="E3P-w2-QXI" secondAttribute="trailing" constant="250" id="HM6-pY-GOb"/>
                                                     <constraint firstAttribute="bottom" secondItem="uis-gi-Nb8" secondAttribute="bottom" constant="84" id="HPC-D0-f7a"/>
-                                                    <constraint firstAttribute="trailing" secondItem="uis-gi-Nb8" secondAttribute="trailing" constant="44" id="Hwe-it-6I0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uis-gi-Nb8" secondAttribute="trailing" constant="47" id="Hwe-it-6I0"/>
                                                     <constraint firstItem="1s1-HI-WP2" firstAttribute="top" secondItem="sYF-eT-vph" secondAttribute="top" constant="288" id="KTs-Cs-Wub"/>
                                                     <constraint firstItem="1s1-HI-WP2" firstAttribute="leading" secondItem="sYF-eT-vph" secondAttribute="leading" constant="146" id="Llo-Sj-HQu"/>
                                                     <constraint firstAttribute="bottom" secondItem="hlA-Tx-enb" secondAttribute="bottom" constant="196" id="MYP-hu-d4C"/>
@@ -281,7 +281,7 @@
                                                     <constraint firstItem="hlA-Tx-enb" firstAttribute="leading" secondItem="sYF-eT-vph" secondAttribute="leading" constant="148" id="WHA-kL-3dC"/>
                                                     <constraint firstItem="IvJ-sp-ufn" firstAttribute="top" secondItem="sYF-eT-vph" secondAttribute="top" constant="176" id="Wwf-72-cVZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="wJa-h1-3Ar" secondAttribute="trailing" constant="179" id="Y53-ne-b9X"/>
-                                                    <constraint firstItem="uis-gi-Nb8" firstAttribute="leading" secondItem="sYF-eT-vph" secondAttribute="leading" constant="215" id="a6L-M8-CiX"/>
+                                                    <constraint firstItem="uis-gi-Nb8" firstAttribute="leading" secondItem="sYF-eT-vph" secondAttribute="leading" constant="249" id="a6L-M8-CiX"/>
                                                     <constraint firstItem="wJa-h1-3Ar" firstAttribute="leading" secondItem="sYF-eT-vph" secondAttribute="leading" constant="21" id="crT-tw-nZk"/>
                                                     <constraint firstItem="uis-gi-Nb8" firstAttribute="top" secondItem="sYF-eT-vph" secondAttribute="top" constant="288" id="ct6-Sj-yuO"/>
                                                     <constraint firstItem="wJa-h1-3Ar" firstAttribute="top" secondItem="sYF-eT-vph" secondAttribute="top" constant="64" id="ded-N3-WjX"/>
@@ -349,7 +349,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3jb-CB-erK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s3y-vm-x0x">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -364,7 +364,7 @@
     </scenes>
     <resources>
         <image name="btnSwitch" width="18" height="18"/>
-        <image name="mainImgCategory01Love" width="36.333332061767578" height="36.333332061767578"/>
+        <image name="mainImgCategory01Love" width="36.5" height="36.5"/>
         <image name="mainImgCategory02Job" width="35" height="31"/>
         <image name="mainImgCategory03Mind" width="32" height="36"/>
         <image name="mainImgCategory04Relationship" width="33" height="37"/>
