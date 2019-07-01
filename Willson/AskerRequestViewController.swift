@@ -45,9 +45,15 @@ class AskerRequestViewController: UIViewController {
         helper2.name.text = "골든리트리버"
         helper2.detailInfo.text = "여자 / 30대 초반"
         helper2.content.text = "회사가기 싫어용ㅠㅠ"
+        
+        let helper3:HelperCollectionViewCell = Bundle.main.loadNibNamed("HelperCollectionViewCell", owner: self, options: nil)?.first as! HelperCollectionViewCell
+        helper3.category.text = "일상"
+        helper3.name.text = "푸들"
+        helper3.detailInfo.text = "여자 / 20대 초반"
+        helper3.content.text = "밥먹자"
         //===================================
         
-        return [helper1, helper2]
+        return [helper1, helper2, helper3]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,7 +99,7 @@ extension AskerRequestViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width: CGFloat = (helperCollectionView.frame.width)
-        let height: CGFloat = (width) + 20
+        let height: CGFloat = 251
         
         return CGSize(width: width, height: height)
     }
