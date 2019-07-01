@@ -1,5 +1,5 @@
 //
-//  Asker21_ListViewController.swift
+//  AskerList1_CategoryViewController.swift
 //  Willson
 //
 //  Created by JHKim on 01/07/2019.
@@ -7,12 +7,9 @@
 //
 
 import UIKit
-import DLRadioButton
 
-class Asker21_ListViewController: UIViewController {
+class AskerList1_CategoryViewController: UIViewController {
 
-    @IBOutlet weak var radioButton_1: DLRadioButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

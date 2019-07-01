@@ -1,5 +1,5 @@
 //
-//  Asker12_ListViewController.swift
+//  AskerList2_FeelViewController.swift
 //  Willson
 //
 //  Created by JHKim on 01/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Asker12_ListViewController: UIViewController {
+class AskerList2_FeelViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
