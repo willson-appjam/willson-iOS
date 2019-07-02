@@ -18,6 +18,9 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     var slides:[Slide] = [];
     var reviewSlides:[ReviewSlide] = [];
    
+    var timer = Timer()
+    var timer2 = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,8 +44,17 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         ReviewPageControl.numberOfPages = reviewSlides.count - 1
         ReviewPageControl.currentPage = 0
         AskerScrollView.bringSubviewToFront(ReviewPageControl)
+        
+        //자동 스크롤
+        timer = Timer.scheduledTimer(timeInterval:6, target:self, selector:#selector(AskerMainViewController.autoScroll), userInfo:nil, repeats:true)
     }
     
+  
+    @objc func autoScroll() {
+        self.scrollView.setContentOffset(CGPoint(x: self.scrollView.contentOffset.x + scrollView.frame.width, y: 0), animated: true)
+        self.AskerScrollView.setContentOffset(CGPoint(x: self.AskerScrollView.contentOffset.x + AskerScrollView.frame.width, y: 0), animated: true)
+    }
+
     func createSlides() -> [Slide] {
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.name.text = "앱잼파이팅 헬퍼님"
@@ -183,7 +195,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    func AskerScrollViewDidScroll(_ AskerScrollView: UIScrollView) {
+    @objc func AskerScrollViewDidScroll(_ AskerScrollView: UIScrollView) {
         let pageIndex = round(AskerScrollView.contentOffset.x/view.frame.width)
         ReviewPageControl.currentPage = Int(pageIndex)
         
