@@ -17,7 +17,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     var slides:[Slide] = [];
     var reviewSlides:[ReviewSlide] = [];
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +27,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slides = createSlides()
         setupSlideScrollView(slides: slides)
         
-        pageControl.numberOfPages = slides.count
+        pageControl.numberOfPages = slides.count - 1
         pageControl.currentPage = 0
         scrollView.bringSubviewToFront(pageControl)
         
@@ -69,7 +69,12 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slide5.category.text = "일상"
         slide5.content.text = "55555555555"
         
-        return [slide1, slide2, slide3, slide4, slide5]
+        let slide6:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+        slide6.name.text = "앱잼파이팅 헬퍼님"
+        slide6.category.text = "연애"
+        slide6.content.text = "- 20대에 억단위를 벌어본 경험\n- 3년간 투병생활\n- 20년간 어머니를 병간호한 경험"
+        
+        return [slide1, slide2, slide3, slide4, slide5, slide6]
     }
     
     func setupSlideScrollView(slides : [Slide]) {
@@ -100,23 +105,29 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
-        
-        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
+        if(percentOffset.x > 0 && percentOffset.x <= 0.2) {
+            slides[0].mask?.transform = CGAffineTransform(scaleX: (0.2-percentOffset.x)/0.2, y: (0.2-percentOffset.x)/0.2)
+            slides[1].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.2, y: percentOffset.x/0.2)
             
-            slides[0].mask?.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
-            slides[1].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
+        } else if(percentOffset.x > 0.2 && percentOffset.x <= 0.4) {
+            slides[1].mask?.transform = CGAffineTransform(scaleX: (0.4-percentOffset.x)/0.2, y: (0.4-percentOffset.x)/0.2)
+            slides[2].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.4, y: percentOffset.x/0.4)
             
-        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-            slides[1].mask?.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
-            slides[2].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+        } else if(percentOffset.x > 0.4 && percentOffset.x <= 0.6) {
+            slides[2].mask?.transform = CGAffineTransform(scaleX: (0.6-percentOffset.x)/0.2, y: (0.6-percentOffset.x)/0.2)
+            slides[3].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.6, y: percentOffset.x/0.6)
             
-        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-            slides[2].mask?.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
-            slides[3].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
-            
-        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
-            slides[3].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
-            slides[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+        } else if(percentOffset.x > 0.6 && percentOffset.x <= 0.8) {
+            slides[3].mask?.transform = CGAffineTransform(scaleX: (0.8-percentOffset.x)/0.2, y: (0.8-percentOffset.x)/0.2)
+            slides[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.8, y: percentOffset.x/0.8)
+        } else if(percentOffset.x > 0.8 && percentOffset.x <= 1) {
+            pageControl.currentPage = 0
+            slides[4].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.2, y: (1-percentOffset.x)/0.2)
+            slides[5].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
+           
+        } else if(percentOffset.x > 1) {
+            let offset = CGPoint(x: 0, y: -scrollView.adjustedContentInset.top)
+            scrollView.setContentOffset(offset, animated: false)
         }
     }
     

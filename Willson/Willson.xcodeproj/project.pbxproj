@@ -26,6 +26,7 @@
 		663835CC22CA3EBC003265C7 /* HelperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663835CB22CA3EBC003265C7 /* HelperCollectionViewCell.xib */; };
 		663835D022CA6A53003265C7 /* HelperProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835CF22CA6A53003265C7 /* HelperProfileViewController.swift */; };
 		663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835D122CA87A8003265C7 /* PopUpViewController.swift */; };
+		663835D422CAFDD7003265C7 /* AskerSNSSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835D322CAFDD7003265C7 /* AskerSNSSignUpViewController.swift */; };
 		D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965850522C4E7E40072CC5E /* AppDelegate.swift */; };
 		D965850B22C4E7E40072CC5E /* AskerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965850922C4E7E40072CC5E /* AskerMain.storyboard */; };
 		D965850D22C4E7E60072CC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965850C22C4E7E60072CC5E /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		663835CB22CA3EBC003265C7 /* HelperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperCollectionViewCell.xib; sourceTree = "<group>"; };
 		663835CF22CA6A53003265C7 /* HelperProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperProfileViewController.swift; sourceTree = "<group>"; };
 		663835D122CA87A8003265C7 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		663835D322CAFDD7003265C7 /* AskerSNSSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSNSSignUpViewController.swift; path = Willson/AskerSNSSignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		9794B654C502E453FEF56F6A /* Pods_Willson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Willson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF23D3E76D75D4A1670D121 /* Pods-Willson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.debug.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.debug.xcconfig"; sourceTree = "<group>"; };
 		D965850222C4E7E40072CC5E /* Willson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Willson.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +276,7 @@
 			children = (
 				6634344822C7BEE600D419EC /* AskerSignUpViewController1.swift */,
 				6634344A22C7BF0300D419EC /* AskerSignUpViewController2.swift */,
+				663835D322CAFDD7003265C7 /* AskerSNSSignUpViewController.swift */,
 			);
 			path = "sign up";
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
 				663835BF22C9ECDA003265C7 /* ReviewSlide.swift in Sources */,
 				D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */,
+				663835D422CAFDD7003265C7 /* AskerSNSSignUpViewController.swift in Sources */,
 				663835D022CA6A53003265C7 /* HelperProfileViewController.swift in Sources */,
 				6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */,
 				663835B922C9BC30003265C7 /* Slide.swift in Sources */,
