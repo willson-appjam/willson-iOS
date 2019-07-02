@@ -7,24 +7,30 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialButtons
+import MaterialComponents.MaterialButtons_Theming
 
 class HelperProfileViewController: UIViewController {
-
+   
+    @IBOutlet weak var content: UITextView!
+    @IBOutlet weak var startBtn: MDCFloatingButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setNavigationBar()
+        
+        //startBtn.applyOutlinedTheme(withScheme: containerScheme)
+        
+        /*let backImg: UIImage = UIImage(named: "btnBackbtn")!
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backImg, for: [], barMetrics: .default)*/
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func setNavigationBar() {
+        self.navigationItem.title = "헬퍼 프로필"
+        //self.setBackBtn(color: UIColor.black)
+        self.setNavigationBarShadow()
     }
-    */
-
 }

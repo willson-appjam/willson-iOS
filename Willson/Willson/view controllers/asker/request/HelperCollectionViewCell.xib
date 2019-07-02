@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="333" height="251"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVD-vV-pe8">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVD-vV-pe8" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="333" height="251"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-Tp-QYO" customClass="CustonView" customModule="Willson" customModuleProvider="target">
@@ -155,6 +155,11 @@
                         <constraint firstItem="ymR-4f-vPv" firstAttribute="leading" secondItem="nVD-vV-pe8" secondAttribute="leading" constant="15" id="tE9-VP-aEY"/>
                         <constraint firstAttribute="trailing" secondItem="QCA-IF-aCr" secondAttribute="trailing" constant="15" id="zAa-1w-kWC"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

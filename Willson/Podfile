@@ -13,6 +13,8 @@ target 'Willson' do
   pod 'DLRadioButton', '~> 1.4'
   pod 'FBSDKLoginKit'
   pod 'KakaoOpenSDK'
+  pod 'MaterialComponents/Buttons'
+  pod 'MaterialComponents/Buttons+Theming'
   # Pods for Willson
 
 end

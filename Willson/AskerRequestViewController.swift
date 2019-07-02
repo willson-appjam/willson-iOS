@@ -31,6 +31,20 @@ class AskerRequestViewController: UIViewController {
         helpers = getHelper()
         helperCollectionView.delegate = self
         helperCollectionView.dataSource = self
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
+        
+        self.helperCollectionView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func goPage(sender:UIGestureRecognizer)
+        
+    {
+        let storyboard  = UIStoryboard(name: "AskerRequest", bundle: nil)
+   
+        let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController")
+        
+        self.navigationController!.pushViewController(vc, animated: true)
     }
     
     @objc func timeLimit() {
