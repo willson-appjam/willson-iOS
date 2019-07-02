@@ -298,13 +298,13 @@
                                                         <color key="textColor" name="darkPurple"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r5-qV-AxQ">
+                                                        <rect key="frame" x="21" y="113.33333333333324" width="333" height="215.66666666666663"/>
+                                                    </scrollView>
                                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="2me-hf-oGg">
                                                         <rect key="frame" x="168" y="281" width="39" height="37"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </pageControl>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r5-qV-AxQ">
-                                                        <rect key="frame" x="21" y="113.33333333333324" width="333" height="215.66666666666663"/>
-                                                    </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" name="bgColor"/>
                                                 <constraints>

@@ -38,7 +38,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         reviewSlides = createReviewSlides()
         setupReviewSlideScrollView(reviewSlides: reviewSlides)
         
-        ReviewPageControl.numberOfPages = reviewSlides.count
+        ReviewPageControl.numberOfPages = reviewSlides.count - 1
         ReviewPageControl.currentPage = 0
         AskerScrollView.bringSubviewToFront(ReviewPageControl)
     }
@@ -136,34 +136,40 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         let ReviewSlide1:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
        
         ReviewSlide1.category.text = "일상"
-        ReviewSlide1.content.text = "질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다."
+        ReviewSlide1.content.text = "11질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다."
         ReviewSlide1.asker.text = "- 기계과 전공으로 진로에 대해 고민 중인 윌슨님-"
         
         let ReviewSlide2:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide2.category.text = "연애"
-        ReviewSlide2.content.text = "큰 기대하지 않고 진로에 대한 고민을 신청했는데 답변자님이 정말 진지하게 전문적으로 상담해주셔서 너무 도움이 되었습니다. 감사합니다. ”"
+        ReviewSlide2.content.text = "22큰 기대하지 않고 진로에 대한 고민을 신청했는데 답변자님이 정말 진지하게 전문적으로 상담해주셔서 너무 도움이 되었습니다. 감사합니다. ”"
         ReviewSlide2.asker.text = "- 컴퓨터공학과 전공으로 연애에 대해 고민 중인 릴라님-"
         
         let ReviewSlide3:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide3.category.text = "진로"
-        ReviewSlide3.content.text = "“ 안녕안녕안녕앙년아녀안연연여낭녀아연아녀 ”"
+        ReviewSlide3.content.text = "33“ 안녕안녕안녕앙년아녀안연연여낭녀아연아녀 ”"
         ReviewSlide3.asker.text = "- 화학과 전공으로 진로에 대해 고민 중인 릴라님-"
         
         let ReviewSlide4:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide4.category.text = "진로"
-        ReviewSlide4.content.text = "“ 큰 기대하지 않고 진로에 대한 고민을 신청했는데 답변자님이 정말 진지하게 전문적으로 상담해주셔서 너무 도움이 되었습니다. 감사합니다. ”"
+        ReviewSlide4.content.text = "44“ 큰 기대하지 않고 진로에 대한 고민을 신청했는데 답변자님이 정말 진지하게 전문적으로 상담해주셔서 너무 도움이 되었습니다. 감사합니다. ”"
         ReviewSlide4.asker.text = "- 수학과 전공으로 진로에 대해 고민 중인 릴라님-"
         
         let ReviewSlide5:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide5.category.text = "진로"
-        ReviewSlide5.content.text = "“ ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅂㅈㄷㄱㅂㅈ더ㅣ;ㅓ만어라ㅣㅓㅂ쟏;버ㅓㅏ. ”"
+        ReviewSlide5.content.text = "55“ ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅂㅈㄷㄱㅂㅈ더ㅣ;ㅓ만어라ㅣㅓㅂ쟏;버ㅓㅏ. ”"
         ReviewSlide5.asker.text = "- 중문과 전공으로 진로에 대해 고민 중인 릴라님-"
         
-        return [ReviewSlide1, ReviewSlide2, ReviewSlide3, ReviewSlide4, ReviewSlide5]
+        let ReviewSlide6:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
+        
+        ReviewSlide6.category.text = "일상"
+        ReviewSlide6.content.text = "11질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다."
+        ReviewSlide6.asker.text = "- 기계과 전공으로 진로에 대해 고민 중인 윌슨님-"
+        
+        return [ReviewSlide1, ReviewSlide2, ReviewSlide3, ReviewSlide4, ReviewSlide5, ReviewSlide6]
     }
     
     func setupReviewSlideScrollView(reviewSlides : [ReviewSlide]) {
@@ -195,22 +201,29 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
         
-        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
+        if(percentOffset.x > 0 && percentOffset.x <= 0.2) {
+            reviewSlides[0].mask?.transform = CGAffineTransform(scaleX: (0.2-percentOffset.x)/0.2, y: (0.2-percentOffset.x)/0.2)
+            reviewSlides[1].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.2, y: percentOffset.x/0.2)
             
-            reviewSlides[0].mask?.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
-            reviewSlides[1].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
+        } else if(percentOffset.x > 0.2 && percentOffset.x <= 0.4) {
+            reviewSlides[1].mask?.transform = CGAffineTransform(scaleX: (0.4-percentOffset.x)/0.2, y: (0.4-percentOffset.x)/0.2)
+            reviewSlides[2].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.4, y: percentOffset.x/0.4)
             
-        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-            reviewSlides[1].mask?.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
-            reviewSlides[2].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+        } else if(percentOffset.x > 0.4 && percentOffset.x <= 0.6) {
+            reviewSlides[2].mask?.transform = CGAffineTransform(scaleX: (0.6-percentOffset.x)/0.2, y: (0.6-percentOffset.x)/0.2)
+            reviewSlides[3].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.6, y: percentOffset.x/0.6)
             
-        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-            reviewSlides[2].mask?.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
-            reviewSlides[3].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
+        } else if(percentOffset.x > 0.6 && percentOffset.x <= 0.8) {
+            reviewSlides[3].mask?.transform = CGAffineTransform(scaleX: (0.8-percentOffset.x)/0.2, y: (0.8-percentOffset.x)/0.2)
+            reviewSlides[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.8, y: percentOffset.x/0.8)
+        } else if(percentOffset.x > 0.8 && percentOffset.x <= 1) {
+            ReviewPageControl.currentPage = 0
+            reviewSlides[4].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.2, y: (1-percentOffset.x)/0.2)
+            reviewSlides[5].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
             
-        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
-            reviewSlides[3].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
-            reviewSlides[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+        } else if(percentOffset.x > 1) {
+            let offset = CGPoint(x: 0, y: -AskerScrollView.adjustedContentInset.top)
+            AskerScrollView.setContentOffset(offset, animated: false)
         }
     }
 }
