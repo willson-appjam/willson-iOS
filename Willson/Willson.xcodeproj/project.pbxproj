@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		46BD78418D4087C1A660D9DE /* Pods_Willson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794B654C502E453FEF56F6A /* Pods_Willson.framework */; };
 		660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */; };
+		663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663368C922CD36D800C3C694 /* PopUpViewController4.swift */; };
 		6634344222C67ED500D419EC /* NanumSquareEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344122C67E8300D419EC /* NanumSquareEB.ttf */; };
 		6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344022C67E4500D419EC /* NanumSquareB.ttf */; };
 		6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634343F22C67E2F00D419EC /* NanumSquareR.ttf */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		1BAEDD6E774F4EB08452D077 /* Pods-Willson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.release.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.release.xcconfig"; sourceTree = "<group>"; };
 		660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = Willson/MyPageViewController.swift; sourceTree = SOURCE_ROOT; };
+		663368C922CD36D800C3C694 /* PopUpViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController4.swift; sourceTree = "<group>"; };
 		6634343E22C67E0E00D419EC /* NanumSquareL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.ttf; sourceTree = "<group>"; };
 		6634343F22C67E2F00D419EC /* NanumSquareR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.ttf; sourceTree = "<group>"; };
 		6634344022C67E4500D419EC /* NanumSquareB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareB.ttf; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */,
 				66C661CB22CC8A01008A451F /* CollectionReusableView.swift */,
 				66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */,
+				663368C922CD36D800C3C694 /* PopUpViewController4.swift */,
 			);
 			path = request;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */,
 				66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */,
 				D982BCC922CA0B3800458662 /* AskerList3_ImportantViewController.swift in Sources */,
+				663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */,
 				663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */,
 				663835C622CA33F9003265C7 /* CustonView.swift in Sources */,
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
