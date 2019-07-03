@@ -643,7 +643,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-Jg-tkf">
-                                        <rect key="frame" x="21" y="191" width="281" height="31"/>
+                                        <rect key="frame" x="21" y="190" width="281" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="05K-87-RXq"/>
                                             <constraint firstAttribute="height" constant="31" id="EhH-nt-590"/>

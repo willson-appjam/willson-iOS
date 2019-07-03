@@ -16,7 +16,7 @@ class HelperProfileViewController: UIViewController {
     @IBOutlet weak var startBtn: MDCFloatingButton!
     @IBOutlet weak var HelperReviewCV: UICollectionView!
     
-    
+    var count = 0
     var reviews:[HelperReviewCollectionViewCell] = [];
     
     override func viewDidLoad() {

@@ -20,7 +20,7 @@ class AskerRequestViewController: UIViewController {
     var timer = Timer()
     var startTimer = false
     var extended = false
-    
+    var completionHandlers: [() -> Void] = []
     //===================================
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +43,10 @@ class AskerRequestViewController: UIViewController {
     {
         let storyboard  = UIStoryboard(name: "AskerRequest", bundle: nil)
    
-        let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController") as! HelperProfileViewController
         
-        self.navigationController!.pushViewController(vc, animated: true)
+        //vc.count = self.count
+     self.navigationController!.pushViewController(vc, animated: true)
     }
     
     @objc func timeLimit() {
@@ -65,26 +66,29 @@ class AskerRequestViewController: UIViewController {
     }
     
     func timeLimitStop() {
+        
+        var vc = UIApplication.topViewController()
+        
         //startTimer = false
         timer.invalidate()
         
         if (extended == false) { //처음 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
                 "bPopUpID") as! PopUpViewController
-            self.addChild(popOverVC)
+            vc?.addChild(popOverVC)
             
-            popOverVC.view.frame = self.view.frame
-            self.view.addSubview(popOverVC.view)
-            popOverVC.didMove(toParent: self)
+            popOverVC.view.frame = (vc?.view.frame)!
+            vc?.view.addSubview(popOverVC.view)
+            popOverVC.didMove(toParent: vc)
         }
         else { //두번째 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
                 "bPopUp3ID") as! PopUpViewController3
-            self.addChild(popOverVC)
+            vc?.addChild(popOverVC)
             
-            popOverVC.view.frame = self.view.frame
-            self.view.addSubview(popOverVC.view)
-            popOverVC.didMove(toParent: self)
+            popOverVC.view.frame = (vc?.view.frame)!
+            vc?.view.addSubview(popOverVC.view)
+            popOverVC.didMove(toParent: vc)
         }
     }
     
@@ -178,5 +182,18 @@ extension AskerRequestViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+}
+
+extension UIApplication {
+    class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController { if let selected = tab.selectedViewController { return topViewController(base: selected) } }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        return base
     }
 }
