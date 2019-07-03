@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import KakaoOpenSDK
 
 class AskerLoginViewController: UIViewController {
 
@@ -80,6 +81,67 @@ class AskerLoginViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func kakaotalkBtnAction(_ sender: Any) {
+        if KOSession.shared().isOpen() { KOSession.shared().close() }
+        KOSession.shared().presentingViewController = self
+        
+        func profile(_ error: Error?, user: KOUserMe?) {
+            guard let user = user,
+                error == nil else { return }
+            
+            guard let token = user.id else { return }
+            let name = user.nickname ?? ""
+            
+            if let gender = user.account?.gender {
+                if gender == KOUserGender.male {
+                    print("male")
+                } else if gender == KOUserGender.female {
+                    print("female")
+                }
+            }
+            
+            let email = user.account?.email ?? ""
+            let profile = user.profileImageURL?.absoluteString ?? ""
+            let thumbnail = user.thumbnailImageURL?.absoluteString ?? ""
+            
+            print(token)
+            print(name)
+            print(email)
+            print(profile)
+            print(thumbnail)
+        }
+        
+        KOSession.shared().open(completionHandler: { (error) in
+            if error != nil || !KOSession.shared().isOpen() { return }
+            KOSessionTask.userMeTask(completion: { (error, user) in
+                if let account = user?.account {
+                    var updateScopes = [String]()
+                    if account.emailNeedsAgreement {
+                        updateScopes.append("account_email")
+                    }
+                    
+                    if account.genderNeedsAgreement {
+                        updateScopes.append("gender")
+                    }
+                    
+                    if account.genderNeedsAgreement {
+                        updateScopes.append("birthday")
+                    }
+                    KOSession.shared()?.updateScopes(updateScopes, completionHandler: { (error) in
+                        guard error == nil else {
+                            return
+                        }
+                        KOSessionTask.userMeTask(completion: { (error, user) in
+                            profile(error, user: user)
+                        })
+                    })
+                } else {
+                    profile(error, user: user)
+                }
+            })
+        })
     }
     
     @IBAction func signinBtnAction(_ sender: Any) {
