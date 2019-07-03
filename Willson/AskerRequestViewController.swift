@@ -19,6 +19,7 @@ class AskerRequestViewController: UIViewController {
     var count = 10
     var timer = Timer()
     var startTimer = false
+    var extended = false
     
     //===================================
     override func viewDidLoad() {
@@ -67,13 +68,24 @@ class AskerRequestViewController: UIViewController {
         //startTimer = false
         timer.invalidate()
         
-        let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier: "bPopUpID") as! PopUpViewController
-        
-        self.addChild(popOverVC)
-        
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParent: self)
+        if (extended == false) { //처음 5분 연장했을 때의 팝업창
+            let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
+                "bPopUpID") as! PopUpViewController
+            self.addChild(popOverVC)
+            
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMove(toParent: self)
+        }
+        else { //두번째 5분 연장했을 때의 팝업창
+            let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
+                "bPopUp3ID") as! PopUpViewController3
+            self.addChild(popOverVC)
+            
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMove(toParent: self)
+        }
     }
     
     func registerCVC() {

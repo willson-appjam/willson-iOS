@@ -17,6 +17,15 @@ class PopUpViewController: PopUpVC {
         self.showAnimate()
     }
     
+    @IBAction func extendBtn(_ sender: Any) {
+        self.removeAnimate()
+        
+        let storyboard  = UIStoryboard(name: "AskerRequest", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "AskerRequestViewController") as! AskerRequestViewController
+        vc.extended = true
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
     @IBAction func removePopUpBtn(_ sender: Any) {
         //self.removeAnimate()
         self.showAnimate()

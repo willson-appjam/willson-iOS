@@ -1,15 +1,14 @@
 //
-//  PopUpViewController2.swift
+//  PopUpViewController3.swift
 //  Willson
 //
-//  Created by 박지수 on 02/07/2019.
+//  Created by 박지수 on 03/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
 
-class PopUpViewController2: PopUpVC {
-
+class PopUpViewController3: PopUpVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
