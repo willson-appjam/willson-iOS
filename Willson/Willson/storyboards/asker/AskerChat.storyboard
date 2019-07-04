@@ -34,7 +34,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oew-Yy-mlT">
                                 <rect key="frame" x="0.0" y="132" width="414" height="730"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="bgColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListTableViewCell" rowHeight="92" id="kdy-Eo-YH3" customClass="ChatListTableViewCell" customModule="Willson" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="92"/>
@@ -143,7 +143,7 @@
         <!--Review Star View Controller-->
         <scene sceneID="PPs-qz-9T5">
             <objects>
-                <viewController id="vgM-ff-RBv" customClass="ReviewStarViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReviewStarViewController" id="vgM-ff-RBv" customClass="ReviewStarViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wO-dM-Kjq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4PK-gA-o9P" firstAttribute="centerY" secondItem="8wO-dM-Kjq" secondAttribute="centerY" id="0Zs-fW-gEj"/>
                             <constraint firstItem="4PK-gA-o9P" firstAttribute="centerX" secondItem="8wO-dM-Kjq" secondAttribute="centerX" id="ueM-0w-0BO"/>
@@ -292,6 +292,9 @@
         <image name="chatBtnReviewStarYellow" width="29" height="28"/>
         <image name="chatImgAlert" width="23.5" height="23"/>
         <image name="chatImgHelperprofile" width="60" height="60"/>
+        <namedColor name="bgColor">
+            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
