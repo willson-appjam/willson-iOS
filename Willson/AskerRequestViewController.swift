@@ -45,8 +45,7 @@ class AskerRequestViewController: UIViewController {
    
         let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController") as! HelperProfileViewController
         
-        //vc.count = self.count
-     self.navigationController!.pushViewController(vc, animated: true)
+        self.navigationController!.pushViewController(vc, animated: true)
     }
     
     @objc func timeLimit() {

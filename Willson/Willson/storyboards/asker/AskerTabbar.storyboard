@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CdY-14-yRH">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="9j7-P7-lYU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fGc-e1-enk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baC-dW-eHS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <connections>
                                     <segue destination="Stt-DT-DlQ" kind="embed" id="z5A-TE-EtR"/>
                                 </connections>
@@ -45,11 +45,11 @@
             <objects>
                 <viewController id="RZl-Q2-DCt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdd-JC-o6g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-ML-IHM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <connections>
                                     <segue destination="pcM-cA-fsU" kind="embed" id="Pcq-MC-y6y"/>
                                 </connections>
@@ -115,11 +115,11 @@
             <objects>
                 <viewController id="xbf-fG-wUV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tEp-y1-0SB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-pl-hyp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <connections>
                                     <segue destination="byR-sJ-mNs" kind="embed" id="dd0-Bn-YT3"/>
                                 </connections>
@@ -145,11 +145,11 @@
             <objects>
                 <viewController id="U08-Wl-HbH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d5E-VN-wOU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39n-5S-SDZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <connections>
                                     <segue destination="YyS-zJ-xe7" kind="embed" id="eCp-bf-578"/>
                                 </connections>
@@ -173,7 +173,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="WeL-Ol-VNs">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CdY-14-yRH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AskerTabbar" automaticallyAdjustsScrollViewInsets="NO" id="CdY-14-yRH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zoO-BS-C5f">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

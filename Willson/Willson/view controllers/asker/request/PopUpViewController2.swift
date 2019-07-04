@@ -16,4 +16,9 @@ class PopUpViewController2: PopUpVC {
         
         self.showAnimate()
     }
+    
+    @IBAction func goHome(_ sender: Any) {
+        let vc = UIStoryboard(name: "AskerMain", bundle: nil).instantiateViewController(withIdentifier: "AskerMainViewController")
+        self.present(vc, animated: true)
+    }
 }
