@@ -13,6 +13,9 @@
         <array key="NanumSquareB.ttf">
             <string>NanumSquareB</string>
         </array>
+        <array key="NanumSquareEB.ttf">
+            <string>NanumSquareEB</string>
+        </array>
         <array key="NanumSquareR.ttf">
             <string>NanumSquareR</string>
         </array>
@@ -244,6 +247,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlK-c2-3oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1661.5999999999999" y="99.753694581280797"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GiL-lT-ADn">
+            <objects>
+                <viewController id="LAG-r8-NmJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="smy-oZ-PF3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAd-lo-myk">
+                                <rect key="frame" x="26" y="269" width="323" height="284"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listImgAlertWillson" translatesAutoresizingMaskIntoConstraints="NO" id="htg-jX-Ho2">
+                                        <rect key="frame" x="116" y="29" width="91" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="0ix-Tm-OzE"/>
+                                            <constraint firstAttribute="width" constant="91" id="AsP-Of-AJ4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-Y1-wap">
+                                        <rect key="frame" x="37.333333333333329" y="131" width="248.33333333333337" height="40"/>
+                                        <string key="text">정말 그만두시겠어요?
+아직 하나도 작성하지 않으셨어요!</string>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFf-cT-nyk">
+                                        <rect key="frame" x="70" y="188" width="183" height="38"/>
+                                        <color key="backgroundColor" name="buttonRight"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="183" id="Rh8-Zu-F2s"/>
+                                            <constraint firstAttribute="height" constant="38" id="Zzr-lC-MV5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
+                                        <state key="normal" title="계속 작성하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-Tl-7jk">
+                                        <rect key="frame" x="137.66666666666666" y="241" width="48" height="27"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="13"/>
+                                        <state key="normal" title="취소하기">
+                                            <color key="titleColor" name="brownishGrey"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0hN-Y1-wap" firstAttribute="centerX" secondItem="zAd-lo-myk" secondAttribute="centerX" id="7yw-cV-Owx"/>
+                                    <constraint firstItem="htg-jX-Ho2" firstAttribute="top" secondItem="zAd-lo-myk" secondAttribute="top" constant="29" id="9au-a6-Yit"/>
+                                    <constraint firstAttribute="height" constant="284" id="NEl-4x-vsi"/>
+                                    <constraint firstItem="hXs-Tl-7jk" firstAttribute="top" secondItem="HFf-cT-nyk" secondAttribute="bottom" constant="15" id="R8i-jH-Gxt"/>
+                                    <constraint firstItem="HFf-cT-nyk" firstAttribute="centerX" secondItem="zAd-lo-myk" secondAttribute="centerX" id="T8d-ef-stD"/>
+                                    <constraint firstItem="0hN-Y1-wap" firstAttribute="top" secondItem="htg-jX-Ho2" secondAttribute="bottom" constant="22" id="XGQ-sv-tel"/>
+                                    <constraint firstItem="hXs-Tl-7jk" firstAttribute="centerX" secondItem="zAd-lo-myk" secondAttribute="centerX" id="k55-1U-ZGb"/>
+                                    <constraint firstItem="HFf-cT-nyk" firstAttribute="top" secondItem="0hN-Y1-wap" secondAttribute="bottom" constant="17" id="m8v-2j-KXx"/>
+                                    <constraint firstItem="htg-jX-Ho2" firstAttribute="centerX" secondItem="zAd-lo-myk" secondAttribute="centerX" id="qaX-NQ-Ek7"/>
+                                    <constraint firstAttribute="width" constant="323" id="yKk-QE-sU0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zAd-lo-myk" firstAttribute="centerY" secondItem="GUw-YF-W6H" secondAttribute="centerY" id="KQV-wU-agW"/>
+                            <constraint firstItem="zAd-lo-myk" firstAttribute="centerX" secondItem="GUw-YF-W6H" secondAttribute="centerX" id="T6U-p8-gRk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GUw-YF-W6H"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5b-qV-eC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="901"/>
         </scene>
         <!--리스트 작성-->
         <scene sceneID="c1U-Bz-6gf">
@@ -2017,6 +2099,7 @@
         <image name="btnCheckNonactive" width="20" height="20"/>
         <image name="btnRadioActive" width="15" height="15"/>
         <image name="btnRadioNonactive" width="15" height="15"/>
+        <image name="listImgAlertWillson" width="92.666664123535156" height="81.333335876464844"/>
         <image name="listImgCategory01Love" width="119" height="118"/>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
