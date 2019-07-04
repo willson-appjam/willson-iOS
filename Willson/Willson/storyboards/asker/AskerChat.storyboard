@@ -171,27 +171,38 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="nco-he-CKk">
-                                        <rect key="frame" x="119.5" y="77" width="83.5" height="13.5"/>
+                                        <rect key="frame" x="117.5" y="77" width="87" height="13.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raj-xa-7Nt">
-                                                <rect key="frame" x="0.0" y="0.0" width="25.5" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="13.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 /" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-mx-Job">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="13.5"/>
-                                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                        <color key="textColor" name="darkPurple"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RF-Uu-YrF">
-                                                        <rect key="frame" x="15" y="0.0" width="10.5" height="13.5"/>
-                                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
-                                                        <color key="textColor" name="grey"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1m-52-V6k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="13.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-mx-Job">
+                                                                <rect key="frame" x="0.0" y="0.0" width="7.5" height="13.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" / " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eof-JO-xMI">
+                                                                <rect key="frame" x="7.5" y="0.0" width="11" height="13.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-iP-0Vn">
+                                                                <rect key="frame" x="18.5" y="0.0" width="10.5" height="13.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                                <color key="textColor" name="grey"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="별로에요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNU-ki-SyG">
-                                                <rect key="frame" x="39.5" y="0.0" width="44" height="13.5"/>
+                                                <rect key="frame" x="43" y="0.0" width="44" height="13.5"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                                 <color key="textColor" name="black"/>
                                                 <nil key="highlightedColor"/>
