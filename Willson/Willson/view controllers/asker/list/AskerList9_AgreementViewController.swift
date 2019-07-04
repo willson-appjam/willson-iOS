@@ -1,14 +1,14 @@
 //
-//  AskerList7_DirectionViewController.swift
+//  AskerList9_AgreementViewController.swift
 //  Willson
 //
-//  Created by JHKim on 01/07/2019.
+//  Created by JHKim on 04/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
 
-class AskerList7_DirectionViewController: UIViewController {
+class AskerList9_AgreementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

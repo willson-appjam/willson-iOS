@@ -1,14 +1,14 @@
 //
-//  AskerList6_DetailHelperViewController.swift
+//  AskerList3_ImpactViewController.swift
 //  Willson
 //
-//  Created by JHKim on 01/07/2019.
+//  Created by JHKim on 04/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
 
-class AskerList6_DetailHelperViewController: UIViewController {
+class AskerList3_ImpactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

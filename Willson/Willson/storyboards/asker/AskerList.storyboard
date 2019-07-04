@@ -158,21 +158,12 @@
                                 <rect key="frame" x="27" y="303" width="321" height="231"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rA1-kw-vcb">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="154" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="C2E-kf-7Q0">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,7 +206,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.12" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-xT-jyC">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-xT-jyC">
                                 <rect key="frame" x="0.0" y="88" width="375" height="7"/>
                                 <color key="tintColor" name="lightPurple"/>
                                 <constraints>
@@ -224,7 +215,7 @@
                                 <color key="progressTintColor" name="lightPurple"/>
                                 <color key="trackTintColor" name="white2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFH-lr-UFi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFH-lr-UFi">
                                 <rect key="frame" x="16" y="103" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkPurple"/>
@@ -318,12 +309,12 @@
         <!--리스트 작성-->
         <scene sceneID="fcA-4U-2b1">
             <objects>
-                <viewController id="Lo6-wb-r96" customClass="AskerList3_ImportantViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lo6-wb-r96" customClass="AskerList3_ImpactViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iw1-aZ-h0a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="bkV-RX-K4H">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="bkV-RX-K4H">
                                 <rect key="frame" x="0.0" y="88" width="375" height="7"/>
                                 <color key="tintColor" name="lightPurple"/>
                                 <constraints>
@@ -332,20 +323,20 @@
                                 <color key="progressTintColor" name="lightPurple"/>
                                 <color key="trackTintColor" name="white2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoP-f2-mZ4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoP-f2-mZ4">
                                 <rect key="frame" x="16" y="103" width="343" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 고민은 얼마나 중요한가요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pz-nj-aVW">
-                                <rect key="frame" x="22" y="201.33333333333334" width="280.66666666666669" height="22.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일상에 얼마나 많은 영향을 주고 있나요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pz-nj-aVW">
+                                <rect key="frame" x="22" y="201.33333333333334" width="327.33333333333331" height="22.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중요할수록 큰 숫자를 골라주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-9z-bFH">
-                                <rect key="frame" x="22" y="231.66666666666666" width="216" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영향이 클수록 큰 숫자를 골라주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-9z-bFH">
+                                <rect key="frame" x="21.999999999999986" y="231.66666666666666" width="234.66666666666663" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="brownishGrey"/>
                                 <nil key="highlightedColor"/>
@@ -563,8 +554,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 고민은 얼마나 중요한가요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-vj-e1a">
-                                <rect key="frame" x="22" y="201.33333333333334" width="280.66666666666669" height="22.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구체적으로 어떤 내용인가요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-vj-e1a">
+                                <rect key="frame" x="22.000000000000014" y="201.33333333333334" width="239.33333333333337" height="22.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
@@ -605,7 +596,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.37" translatesAutoresizingMaskIntoConstraints="NO" id="kB2-TZ-u1Y">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="kB2-TZ-u1Y">
                                 <rect key="frame" x="0.0" y="88" width="375" height="7"/>
                                 <color key="tintColor" name="lightPurple"/>
                                 <constraints>
@@ -614,7 +605,7 @@
                                 <color key="progressTintColor" name="lightPurple"/>
                                 <color key="trackTintColor" name="white2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mJ-hd-KDe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mJ-hd-KDe">
                                 <rect key="frame" x="16" y="103" width="343" height="20.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkPurple"/>
@@ -675,13 +666,13 @@
         <!--리스트 작성-->
         <scene sceneID="3t0-sb-IdX">
             <objects>
-                <viewController id="e9e-vH-2nt" customClass="AskerList5_SelectHelperViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e9e-vH-2nt" customClass="AskerList5_HelperSexViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uNS-gZ-cIr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 헬퍼는 어떤 분인가요? (1/2)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUZ-bM-OID">
-                                <rect key="frame" x="22" y="201.33333333333334" width="296" height="22.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 헬퍼와 이야기하고 싶나요? (1/3)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUZ-bM-OID">
+                                <rect key="frame" x="22" y="201.33333333333334" width="314.33333333333331" height="22.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
@@ -707,18 +698,6 @@
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성격" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBA-f2-Uuc">
-                                <rect key="frame" x="22" y="393.33333333333331" width="33" height="20"/>
-                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
-                                <color key="textColor" name="darkPurple"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3개를 선택해주세요." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqD-Bm-anU">
-                                <rect key="frame" x="22" y="421.33333333333331" width="134" height="18"/>
-                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                <color key="textColor" name="brownishGrey"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msY-VM-VBJ">
                                 <rect key="frame" x="33" y="714" width="309" height="48"/>
                                 <color key="backgroundColor" name="buttonRight"/>
@@ -736,17 +715,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Qnd-kO-6bg" kind="show" id="SJQ-Fe-Zyd"/>
+                                    <segue destination="s0K-Rz-nPo" kind="show" id="at3-cU-F5k"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jUZ-bM-OID" firstAttribute="top" secondItem="uNS-gZ-cIr" secondAttribute="centerY" multiplier="193:389" id="1YI-Kt-LaW"/>
-                            <constraint firstItem="sBA-f2-Uuc" firstAttribute="top" secondItem="uNS-gZ-cIr" secondAttribute="centerY" multiplier="377:389" id="5eg-Lt-ap2"/>
                             <constraint firstItem="Klg-Zy-1tw" firstAttribute="leading" secondItem="uNS-gZ-cIr" secondAttribute="leading" id="Hjf-NQ-MIt"/>
-                            <constraint firstItem="aqD-Bm-anU" firstAttribute="leading" secondItem="TGX-Wf-0qH" secondAttribute="leading" constant="22" id="MRy-mz-blt"/>
-                            <constraint firstItem="aqD-Bm-anU" firstAttribute="top" secondItem="sBA-f2-Uuc" secondAttribute="bottom" constant="8" id="Owd-9t-I5y"/>
                             <constraint firstItem="msY-VM-VBJ" firstAttribute="centerX" secondItem="TGX-Wf-0qH" secondAttribute="centerX" id="QoJ-os-q8T"/>
                             <constraint firstItem="0iU-cf-ljW" firstAttribute="top" secondItem="Klg-Zy-1tw" secondAttribute="bottom" constant="8" id="QyW-uR-kIC"/>
                             <constraint firstItem="TGX-Wf-0qH" firstAttribute="bottom" secondItem="msY-VM-VBJ" secondAttribute="bottom" constant="16" id="Tyx-Xa-7pN"/>
@@ -754,7 +730,6 @@
                             <constraint firstItem="LYy-Y2-3ed" firstAttribute="leading" secondItem="TGX-Wf-0qH" secondAttribute="leading" constant="22" id="a05-xS-Dig"/>
                             <constraint firstItem="LYy-Y2-3ed" firstAttribute="top" secondItem="uNS-gZ-cIr" secondAttribute="centerY" multiplier="257:389" id="c4M-Uz-mL6"/>
                             <constraint firstItem="Klg-Zy-1tw" firstAttribute="top" secondItem="TGX-Wf-0qH" secondAttribute="top" id="fnB-mE-6ZD"/>
-                            <constraint firstItem="sBA-f2-Uuc" firstAttribute="leading" secondItem="TGX-Wf-0qH" secondAttribute="leading" constant="22" id="jKl-5j-SSW"/>
                             <constraint firstItem="TGX-Wf-0qH" firstAttribute="trailing" secondItem="Klg-Zy-1tw" secondAttribute="trailing" id="uTE-40-WdD"/>
                             <constraint firstItem="0iU-cf-ljW" firstAttribute="leading" secondItem="TGX-Wf-0qH" secondAttribute="leading" constant="16" id="wbN-yz-dlx"/>
                             <constraint firstItem="jUZ-bM-OID" firstAttribute="leading" secondItem="TGX-Wf-0qH" secondAttribute="leading" constant="22" id="x62-MH-eRS"/>
@@ -775,12 +750,12 @@
         <!--리스트 작성-->
         <scene sceneID="hIp-1h-R3S">
             <objects>
-                <viewController id="Qnd-kO-6bg" customClass="AskerList6_DetailHelperViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qnd-kO-6bg" customClass="AskerList7_HelperExperienceViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzL-E0-q2R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.62" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-IY-TeA">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-IY-TeA">
                                 <rect key="frame" x="0.0" y="88" width="375" height="7"/>
                                 <color key="tintColor" name="lightPurple"/>
                                 <constraints>
@@ -789,14 +764,14 @@
                                 <color key="progressTintColor" name="lightPurple"/>
                                 <color key="trackTintColor" name="white2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ro-tF-W25">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ro-tF-W25">
                                 <rect key="frame" x="16" y="103" width="343" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 헬퍼는 어떤 분인가요? (2/2)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxf-Qc-ebx">
-                                <rect key="frame" x="22" y="201.33333333333334" width="296" height="22.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 헬퍼와 이야기하고 싶나요? (3/3)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxf-Qc-ebx">
+                                <rect key="frame" x="22" y="201.33333333333334" width="314.33333333333331" height="22.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
@@ -807,14 +782,40 @@
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3개를 선택해주세요." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGA-3k-Hfw">
-                                <rect key="frame" x="22" y="294.33333333333331" width="134" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드를 작성해주시면 더 알맞은 헬퍼를 매칭해드릴게요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGA-3k-Hfw">
+                                <rect key="frame" x="22" y="294.33333333333331" width="331" height="35.666666666666686"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="brownishGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-k1-4sV">
+                                <rect key="frame" x="33" y="714" width="309" height="48"/>
+                                <color key="backgroundColor" name="buttonRight"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="Tqw-99-bmb"/>
+                                    <constraint firstAttribute="height" constant="48" id="pvU-Pj-gov"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="pxu-Aa-dEn" kind="show" id="3Tx-yD-M3K"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ex) #이별, #다툼, #화해" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFU-dn-zHc">
+                                <rect key="frame" x="22" y="362" width="157" height="18"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" name="middlePurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ASz-rQ-xUo">
-                                <rect key="frame" x="23" y="357.33333333333331" width="329" height="118"/>
+                                <rect key="frame" x="23" y="398" width="329" height="118"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xji-Ym-C8I">
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="32"/>
@@ -828,7 +829,7 @@
                                                 <color key="textColor" name="lightPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gL-AW-dKC">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="태그 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gL-AW-dKC">
                                                 <rect key="frame" x="30" y="0.0" width="299" height="32"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -858,7 +859,7 @@
                                                 <color key="textColor" name="lightPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uG3-nW-sGp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="태그 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uG3-nW-sGp">
                                                 <rect key="frame" x="30" y="0.0" width="299" height="32"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -888,7 +889,7 @@
                                                 <color key="textColor" name="lightPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qgB-HX-oeQ">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="태그 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qgB-HX-oeQ">
                                                 <rect key="frame" x="30" y="0.0" width="299" height="32"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -908,12 +909,89 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-k1-4sV">
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HGA-3k-Hfw" firstAttribute="top" secondItem="7fN-Gd-1Dl" secondAttribute="bottom" constant="6" id="577-p3-ks6"/>
+                            <constraint firstItem="7fN-Gd-1Dl" firstAttribute="top" secondItem="tzL-E0-q2R" secondAttribute="centerY" multiplier="257:389" id="8hf-XK-JRn"/>
+                            <constraint firstItem="bG6-U0-mKM" firstAttribute="bottom" secondItem="YlT-k1-4sV" secondAttribute="bottom" constant="16" id="9Su-d8-3TU"/>
+                            <constraint firstItem="0Ro-tF-W25" firstAttribute="top" secondItem="cvg-IY-TeA" secondAttribute="bottom" constant="8" id="FVA-DV-0Pe"/>
+                            <constraint firstItem="cFU-dn-zHc" firstAttribute="leading" secondItem="HGA-3k-Hfw" secondAttribute="leading" id="Ihw-Ok-wgL"/>
+                            <constraint firstItem="bG6-U0-mKM" firstAttribute="trailing" secondItem="ASz-rQ-xUo" secondAttribute="trailing" constant="23" id="J4l-Sk-D1w"/>
+                            <constraint firstItem="HGA-3k-Hfw" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="22" id="NFf-3M-CSh"/>
+                            <constraint firstItem="cvg-IY-TeA" firstAttribute="top" secondItem="bG6-U0-mKM" secondAttribute="top" id="Y8A-RV-zIq"/>
+                            <constraint firstItem="ASz-rQ-xUo" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="23" id="YiV-hI-Wre"/>
+                            <constraint firstAttribute="trailing" secondItem="HGA-3k-Hfw" secondAttribute="trailing" constant="22" id="c1j-MZ-lQU"/>
+                            <constraint firstItem="7fN-Gd-1Dl" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="22" id="e6o-Hm-ErU"/>
+                            <constraint firstItem="lxf-Qc-ebx" firstAttribute="top" secondItem="tzL-E0-q2R" secondAttribute="centerY" multiplier="193:389" id="fJx-oZ-Awc"/>
+                            <constraint firstItem="bG6-U0-mKM" firstAttribute="trailing" secondItem="0Ro-tF-W25" secondAttribute="trailing" constant="16" id="g2Q-u3-yTw"/>
+                            <constraint firstItem="YlT-k1-4sV" firstAttribute="centerX" secondItem="bG6-U0-mKM" secondAttribute="centerX" id="gPn-Hl-dgG"/>
+                            <constraint firstItem="ASz-rQ-xUo" firstAttribute="top" secondItem="cFU-dn-zHc" secondAttribute="bottom" constant="18" id="id8-FG-cFu"/>
+                            <constraint firstItem="cvg-IY-TeA" firstAttribute="leading" secondItem="tzL-E0-q2R" secondAttribute="leading" id="ndu-gf-WeF"/>
+                            <constraint firstItem="0Ro-tF-W25" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="16" id="pHz-4f-bWA"/>
+                            <constraint firstItem="lxf-Qc-ebx" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="22" id="rq6-Ly-VFV"/>
+                            <constraint firstItem="bG6-U0-mKM" firstAttribute="trailing" secondItem="cvg-IY-TeA" secondAttribute="trailing" id="s7f-VC-cgt"/>
+                            <constraint firstItem="cFU-dn-zHc" firstAttribute="top" secondItem="tzL-E0-q2R" secondAttribute="centerY" multiplier="373:389" constant="-27.300771208226251" id="uQo-ac-aW2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bG6-U0-mKM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="리스트 작성" id="4ae-qo-yTx">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gsO-0W-FUB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="btnCancel" id="yB9-Bs-44J"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27B-h4-Aga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6662" y="98"/>
+        </scene>
+        <!--Asker List6 Helper Character View Controller-->
+        <scene sceneID="JT4-Ok-JUE">
+            <objects>
+                <viewController id="s0K-Rz-nPo" customClass="AskerList6_HelperCharacterViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e4c-uH-0td">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이런 성격의 헬퍼를 원해요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBA-f2-Uuc">
+                                <rect key="frame" x="22" y="268.33333333333331" width="194" height="20"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                <color key="textColor" name="darkPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3개를 선택해주세요." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqD-Bm-anU">
+                                <rect key="frame" x="22" y="296.33333333333331" width="134" height="18"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" name="brownishGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="어떤 헬퍼와 이야기하고 싶나요? (2/3)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx3-jj-Pf7">
+                                <rect key="frame" x="30" y="200" width="314.33333333333331" height="22.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
+                                <color key="textColor" name="darkPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="vKr-4f-aMu">
+                                <rect key="frame" x="0.0" y="88" width="375" height="7"/>
+                                <color key="tintColor" name="lightPurple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="tiF-QY-tcI"/>
+                                </constraints>
+                                <color key="progressTintColor" name="lightPurple"/>
+                                <color key="trackTintColor" name="white2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXl-II-cDX">
+                                <rect key="frame" x="16" y="103" width="343" height="20.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="darkPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td2-pX-qpd">
                                 <rect key="frame" x="33" y="714" width="309" height="48"/>
                                 <color key="backgroundColor" name="buttonRight"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="309" id="Tqw-99-bmb"/>
-                                    <constraint firstAttribute="height" constant="48" id="pvU-Pj-gov"/>
+                                    <constraint firstAttribute="height" constant="48" id="qFi-xE-ZyB"/>
+                                    <constraint firstAttribute="width" constant="309" id="x3H-VL-uUO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
                                 <state key="normal" title="다음">
@@ -925,45 +1003,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="pxu-Aa-dEn" kind="show" id="EHD-FD-Yfv"/>
+                                    <segue destination="Qnd-kO-6bg" kind="show" id="2io-bI-JBy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HGA-3k-Hfw" firstAttribute="top" secondItem="7fN-Gd-1Dl" secondAttribute="bottom" constant="6" id="577-p3-ks6"/>
-                            <constraint firstItem="7fN-Gd-1Dl" firstAttribute="top" secondItem="tzL-E0-q2R" secondAttribute="centerY" multiplier="257:389" id="8hf-XK-JRn"/>
-                            <constraint firstItem="bG6-U0-mKM" firstAttribute="bottom" secondItem="YlT-k1-4sV" secondAttribute="bottom" constant="16" id="9Su-d8-3TU"/>
-                            <constraint firstItem="0Ro-tF-W25" firstAttribute="top" secondItem="cvg-IY-TeA" secondAttribute="bottom" constant="8" id="FVA-DV-0Pe"/>
-                            <constraint firstItem="bG6-U0-mKM" firstAttribute="trailing" secondItem="ASz-rQ-xUo" secondAttribute="trailing" constant="23" id="J4l-Sk-D1w"/>
-                            <constraint firstItem="HGA-3k-Hfw" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="22" id="NFf-3M-CSh"/>
-                            <constraint firstItem="ASz-rQ-xUo" firstAttribute="top" secondItem="HGA-3k-Hfw" secondAttribute="bottom" constant="45" id="SOq-TI-Hxg"/>
-                            <constraint firstItem="cvg-IY-TeA" firstAttribute="top" secondItem="bG6-U0-mKM" secondAttribute="top" id="Y8A-RV-zIq"/>
-                            <constraint firstItem="ASz-rQ-xUo" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="23" id="YiV-hI-Wre"/>
-                            <constraint firstItem="7fN-Gd-1Dl" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="22" id="e6o-Hm-ErU"/>
-                            <constraint firstItem="lxf-Qc-ebx" firstAttribute="top" secondItem="tzL-E0-q2R" secondAttribute="centerY" multiplier="193:389" id="fJx-oZ-Awc"/>
-                            <constraint firstItem="bG6-U0-mKM" firstAttribute="trailing" secondItem="0Ro-tF-W25" secondAttribute="trailing" constant="16" id="g2Q-u3-yTw"/>
-                            <constraint firstItem="YlT-k1-4sV" firstAttribute="centerX" secondItem="bG6-U0-mKM" secondAttribute="centerX" id="gPn-Hl-dgG"/>
-                            <constraint firstItem="cvg-IY-TeA" firstAttribute="leading" secondItem="tzL-E0-q2R" secondAttribute="leading" id="ndu-gf-WeF"/>
-                            <constraint firstItem="0Ro-tF-W25" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="16" id="pHz-4f-bWA"/>
-                            <constraint firstItem="lxf-Qc-ebx" firstAttribute="leading" secondItem="bG6-U0-mKM" secondAttribute="leading" constant="22" id="rq6-Ly-VFV"/>
-                            <constraint firstItem="bG6-U0-mKM" firstAttribute="trailing" secondItem="cvg-IY-TeA" secondAttribute="trailing" id="s7f-VC-cgt"/>
+                            <constraint firstItem="vKr-4f-aMu" firstAttribute="trailing" secondItem="euf-zV-YeK" secondAttribute="trailing" id="96i-0V-9hJ"/>
+                            <constraint firstItem="td2-pX-qpd" firstAttribute="centerX" secondItem="e4c-uH-0td" secondAttribute="centerX" id="B1b-Dd-elE"/>
+                            <constraint firstItem="aqD-Bm-anU" firstAttribute="top" secondItem="sBA-f2-Uuc" secondAttribute="bottom" constant="8" id="BMc-Sj-lhm"/>
+                            <constraint firstItem="euf-zV-YeK" firstAttribute="trailing" secondItem="MXl-II-cDX" secondAttribute="trailing" constant="16" id="DOy-JY-8IH"/>
+                            <constraint firstItem="vKr-4f-aMu" firstAttribute="top" secondItem="euf-zV-YeK" secondAttribute="top" id="Qob-g0-O3K"/>
+                            <constraint firstItem="vKr-4f-aMu" firstAttribute="leading" secondItem="euf-zV-YeK" secondAttribute="leading" id="Rxo-63-r9K"/>
+                            <constraint firstItem="sBA-f2-Uuc" firstAttribute="leading" secondItem="euf-zV-YeK" secondAttribute="leading" constant="22" id="cLm-dE-dxW"/>
+                            <constraint firstItem="MXl-II-cDX" firstAttribute="top" secondItem="vKr-4f-aMu" secondAttribute="bottom" constant="8" id="dha-Fa-tIb"/>
+                            <constraint firstItem="aqD-Bm-anU" firstAttribute="leading" secondItem="sBA-f2-Uuc" secondAttribute="leading" id="hrn-Ze-aSa"/>
+                            <constraint firstItem="MXl-II-cDX" firstAttribute="leading" secondItem="euf-zV-YeK" secondAttribute="leading" constant="16" id="myi-D8-lbr"/>
+                            <constraint firstItem="sBA-f2-Uuc" firstAttribute="top" secondItem="e4c-uH-0td" secondAttribute="centerY" multiplier="257:389" id="s4I-70-uFn"/>
+                            <constraint firstItem="euf-zV-YeK" firstAttribute="bottom" secondItem="td2-pX-qpd" secondAttribute="bottom" constant="16" id="tHw-XU-2e6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bG6-U0-mKM"/>
+                        <viewLayoutGuide key="safeArea" id="euf-zV-YeK"/>
                     </view>
-                    <navigationItem key="navigationItem" title="리스트 작성" id="4ae-qo-yTx">
-                        <barButtonItem key="backBarButtonItem" title=" " id="gsO-0W-FUB"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="btnCancel" id="yB9-Bs-44J"/>
-                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="27B-h4-Aga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jV-s0-NIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5840.8000000000002" y="98.50074962518741"/>
+            <point key="canvasLocation" x="5860" y="100"/>
         </scene>
         <!--리스트 작성-->
         <scene sceneID="2q1-Bt-1JX">
             <objects>
-                <viewController id="pxu-Aa-dEn" customClass="AskerList7_DirectionViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pxu-Aa-dEn" customClass="AskerList8_ChatDirectionViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="74U-tm-xzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -974,7 +1043,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-t0-kiC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-IJ-5dc">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-IJ-5dc">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
                                                 <color key="tintColor" name="lightPurple"/>
                                                 <constraints>
@@ -983,7 +1052,7 @@
                                                 <color key="progressTintColor" name="lightPurple"/>
                                                 <color key="trackTintColor" name="white2"/>
                                             </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFb-xB-j9V">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFb-xB-j9V">
                                                 <rect key="frame" x="16" y="15" width="343" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="darkPurple"/>
@@ -1006,7 +1075,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="ABL-cv-Xjz" kind="show" id="0Xd-W5-gPt"/>
+                                                    <segue destination="ABL-cv-Xjz" kind="show" id="2FD-eF-GTO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1052,12 +1121,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVK-Qn-gfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6576.8000000000002" y="98.50074962518741"/>
+            <point key="canvasLocation" x="7425" y="100"/>
         </scene>
         <!--리스트 작성-->
         <scene sceneID="3h7-PX-JpS">
             <objects>
-                <viewController id="ABL-cv-Xjz" sceneMemberID="viewController">
+                <viewController id="ABL-cv-Xjz" customClass="AskerList9_AgreementViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fe0-BD-gTe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1079,7 +1148,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.88" translatesAutoresizingMaskIntoConstraints="NO" id="iYt-vK-ajT">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="iYt-vK-ajT">
                                 <rect key="frame" x="0.0" y="88" width="375" height="7"/>
                                 <color key="tintColor" name="lightPurple"/>
                                 <constraints>
@@ -1088,7 +1157,7 @@
                                 <color key="progressTintColor" name="lightPurple"/>
                                 <color key="trackTintColor" name="white2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VV-w4-lFF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VV-w4-lFF">
                                 <rect key="frame" x="16" y="103" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkPurple"/>
@@ -1200,7 +1269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJD-r7-hau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7348" y="88.669950738916256"/>
+            <point key="canvasLocation" x="8257" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a1F-co-mYk">
@@ -1244,6 +1313,9 @@
         </namedColor>
         <namedColor name="lightPurple">
             <color red="0.32156862745098042" green="0.32156862745098042" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="middlePurple">
+            <color red="0.21568627450980393" green="0.21568627450980393" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white2">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
