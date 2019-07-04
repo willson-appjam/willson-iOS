@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CdY-14-yRH">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--홈-->
+        <scene sceneID="YyD-0b-Eir">
+            <objects>
+                <viewController id="9j7-P7-lYU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fGc-e1-enk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baC-dW-eHS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <segue destination="Stt-DT-DlQ" kind="embed" id="z5A-TE-EtR"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="baC-dW-eHS" firstAttribute="leading" secondItem="ZPb-ER-jak" secondAttribute="leading" id="2NW-O2-PTm"/>
+                            <constraint firstItem="ZPb-ER-jak" firstAttribute="trailing" secondItem="baC-dW-eHS" secondAttribute="trailing" id="A1G-2D-TTE"/>
+                            <constraint firstItem="ZPb-ER-jak" firstAttribute="bottom" secondItem="baC-dW-eHS" secondAttribute="bottom" id="FmA-Fr-Oql"/>
+                            <constraint firstItem="baC-dW-eHS" firstAttribute="top" secondItem="ZPb-ER-jak" secondAttribute="top" id="KIx-Lf-10N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZPb-ER-jak"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="tab01Home" selectedImage="tab01HomeActive" id="U5X-Fd-YAC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnH-UQ-iQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="-305"/>
+        </scene>
+        <!--받은요청-->
+        <scene sceneID="mb7-Sf-tQl">
+            <objects>
+                <viewController id="RZl-Q2-DCt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdd-JC-o6g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-ML-IHM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <segue destination="pcM-cA-fsU" kind="embed" id="Pcq-MC-y6y"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KfV-ML-IHM" firstAttribute="leading" secondItem="Bkr-zk-e9P" secondAttribute="leading" id="6PX-5m-Tnv"/>
+                            <constraint firstItem="Bkr-zk-e9P" firstAttribute="trailing" secondItem="KfV-ML-IHM" secondAttribute="trailing" id="Htp-AM-QjI"/>
+                            <constraint firstItem="Bkr-zk-e9P" firstAttribute="bottom" secondItem="KfV-ML-IHM" secondAttribute="bottom" id="dOv-Cb-YxP"/>
+                            <constraint firstItem="KfV-ML-IHM" firstAttribute="top" secondItem="Bkr-zk-e9P" secondAttribute="top" id="vPW-U5-uKY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bkr-zk-e9P"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="받은요청" image="tab02Request" selectedImage="tab02RequestActive" id="mZc-xE-aV4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlT-xn-24s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="-305"/>
+        </scene>
+        <!--AskerMainViewController-->
+        <scene sceneID="0hf-Vd-MiD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AskerMain" referencedIdentifier="AskerMainViewController" id="Stt-DT-DlQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wZn-Qu-paI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7aU-Gg-wr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="-439"/>
+        </scene>
+        <!--askerRequestNavi-->
+        <scene sceneID="LUn-sm-1ek">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AskerRequest" referencedIdentifier="askerRequestNavi" id="pcM-cA-fsU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EtG-bL-LdN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjP-St-9og" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="-305"/>
+        </scene>
+        <!--askerChatListNavi-->
+        <scene sceneID="Jog-SD-Nj7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AskerChat" referencedIdentifier="askerChatListNavi" id="byR-sJ-mNs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="E64-97-q7c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAI-LM-C1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="621"/>
+        </scene>
+        <!--MyPageViewController-->
+        <scene sceneID="XjS-Kb-BzR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AskerMypage" referencedIdentifier="MyPageViewController" id="YyS-zJ-xe7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8CZ-0N-e3S"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvX-ez-ppP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="621"/>
+        </scene>
+        <!--채팅-->
+        <scene sceneID="sdV-Uw-LY5">
+            <objects>
+                <viewController id="xbf-fG-wUV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tEp-y1-0SB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-pl-hyp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <segue destination="byR-sJ-mNs" kind="embed" id="dd0-Bn-YT3"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eFG-iS-Tms" firstAttribute="bottom" secondItem="w1b-pl-hyp" secondAttribute="bottom" id="6bC-Tv-u4x"/>
+                            <constraint firstItem="eFG-iS-Tms" firstAttribute="trailing" secondItem="w1b-pl-hyp" secondAttribute="trailing" id="Ii9-Fi-aI7"/>
+                            <constraint firstItem="w1b-pl-hyp" firstAttribute="leading" secondItem="eFG-iS-Tms" secondAttribute="leading" id="RJJ-za-G0S"/>
+                            <constraint firstItem="w1b-pl-hyp" firstAttribute="top" secondItem="eFG-iS-Tms" secondAttribute="top" id="SGQ-1d-2QS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eFG-iS-Tms"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="채팅" image="tab03Chat" selectedImage="tab03ChatActive" id="Czt-BZ-Hkb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cG-DQ-V25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="621"/>
+        </scene>
+        <!--마이페이지-->
+        <scene sceneID="nha-XS-j6d">
+            <objects>
+                <viewController id="U08-Wl-HbH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5E-VN-wOU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39n-5S-SDZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <segue destination="YyS-zJ-xe7" kind="embed" id="eCp-bf-578"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gr9-q6-uH3" firstAttribute="trailing" secondItem="39n-5S-SDZ" secondAttribute="trailing" id="8RN-lX-9et"/>
+                            <constraint firstItem="39n-5S-SDZ" firstAttribute="leading" secondItem="gr9-q6-uH3" secondAttribute="leading" id="Arm-f7-euX"/>
+                            <constraint firstItem="gr9-q6-uH3" firstAttribute="bottom" secondItem="39n-5S-SDZ" secondAttribute="bottom" id="fZx-K1-4d5"/>
+                            <constraint firstItem="39n-5S-SDZ" firstAttribute="top" secondItem="gr9-q6-uH3" secondAttribute="top" id="rmk-sa-XbA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gr9-q6-uH3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="tab04Mypage" selectedImage="tab04MypageActive" id="13k-cl-UAw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3e-Bt-kiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213" y="621"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WeL-Ol-VNs">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CdY-14-yRH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zoO-BS-C5f">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="darkPurple"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9j7-P7-lYU" kind="relationship" relationship="viewControllers" id="x6l-KH-82V"/>
+                        <segue destination="RZl-Q2-DCt" kind="relationship" relationship="viewControllers" id="b7j-n5-L0N"/>
+                        <segue destination="xbf-fG-wUV" kind="relationship" relationship="viewControllers" id="hXL-ZX-pqo"/>
+                        <segue destination="U08-Wl-HbH" kind="relationship" relationship="viewControllers" id="WT7-7W-qnq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1Q-1J-Gwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498.55072463768118" y="38.169642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab01Home" width="22" height="25"/>
+        <image name="tab01HomeActive" width="22" height="25"/>
+        <image name="tab02Request" width="24" height="24"/>
+        <image name="tab02RequestActive" width="24" height="24"/>
+        <image name="tab03Chat" width="23" height="24"/>
+        <image name="tab03ChatActive" width="23" height="24"/>
+        <image name="tab04Mypage" width="23" height="23"/>
+        <image name="tab04MypageActive" width="23" height="23"/>
+        <namedColor name="darkPurple">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

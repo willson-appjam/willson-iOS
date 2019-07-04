@@ -18,16 +18,16 @@
         <!--Asker Main View Controller-->
         <scene sceneID="zqX-z2-ylz">
             <objects>
-                <viewController id="1w9-mS-2xH" customClass="AskerMainViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HmU-ig-oU6">
+                <viewController storyboardIdentifier="AskerMainViewController" id="1w9-mS-2xH" customClass="AskerMainViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="HmU-ig-oU6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztI-z5-BPs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztI-z5-BPs">
+                                <rect key="frame" x="0.0" y="44" width="375" height="1707"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-Pb-WHQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-Pb-WHQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1717"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmt-fj-7GM" userLabel="StoryView">
                                                 <rect key="frame" x="0.0" y="556" width="375" height="391"/>
@@ -287,8 +287,8 @@
                                                     <constraint firstAttribute="trailing" secondItem="3mh-pf-vaI" secondAttribute="trailing" constant="44" id="mUv-9u-40w"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wM-IM-dJd" userLabel="ReviewView">
-                                                <rect key="frame" x="0.0" y="947" width="375" height="600"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wM-IM-dJd" userLabel="ReviewView">
+                                                <rect key="frame" x="0.0" y="947" width="375" height="517"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klx-Mb-6kM">
                                                         <rect key="frame" x="20.999999999999993" y="36" width="109.33333333333331" height="53.333333333333343"/>
@@ -298,8 +298,8 @@
                                                         <color key="textColor" name="darkPurple"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r5-qV-AxQ">
-                                                        <rect key="frame" x="21" y="113.33333333333324" width="333" height="215.66666666666663"/>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4r5-qV-AxQ">
+                                                        <rect key="frame" x="21" y="113.33333333333326" width="333" height="132.66666666666663"/>
                                                     </scrollView>
                                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="2me-hf-oGg">
                                                         <rect key="frame" x="168" y="281" width="39" height="37"/>
@@ -359,6 +359,8 @@
                             <color key="tintColor" name="darkPurple"/>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1800"/>
                     <connections>
                         <outlet property="AskerScrollView" destination="4r5-qV-AxQ" id="fCq-Ze-dyh"/>
