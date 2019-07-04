@@ -40,10 +40,6 @@
 		D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC622CA0B2A00458662 /* AskerList2_FeelViewController.swift */; };
 		D982BCC922CA0B3800458662 /* AskerList3_ImportantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC822CA0B3800458662 /* AskerList3_ImportantViewController.swift */; };
 		D982BCCB22CA2B3E00458662 /* AskerList4_DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCCA22CA2B3E00458662 /* AskerList4_DetailViewController.swift */; };
-		D982BCCD22CA308800458662 /* AskerList5_SelectHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCCC22CA308800458662 /* AskerList5_SelectHelperViewController.swift */; };
-		D982BCCF22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCCE22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift */; };
-		D982BCD122CA3DFE00458662 /* AskerList7_DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCD022CA3DFE00458662 /* AskerList7_DirectionViewController.swift */; };
-		D982BCD322CA3E1700458662 /* AskerList8_AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCD222CA3E1700458662 /* AskerList8_AgreementViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,10 +80,6 @@
 		D982BCC622CA0B2A00458662 /* AskerList2_FeelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList2_FeelViewController.swift; sourceTree = "<group>"; };
 		D982BCC822CA0B3800458662 /* AskerList3_ImportantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList3_ImportantViewController.swift; sourceTree = "<group>"; };
 		D982BCCA22CA2B3E00458662 /* AskerList4_DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList4_DetailViewController.swift; sourceTree = "<group>"; };
-		D982BCCC22CA308800458662 /* AskerList5_SelectHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList5_SelectHelperViewController.swift; sourceTree = "<group>"; };
-		D982BCCE22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList6_DetailHelperViewController.swift; sourceTree = "<group>"; };
-		D982BCD022CA3DFE00458662 /* AskerList7_DirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList7_DirectionViewController.swift; sourceTree = "<group>"; };
-		D982BCD222CA3E1700458662 /* AskerList8_AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList8_AgreementViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,10 +275,6 @@
 				D982BCC622CA0B2A00458662 /* AskerList2_FeelViewController.swift */,
 				D982BCC822CA0B3800458662 /* AskerList3_ImportantViewController.swift */,
 				D982BCCA22CA2B3E00458662 /* AskerList4_DetailViewController.swift */,
-				D982BCCC22CA308800458662 /* AskerList5_SelectHelperViewController.swift */,
-				D982BCCE22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift */,
-				D982BCD022CA3DFE00458662 /* AskerList7_DirectionViewController.swift */,
-				D982BCD222CA3E1700458662 /* AskerList8_AgreementViewController.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -512,16 +500,12 @@
 				6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */,
 				663835B922C9BC30003265C7 /* Slide.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
-				D982BCD322CA3E1700458662 /* AskerList8_AgreementViewController.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 				D982BCC922CA0B3800458662 /* AskerList3_ImportantViewController.swift in Sources */,
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
 				D982BCCB22CA2B3E00458662 /* AskerList4_DetailViewController.swift in Sources */,
-				D982BCD122CA3DFE00458662 /* AskerList7_DirectionViewController.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
-				D982BCCF22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift in Sources */,
 				D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */,
-				D982BCCD22CA308800458662 /* AskerList5_SelectHelperViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
