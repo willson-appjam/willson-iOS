@@ -1,5 +1,5 @@
 //
-//  AskerList4_DetailViewController.swift
+//  AskerList8_ChatDirectionViewController.swift
 //  Willson
 //
 //  Created by JHKim on 04/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AskerList4_DetailViewController: UIViewController {
+class AskerList8_ChatDirectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  AskerList4_DetailViewController.swift
+//  AskerList9_AgreementViewController.swift
 //  Willson
 //
 //  Created by JHKim on 04/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AskerList4_DetailViewController: UIViewController {
+class AskerList9_AgreementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

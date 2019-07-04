@@ -1,5 +1,5 @@
 //
-//  AskerList4_DetailViewController.swift
+//  AskerList3_ImpactViewController.swift
 //  Willson
 //
 //  Created by JHKim on 04/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AskerList4_DetailViewController: UIViewController {
+class AskerList3_ImpactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

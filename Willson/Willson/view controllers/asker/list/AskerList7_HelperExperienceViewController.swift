@@ -1,5 +1,5 @@
 //
-//  AskerList4_DetailViewController.swift
+//  AskerList7_HelperExperienceViewController.swift
 //  Willson
 //
 //  Created by JHKim on 04/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AskerList4_DetailViewController: UIViewController {
+class AskerList7_HelperExperienceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

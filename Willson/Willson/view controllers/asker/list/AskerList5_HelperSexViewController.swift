@@ -1,18 +1,15 @@
 //
-//  AskerList3_ImportantViewController.swift
+//  AskerList5_HelperSexViewController.swift
 //  Willson
 //
-//  Created by JHKim on 01/07/2019.
+//  Created by JHKim on 04/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
-import DLRadioButton
 
-class AskerList3_ImportantViewController: UIViewController {
+class AskerList5_HelperSexViewController: UIViewController {
 
-    @IBOutlet weak var radioButton_1: DLRadioButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
