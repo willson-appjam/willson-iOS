@@ -49,6 +49,10 @@
                 <constraint firstItem="psJ-Kq-6LM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ihy-Aa-X2K"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="concernLabel" destination="jAe-xo-cI3" id="9is-yh-gZ3"/>
+                <outlet property="concernTextField" destination="psJ-Kq-6LM" id="1sd-VD-4gb"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="35.15625"/>
         </collectionViewCell>
     </objects>

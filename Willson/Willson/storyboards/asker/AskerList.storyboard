@@ -26,14 +26,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oL5-eV-8nI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listImgCategory01Love" translatesAutoresizingMaskIntoConstraints="NO" id="oL5-eV-8nI">
                                 <rect key="frame" x="130" y="238" width="115" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="1U4-bk-BJo"/>
                                     <constraint firstAttribute="width" constant="115" id="eyD-Il-8nw"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0L9-Xs-3X4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연애" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0L9-Xs-3X4">
                                 <rect key="frame" x="16" y="370" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
                                 <color key="textColor" name="darkPurple"/>
@@ -151,7 +151,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="uh3-4E-OH7" kind="show" id="jUy-ub-nBw"/>
+                                    <segue destination="uh3-4E-OH7" kind="show" id="KHv-Td-RQ1"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u19-S7-QVU">
@@ -163,7 +163,45 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ConcernCollectionViewCell" id="fbk-jR-ixe" customClass="ConcernCollectionViewCell" customModule="Willson" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="154" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giQ-r6-xfx">
+                                                    <rect key="frame" x="8" y="16.666666666666668" width="138" height="18.000000000000004"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                    <color key="textColor" name="lightPurple"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+ 직접입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQl-yz-3Y1">
+                                                    <rect key="frame" x="8" y="16.666666666666668" width="138" height="18.000000000000004"/>
+                                                    <color key="textColor" name="lightPurple"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="giQ-r6-xfx" firstAttribute="leading" secondItem="fbk-jR-ixe" secondAttribute="leading" constant="8" id="24z-6R-fy8"/>
+                                            <constraint firstItem="AQl-yz-3Y1" firstAttribute="leading" secondItem="fbk-jR-ixe" secondAttribute="leading" constant="8" id="2GV-YZ-0dd"/>
+                                            <constraint firstItem="giQ-r6-xfx" firstAttribute="centerY" secondItem="fbk-jR-ixe" secondAttribute="centerY" id="2Le-Kr-DgO"/>
+                                            <constraint firstAttribute="trailing" secondItem="giQ-r6-xfx" secondAttribute="trailing" constant="8" id="EnT-s4-9xB"/>
+                                            <constraint firstAttribute="trailing" secondItem="AQl-yz-3Y1" secondAttribute="trailing" constant="8" id="J4F-wt-lgC"/>
+                                            <constraint firstItem="giQ-r6-xfx" firstAttribute="centerY" secondItem="fbk-jR-ixe" secondAttribute="centerY" id="RGl-sc-pEc"/>
+                                            <constraint firstItem="AQl-yz-3Y1" firstAttribute="centerY" secondItem="fbk-jR-ixe" secondAttribute="centerY" id="awY-n5-ceh"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="1as-gS-Pdh"/>
+                                        <connections>
+                                            <outlet property="concernLabel" destination="giQ-r6-xfx" id="TFb-hm-udF"/>
+                                            <outlet property="concernTextField" destination="AQl-yz-3Y1" id="k3L-Ej-LT4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,8 +229,14 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="URt-I9-aOv"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="btnCancel" id="2KH-QH-79J">
                             <color key="tintColor" name="black"/>
+                            <connections>
+                                <action selector="tappedCancelBarButton:" destination="3bq-kV-OHW" id="1Aq-ka-zZW"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="concernCollectionView" destination="u19-S7-QVU" id="Nnl-4l-CRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlK-c2-3oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,28 +272,46 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1개만 선택해주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="867-mD-YBR">
-                                <rect key="frame" x="22" y="231.66666666666666" width="131" height="18"/>
+                                <rect key="frame" x="22" y="231.66666666666666" width="130.33333333333334" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="brownishGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GgO-lT-rDB">
-                                <rect key="frame" x="20" y="279.66666666666669" width="335" height="254.33333333333331"/>
+                                <rect key="frame" x="20" y="279.66666666666674" width="335" height="334.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pNC-00-AaH">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="100" height="36"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1j2-Mf-IgE">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeelCollectionViewCell" id="8z1-Ap-PFU" customClass="FeelCollectionViewCell" customModule="Willson" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#당황스러운" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTD-2l-z0c">
+                                                    <rect key="frame" x="0.0" y="6" width="100" height="20"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                                    <color key="textColor" name="lightPurple"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KTD-2l-z0c" secondAttribute="trailing" id="2dh-qS-1nu"/>
+                                            <constraint firstItem="KTD-2l-z0c" firstAttribute="leading" secondItem="8z1-Ap-PFU" secondAttribute="leading" id="Ffq-fn-WbD"/>
+                                            <constraint firstItem="KTD-2l-z0c" firstAttribute="centerY" secondItem="8z1-Ap-PFU" secondAttribute="centerY" id="vPC-XK-SrJ"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="JBS-fG-dAq"/>
+                                        <connections>
+                                            <outlet property="feelLabel" destination="KTD-2l-z0c" id="Gh6-jl-5z1"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -283,6 +345,7 @@
                             <constraint firstItem="GgO-lT-rDB" firstAttribute="leading" secondItem="rWN-E7-Gy6" secondAttribute="leading" constant="20" id="9J5-i8-AhE"/>
                             <constraint firstItem="rWN-E7-Gy6" firstAttribute="trailing" secondItem="WFH-lr-UFi" secondAttribute="trailing" constant="16" id="9Ug-cH-8hu"/>
                             <constraint firstItem="867-mD-YBR" firstAttribute="leading" secondItem="rWN-E7-Gy6" secondAttribute="leading" constant="22" id="Jwv-0W-DeX"/>
+                            <constraint firstItem="CAD-o0-xxu" firstAttribute="top" secondItem="GgO-lT-rDB" secondAttribute="bottom" constant="100" id="Ssm-Hh-luD"/>
                             <constraint firstItem="Ew7-KJ-mzg" firstAttribute="top" secondItem="hpC-MS-K5M" secondAttribute="centerY" multiplier="193:389" id="U7b-ZW-Bsa"/>
                             <constraint firstItem="E0d-xT-jyC" firstAttribute="top" secondItem="rWN-E7-Gy6" secondAttribute="top" id="Vsz-Ie-wro"/>
                             <constraint firstItem="Ew7-KJ-mzg" firstAttribute="leading" secondItem="rWN-E7-Gy6" secondAttribute="leading" constant="22" id="c2E-Ws-dP2"/>
@@ -290,7 +353,6 @@
                             <constraint firstItem="E0d-xT-jyC" firstAttribute="leading" secondItem="hpC-MS-K5M" secondAttribute="leading" id="keU-VO-noO"/>
                             <constraint firstItem="CAD-o0-xxu" firstAttribute="bottom" secondItem="rWN-E7-Gy6" secondAttribute="bottom" constant="-16" id="oUr-f1-vWc"/>
                             <constraint firstItem="GgO-lT-rDB" firstAttribute="top" secondItem="867-mD-YBR" secondAttribute="bottom" constant="30" id="pQU-W0-9xS"/>
-                            <constraint firstItem="CAD-o0-xxu" firstAttribute="top" secondItem="GgO-lT-rDB" secondAttribute="bottom" constant="180" id="tTe-Hr-CDR"/>
                             <constraint firstItem="rWN-E7-Gy6" firstAttribute="trailing" secondItem="E0d-xT-jyC" secondAttribute="trailing" id="vw3-KA-teb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rWN-E7-Gy6"/>
@@ -299,8 +361,14 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="iak-sB-Y8l"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="btnCancel" id="6JS-MA-ePF">
                             <color key="tintColor" name="black"/>
+                            <connections>
+                                <action selector="tappedCancelBarButton:" destination="uh3-4E-OH7" id="49V-K2-sUN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="feelCollectionView" destination="GgO-lT-rDB" id="1eR-Mp-vJ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txF-Ay-JH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -539,7 +607,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="radioButton_1" destination="JmW-c4-l5W" id="N9e-sj-JT8"/>
+                        <outlet property="radioButton_1" destination="JmW-c4-l5W" id="QgP-YH-6F8"/>
+                        <outlet property="radioButton_2" destination="Ylg-Qy-qyn" id="fDU-NS-OEj"/>
+                        <outlet property="radioButton_3" destination="wCq-Qr-bkT" id="AsM-y5-YA3"/>
+                        <outlet property="radioButton_4" destination="yuf-nT-0fp" id="rqJ-ch-ptA"/>
+                        <outlet property="radioButton_5" destination="rrH-TX-NAc" id="uii-ar-q4U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="riM-pB-TRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -678,7 +750,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Klg-Zy-1tw">
-                                <rect key="frame" x="0.0" y="88" width="375" height="7"/>
+                                <rect key="frame" x="0.0" y="88" width="374" height="7"/>
                                 <color key="tintColor" name="lightPurple"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="7" id="0Bw-Dy-MwS"/>
@@ -687,7 +759,7 @@
                                 <color key="trackTintColor" name="white2"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-cf-ljW">
-                                <rect key="frame" x="16" y="103" width="343" height="20.666666666666671"/>
+                                <rect key="frame" x="16" y="103" width="342" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
@@ -699,7 +771,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msY-VM-VBJ">
-                                <rect key="frame" x="33" y="714" width="309" height="48"/>
+                                <rect key="frame" x="32.333333333333343" y="714" width="309" height="48"/>
                                 <color key="backgroundColor" name="buttonRight"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="buL-R7-mRH"/>
@@ -715,13 +787,53 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="s0K-Rz-nPo" kind="show" id="at3-cU-F5k"/>
+                                    <segue destination="s0K-Rz-nPo" kind="show" id="k75-jR-zp3"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="adT-wF-rqS">
+                                <rect key="frame" x="22" y="309.33333333333331" width="330" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0W-Sz-DCm">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="hna-CQ-Qvy"/>
+                                            <constraint firstAttribute="width" constant="100" id="kQd-6u-Vfz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                        <state key="normal" title="남자">
+                                            <color key="titleColor" name="lightPurple"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8n-S8-yR8">
+                                        <rect key="frame" x="115" y="0.0" width="100" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="G6X-sB-AkV"/>
+                                            <constraint firstAttribute="width" constant="100" id="ls8-DR-Kxd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                        <state key="normal" title="여자">
+                                            <color key="titleColor" name="lightPurple"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWR-u7-wRc">
+                                        <rect key="frame" x="230" y="0.0" width="100" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Lj8-9Z-HL5"/>
+                                            <constraint firstAttribute="width" constant="100" id="vLe-X9-ISh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                        <state key="normal" title="모두">
+                                            <color key="titleColor" name="lightPurple"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jUZ-bM-OID" firstAttribute="top" secondItem="uNS-gZ-cIr" secondAttribute="centerY" multiplier="193:389" id="1YI-Kt-LaW"/>
+                            <constraint firstItem="adT-wF-rqS" firstAttribute="top" secondItem="LYy-Y2-3ed" secondAttribute="bottom" constant="21" id="62R-rx-cfo"/>
+                            <constraint firstItem="adT-wF-rqS" firstAttribute="leading" secondItem="uNS-gZ-cIr" secondAttribute="leading" constant="22" id="8iX-kS-wzQ"/>
                             <constraint firstItem="Klg-Zy-1tw" firstAttribute="leading" secondItem="uNS-gZ-cIr" secondAttribute="leading" id="Hjf-NQ-MIt"/>
                             <constraint firstItem="msY-VM-VBJ" firstAttribute="centerX" secondItem="TGX-Wf-0qH" secondAttribute="centerX" id="QoJ-os-q8T"/>
                             <constraint firstItem="0iU-cf-ljW" firstAttribute="top" secondItem="Klg-Zy-1tw" secondAttribute="bottom" constant="8" id="QyW-uR-kIC"/>
@@ -733,6 +845,7 @@
                             <constraint firstItem="TGX-Wf-0qH" firstAttribute="trailing" secondItem="Klg-Zy-1tw" secondAttribute="trailing" id="uTE-40-WdD"/>
                             <constraint firstItem="0iU-cf-ljW" firstAttribute="leading" secondItem="TGX-Wf-0qH" secondAttribute="leading" constant="16" id="wbN-yz-dlx"/>
                             <constraint firstItem="jUZ-bM-OID" firstAttribute="leading" secondItem="TGX-Wf-0qH" secondAttribute="leading" constant="22" id="x62-MH-eRS"/>
+                            <constraint firstAttribute="trailing" secondItem="adT-wF-rqS" secondAttribute="trailing" constant="22" id="zeE-LV-sWM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TGX-Wf-0qH"/>
                     </view>
@@ -944,7 +1057,7 @@
             </objects>
             <point key="canvasLocation" x="6662" y="98"/>
         </scene>
-        <!--Asker List6 Helper Character View Controller-->
+        <!--리스트 작성-->
         <scene sceneID="JT4-Ok-JUE">
             <objects>
                 <viewController id="s0K-Rz-nPo" customClass="AskerList6_HelperCharacterViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
@@ -1003,9 +1116,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Qnd-kO-6bg" kind="show" id="2io-bI-JBy"/>
+                                    <segue destination="Qnd-kO-6bg" kind="show" id="I8h-u2-GpN"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="99A-8u-yHR">
+                                <rect key="frame" x="20" y="343.33333333333326" width="335" height="341.66666666666674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cGm-i9-X1P">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1014,16 +1138,24 @@
                             <constraint firstItem="aqD-Bm-anU" firstAttribute="top" secondItem="sBA-f2-Uuc" secondAttribute="bottom" constant="8" id="BMc-Sj-lhm"/>
                             <constraint firstItem="euf-zV-YeK" firstAttribute="trailing" secondItem="MXl-II-cDX" secondAttribute="trailing" constant="16" id="DOy-JY-8IH"/>
                             <constraint firstItem="vKr-4f-aMu" firstAttribute="top" secondItem="euf-zV-YeK" secondAttribute="top" id="Qob-g0-O3K"/>
+                            <constraint firstItem="td2-pX-qpd" firstAttribute="top" secondItem="99A-8u-yHR" secondAttribute="bottom" constant="29" id="RAu-Ui-589"/>
                             <constraint firstItem="vKr-4f-aMu" firstAttribute="leading" secondItem="euf-zV-YeK" secondAttribute="leading" id="Rxo-63-r9K"/>
                             <constraint firstItem="sBA-f2-Uuc" firstAttribute="leading" secondItem="euf-zV-YeK" secondAttribute="leading" constant="22" id="cLm-dE-dxW"/>
                             <constraint firstItem="MXl-II-cDX" firstAttribute="top" secondItem="vKr-4f-aMu" secondAttribute="bottom" constant="8" id="dha-Fa-tIb"/>
+                            <constraint firstItem="99A-8u-yHR" firstAttribute="top" secondItem="aqD-Bm-anU" secondAttribute="bottom" constant="29" id="hdd-0A-x5r"/>
                             <constraint firstItem="aqD-Bm-anU" firstAttribute="leading" secondItem="sBA-f2-Uuc" secondAttribute="leading" id="hrn-Ze-aSa"/>
+                            <constraint firstItem="99A-8u-yHR" firstAttribute="leading" secondItem="euf-zV-YeK" secondAttribute="leading" constant="20" id="kjp-DM-3iw"/>
                             <constraint firstItem="MXl-II-cDX" firstAttribute="leading" secondItem="euf-zV-YeK" secondAttribute="leading" constant="16" id="myi-D8-lbr"/>
                             <constraint firstItem="sBA-f2-Uuc" firstAttribute="top" secondItem="e4c-uH-0td" secondAttribute="centerY" multiplier="257:389" id="s4I-70-uFn"/>
                             <constraint firstItem="euf-zV-YeK" firstAttribute="bottom" secondItem="td2-pX-qpd" secondAttribute="bottom" constant="16" id="tHw-XU-2e6"/>
+                            <constraint firstItem="euf-zV-YeK" firstAttribute="trailing" secondItem="99A-8u-yHR" secondAttribute="trailing" constant="20" id="wR7-CW-cnq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="euf-zV-YeK"/>
                     </view>
+                    <navigationItem key="navigationItem" title="리스트 작성" id="c8j-ci-3Zn">
+                        <barButtonItem key="backBarButtonItem" title=" " id="RkL-Pg-0cO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="btnCancel" id="1ad-o2-xdR"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jV-s0-NIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1034,14 +1166,14 @@
             <objects>
                 <viewController id="pxu-Aa-dEn" customClass="AskerList8_ChatDirectionViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="74U-tm-xzy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eff-ik-1y2">
-                                <rect key="frame" x="0.0" y="88" width="375" height="1078"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="878"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-t0-kiC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="843"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-IJ-5dc">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
@@ -1053,13 +1185,13 @@
                                                 <color key="trackTintColor" name="white2"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFb-xB-j9V">
-                                                <rect key="frame" x="16" y="15" width="343" height="21"/>
+                                                <rect key="frame" x="16" y="14.999999999999998" width="343" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrb-jq-KyP">
-                                                <rect key="frame" x="33" y="936" width="309" height="48"/>
+                                                <rect key="frame" x="33" y="779" width="309" height="48"/>
                                                 <color key="backgroundColor" name="buttonRight"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="309" id="aLu-2L-mcu"/>
@@ -1078,18 +1210,548 @@
                                                     <segue destination="ABL-cv-Xjz" kind="show" id="2FD-eF-GTO"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 대화 방향은 무엇인가요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7e-8V-1kq">
+                                                <rect key="frame" x="22" y="97" width="262.66666666666669" height="22.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
+                                                <color key="textColor" name="darkPurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중요할수록 큰 숫자를 골라주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk4-bU-KoB">
+                                                <rect key="frame" x="22" y="125.33333333333334" width="216" height="18"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                <color key="textColor" name="brownishGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제 얘기에 대한 공감과 위로로 감정을 해소하고 싶어요." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-gZ-FRr">
+                                                <rect key="frame" x="22" y="226" width="331" height="35.666666666666686"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                <color key="textColor" name="middlePurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공감을 얻고싶어요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV6-zp-giS">
+                                                <rect key="frame" x="22" y="197" width="135.66666666666666" height="20"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                                <color key="textColor" name="darkPurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-dZ-tEQ">
+                                                <rect key="frame" x="22" y="275.66666666666669" width="331" height="39"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="253-bS-yGr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EW-OJ-FQ8">
+                                                                <rect key="frame" x="15.666666666666664" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHn-XB-cMj" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333336" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="17" id="Zzr-eD-V6m"/>
+                                                                    <constraint firstAttribute="height" constant="17" id="izJ-0p-GHF"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="BuZ-Hr-cRq"/>
+                                                                    <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="XaR-qN-7eo"/>
+                                                                    <outletCollection property="otherButtons" destination="5fK-fm-r8B" id="4O4-mc-QYc"/>
+                                                                    <outletCollection property="otherButtons" destination="Z30-ah-ZDM" id="p7q-LD-X1j"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BDE-rK-hdF">
+                                                        <rect key="frame" x="72.333333333333329" y="0.0" width="41.333333333333329" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-pZ-qXK">
+                                                                <rect key="frame" x="15.666666666666671" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POY-cw-4Wc" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333343" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="17" id="ZnO-7n-ky1"/>
+                                                                    <constraint firstAttribute="height" constant="17" id="nti-KO-4Ez"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="KXi-oX-Wbd"/>
+                                                                    <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="e5g-du-UOF"/>
+                                                                    <outletCollection property="otherButtons" destination="5fK-fm-r8B" id="bOV-FA-Gck"/>
+                                                                    <outletCollection property="otherButtons" destination="Z30-ah-ZDM" id="cac-6X-Gg5"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dfk-WL-6kG">
+                                                        <rect key="frame" x="144.66666666666666" y="0.0" width="41.666666666666657" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-dY-fIG">
+                                                                <rect key="frame" x="16" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8z-DA-bZW" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333343" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="17" id="GRW-WZ-8Px"/>
+                                                                    <constraint firstAttribute="height" constant="17" id="lyY-H4-4cM"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="Cbj-Iz-S9L"/>
+                                                                    <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="5AI-Zs-W10"/>
+                                                                    <outletCollection property="otherButtons" destination="5fK-fm-r8B" id="o2E-RP-1Zo"/>
+                                                                    <outletCollection property="otherButtons" destination="Z30-ah-ZDM" id="skw-oA-Gop"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BGl-QO-n7P">
+                                                        <rect key="frame" x="217.33333333333334" y="0.0" width="41.333333333333343" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPP-Gn-tEn">
+                                                                <rect key="frame" x="15.666666666666657" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fK-fm-r8B" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="5Vz-qL-Hyo"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="Jfy-2S-1DN"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="y5c-Nc-eVI"/>
+                                                                    <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="b54-xe-QSI"/>
+                                                                    <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="miV-NW-9JM"/>
+                                                                    <outletCollection property="otherButtons" destination="Z30-ah-ZDM" id="eAF-9g-VaX"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rk3-YA-uLK">
+                                                        <rect key="frame" x="289.66666666666669" y="0.0" width="41.333333333333314" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5W-87-3qF">
+                                                                <rect key="frame" x="15.666666666666629" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-ah-ZDM" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="7Nk-4Y-q7f"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="tTm-Pe-8Z1"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="PWg-bD-lr3"/>
+                                                                    <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="YY3-u3-NUe"/>
+                                                                    <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="D8m-DM-FdG"/>
+                                                                    <outletCollection property="otherButtons" destination="5fK-fm-r8B" id="UjN-4q-bGv"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuz-Xa-2uH">
+                                                <rect key="frame" x="22" y="408.66666666666669" width="331" height="35.666666666666686"/>
+                                                <string key="text">저의 고민에 대한 현실적인 조언이 필요해요. 
+</string>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                <color key="textColor" name="middlePurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="문제를 해결하고 싶어요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMQ-Od-gbb">
+                                                <rect key="frame" x="22" y="379.66666666666669" width="331" height="20"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                                <color key="textColor" name="darkPurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="YZJ-D3-FiV">
+                                                <rect key="frame" x="22" y="458.33333333333337" width="331" height="39"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7sF-nY-UAs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-Iq-v6U">
+                                                                <rect key="frame" x="15.666666666666664" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c7-9G-c5c" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333336" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="LNN-v6-Vyo"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="Q9s-4q-4x4"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="44n-Lw-x2w"/>
+                                                                    <outletCollection property="otherButtons" destination="bmK-de-EqR" id="T4U-tX-54p"/>
+                                                                    <outletCollection property="otherButtons" destination="cV7-Fd-rP2" id="LR7-DB-c7L"/>
+                                                                    <outletCollection property="otherButtons" destination="zO7-Nz-aFs" id="EGd-E7-gET"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VDD-xH-YbW">
+                                                        <rect key="frame" x="72.333333333333329" y="0.0" width="41.333333333333329" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zr-IV-Z50">
+                                                                <rect key="frame" x="15.666666666666671" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-w4-3fi" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333343" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="x9l-rX-Ev7"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="zBh-ae-oaA"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="25Q-MH-cru"/>
+                                                                    <outletCollection property="otherButtons" destination="bmK-de-EqR" id="UIL-jm-ya4"/>
+                                                                    <outletCollection property="otherButtons" destination="cV7-Fd-rP2" id="5c1-aF-9bG"/>
+                                                                    <outletCollection property="otherButtons" destination="zO7-Nz-aFs" id="nRd-MJ-lpO"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iam-7M-byU">
+                                                        <rect key="frame" x="144.66666666666666" y="0.0" width="41.666666666666657" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um2-av-cPR">
+                                                                <rect key="frame" x="16" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmK-de-EqR" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333343" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="IDs-UY-TXz"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="zqZ-fN-jPf"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="jQb-lX-HaR"/>
+                                                                    <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="Cce-Qt-Xqt"/>
+                                                                    <outletCollection property="otherButtons" destination="cV7-Fd-rP2" id="mMF-IS-lyd"/>
+                                                                    <outletCollection property="otherButtons" destination="zO7-Nz-aFs" id="xoU-MM-a0j"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vvS-jM-01T">
+                                                        <rect key="frame" x="217.33333333333334" y="0.0" width="41.333333333333343" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-fM-Mo9">
+                                                                <rect key="frame" x="15.666666666666657" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV7-Fd-rP2" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="B0s-GX-JUK"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="mRq-bl-xj4"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="X2g-ES-qUu"/>
+                                                                    <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="O5U-Zo-hLk"/>
+                                                                    <outletCollection property="otherButtons" destination="bmK-de-EqR" id="QvO-Mf-Xdy"/>
+                                                                    <outletCollection property="otherButtons" destination="zO7-Nz-aFs" id="kai-fj-tAh"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1WE-qN-5Ix">
+                                                        <rect key="frame" x="289.66666666666669" y="0.0" width="41.333333333333314" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WY-m5-Q1g">
+                                                                <rect key="frame" x="15.666666666666629" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zO7-Nz-aFs" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="Ekr-lZ-aSW"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="vnH-O0-WJG"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="zg3-cY-nWp"/>
+                                                                    <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="g4A-fG-hBn"/>
+                                                                    <outletCollection property="otherButtons" destination="bmK-de-EqR" id="1th-iT-rXV"/>
+                                                                    <outletCollection property="otherButtons" destination="cV7-Fd-rP2" id="irh-dW-qi7"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저와 비슷한 상황에서 답변자분이 겪은 경험을 듣고 싶어요." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ux-Ea-OpM">
+                                                <rect key="frame" x="22" y="591.33333333333337" width="331" height="35.666666666666629"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                <color key="textColor" name="middlePurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비슷한 경험을 듣고싶어요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAq-Uv-RX8">
+                                                <rect key="frame" x="22" y="562.33333333333337" width="331" height="20"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                                <color key="textColor" name="darkPurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="vlb-47-OOe">
+                                                <rect key="frame" x="22" y="641" width="331" height="39"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qPx-61-rdE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiI-yz-erZ">
+                                                                <rect key="frame" x="15.666666666666664" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycE-Yx-2cq" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333336" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="Jq1-R8-OlY"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="j3e-S5-Ar8"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="Mbw-ca-st8"/>
+                                                                    <outletCollection property="otherButtons" destination="7me-c5-JsX" id="vUZ-PT-VHw"/>
+                                                                    <outletCollection property="otherButtons" destination="kZl-cc-lmr" id="D62-Gk-YpQ"/>
+                                                                    <outletCollection property="otherButtons" destination="m4f-mm-vDG" id="sfw-Jg-cKH"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TLy-et-2B3">
+                                                        <rect key="frame" x="72.333333333333329" y="0.0" width="41.333333333333329" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-na-edr">
+                                                                <rect key="frame" x="15.666666666666671" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ6-jz-mGV" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333343" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="17" id="0uq-Q3-VhY"/>
+                                                                    <constraint firstAttribute="height" constant="17" id="q8I-m6-ybJ"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="jgE-GA-KtP"/>
+                                                                    <outletCollection property="otherButtons" destination="7me-c5-JsX" id="bo0-dv-Ypi"/>
+                                                                    <outletCollection property="otherButtons" destination="kZl-cc-lmr" id="aKi-dJ-Vz7"/>
+                                                                    <outletCollection property="otherButtons" destination="m4f-mm-vDG" id="vCF-vU-wWq"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kaD-hv-Fab">
+                                                        <rect key="frame" x="144.66666666666666" y="0.0" width="41.666666666666657" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyN-e2-H9J">
+                                                                <rect key="frame" x="16" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7me-c5-JsX" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12.333333333333343" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="PVt-Th-FMk"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="rX6-ow-QkD"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="VIM-Oi-D3d"/>
+                                                                    <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="Wcf-gm-UOR"/>
+                                                                    <outletCollection property="otherButtons" destination="kZl-cc-lmr" id="JSQ-H6-AfC"/>
+                                                                    <outletCollection property="otherButtons" destination="m4f-mm-vDG" id="aph-Ll-xuE"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-1e-xCS">
+                                                        <rect key="frame" x="217.33333333333334" y="0.0" width="41.333333333333343" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLK-A8-izj">
+                                                                <rect key="frame" x="15.666666666666657" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZl-cc-lmr" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="WZn-H1-VDN"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="exv-QB-4jo"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="g93-91-hKS"/>
+                                                                    <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="qgD-U9-fc4"/>
+                                                                    <outletCollection property="otherButtons" destination="7me-c5-JsX" id="VwZ-gd-1Wn"/>
+                                                                    <outletCollection property="otherButtons" destination="m4f-mm-vDG" id="zvX-w6-Ts5"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nVK-z6-P4k">
+                                                        <rect key="frame" x="289.66666666666669" y="0.0" width="41.333333333333314" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2p-id-Esr">
+                                                                <rect key="frame" x="15.666666666666629" y="0.0" width="10" height="17"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                                                <color key="textColor" name="darkPurple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4f-mm-vDG" customClass="DLRadioButton">
+                                                                <rect key="frame" x="12" y="22" width="17" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="B1Y-JZ-Lxc"/>
+                                                                    <constraint firstAttribute="width" constant="17" id="ogl-dI-mIG"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="btnRadioNonactive"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="L1H-2u-KKK"/>
+                                                                    <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="h4a-0z-BVW"/>
+                                                                    <outletCollection property="otherButtons" destination="7me-c5-JsX" id="I2D-Us-xGJ"/>
+                                                                    <outletCollection property="otherButtons" destination="kZl-cc-lmr" id="QcB-Tv-RHA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Yjf-dZ-tEQ" secondAttribute="trailing" constant="22" id="1gU-Af-7E9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tuz-Xa-2uH" secondAttribute="trailing" constant="22" id="2VC-2b-6IP"/>
                                             <constraint firstAttribute="trailing" secondItem="gjG-IJ-5dc" secondAttribute="trailing" id="540-oE-rPE"/>
+                                            <constraint firstItem="A7e-8V-1kq" firstAttribute="top" secondItem="QdR-t0-kiC" secondAttribute="top" constant="97" id="8gf-gd-cyU"/>
+                                            <constraint firstItem="Yjf-dZ-tEQ" firstAttribute="top" secondItem="ZCg-gZ-FRr" secondAttribute="bottom" constant="14" id="BJK-Bd-fb1"/>
+                                            <constraint firstItem="ZCg-gZ-FRr" firstAttribute="top" secondItem="SV6-zp-giS" secondAttribute="bottom" constant="9" id="BRs-Qg-oP9"/>
+                                            <constraint firstItem="Tuz-Xa-2uH" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="Bmz-at-hat"/>
                                             <constraint firstItem="HFb-xB-j9V" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="16" id="G2Q-pU-ocY"/>
+                                            <constraint firstItem="YZJ-D3-FiV" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="Gk8-P0-YoT"/>
+                                            <constraint firstItem="2ux-Ea-OpM" firstAttribute="leading" secondItem="OAq-Uv-RX8" secondAttribute="leading" id="H5W-AB-LTd"/>
+                                            <constraint firstItem="Yjf-dZ-tEQ" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="HuJ-OU-0KG"/>
+                                            <constraint firstItem="A7e-8V-1kq" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="IvF-q7-xMv"/>
+                                            <constraint firstItem="mk4-bU-KoB" firstAttribute="leading" secondItem="A7e-8V-1kq" secondAttribute="leading" id="Jsl-wr-dBE"/>
                                             <constraint firstItem="gjG-IJ-5dc" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" id="Jzj-8M-NjI"/>
-                                            <constraint firstAttribute="height" constant="1000" id="N6i-KK-Rky"/>
+                                            <constraint firstItem="xMQ-Od-gbb" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="KmU-rU-BIH"/>
+                                            <constraint firstAttribute="height" constant="843" id="N6i-KK-Rky"/>
+                                            <constraint firstItem="2ux-Ea-OpM" firstAttribute="trailing" secondItem="OAq-Uv-RX8" secondAttribute="trailing" id="NIu-NR-wJc"/>
+                                            <constraint firstItem="xMQ-Od-gbb" firstAttribute="top" secondItem="Yjf-dZ-tEQ" secondAttribute="bottom" constant="65" id="OeV-aQ-kvY"/>
+                                            <constraint firstItem="mk4-bU-KoB" firstAttribute="top" secondItem="A7e-8V-1kq" secondAttribute="bottom" constant="6" id="QW0-Q7-f1R"/>
+                                            <constraint firstItem="OAq-Uv-RX8" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="UiQ-7i-BMO"/>
+                                            <constraint firstItem="YZJ-D3-FiV" firstAttribute="top" secondItem="Tuz-Xa-2uH" secondAttribute="bottom" constant="14" id="Uld-bb-wjE"/>
                                             <constraint firstAttribute="bottom" secondItem="xrb-jq-KyP" secondAttribute="bottom" constant="16" id="YzU-BX-uuj"/>
                                             <constraint firstItem="HFb-xB-j9V" firstAttribute="top" secondItem="gjG-IJ-5dc" secondAttribute="bottom" constant="8" id="bMg-x8-gPI"/>
+                                            <constraint firstItem="vlb-47-OOe" firstAttribute="leading" secondItem="2ux-Ea-OpM" secondAttribute="leading" id="bZF-16-COU"/>
                                             <constraint firstAttribute="trailing" secondItem="HFb-xB-j9V" secondAttribute="trailing" constant="16" id="cCh-30-RSg"/>
+                                            <constraint firstAttribute="trailing" secondItem="OAq-Uv-RX8" secondAttribute="trailing" constant="22" id="cKe-DC-Ot5"/>
+                                            <constraint firstAttribute="trailing" secondItem="YZJ-D3-FiV" secondAttribute="trailing" constant="22" id="gCd-Wr-0bd"/>
+                                            <constraint firstItem="2ux-Ea-OpM" firstAttribute="top" secondItem="OAq-Uv-RX8" secondAttribute="bottom" constant="9" id="gbO-xO-W77"/>
+                                            <constraint firstAttribute="trailing" secondItem="xMQ-Od-gbb" secondAttribute="trailing" constant="22" id="hHy-sP-Ztd"/>
+                                            <constraint firstItem="OAq-Uv-RX8" firstAttribute="top" secondItem="YZJ-D3-FiV" secondAttribute="bottom" constant="65" id="hxN-JE-UdZ"/>
                                             <constraint firstItem="xrb-jq-KyP" firstAttribute="centerX" secondItem="QdR-t0-kiC" secondAttribute="centerX" id="nVt-Kf-Tr9"/>
+                                            <constraint firstItem="Tuz-Xa-2uH" firstAttribute="top" secondItem="xMQ-Od-gbb" secondAttribute="bottom" constant="9" id="rEK-lX-iAg"/>
+                                            <constraint firstItem="ZCg-gZ-FRr" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="uKr-Q1-hDb"/>
+                                            <constraint firstItem="SV6-zp-giS" firstAttribute="leading" secondItem="QdR-t0-kiC" secondAttribute="leading" constant="22" id="uUz-zx-cjk"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZCg-gZ-FRr" secondAttribute="trailing" constant="22" id="uVt-0i-rIl"/>
+                                            <constraint firstItem="vlb-47-OOe" firstAttribute="top" secondItem="2ux-Ea-OpM" secondAttribute="bottom" constant="14" id="v7x-hg-Q9X"/>
+                                            <constraint firstItem="SV6-zp-giS" firstAttribute="top" secondItem="QdR-t0-kiC" secondAttribute="top" constant="197" id="v9w-cM-UxA"/>
                                             <constraint firstItem="gjG-IJ-5dc" firstAttribute="top" secondItem="QdR-t0-kiC" secondAttribute="top" id="vJD-OP-ONe"/>
+                                            <constraint firstItem="vlb-47-OOe" firstAttribute="trailing" secondItem="2ux-Ea-OpM" secondAttribute="trailing" id="xna-fZ-2lW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1117,7 +1779,7 @@
                             <color key="tintColor" name="black"/>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="1200"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVK-Qn-gfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1139,7 +1801,7 @@
                                     <constraint firstAttribute="width" constant="309" id="r5y-7Y-Jdt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
-                                <state key="normal" title="다음">
+                                <state key="normal" title="작성 완료하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1167,7 +1829,7 @@
                                 <rect key="frame" x="0.0" y="140" width="375" height="558"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="윌슨 상담 동의서" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlK-XO-ChR">
-                                        <rect key="frame" x="22" y="45.333333333333343" width="144.33333333333334" height="23.333333333333329"/>
+                                        <rect key="frame" x="22" y="45.333333333333343" width="331" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>
@@ -1240,6 +1902,7 @@
                                     <constraint firstItem="sjr-6V-6Ys" firstAttribute="leading" secondItem="Zqw-ZM-BBI" secondAttribute="trailing" constant="9" id="aXL-cW-5bR"/>
                                     <constraint firstItem="KlK-XO-ChR" firstAttribute="leading" secondItem="eap-lW-Y6g" secondAttribute="leading" constant="22" id="cmo-ig-xec"/>
                                     <constraint firstItem="AQ7-JQ-2XL" firstAttribute="leading" secondItem="B1o-nJ-EN6" secondAttribute="trailing" constant="9" id="dKf-9A-6ab"/>
+                                    <constraint firstAttribute="trailing" secondItem="KlK-XO-ChR" secondAttribute="trailing" constant="22" id="dc2-jp-Jkt"/>
                                     <constraint firstItem="AQ7-JQ-2XL" firstAttribute="trailing" secondItem="sjr-6V-6Ys" secondAttribute="trailing" id="fsv-Ld-ehW"/>
                                     <constraint firstItem="B1o-nJ-EN6" firstAttribute="leading" secondItem="Zqw-ZM-BBI" secondAttribute="leading" id="hdE-w8-AHW"/>
                                     <constraint firstAttribute="trailing" secondItem="sjr-6V-6Ys" secondAttribute="trailing" constant="37" id="zCN-bH-Fu1"/>
@@ -1274,7 +1937,7 @@
         <!--Navigation Controller-->
         <scene sceneID="a1F-co-mYk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dCg-9k-utu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AskerListNavi" automaticallyAdjustsScrollViewInsets="NO" id="dCg-9k-utu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CYo-Jm-jCa">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1296,6 +1959,7 @@
         <image name="btnCheckNonactive" width="20" height="20"/>
         <image name="btnRadioActive" width="15" height="15"/>
         <image name="btnRadioNonactive" width="15" height="15"/>
+        <image name="listImgCategory01Love" width="119" height="118"/>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

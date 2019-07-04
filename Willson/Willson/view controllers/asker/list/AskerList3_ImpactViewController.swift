@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import DLRadioButton
 
 class AskerList3_ImpactViewController: UIViewController {
-
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var radioButton_1: DLRadioButton!
+    @IBOutlet weak var radioButton_2: DLRadioButton!
+    @IBOutlet weak var radioButton_3: DLRadioButton!
+    @IBOutlet weak var radioButton_4: DLRadioButton!
+    @IBOutlet weak var radioButton_5: DLRadioButton!
+    
+    //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -368,6 +368,7 @@
                     <connections>
                         <outlet property="AskerScrollView" destination="4r5-qV-AxQ" id="fCq-Ze-dyh"/>
                         <outlet property="ReviewPageControl" destination="2me-hf-oGg" id="m0z-xz-7fh"/>
+                        <outlet property="concern1View" destination="IvJ-sp-ufn" id="D9X-dO-aHV"/>
                         <outlet property="pageControl" destination="Fya-Ot-lqN" id="C35-8j-GMY"/>
                         <outlet property="scrollView" destination="NYN-4y-fUw" id="ilP-sn-WCJ"/>
                     </connections>

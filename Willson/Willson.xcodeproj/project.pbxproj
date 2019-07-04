@@ -66,6 +66,8 @@
 		D9AC037822CE1A4D00E16AD8 /* AskerList9_AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC037722CE1A4D00E16AD8 /* AskerList9_AgreementViewController.swift */; };
 		D9AC038222CE1DA400E16AD8 /* ConcernCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038022CE1DA400E16AD8 /* ConcernCollectionViewCell.swift */; };
 		D9AC038322CE1DA400E16AD8 /* ConcernCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC038122CE1DA400E16AD8 /* ConcernCollectionViewCell.xib */; };
+		D9AC038622CE601C00E16AD8 /* FeelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038422CE601C00E16AD8 /* FeelCollectionViewCell.swift */; };
+		D9AC038722CE601C00E16AD8 /* FeelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC038522CE601C00E16AD8 /* FeelCollectionViewCell.xib */; };
 		D9E64E4922CDDEDA003265E4 /* HelperRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4822CDDEDA003265E4 /* HelperRequestViewController.swift */; };
 		D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */; };
 		D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */; };
@@ -136,6 +138,8 @@
 		D9AC037722CE1A4D00E16AD8 /* AskerList9_AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList9_AgreementViewController.swift; sourceTree = "<group>"; };
 		D9AC038022CE1DA400E16AD8 /* ConcernCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9AC038122CE1DA400E16AD8 /* ConcernCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConcernCollectionViewCell.xib; sourceTree = "<group>"; };
+		D9AC038422CE601C00E16AD8 /* FeelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelCollectionViewCell.swift; sourceTree = "<group>"; };
+		D9AC038522CE601C00E16AD8 /* FeelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeelCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9E64E4822CDDEDA003265E4 /* HelperRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperRequestViewController.swift; sourceTree = "<group>"; };
 		D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperChatListViewController.swift; sourceTree = "<group>"; };
 		D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMypageViewController.swift; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 			children = (
 				D9AC038022CE1DA400E16AD8 /* ConcernCollectionViewCell.swift */,
 				D9AC038122CE1DA400E16AD8 /* ConcernCollectionViewCell.xib */,
+				D9AC038422CE601C00E16AD8 /* FeelCollectionViewCell.swift */,
+				D9AC038522CE601C00E16AD8 /* FeelCollectionViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				D965853722C4EB890072CC5E /* AskerList.storyboard in Resources */,
 				D9AC038322CE1DA400E16AD8 /* ConcernCollectionViewCell.xib in Resources */,
 				D965854122C4EBE50072CC5E /* HelperRequest.storyboard in Resources */,
+				D9AC038722CE601C00E16AD8 /* FeelCollectionViewCell.xib in Resources */,
 				669624F822CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib in Resources */,
 				D965852F22C4EB430072CC5E /* AskerLogin.storyboard in Resources */,
 				D965853322C4EB560072CC5E /* AskerChat.storyboard in Resources */,
@@ -636,6 +643,7 @@
 				66C661CE22CC8F3D008A451F /* PopUpViewController3.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 				66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */,
+				D9AC038622CE601C00E16AD8 /* FeelCollectionViewCell.swift in Sources */,
 				663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */,
 				66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */,
 				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,

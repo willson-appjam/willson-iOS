@@ -9,20 +9,28 @@
 import UIKit
 
 class AskerMainViewController: UIViewController, UIScrollViewDelegate {
+    
+    // MARK: - properties
+    var slides:[Slide] = [];
+    var reviewSlides:[ReviewSlide] = [];
+    
+    var timer = Timer()
+    var timer2 = Timer()
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var concern1View: UIView!
+    
     @IBOutlet weak var scrollView: UIScrollView! //헬퍼들의 이야기 좌우스크롤뷰
     @IBOutlet weak var AskerScrollView: UIScrollView! //질문자들의 후기 좌우스크롤뷰
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var ReviewPageControl: UIPageControl!
     
-    var slides:[Slide] = [];
-    var reviewSlides:[ReviewSlide] = [];
-   
-    var timer = Timer()
-    var timer2 = Timer()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 카테고리 UIView에 touch Action 추가
+        let concern1Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern1(_:)))
+        concern1View.addGestureRecognizer(concern1Gesture)
         
         //헬퍼
         scrollView.delegate = self
@@ -55,6 +63,13 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         let vc = storyboard.instantiateViewController(withIdentifier: "HelperTabbar")
         
         present(vc, animated: true)
+    }
+    
+    // MARK: - Methods
+    @objc func tappedconcern1(_ gesture: UITapGestureRecognizer) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "AskerList", bundle: nil)
+        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AskerListNavi")
+        present(viewcontroller, animated: true)
     }
     
     @objc func autoScroll() {
