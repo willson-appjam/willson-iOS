@@ -20,6 +20,7 @@ class AskerList2_FeelViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func tappedCancelBarButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - life cycle

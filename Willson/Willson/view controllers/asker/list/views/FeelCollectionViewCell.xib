@@ -42,7 +42,7 @@
             <connections>
                 <outlet property="feelLabel" destination="vyN-q4-jEj" id="5kR-WR-hSh"/>
             </connections>
-            <point key="canvasLocation" x="157.97101449275362" y="35.491071428571423"/>
+            <point key="canvasLocation" x="155.07246376811597" y="34.821428571428569"/>
         </collectionViewCell>
     </objects>
     <resources>

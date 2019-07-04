@@ -18,6 +18,7 @@ class AskerList1_CategoryViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func tappedCancelBarButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - life cycle
