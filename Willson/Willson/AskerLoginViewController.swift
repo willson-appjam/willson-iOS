@@ -45,9 +45,9 @@ class AskerLoginViewController: UIViewController {
     }
     
     @IBAction func facebookBtnAction(_ sender: Any) {
-        
+        var getEmail = ""
         let fbLoginManager : LoginManager = LoginManager()
-        
+
         fbLoginManager.logIn(permissions: ["public_profile","email"], from: self) { (result, error) in
             
             if (error == nil){
@@ -73,7 +73,15 @@ class AskerLoginViewController: UIViewController {
                                     }
                                     if let email : NSString = (result! as AnyObject).value(forKey: "email") as? NSString {
                                         print("email: \(email)")
+                                        getEmail = email as String
                                     }
+                                    
+                                    
+                                    //회원정보가 서버에 존재하지 않을 경우 회원가입 창으로 이동(데이터로 이메일 정보 전송)
+                                    let dvc = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "AskerSNSSignUpViewController") as! AskerSNSSignUpViewController
+                                    
+                                    dvc.snsEmail = getEmail
+                                    self.present(dvc, animated: true, completion: nil)
                                 }
                             })
                         }
@@ -81,9 +89,11 @@ class AskerLoginViewController: UIViewController {
                 }
             }
         }
+
     }
     
     @IBAction func kakaotalkBtnAction(_ sender: Any) {
+        var getEmail = ""
         if KOSession.shared().isOpen() { KOSession.shared().close() }
         KOSession.shared().presentingViewController = self
         
@@ -111,6 +121,7 @@ class AskerLoginViewController: UIViewController {
             print(email)
             print(profile)
             print(thumbnail)
+            getEmail = email
         }
         
         KOSession.shared().open(completionHandler: { (error) in
@@ -135,6 +146,12 @@ class AskerLoginViewController: UIViewController {
                         }
                         KOSessionTask.userMeTask(completion: { (error, user) in
                             profile(error, user: user)
+                            
+                            let dvc = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "AskerSNSSignUpViewController") as! AskerSNSSignUpViewController
+                            
+                            
+                            dvc.snsEmail = getEmail
+                            self.present(dvc, animated: true, completion: nil)
                         })
                     })
                 } else {
@@ -142,6 +159,13 @@ class AskerLoginViewController: UIViewController {
                 }
             })
         })
+    }
+    
+    func snsSignup() {
+        let dvc = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "AskerSNSSignUpViewController") as! AskerSNSSignUpViewController
+        
+        //dvc.email.text = getEmail
+        self.present(dvc, animated: true, completion: nil)
     }
     
     @IBAction func signinBtnAction(_ sender: Any) {
@@ -157,14 +181,4 @@ class AskerLoginViewController: UIViewController {
         print(token)
         print("#### AccessToken ####")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

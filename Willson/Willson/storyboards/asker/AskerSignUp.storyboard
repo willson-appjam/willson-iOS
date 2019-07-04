@@ -249,96 +249,98 @@
         <!--회원가입-->
         <scene sceneID="YmL-zj-TxM">
             <objects>
-                <viewController id="lfM-Ao-71f" customClass="AskerSNSSignUpViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerSNSSignUpViewController" id="lfM-Ao-71f" customClass="AskerSNSSignUpViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wbk-Da-gIG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="나이를 선택해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbw-KX-vak">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="나이를 선택해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbw-KX-vak">
                                 <rect key="frame" x="33" y="406" width="309" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="CAe-4q-qI1"/>
+                                    <constraint firstAttribute="height" constant="40" id="lHz-Xo-KLj"/>
+                                </constraints>
                                 <color key="textColor" name="bdbdbd"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-Ek-dQ9" customClass="DLRadioButton">
-                                <rect key="frame" x="33" y="338" width="38" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="여성">
-                                    <color key="titleColor" name="darkPurple"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="otherButtons" destination="kCL-F5-8Jq" id="GDP-no-3tR"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY7-mr-zG9">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-lo-xvH">
+                                <rect key="frame" x="33" y="338" width="86" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-Ek-dQ9" customClass="DLRadioButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="여성">
+                                            <color key="titleColor" name="darkPurple"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="kCL-F5-8Jq" id="GDP-no-3tR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCL-F5-8Jq" customClass="DLRadioButton">
+                                        <rect key="frame" x="56" y="0.0" width="30" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="남성">
+                                            <color key="titleColor" name="darkPurple"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="fTE-tr-NXh"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY7-mr-zG9">
                                 <rect key="frame" x="33" y="378" width="38" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="middlePurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCL-F5-8Jq" customClass="DLRadioButton">
-                                <rect key="frame" x="97" y="338" width="31" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="남성">
-                                    <color key="titleColor" name="darkPurple"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-id-CSM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-id-CSM">
                                 <rect key="frame" x="33" y="302" width="40" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="middlePurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="example@willson.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1up-uo-8Qh">
-                                <rect key="frame" x="33" y="144" width="309" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" name="bdbdbd"/>
-                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8자 이내의 닉네임을 입력해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgn-0m-fCM">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8자 이내의 닉네임을 입력해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgn-0m-fCM">
                                 <rect key="frame" x="33" y="237" width="309" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="fjL-lb-Ntt"/>
+                                    <constraint firstAttribute="height" constant="40" id="oAB-72-lKc"/>
+                                </constraints>
                                 <color key="textColor" name="bdbdbd"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZo-BV-xdM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZo-BV-xdM">
                                 <rect key="frame" x="33" y="209" width="44" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="middlePurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfn-gL-0fi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfn-gL-0fi">
                                 <rect key="frame" x="33" y="116" width="44" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="middlePurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ej6-Je-C3A">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ej6-Je-C3A">
                                 <rect key="frame" x="27" y="627" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLB-Ff-4wa" customClass="DLRadioButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLB-Ff-4wa" customClass="DLRadioButton">
                                 <rect key="frame" x="33" y="677" width="284" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="YM3-nd-GJn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="윌슨의 이용약관 및 개인정보취급방침에 동의합니다.">
                                     <color key="titleColor" name="darkPurple"/>
@@ -349,10 +351,13 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNS-32-TiH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNS-32-TiH">
                                 <rect key="frame" x="33" y="714" width="309" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="grey"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="CKM-ba-UTC"/>
+                                    <constraint firstAttribute="height" constant="48" id="bOB-mv-2hx"/>
+                                </constraints>
                                 <state key="normal" title="다음">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -360,15 +365,83 @@
                                     <action selector="nextBtnAction:" destination="naf-xC-oDk" eventType="touchUpInside" id="SrS-1l-Gmp"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RE-II-1nZ" customClass="CustonView" customModule="Willson" customModuleProvider="target">
+                                <rect key="frame" x="33" y="144" width="309" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="willson@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-mf-RbZ">
+                                        <rect key="frame" x="11" y="12" width="141" height="18"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                        <color key="textColor" name="black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dSg-mf-RbZ" secondAttribute="bottom" constant="12" id="0Un-uw-8Le"/>
+                                    <constraint firstItem="dSg-mf-RbZ" firstAttribute="leading" secondItem="0RE-II-1nZ" secondAttribute="leading" constant="11" id="WOv-ed-NO4"/>
+                                    <constraint firstItem="dSg-mf-RbZ" firstAttribute="top" secondItem="0RE-II-1nZ" secondAttribute="top" constant="12" id="WhS-E1-Xjm"/>
+                                    <constraint firstItem="dSg-mf-RbZ" firstAttribute="centerY" secondItem="0RE-II-1nZ" secondAttribute="centerY" id="XKi-Sw-yej"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="bdbdbd"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="회원가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKR-h7-0ZG">
+                                <rect key="frame" x="150" y="54" width="78" height="23"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vY7-mr-zG9" firstAttribute="top" secondItem="Za0-Ek-dQ9" secondAttribute="bottom" constant="4" id="0Ys-FO-Abb"/>
+                            <constraint firstItem="Mbw-KX-vak" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="2eO-Yb-4Oq"/>
+                            <constraint firstItem="kWt-th-8ol" firstAttribute="bottom" secondItem="cNS-32-TiH" secondAttribute="bottom" constant="16" id="CAF-IR-e9i"/>
+                            <constraint firstItem="0RE-II-1nZ" firstAttribute="leading" secondItem="Wfn-gL-0fi" secondAttribute="leading" id="D9J-Ox-7wH"/>
+                            <constraint firstItem="Wfn-gL-0fi" firstAttribute="top" secondItem="kWt-th-8ol" secondAttribute="top" constant="72" id="DQ8-BA-wCC"/>
+                            <constraint firstItem="cNS-32-TiH" firstAttribute="centerX" secondItem="kWt-th-8ol" secondAttribute="centerX" id="G7K-mj-eKb"/>
+                            <constraint firstItem="kWt-th-8ol" firstAttribute="trailing" secondItem="KLB-Ff-4wa" secondAttribute="trailing" constant="58" id="Gds-xB-kSr"/>
+                            <constraint firstItem="UKR-h7-0ZG" firstAttribute="centerX" secondItem="kWt-th-8ol" secondAttribute="centerX" id="Iqw-72-5H0"/>
+                            <constraint firstItem="Za0-Ek-dQ9" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="LRc-dL-yGx"/>
+                            <constraint firstItem="0RE-II-1nZ" firstAttribute="centerX" secondItem="kWt-th-8ol" secondAttribute="centerX" id="Leq-oR-5Mk"/>
+                            <constraint firstItem="kgn-0m-fCM" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="NQE-QK-BxB"/>
+                            <constraint firstItem="Ej6-Je-C3A" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="27" id="Oy8-cq-1ww"/>
+                            <constraint firstItem="Za0-Ek-dQ9" firstAttribute="top" secondItem="mwR-id-CSM" secondAttribute="bottom" constant="18" id="QdW-tB-UV4"/>
+                            <constraint firstItem="kgn-0m-fCM" firstAttribute="top" secondItem="qZo-BV-xdM" secondAttribute="bottom" constant="10" id="S74-3q-0Zo"/>
+                            <constraint firstItem="qZo-BV-xdM" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="Syo-5d-1EW"/>
+                            <constraint firstItem="UKR-h7-0ZG" firstAttribute="top" secondItem="kWt-th-8ol" secondAttribute="top" constant="10" id="UFI-R1-3pn"/>
+                            <constraint firstItem="vY7-mr-zG9" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="YhQ-Tq-13R"/>
+                            <constraint firstItem="0RE-II-1nZ" firstAttribute="centerX" secondItem="Ej6-Je-C3A" secondAttribute="centerX" id="aht-xY-5Z0"/>
+                            <constraint firstItem="UKR-h7-0ZG" firstAttribute="height" secondItem="wbk-Da-gIG" secondAttribute="height" id="cUR-pY-CoA"/>
+                            <constraint firstItem="mwR-id-CSM" firstAttribute="top" secondItem="kgn-0m-fCM" secondAttribute="bottom" constant="25" id="dV7-ma-IGU"/>
+                            <constraint firstItem="mwR-id-CSM" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="dgi-D3-ExH"/>
+                            <constraint firstItem="qZo-BV-xdM" firstAttribute="top" secondItem="0RE-II-1nZ" secondAttribute="bottom" constant="23" id="frR-tR-Wsg"/>
+                            <constraint firstItem="Wfn-gL-0fi" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="gIV-3C-bjv"/>
+                            <constraint firstItem="UKR-h7-0ZG" firstAttribute="width" secondItem="wbk-Da-gIG" secondAttribute="width" id="jxu-hV-665"/>
+                            <constraint firstItem="cNS-32-TiH" firstAttribute="top" secondItem="KLB-Ff-4wa" secondAttribute="bottom" constant="8" symbolic="YES" id="krY-0n-PIr"/>
+                            <constraint firstItem="0RE-II-1nZ" firstAttribute="leading" secondItem="KLB-Ff-4wa" secondAttribute="leading" id="q9f-Yx-t5y"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ej6-Je-C3A" secondAttribute="bottom" constant="-65" id="rSZ-Yk-jTB"/>
+                            <constraint firstItem="0RE-II-1nZ" firstAttribute="top" secondItem="Wfn-gL-0fi" secondAttribute="bottom" constant="10" id="tjY-jd-mv3"/>
+                            <constraint firstItem="Mbw-KX-vak" firstAttribute="top" secondItem="vY7-mr-zG9" secondAttribute="bottom" constant="10" id="yAF-zE-OKb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kWt-th-8ol"/>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="szU-oN-dyc"/>
+                    <connections>
+                        <outlet property="age" destination="Mbw-KX-vak" id="SbW-Kb-wtU"/>
+                        <outlet property="email" destination="dSg-mf-RbZ" id="MEV-lV-iJ2"/>
+                        <outlet property="nickname" destination="kgn-0m-fCM" id="h0h-Q0-6Jx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQG-dE-KGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2807.1999999999998" y="890.39408866995075"/>
+            <point key="canvasLocation" x="2625" y="890"/>
         </scene>
         <!--Asker Sign Up View Controller2-->
         <scene sceneID="pZr-fP-KWf">
@@ -425,30 +498,15 @@
             </objects>
             <point key="canvasLocation" x="1119" y="219"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="16W-Xj-Xam">
-            <objects>
-                <navigationController storyboardIdentifier="AskerSNSSignUpNC" automaticallyAdjustsScrollViewInsets="NO" id="7bJ-C1-70m" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HM0-f0-v6z">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lfM-Ao-71f" kind="relationship" relationship="rootViewController" id="qbA-8w-OVg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CSA-cJ-xP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1864.8" y="890.39408866995075"/>
-        </scene>
     </scenes>
     <resources>
         <image name="btnRadioActive" width="15" height="15"/>
         <image name="btnRadioNonactive" width="15" height="15"/>
         <namedColor name="bdbdbd">
             <color red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black">
+            <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkPurple">
             <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
