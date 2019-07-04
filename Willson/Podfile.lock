@@ -4,13 +4,13 @@ PODS:
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
   - DLRadioButton (1.4.12)
-  - FBSDKCoreKit (5.2.1):
-    - FBSDKCoreKit/Basics (= 5.2.1)
-    - FBSDKCoreKit/Core (= 5.2.1)
-  - FBSDKCoreKit/Basics (5.2.1)
-  - FBSDKCoreKit/Core (5.2.1):
+  - FBSDKCoreKit (5.2.0):
+    - FBSDKCoreKit/Basics (= 5.2.0)
+    - FBSDKCoreKit/Core (= 5.2.0)
+  - FBSDKCoreKit/Basics (5.2.0)
+  - FBSDKCoreKit/Core (5.2.0):
     - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.2.1):
+  - FBSDKLoginKit (5.2.0):
     - FBSDKCoreKit (~> 5.0)
   - KakaoOpenSDK (1.12.1):
     - KakaoOpenSDK/KakaoCommon (= 1.12.1)
@@ -121,8 +121,8 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
-  FBSDKCoreKit: e1ab8d86f5eea2d7aa6ab12acca3e1d2dcb11983
-  FBSDKLoginKit: 6e20e44775ddf4b159a8ca676834325e13d12221
+  FBSDKCoreKit: fd37d65447ef93255191dd5ded4f63955d23f8aa
+  FBSDKLoginKit: b814ebf853e7b28592eab4d24b458a89b3f8d69e
   KakaoOpenSDK: f062fe961bdb627dc3d7c319c46d926dc5ed5126
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MaterialComponents: 9d487867c80fe07478967647485eba2e8efe4ad3
@@ -131,6 +131,6 @@ SPEC CHECKSUMS:
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: 487876a03ce28415ac77dc7ddfa24e76bc88b7cc
+PODFILE CHECKSUM: ad8d31ec966169d7d0fe765e5da01b869f232ecb
 
 COCOAPODS: 1.7.3
