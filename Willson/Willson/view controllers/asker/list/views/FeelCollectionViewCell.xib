@@ -40,7 +40,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="feelLabel" destination="vyN-q4-jEj" id="Brj-8u-cik"/>
+                <outlet property="feelLabel" destination="vyN-q4-jEj" id="5kR-WR-hSh"/>
             </connections>
             <point key="canvasLocation" x="157.97101449275362" y="35.491071428571423"/>
         </collectionViewCell>

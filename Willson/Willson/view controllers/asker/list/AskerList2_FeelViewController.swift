@@ -13,7 +13,7 @@ class AskerList2_FeelViewController: UIViewController {
     // MARK: - properties
     let feelCollectionViewCellIdentifier: String = "FeelCollectionViewCell"
     
-    let feelArray: [String] = ["#신남", "#행복", "#자신감", "#자랑스러운", "#당황스러운", "#지친", "#슬픈", "#두려운", "#무기력한", "#어색한", "#걱정스러운", "#질투나는", "#무서운", "#아픈"]
+    let feelArray = ["#신남", "#행복", "#자신감", "#자랑스러운", "#당황스러운", "#지친", "#슬픈", "#두려운", "#무기력한", "#어색한", "#걱정스러운", "#질투나는", "#무서운", "#아픈"]
     
     // MARK: - IBOutlet
     @IBOutlet weak var feelCollectionView: UICollectionView!
@@ -29,8 +29,6 @@ class AskerList2_FeelViewController: UIViewController {
         // UICollectionView delegate, datasource
         feelCollectionView.delegate = self
         feelCollectionView.dataSource = self
-        
-        feelCollectionView.register(FeelCollectionViewCell.self, forCellWithReuseIdentifier: feelCollectionViewCellIdentifier)
     }
 }
 
@@ -45,7 +43,9 @@ extension AskerList2_FeelViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: FeelCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: feelCollectionViewCellIdentifier, for: indexPath) as? FeelCollectionViewCell else { return UICollectionViewCell() }
-        cell.feelLabel.text = feelArray[indexPath.item]
+        if let label = cell.feelLabel {
+            label.text = feelArray[indexPath.item]
+        }
         return cell
     }
     
