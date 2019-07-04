@@ -1,14 +1,14 @@
 //
-//  AskerList8_AgreementViewController.swift
+//  AskerList5_HelperSexViewController.swift
 //  Willson
 //
-//  Created by JHKim on 01/07/2019.
+//  Created by JHKim on 04/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
 
-class AskerList8_AgreementViewController: UIViewController {
+class AskerList5_HelperSexViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
