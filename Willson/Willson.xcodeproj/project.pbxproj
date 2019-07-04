@@ -62,9 +62,9 @@
 		D982BCCF22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCCE22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift */; };
 		D982BCD122CA3DFE00458662 /* AskerList7_DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCD022CA3DFE00458662 /* AskerList7_DirectionViewController.swift */; };
 		D982BCD322CA3E1700458662 /* AskerList8_AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCD222CA3E1700458662 /* AskerList8_AgreementViewController.swift */; };
+		D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC036922CDEB7200E16AD8 /* HelperModeProfileViewController.swift */; };
 		D9E64E4922CDDEDA003265E4 /* HelperRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4822CDDEDA003265E4 /* HelperRequestViewController.swift */; };
 		D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */; };
-		D9E64E4D22CDDF5B003265E4 /* HelperProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4C22CDDF5B003265E4 /* HelperProfileViewController.swift */; };
 		D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */; };
 		D9E64E5122CDDFA4003265E4 /* HelperTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E64E5022CDDFA4003265E4 /* HelperTabbar.storyboard */; };
 /* End PBXBuildFile section */
@@ -129,9 +129,9 @@
 		D982BCCE22CA3C7800458662 /* AskerList6_DetailHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList6_DetailHelperViewController.swift; sourceTree = "<group>"; };
 		D982BCD022CA3DFE00458662 /* AskerList7_DirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList7_DirectionViewController.swift; sourceTree = "<group>"; };
 		D982BCD222CA3E1700458662 /* AskerList8_AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList8_AgreementViewController.swift; sourceTree = "<group>"; };
+		D9AC036922CDEB7200E16AD8 /* HelperModeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperModeProfileViewController.swift; sourceTree = "<group>"; };
 		D9E64E4822CDDEDA003265E4 /* HelperRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperRequestViewController.swift; sourceTree = "<group>"; };
 		D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperChatListViewController.swift; sourceTree = "<group>"; };
-		D9E64E4C22CDDF5B003265E4 /* HelperProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperProfileViewController.swift; sourceTree = "<group>"; };
 		D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMypageViewController.swift; sourceTree = "<group>"; };
 		D9E64E5022CDDFA4003265E4 /* HelperTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelperTabbar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -409,7 +409,7 @@
 		D965852A22C4EA540072CC5E /* profile */ = {
 			isa = PBXGroup;
 			children = (
-				D9E64E4C22CDDF5B003265E4 /* HelperProfileViewController.swift */,
+				D9AC036922CDEB7200E16AD8 /* HelperModeProfileViewController.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -615,8 +615,8 @@
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 				66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */,
 				663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */,
-				D9E64E4D22CDDF5B003265E4 /* HelperProfileViewController.swift in Sources */,
 				66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */,
+				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,
 				D982BCC922CA0B3800458662 /* AskerList3_ImportantViewController.swift in Sources */,
 				663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */,
 				663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */,

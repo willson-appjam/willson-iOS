@@ -1,7 +1,202 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HTK-nu-mn9">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--프로필-->
+        <scene sceneID="lo6-EQ-Yov">
+            <objects>
+                <viewController id="JKR-Gx-j5d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Id-uS-sxn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9n-dV-4kz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <connections>
+                                    <segue destination="hdv-AO-bYU" kind="embed" id="kNn-wj-bPf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C9n-dV-4kz" firstAttribute="top" secondItem="3Id-uS-sxn" secondAttribute="top" id="0tz-M5-ZSr"/>
+                            <constraint firstItem="e5w-hV-KKx" firstAttribute="bottom" secondItem="C9n-dV-4kz" secondAttribute="bottom" id="7Ey-Q3-S3O"/>
+                            <constraint firstItem="C9n-dV-4kz" firstAttribute="leading" secondItem="3Id-uS-sxn" secondAttribute="leading" id="Aw5-bL-LMN"/>
+                            <constraint firstItem="e5w-hV-KKx" firstAttribute="trailing" secondItem="C9n-dV-4kz" secondAttribute="trailing" id="Gj6-zk-vEB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e5w-hV-KKx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="프로필" image="helperTab03Profile" selectedImage="helperTab03ProfileActive" id="fZn-ka-eaZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMJ-BH-y6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1455" y="146"/>
+        </scene>
+        <!--HelperModeProfileViewController-->
+        <scene sceneID="dKP-Pd-gb6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HelperProfile" referencedIdentifier="HelperModeProfileViewController" id="hdv-AO-bYU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqL-ad-aRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-859" y="146"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="67l-X5-VZY">
+            <objects>
+                <tabBarController id="HTK-nu-mn9" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qR6-tG-Vde">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="darkPurple"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gk4-XU-k3c" kind="relationship" relationship="viewControllers" id="OYr-vE-FNv"/>
+                        <segue destination="GAS-yJ-cCF" kind="relationship" relationship="viewControllers" id="B2p-2s-XpF"/>
+                        <segue destination="JKR-Gx-j5d" kind="relationship" relationship="viewControllers" id="PZB-fG-6Ja"/>
+                        <segue destination="DUv-KT-N3n" kind="relationship" relationship="viewControllers" id="P2H-Iy-HXX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53g-iL-L7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="-221"/>
+        </scene>
+        <!--마이페이지-->
+        <scene sceneID="vTy-mI-XBb">
+            <objects>
+                <viewController id="DUv-KT-N3n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lpf-un-4Kx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lya-MJ-6Xe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <connections>
+                                    <segue destination="DZ0-qP-hJ8" kind="embed" id="F2I-WB-FFR"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WOs-H7-nTX" firstAttribute="trailing" secondItem="lya-MJ-6Xe" secondAttribute="trailing" id="RXv-za-UsX"/>
+                            <constraint firstItem="WOs-H7-nTX" firstAttribute="bottom" secondItem="lya-MJ-6Xe" secondAttribute="bottom" id="U5O-gR-TIv"/>
+                            <constraint firstItem="lya-MJ-6Xe" firstAttribute="leading" secondItem="Lpf-un-4Kx" secondAttribute="leading" id="VVE-RT-ux8"/>
+                            <constraint firstItem="lya-MJ-6Xe" firstAttribute="top" secondItem="Lpf-un-4Kx" secondAttribute="top" id="cUR-3A-iRu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WOs-H7-nTX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="tab04Mypage" selectedImage="tab04MypageActive" id="kfF-ih-4Cs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFu-s5-c2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="146"/>
+        </scene>
+        <!--HelperMypageViewController-->
+        <scene sceneID="lop-ps-LOt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HelperMypage" referencedIdentifier="HelperMypageViewController" id="DZ0-qP-hJ8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ibz-Y4-F4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="146"/>
+        </scene>
+        <!--받은고민-->
+        <scene sceneID="kGT-iV-ILg">
+            <objects>
+                <viewController id="gk4-XU-k3c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TfY-9j-IQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3p-Cz-HsB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <segue destination="jTZ-cb-AoD" kind="embed" id="vck-aS-zrN"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8DP-ay-0UX" firstAttribute="bottom" secondItem="M3p-Cz-HsB" secondAttribute="bottom" id="8qs-Wm-uZ8"/>
+                            <constraint firstItem="8DP-ay-0UX" firstAttribute="trailing" secondItem="M3p-Cz-HsB" secondAttribute="trailing" id="H39-xg-ml5"/>
+                            <constraint firstItem="M3p-Cz-HsB" firstAttribute="leading" secondItem="8DP-ay-0UX" secondAttribute="leading" id="NdG-0m-qA0"/>
+                            <constraint firstItem="M3p-Cz-HsB" firstAttribute="top" secondItem="8DP-ay-0UX" secondAttribute="top" id="gyp-hL-suH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8DP-ay-0UX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="받은고민" image="tab02Request" selectedImage="tab02RequestActive" id="m8j-vI-cpK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6I2-IM-XhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1454" y="-592"/>
+        </scene>
+        <!--HelperRequestViewController-->
+        <scene sceneID="yZV-gg-dof">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HelperRequest" referencedIdentifier="HelperRequestViewController" id="jTZ-cb-AoD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EBs-os-1uG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEf-2G-pPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="-592"/>
+        </scene>
+        <!--채팅-->
+        <scene sceneID="Q6A-VZ-yk0">
+            <objects>
+                <viewController id="GAS-yJ-cCF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3g3-JL-jLz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmJ-V9-4UW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <segue destination="wf0-iE-LOr" kind="embed" id="rxU-G8-okJ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qZ5-CN-Z6T" firstAttribute="trailing" secondItem="HmJ-V9-4UW" secondAttribute="trailing" id="1ha-QZ-fip"/>
+                            <constraint firstItem="HmJ-V9-4UW" firstAttribute="leading" secondItem="qZ5-CN-Z6T" secondAttribute="leading" id="8Wr-0x-VjE"/>
+                            <constraint firstItem="qZ5-CN-Z6T" firstAttribute="bottom" secondItem="HmJ-V9-4UW" secondAttribute="bottom" id="YUB-P8-hFq"/>
+                            <constraint firstItem="HmJ-V9-4UW" firstAttribute="top" secondItem="qZ5-CN-Z6T" secondAttribute="top" id="sYK-Sw-pqR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qZ5-CN-Z6T"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="채팅" image="tab03Chat" selectedImage="tab03ChatActive" id="dUD-fK-cmA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T59-kk-HJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="-593"/>
+        </scene>
+        <!--helperChatListNavi-->
+        <scene sceneID="tae-Rs-Gyc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HelperChat" referencedIdentifier="helperChatListNavi" id="wf0-iE-LOr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vt8-Ke-hw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="-593"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="helperTab03Profile" width="23.5" height="23.5"/>
+        <image name="helperTab03ProfileActive" width="23.5" height="23.5"/>
+        <image name="tab02Request" width="24" height="24"/>
+        <image name="tab02RequestActive" width="24" height="24"/>
+        <image name="tab03Chat" width="23" height="24"/>
+        <image name="tab03ChatActive" width="23" height="24"/>
+        <image name="tab04Mypage" width="23" height="23"/>
+        <image name="tab04MypageActive" width="23" height="23"/>
+        <namedColor name="darkPurple">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

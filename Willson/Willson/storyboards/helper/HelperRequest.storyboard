@@ -5,9 +5,18 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareB.ttf">
+            <string>NanumSquareB</string>
+        </array>
+        <array key="NanumSquareR.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Helper Request View Controller-->
         <scene sceneID="0Jh-2Z-MYz">
@@ -16,7 +25,36 @@
                     <view key="view" contentMode="scaleToFill" id="FZa-cS-H5x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helperSignupImgConfirmwillson" translatesAutoresizingMaskIntoConstraints="NO" id="IAv-Zu-xk6">
+                                <rect key="frame" x="144" y="307.5" width="126" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="8Cw-YW-0XO"/>
+                                    <constraint firstAttribute="width" constant="126" id="vaw-Kc-AkE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증 진행중입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wy-3g-y2h">
+                                <rect key="frame" x="127.5" y="468.5" width="159" height="24"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
+                                <color key="textColor" name="darkPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증 완료 후 헬퍼로 활동해보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52K-YP-uB2">
+                                <rect key="frame" x="94.5" y="507.5" width="225" height="18"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" name="black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IAv-Zu-xk6" firstAttribute="top" secondItem="FZa-cS-H5x" secondAttribute="centerY" multiplier="267:389" id="0Rk-rS-CcE"/>
+                            <constraint firstItem="52K-YP-uB2" firstAttribute="top" secondItem="7Wy-3g-y2h" secondAttribute="bottom" constant="15" id="QXI-fi-Cv2"/>
+                            <constraint firstItem="7Wy-3g-y2h" firstAttribute="top" secondItem="IAv-Zu-xk6" secondAttribute="bottom" constant="21" id="SvT-Br-srU"/>
+                            <constraint firstItem="IAv-Zu-xk6" firstAttribute="centerX" secondItem="tZa-3K-9w1" secondAttribute="centerX" id="nCZ-0U-Mfu"/>
+                            <constraint firstItem="7Wy-3g-y2h" firstAttribute="centerX" secondItem="tZa-3K-9w1" secondAttribute="centerX" id="pip-b1-Thp"/>
+                            <constraint firstItem="52K-YP-uB2" firstAttribute="centerX" secondItem="tZa-3K-9w1" secondAttribute="centerX" id="t3j-3U-bBL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tZa-3K-9w1"/>
                     </view>
                 </viewController>
@@ -25,4 +63,13 @@
             <point key="canvasLocation" x="222" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="helperSignupImgConfirmwillson" width="126" height="140"/>
+        <namedColor name="black">
+            <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkPurple">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
