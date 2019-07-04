@@ -49,7 +49,14 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         timer = Timer.scheduledTimer(timeInterval:6, target:self, selector:#selector(AskerMainViewController.autoScroll), userInfo:nil, repeats:true)
     }
     
-  
+    @IBAction func userTransition(_ sender: Any) {
+        let storyboard  = UIStoryboard(name: "HelperTabbar", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "HelperTabbar")
+        
+        present(vc, animated: true)
+    }
+    
     @objc func autoScroll() {
         self.scrollView.setContentOffset(CGPoint(x: self.scrollView.contentOffset.x + scrollView.frame.width, y: 0), animated: true)
         self.AskerScrollView.setContentOffset(CGPoint(x: self.AskerScrollView.contentOffset.x + AskerScrollView.frame.width, y: 0), animated: true)

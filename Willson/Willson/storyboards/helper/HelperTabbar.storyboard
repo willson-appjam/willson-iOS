@@ -51,7 +51,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="67l-X5-VZY">
             <objects>
-                <tabBarController id="HTK-nu-mn9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HelperTabbar" id="HTK-nu-mn9" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qR6-tG-Vde">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
