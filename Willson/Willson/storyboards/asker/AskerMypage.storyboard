@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gJZ-hP-wQT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oW1-GG-4MW">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,13 +58,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="GPO-Ga-oO9">
-                                <rect key="frame" x="111" y="204" width="51" height="60.333333333333314"/>
+                                <rect key="frame" x="111" y="204.66666666666666" width="51" height="59.666666666666657"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="mypageBtnReviewsetting" translatesAutoresizingMaskIntoConstraints="NO" id="RkD-hX-va9">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="23"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후기관리" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-uU-t86">
-                                        <rect key="frame" x="0.0" y="44" width="51" height="16.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="44" width="51" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>
@@ -91,18 +91,28 @@
                                     <segue destination="m6P-9N-z3e" kind="embed" id="5SR-2y-g9n"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이페이지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ3-2f-Qkt">
+                                <rect key="frame" x="139.66666666666666" y="54.000000000000007" width="95.666666666666657" height="23.333333333333336"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iFp-HU-TQr" firstAttribute="bottom" secondItem="CJB-25-QP1" secondAttribute="bottom" constant="34" id="2jZ-1J-F5k"/>
-                            <constraint firstItem="GPO-Ga-oO9" firstAttribute="top" secondItem="4Wb-6e-uso" secondAttribute="bottom" constant="31" id="BC5-B0-LMG"/>
+                            <constraint firstItem="fZ3-2f-Qkt" firstAttribute="centerX" secondItem="CJB-25-QP1" secondAttribute="centerX" id="8Oq-im-SJf"/>
+                            <constraint firstItem="aTr-ua-lCJ" firstAttribute="leading" secondItem="BXd-14-nv0" secondAttribute="trailing" constant="12" id="8s6-uc-00M"/>
                             <constraint firstItem="hxG-A6-pqN" firstAttribute="leading" secondItem="BXd-14-nv0" secondAttribute="trailing" constant="10" id="Bng-sr-TJW"/>
+                            <constraint firstItem="4Wb-6e-uso" firstAttribute="top" secondItem="fZ3-2f-Qkt" secondAttribute="bottom" constant="94.666666666666657" id="IDK-qV-TF8"/>
                             <constraint firstItem="CJB-25-QP1" firstAttribute="trailing" secondItem="LpM-lh-eP6" secondAttribute="trailing" constant="111.33333333333331" id="Lfh-3C-HDw"/>
                             <constraint firstItem="4Wb-6e-uso" firstAttribute="centerX" secondItem="CJB-25-QP1" secondAttribute="centerX" id="Mm9-Hf-4Mx"/>
-                            <constraint firstItem="BXd-14-nv0" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="21" id="O4Z-Wu-naI"/>
-                            <constraint firstItem="aTr-ua-lCJ" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="27" id="QfV-2P-dXd"/>
+                            <constraint firstItem="BXd-14-nv0" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="65" id="O4Z-Wu-naI"/>
+                            <constraint firstItem="aTr-ua-lCJ" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="71" id="QfV-2P-dXd"/>
                             <constraint firstItem="GPO-Ga-oO9" firstAttribute="leading" secondItem="CJB-25-QP1" secondAttribute="leading" constant="111" id="S7I-9V-ehg"/>
-                            <constraint firstItem="iFp-HU-TQr" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="209" id="XeI-CJ-HSk"/>
+                            <constraint firstItem="TsN-QV-DZo" firstAttribute="leading" secondItem="BXd-14-nv0" secondAttribute="trailing" constant="10" id="Tnq-JM-QrZ"/>
+                            <constraint firstItem="iFp-HU-TQr" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="253" id="XeI-CJ-HSk"/>
+                            <constraint firstItem="fZ3-2f-Qkt" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="10" id="aDN-p4-NMV"/>
                             <constraint firstItem="CJB-25-QP1" firstAttribute="trailing" secondItem="aTr-ua-lCJ" secondAttribute="trailing" constant="217" id="ckY-T1-rxd"/>
                             <constraint firstItem="hxG-A6-pqN" firstAttribute="top" secondItem="aTr-ua-lCJ" secondAttribute="bottom" constant="6" id="clI-FC-ai1"/>
                             <constraint firstItem="iFp-HU-TQr" firstAttribute="top" secondItem="LpM-lh-eP6" secondAttribute="bottom" constant="30.666666666666686" id="cy5-47-Mfy"/>
@@ -111,7 +121,6 @@
                             <constraint firstItem="BXd-14-nv0" firstAttribute="leading" secondItem="CJB-25-QP1" secondAttribute="leading" constant="38" id="hp7-yo-zQY"/>
                             <constraint firstItem="CJB-25-QP1" firstAttribute="trailing" secondItem="iFp-HU-TQr" secondAttribute="trailing" id="jxY-VP-CIC"/>
                             <constraint firstItem="4Wb-6e-uso" firstAttribute="leading" secondItem="0i8-Fu-RM0" secondAttribute="leadingMargin" constant="18" id="wkP-eG-Dmr"/>
-                            <constraint firstItem="4Wb-6e-uso" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="84" id="zM1-yj-EQq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CJB-25-QP1"/>
                     </view>
@@ -305,37 +314,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moU-gN-agS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1593" y="-214"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="LoT-EB-xOT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gJZ-hP-wQT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IER-1K-Yqe">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="oW1-GG-4MW" kind="relationship" relationship="rootViewController" id="y2d-4Z-WXO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j7y-rt-LtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="59.420289855072468" y="-214.28571428571428"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Tlm-Tl-OjI">
-            <objects>
-                <viewController id="lik-az-TXk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E4T-cQ-QrF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn6-SP-sqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

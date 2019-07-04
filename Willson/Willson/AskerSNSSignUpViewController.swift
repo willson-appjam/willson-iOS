@@ -10,21 +10,14 @@ import UIKit
 
 class AskerSNSSignUpViewController: UIViewController {
 
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var nickname: UITextField!
+    @IBOutlet weak var age: UITextField!
+    var snsEmail = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        email.text = self.snsEmail
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
