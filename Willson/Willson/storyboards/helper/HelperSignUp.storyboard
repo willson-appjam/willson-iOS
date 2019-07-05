@@ -1,7 +1,148 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FCI-29-EM8">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="NanumSquareR.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--헬퍼 등록-->
+        <scene sceneID="Bt3-0A-VXo">
+            <objects>
+                <viewController id="T0t-3A-gCq" customClass="HelperEnrollStartViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aTj-MV-9S4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helperSignupImgStartwillson" translatesAutoresizingMaskIntoConstraints="NO" id="gV1-re-yPX">
+                                <rect key="frame" x="106" y="245" width="163" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="6og-3c-tqF"/>
+                                    <constraint firstAttribute="height" constant="140" id="DNC-We-5dI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="헬퍼로 가입해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fz-ek-B8w">
+                                <rect key="frame" x="95.666666666666686" y="402" width="184" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="8gR-dO-7Ra"/>
+                                    <constraint firstAttribute="height" constant="23" id="FwO-dS-TSU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" name="darkPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VD-On-Xdm">
+                                <rect key="frame" x="40.666666666666657" y="445" width="294" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="snd-Vc-UXc"/>
+                                    <constraint firstAttribute="width" constant="294" id="u5s-27-tF6"/>
+                                </constraints>
+                                <string key="text">헬퍼로 가입해서 다른 사람들의
+고민을 들어주세요!</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9B-RB-sd5">
+                                <rect key="frame" x="0.0" y="714" width="375" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="시작하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBY-5P-6ci">
+                                        <rect key="frame" x="150" y="16" width="77" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="6mw-dG-BuJ"/>
+                                            <constraint firstAttribute="width" constant="77" id="GI5-7W-20L"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="21"/>
+                                        <color key="textColor" name="white"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="buttonRight"/>
+                                <constraints>
+                                    <constraint firstItem="sBY-5P-6ci" firstAttribute="top" secondItem="o9B-RB-sd5" secondAttribute="top" constant="16" id="iS9-FR-qtO"/>
+                                    <constraint firstAttribute="width" secondItem="o9B-RB-sd5" secondAttribute="height" multiplier="375:98" id="mgi-kH-csI"/>
+                                    <constraint firstItem="sBY-5P-6ci" firstAttribute="centerX" secondItem="o9B-RB-sd5" secondAttribute="centerX" id="oZs-XA-SH4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8fz-ek-B8w" firstAttribute="centerX" secondItem="xcj-Yb-emt" secondAttribute="centerX" id="37y-zB-j4R"/>
+                            <constraint firstItem="xcj-Yb-emt" firstAttribute="trailing" secondItem="o9B-RB-sd5" secondAttribute="trailing" id="Jcu-TM-P27"/>
+                            <constraint firstItem="3VD-On-Xdm" firstAttribute="centerX" secondItem="xcj-Yb-emt" secondAttribute="centerX" id="L1w-3c-QhM"/>
+                            <constraint firstItem="gV1-re-yPX" firstAttribute="top" secondItem="xcj-Yb-emt" secondAttribute="top" constant="157" id="LDQ-Cv-Vms"/>
+                            <constraint firstItem="3VD-On-Xdm" firstAttribute="top" secondItem="8fz-ek-B8w" secondAttribute="bottom" constant="20" id="Tuz-WW-Vns"/>
+                            <constraint firstItem="8fz-ek-B8w" firstAttribute="top" secondItem="gV1-re-yPX" secondAttribute="bottom" constant="17" id="Zsm-yV-Mkb"/>
+                            <constraint firstItem="gV1-re-yPX" firstAttribute="centerX" secondItem="xcj-Yb-emt" secondAttribute="centerX" id="aFw-ti-ojV"/>
+                            <constraint firstItem="o9B-RB-sd5" firstAttribute="bottom" secondItem="xcj-Yb-emt" secondAttribute="bottom" constant="34" id="tjO-Dt-SKS"/>
+                            <constraint firstItem="o9B-RB-sd5" firstAttribute="leading" secondItem="xcj-Yb-emt" secondAttribute="leading" id="ueO-Cr-Jr7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xcj-Yb-emt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="헬퍼 등록" id="Udb-Bw-DKF"/>
+                    <connections>
+                        <outlet property="startView" destination="o9B-RB-sd5" id="G7m-Ri-qPl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXM-51-490" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="-265"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WZz-ot-uk8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FCI-29-EM8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eok-2B-b3x">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T0t-3A-gCq" kind="relationship" relationship="rootViewController" id="FH7-8d-Gdg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oks-tU-bnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446.37681159420293" y="-265.17857142857144"/>
+        </scene>
+        <!--Helper Enroll Category View Controller-->
+        <scene sceneID="jB0-vq-71h">
+            <objects>
+                <viewController storyboardIdentifier="HelperEnrollCategoryViewController" id="6Lb-9H-oMd" customClass="HelperEnrollCategoryViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTx-zD-Tak">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reE-Gu-f86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="-265"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="helperSignupImgStartwillson" width="163" height="140"/>
+        <namedColor name="black">
+            <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonRight">
+            <color red="0.28627450980392155" green="0.28627450980392155" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkPurple">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
