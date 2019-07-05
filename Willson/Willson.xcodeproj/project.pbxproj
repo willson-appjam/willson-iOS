@@ -34,6 +34,7 @@
 		66AF81B022CFA4DC00722FF2 /* HelperEnrollStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */; };
 		66AF81B222CFAA7000722FF2 /* UINavigationbar_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B122CFAA6F00722FF2 /* UINavigationbar_Extension.swift */; };
 		66AF81B422CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */; };
+		66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */; };
 		66C661CC22CC8A01008A451F /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C661CB22CC8A01008A451F /* CollectionReusableView.swift */; };
 		66C661CE22CC8F3D008A451F /* PopUpViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */; };
 		66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */; };
@@ -108,6 +109,7 @@
 		66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollStartViewController.swift; path = "Willson/view controllers/helper/HelperEnrollStartViewController.swift"; sourceTree = SOURCE_ROOT; };
 		66AF81B122CFAA6F00722FF2 /* UINavigationbar_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationbar_Extension.swift; sourceTree = "<group>"; };
 		66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollCategoryViewController.swift; path = "Willson/view controllers/helper/HelperEnrollCategoryViewController.swift"; sourceTree = SOURCE_ROOT; };
+		66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollDetailCategoryViewController.swift; path = "Willson/view controllers/helper/HelperEnrollDetailCategoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		66C661CB22CC8A01008A451F /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController3.swift; sourceTree = "<group>"; };
 		66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController2.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 			children = (
 				66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */,
 				66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */,
+				66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */,
 			);
 			path = "sign up";
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
 				D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */,
 				D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */,
+				66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */,
 				D9AC037422CE1A1100E16AD8 /* AskerList7_HelperExperienceViewController.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
