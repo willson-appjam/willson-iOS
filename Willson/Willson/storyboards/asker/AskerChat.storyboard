@@ -13,6 +13,9 @@
         <array key="NanumSquareB.ttf">
             <string>NanumSquareB</string>
         </array>
+        <array key="NanumSquareEB.ttf">
+            <string>NanumSquareEB</string>
+        </array>
         <array key="NanumSquareR.ttf">
             <string>NanumSquareR</string>
         </array>
@@ -296,18 +299,167 @@
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="852.45535714285711"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0uH-4j-SQG">
+            <objects>
+                <viewController id="paZ-6R-NRU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dc5-x3-bGv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vY3-47-d3P">
+                                <rect key="frame" x="35.5" y="360.5" width="343" height="175"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상담이 종료되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsj-tN-tL1">
+                                        <rect key="frame" x="94" y="28" width="155" height="18"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-oh-smH">
+                                        <rect key="frame" x="20" y="120" width="303" height="35"/>
+                                        <color key="backgroundColor" name="buttonRight"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="303" id="34t-9T-i6T"/>
+                                            <constraint firstAttribute="height" constant="35" id="VQ2-hK-lIK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
+                                        <state key="normal" title="후기 남기기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-LM-FYh">
+                                        <rect key="frame" x="46" y="69" width="251" height="27"/>
+                                        <string key="text">헬퍼와의 상담을 통해 조금이나마 보탬이 되었나요?
+후기를 남겨서 더 나은 윌슨을 만들어주세요!</string>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                        <color key="textColor" name="black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Tsj-tN-tL1" firstAttribute="top" secondItem="vY3-47-d3P" secondAttribute="top" constant="28" id="3fI-ys-Uil"/>
+                                    <constraint firstAttribute="bottom" secondItem="ocS-oh-smH" secondAttribute="bottom" constant="20" id="4iR-wR-SdO"/>
+                                    <constraint firstAttribute="height" constant="175" id="4nQ-u8-nQV"/>
+                                    <constraint firstItem="q8h-LM-FYh" firstAttribute="centerX" secondItem="vY3-47-d3P" secondAttribute="centerX" id="BKy-Pk-u3W"/>
+                                    <constraint firstItem="q8h-LM-FYh" firstAttribute="top" secondItem="Tsj-tN-tL1" secondAttribute="bottom" constant="23" id="aV9-5x-1at"/>
+                                    <constraint firstItem="ocS-oh-smH" firstAttribute="centerX" secondItem="vY3-47-d3P" secondAttribute="centerX" id="hLk-Sf-KiT"/>
+                                    <constraint firstItem="Tsj-tN-tL1" firstAttribute="centerX" secondItem="vY3-47-d3P" secondAttribute="centerX" id="klD-oD-xoq"/>
+                                    <constraint firstAttribute="width" constant="343" id="oJ3-a4-jwM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vY3-47-d3P" firstAttribute="centerX" secondItem="dc5-x3-bGv" secondAttribute="centerX" id="7YR-Eo-DQL"/>
+                            <constraint firstItem="vY3-47-d3P" firstAttribute="centerY" secondItem="dc5-x3-bGv" secondAttribute="centerY" id="jtB-qT-Pqo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="acb-jm-B8F"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiz-SK-SdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="852"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BlM-Q0-ofu">
+            <objects>
+                <viewController id="CaW-on-Nud" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UI3-ry-1ZA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-bA-IfY">
+                                <rect key="frame" x="45.5" y="314.5" width="323" height="267"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImgFinishwillson" translatesAutoresizingMaskIntoConstraints="NO" id="TJB-Vz-DlQ">
+                                        <rect key="frame" x="104.5" y="27" width="114" height="93"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="93" id="9Vg-13-LsY"/>
+                                            <constraint firstAttribute="width" constant="114" id="oiY-Q6-E9H"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후기 작성이 완료되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSB-FI-Yac">
+                                        <rect key="frame" x="56" y="143" width="211" height="20"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
+                                        <color key="textColor" name="darkPurple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="더 나은 윌슨이 되도록 참고할게요 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqg-FQ-qwl">
+                                        <rect key="frame" x="59" y="176" width="205" height="16"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                        <color key="textColor" name="black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcd-b3-1J1">
+                                        <rect key="frame" x="70" y="207" width="183" height="38"/>
+                                        <color key="backgroundColor" name="buttonRight"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="U57-gD-GFh"/>
+                                            <constraint firstAttribute="width" constant="183" id="pYq-km-KOE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
+                                        <state key="normal" title="홈으로 돌아가기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gSB-FI-Yac" firstAttribute="top" secondItem="TJB-Vz-DlQ" secondAttribute="bottom" constant="23" id="EH6-zR-0CC"/>
+                                    <constraint firstItem="pqg-FQ-qwl" firstAttribute="top" secondItem="gSB-FI-Yac" secondAttribute="bottom" constant="13" id="Vfu-yo-FOA"/>
+                                    <constraint firstItem="gSB-FI-Yac" firstAttribute="centerX" secondItem="6nW-bA-IfY" secondAttribute="centerX" id="bpa-JL-M3d"/>
+                                    <constraint firstItem="Bcd-b3-1J1" firstAttribute="centerX" secondItem="6nW-bA-IfY" secondAttribute="centerX" id="c6G-x9-wMo"/>
+                                    <constraint firstItem="pqg-FQ-qwl" firstAttribute="centerX" secondItem="6nW-bA-IfY" secondAttribute="centerX" id="d5x-WE-Uka"/>
+                                    <constraint firstItem="TJB-Vz-DlQ" firstAttribute="centerX" secondItem="6nW-bA-IfY" secondAttribute="centerX" id="hmQ-R1-2Ta"/>
+                                    <constraint firstAttribute="height" constant="267" id="kPJ-uv-Ju2"/>
+                                    <constraint firstItem="Bcd-b3-1J1" firstAttribute="top" secondItem="pqg-FQ-qwl" secondAttribute="bottom" constant="15" id="xB7-yW-7lZ"/>
+                                    <constraint firstAttribute="width" constant="323" id="zw5-zV-qgs"/>
+                                    <constraint firstItem="TJB-Vz-DlQ" firstAttribute="top" secondItem="6nW-bA-IfY" secondAttribute="top" constant="27" id="zxo-Ez-m4n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6nW-bA-IfY" firstAttribute="centerX" secondItem="UI3-ry-1ZA" secondAttribute="centerX" id="BWg-VO-Co7"/>
+                            <constraint firstItem="6nW-bA-IfY" firstAttribute="centerY" secondItem="UI3-ry-1ZA" secondAttribute="centerY" id="WCw-BE-Dag"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n7D-ai-8Wi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZoV-BP-KJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="852"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chatBtnCheck" width="24" height="24"/>
         <image name="chatBtnReviewStarBlank" width="31.5" height="30.5"/>
         <image name="chatBtnReviewStarYellow" width="29" height="28"/>
         <image name="chatImgAlert" width="23.5" height="23"/>
+        <image name="chatImgFinishwillson" width="115.5" height="94.5"/>
         <image name="chatImgHelperprofile" width="60" height="60"/>
         <namedColor name="bgColor">
             <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonRight">
+            <color red="0.28627450980392155" green="0.28627450980392155" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkPurple">
             <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
