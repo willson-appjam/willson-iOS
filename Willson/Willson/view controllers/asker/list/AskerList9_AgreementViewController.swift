@@ -10,6 +10,12 @@ import UIKit
 
 class AskerList9_AgreementViewController: UIViewController {
 
+    // MARK: - IBAction
+    @IBAction func tappedCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

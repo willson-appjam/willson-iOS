@@ -10,6 +10,8 @@ import UIKit
 
 class ConcernCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet var concernLabel: UILabel!
+    @IBOutlet var concernTextField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

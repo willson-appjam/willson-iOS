@@ -7,9 +7,23 @@
 //
 
 import UIKit
+import DLRadioButton
 
 class AskerList3_ImpactViewController: UIViewController {
-
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var radioButton_1: DLRadioButton!
+    @IBOutlet weak var radioButton_2: DLRadioButton!
+    @IBOutlet weak var radioButton_3: DLRadioButton!
+    @IBOutlet weak var radioButton_4: DLRadioButton!
+    @IBOutlet weak var radioButton_5: DLRadioButton!
+    
+    // MARK: - IBAction
+    @IBAction func tappedCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,6 +10,12 @@ import UIKit
 
 class AskerList7_HelperExperienceViewController: UIViewController {
 
+    // MARK: - IBAction
+    @IBAction func tappedCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

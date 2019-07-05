@@ -15,6 +15,7 @@ target 'Willson' do
   pod 'KakaoOpenSDK', '~> 1.12.1'
   pod 'MaterialComponents/Buttons', '~> 85.2.0'
   pod 'MaterialComponents/Buttons+Theming', '~> 85.2.0'
+  pod 'SwiftGifOrigin', '~> 1.7.0'  
   # Pods for Willson
 
 end

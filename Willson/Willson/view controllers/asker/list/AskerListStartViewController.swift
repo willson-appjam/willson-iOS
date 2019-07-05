@@ -9,7 +9,13 @@
 import UIKit
 
 class AskerListStartViewController: UIViewController {
-
+    
+    // MARK: - IBAction
+    @IBAction func tappedCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
