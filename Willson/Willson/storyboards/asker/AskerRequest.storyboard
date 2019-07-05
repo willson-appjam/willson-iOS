@@ -966,14 +966,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCg-qY-G3f">
-                                <rect key="frame" x="96" y="611" width="183" height="38"/>
+                                <rect key="frame" x="100" y="611" width="175" height="38"/>
                                 <color key="backgroundColor" name="buttonRight"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="8nK-lR-4bG"/>
-                                    <constraint firstAttribute="width" constant="183" id="Ltc-je-iub"/>
+                                    <constraint firstAttribute="width" constant="175" id="ETp-nc-rOP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
-                                <state key="normal" title="홈으로 돌아가기">
+                                <state key="normal" title="대화 시작하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -983,6 +983,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연애" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-8E-fJE">
+                                <rect key="frame" x="172.66666666666666" y="476" width="30" height="18"/>
+                                <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" name="lightPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -991,7 +997,9 @@
                             <constraint firstItem="OVw-gI-g0s" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="E5e-KL-ZIL"/>
                             <constraint firstItem="ce5-ng-JOQ" firstAttribute="bottom" secondItem="Sp6-wP-16j" secondAttribute="bottom" id="EFq-kE-ZU1"/>
                             <constraint firstItem="id1-77-Oke" firstAttribute="top" secondItem="dvE-zA-VPR" secondAttribute="bottom" constant="8" id="EGC-9r-VrL"/>
+                            <constraint firstItem="q5k-8E-fJE" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="HhB-4o-w0A"/>
                             <constraint firstItem="pCg-qY-G3f" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="T1H-Kb-Qr7"/>
+                            <constraint firstItem="q5k-8E-fJE" firstAttribute="top" secondItem="uAM-Iz-mwd" secondAttribute="bottom" constant="14" id="WqF-CW-GUH"/>
                             <constraint firstItem="uAM-Iz-mwd" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="Zwu-0L-jBT"/>
                             <constraint firstItem="OVw-gI-g0s" firstAttribute="top" secondItem="Kfr-ZF-Y7D" secondAttribute="bottom" constant="14" id="cZY-Jj-A6k"/>
                             <constraint firstItem="Kfr-ZF-Y7D" firstAttribute="top" secondItem="G2L-oK-YxH" secondAttribute="centerY" multiplier="317:389" id="dAz-e7-DMf"/>
