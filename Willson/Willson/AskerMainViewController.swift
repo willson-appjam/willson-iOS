@@ -21,9 +21,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var concern1View: UIView!
     
     @IBOutlet weak var scrollView: UIScrollView! //헬퍼들의 이야기 좌우스크롤뷰
-    @IBOutlet weak var AskerScrollView: UIScrollView! //질문자들의 후기 좌우스크롤뷰
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var ReviewPageControl: UIPageControl!
+    @IBOutlet weak var AskerScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +36,9 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slides = createSlides()
         setupSlideScrollView(slides: slides)
         
-        pageControl.numberOfPages = slides.count - 1
-        pageControl.currentPage = 0
-        scrollView.bringSubviewToFront(pageControl)
+//        pageControl.numberOfPages = slides.count - 1
+//        pageControl.currentPage = 0
+//        scrollView.bringSubviewToFront(pageControl)
         
         
         //질문자
@@ -49,9 +47,9 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         reviewSlides = createReviewSlides()
         setupReviewSlideScrollView(reviewSlides: reviewSlides)
         
-        ReviewPageControl.numberOfPages = reviewSlides.count - 1
-        ReviewPageControl.currentPage = 0
-        AskerScrollView.bringSubviewToFront(ReviewPageControl)
+//        ReviewPageControl.numberOfPages = reviewSlides.count - 1
+//        ReviewPageControl.currentPage = 0
+//        AskerScrollView.bringSubviewToFront(ReviewPageControl)
         
         //자동 스크롤
         timer = Timer.scheduledTimer(timeInterval:6, target:self, selector:#selector(AskerMainViewController.autoScroll), userInfo:nil, repeats:true)
@@ -124,7 +122,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-        pageControl.currentPage = Int(pageIndex)
+//        pageControl.currentPage = Int(pageIndex)
         
         let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
         let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
@@ -155,7 +153,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
             slides[3].mask?.transform = CGAffineTransform(scaleX: (0.8-percentOffset.x)/0.2, y: (0.8-percentOffset.x)/0.2)
             slides[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.8, y: percentOffset.x/0.8)
         } else if(percentOffset.x > 0.8 && percentOffset.x <= 1) {
-            pageControl.currentPage = 0
+//            pageControl.currentPage = 0
             slides[4].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.2, y: (1-percentOffset.x)/0.2)
             slides[5].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
            
@@ -219,7 +217,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     @objc func AskerScrollViewDidScroll(_ AskerScrollView: UIScrollView) {
         let pageIndex = round(AskerScrollView.contentOffset.x/view.frame.width)
-        ReviewPageControl.currentPage = Int(pageIndex)
+//        ReviewPageControl.currentPage = Int(pageIndex)
         
         let maximumHorizontalOffset: CGFloat = AskerScrollView.contentSize.width - AskerScrollView.frame.width
         let currentHorizontalOffset: CGFloat = AskerScrollView.contentOffset.x
@@ -251,7 +249,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
             reviewSlides[3].mask?.transform = CGAffineTransform(scaleX: (0.8-percentOffset.x)/0.2, y: (0.8-percentOffset.x)/0.2)
             reviewSlides[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.8, y: percentOffset.x/0.8)
         } else if(percentOffset.x > 0.8 && percentOffset.x <= 1) {
-            ReviewPageControl.currentPage = 0
+//            ReviewPageControl.currentPage = 0
             reviewSlides[4].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.2, y: (1-percentOffset.x)/0.2)
             reviewSlides[5].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
             
