@@ -22,9 +22,11 @@ class HelperChatRoomViewController: UIViewController {
         
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
-        
-        chatRoomTableView.tableHeaderView = UIView()
         chatRoomTableView.rowHeight = 40
+        
+        
+        /*let headerNib = UINib.init(nibName: "ChatHeaderTVC", bundle: Bundle.main)
+        chatRoomTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "ChatHeaderTVC")*/
     }
     
     
@@ -36,21 +38,36 @@ extension HelperChatRoomViewController: UITableViewDelegate {
 
 extension HelperChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: ChatListTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatListTableViewCell else { return UITableViewCell() }
+        guard let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
         
         switch indexPath.row {
         case 0:
-            cell.helperProfileImageView.image = UIImage(named: "helperChatImgProfileWoman")
-            cell.helperNameLabel.text = "리트리버 님"
-            cell.detailLabel.text = "새로운 톡방이 개설되었습니다"
+            cell.profileImg.image = UIImage(named: "helperChatImgProfileWoman")
+            cell.ownText.text = ""
+            cell.oppoText.text = "안녕하세유-"
+            cell.ownText.isHidden = true
+            cell.ownView.isHidden = true
+            cell.ownTime.isHidden = true
+            
+        
         case 1:
-            cell.helperProfileImageView.image = UIImage(named: "helperChatImgProfileMan")
-            cell.helperNameLabel.text = "푸들 님"
-            cell.detailLabel.text = "새로운 톡방이 개설되었습니다"
+            cell.profileImg.isHidden = true
+            cell.ownText.text = ""
+            cell.oppoText.text = "리트리버님???"
+            cell.ownText.isHidden = true
+            cell.ownView.isHidden = true
+            cell.ownTime.isHidden = true
+        case 2:
+            cell.profileImg.isHidden = true
+            cell.ownText.text = "넹"
+            cell.oppoText.text = ""
+            cell.oppoText.isHidden = true
+            cell.oppoView.isHidden = true
+            cell.oppoTime.isHidden = true
         default:
             return cell
         }
@@ -60,19 +77,17 @@ extension HelperChatRoomViewController: UITableViewDataSource {
         return cell
     }
     
-    private func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let  headerCell = tableView.dequeueReusableCell(withIdentifier: "ChatHeaderTableViewCell") as! ChatHeaderTableViewCell
+    /*func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ChatHeaderTVC") as! ChatHeaderTVC
         
-        switch (section) {
-        case 0:
-            headerCell.notificationTitle.text = "상담 대기 안내";
-            headerCell.notificationContent.text = "질문자(답변자) 10분 이내 미 접속 시 대화 자동 종료 및 재매칭됩니다.";
-            //return sectionHeaderView
-            
-            return headerCell
-        default:
-            <#code#>
-        }
+        headerView.notificationTitle.text = "상담 대기 안내"
+        headerView.notificationContent.text = "질문자(답변자) 10분 이내 미 접속 시 대화 자동 종료 및 재매칭됩니다."
+        
+        return headerView
     }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 138
+    }*/
 }

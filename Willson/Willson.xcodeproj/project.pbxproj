@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		46BD78418D4087C1A660D9DE /* Pods_Willson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794B654C502E453FEF56F6A /* Pods_Willson.framework */; };
 		660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */; };
+		6632768222D10671005DC6DC /* ChatHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6632768122D10671005DC6DC /* ChatHeaderTVC.swift */; };
+		6632768422D10686005DC6DC /* ChatHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6632768322D10686005DC6DC /* ChatHeaderTVC.xib */; };
 		663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663368C922CD36D800C3C694 /* PopUpViewController4.swift */; };
 		6634344222C67ED500D419EC /* NanumSquareEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344122C67E8300D419EC /* NanumSquareEB.ttf */; };
 		6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344022C67E4500D419EC /* NanumSquareB.ttf */; };
@@ -34,8 +36,8 @@
 		663F829C22D068B300EAD932 /* HelperEnrollInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */; };
 		663F829E22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829D22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift */; };
 		663F82A022D0A76800EAD932 /* HelperChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829F22D0A76800EAD932 /* HelperChatRoomViewController.swift */; };
-		663F82A822D0C41000EAD932 /* ChatHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F82A622D0C40F00EAD932 /* ChatHeaderTableViewCell.swift */; };
-		663F82A922D0C41000EAD932 /* ChatHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663F82A722D0C41000EAD932 /* ChatHeaderTableViewCell.xib */; };
+		663F82AB22D0D7F700EAD932 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F82AA22D0D7F700EAD932 /* ChatTableViewCell.swift */; };
+		663F82AD22D0D81800EAD932 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663F82AC22D0D81800EAD932 /* ChatTableViewCell.xib */; };
 		669624F722CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */; };
 		669624F822CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */; };
 		66AF81B022CFA4DC00722FF2 /* HelperEnrollStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */; };
@@ -98,6 +100,8 @@
 /* Begin PBXFileReference section */
 		1BAEDD6E774F4EB08452D077 /* Pods-Willson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.release.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.release.xcconfig"; sourceTree = "<group>"; };
 		660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = Willson/MyPageViewController.swift; sourceTree = SOURCE_ROOT; };
+		6632768122D10671005DC6DC /* ChatHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderTVC.swift; sourceTree = "<group>"; };
+		6632768322D10686005DC6DC /* ChatHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHeaderTVC.xib; sourceTree = "<group>"; };
 		663368C922CD36D800C3C694 /* PopUpViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController4.swift; sourceTree = "<group>"; };
 		6634343E22C67E0E00D419EC /* NanumSquareL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.ttf; sourceTree = "<group>"; };
 		6634343F22C67E2F00D419EC /* NanumSquareR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.ttf; sourceTree = "<group>"; };
@@ -123,8 +127,8 @@
 		663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollInfoViewController.swift; path = "Willson/view controllers/helper/HelperEnrollInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
 		663F829D22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollCertificateViewController.swift; path = "Willson/view controllers/helper/HelperEnrollCertificateViewController.swift"; sourceTree = SOURCE_ROOT; };
 		663F829F22D0A76800EAD932 /* HelperChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperChatRoomViewController.swift; sourceTree = "<group>"; };
-		663F82A622D0C40F00EAD932 /* ChatHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		663F82A722D0C41000EAD932 /* ChatHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		663F82AA22D0D7F700EAD932 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		663F82AC22D0D81800EAD932 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperReviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollStartViewController.swift; path = "Willson/view controllers/helper/HelperEnrollStartViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -245,8 +249,10 @@
 		663F82A122D0C24900EAD932 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				663F82A622D0C40F00EAD932 /* ChatHeaderTableViewCell.swift */,
-				663F82A722D0C41000EAD932 /* ChatHeaderTableViewCell.xib */,
+				663F82AA22D0D7F700EAD932 /* ChatTableViewCell.swift */,
+				663F82AC22D0D81800EAD932 /* ChatTableViewCell.xib */,
+				6632768122D10671005DC6DC /* ChatHeaderTVC.swift */,
+				6632768322D10686005DC6DC /* ChatHeaderTVC.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -620,6 +626,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6632768422D10686005DC6DC /* ChatHeaderTVC.xib in Resources */,
 				D965853F22C4EBD70072CC5E /* HelperChat.storyboard in Resources */,
 				D965851022C4E7E60072CC5E /* LaunchScreen.storyboard in Resources */,
 				D9E64E5122CDDFA4003265E4 /* HelperTabbar.storyboard in Resources */,
@@ -627,10 +634,10 @@
 				6634344222C67ED500D419EC /* NanumSquareEB.ttf in Resources */,
 				6634344522C67EE600D419EC /* NanumSquareL.ttf in Resources */,
 				663835CC22CA3EBC003265C7 /* HelperCollectionViewCell.xib in Resources */,
+				663F82AD22D0D81800EAD932 /* ChatTableViewCell.xib in Resources */,
 				D965853722C4EB890072CC5E /* AskerList.storyboard in Resources */,
 				D9AC038322CE1DA400E16AD8 /* ConcernCollectionViewCell.xib in Resources */,
 				D965854122C4EBE50072CC5E /* HelperRequest.storyboard in Resources */,
-				663F82A922D0C41000EAD932 /* ChatHeaderTableViewCell.xib in Resources */,
 				D9AC038722CE601C00E16AD8 /* FeelCollectionViewCell.xib in Resources */,
 				669624F822CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib in Resources */,
 				D965852F22C4EB430072CC5E /* AskerLogin.storyboard in Resources */,
@@ -705,9 +712,9 @@
 				660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
-				663F82A822D0C41000EAD932 /* ChatHeaderTableViewCell.swift in Sources */,
 				D98BA5C022D0119800E72C02 /* HelperRequestViewController.swift in Sources */,
 				669624F722CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift in Sources */,
+				6632768222D10671005DC6DC /* ChatHeaderTVC.swift in Sources */,
 				663F829C22D068B300EAD932 /* HelperEnrollInfoViewController.swift in Sources */,
 				D9AC038222CE1DA400E16AD8 /* ConcernCollectionViewCell.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
@@ -754,6 +761,7 @@
 				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,
 				663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */,
 				663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */,
+				663F82AB22D0D7F700EAD932 /* ChatTableViewCell.swift in Sources */,
 				663F829E22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift in Sources */,
 				D9AC039022CE917200E16AD8 /* ReviewStarViewController.swift in Sources */,
 				663835C622CA33F9003265C7 /* CustonView.swift in Sources */,
