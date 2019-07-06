@@ -17,10 +17,11 @@ class HelperEnrollCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "NanumSquareB", size: 21.0)!];
+        
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
     }
-
 }
 
 extension HelperEnrollCategoryViewController: UICollectionViewDelegate {

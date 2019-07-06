@@ -16,15 +16,5 @@ class HelperEnrollStartViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.sizeThatFits(CGSize(width: UIScreen.main.bounds.width, height: 89))
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "NanumSquareB", size: 21.0)!];
-        
-        let startGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapStart(_:)))
-        startView.addGestureRecognizer(startGesture)
     }
-    
-    @objc func tapStart(_ gesture: UITapGestureRecognizer) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "HelperSignUp", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HelperEnrollCategoryViewController")
-        present(vc, animated: true)
-    }
-
 }
