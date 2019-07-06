@@ -10,6 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NanumSquareB.ttf">
+            <string>NanumSquareB</string>
+        </array>
+        <array key="NanumSquareEB.ttf">
+            <string>NanumSquareEB</string>
+        </array>
+        <array key="NanumSquareL.ttf">
+            <string>NanumSquareL</string>
+        </array>
         <array key="NanumSquareR.ttf">
             <string>NanumSquareR</string>
         </array>
@@ -661,8 +670,8 @@
                                             <action selector="removePopUpBtn:" destination="Wwn-lJ-psx" eventType="touchUpInside" id="vUb-Tc-Qsc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKq-WW-6Sz">
-                                        <rect key="frame" x="21" y="164" width="281" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKq-WW-6Sz">
+                                        <rect key="frame" x="94" y="164" width="135" height="31"/>
                                         <string key="text">아직 결정하지 못했다면
 5분 더 찾아보실래요?</string>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
@@ -909,6 +918,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wq-G5-ZqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="948" y="1913"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="plZ-wc-xYO">
+            <objects>
+                <viewController id="beQ-vp-7V7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G2L-oK-YxH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대화가 확정되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvE-zA-VPR">
+                                <rect key="frame" x="86" y="138.66666666666666" width="203" height="24"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
+                                <color key="textColor" name="darkPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금 바로 대화를 시작해보세요 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id1-77-Oke">
+                                <rect key="frame" x="79.666666666666686" y="170.66666666666666" width="216" height="18"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" name="black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="requestProfileImgHelperprofile" translatesAutoresizingMaskIntoConstraints="NO" id="Kfr-ZF-Y7D">
+                                <rect key="frame" x="151" y="331" width="73" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="1Wo-wo-rLp"/>
+                                    <constraint firstAttribute="width" constant="73" id="lxP-5j-Eey"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세인트버나드 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVw-gI-g0s">
+                                <rect key="frame" x="111.66666666666669" y="418" width="152" height="20"/>
+                                <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="18"/>
+                                <color key="textColor" name="black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남성 / 20대 중반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAM-Iz-mwd">
+                                <rect key="frame" x="139" y="446" width="97" height="16"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <color key="textColor" name="black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImgFinishwillson" translatesAutoresizingMaskIntoConstraints="NO" id="ce5-ng-JOQ">
+                                <rect key="frame" x="125.66666666666669" y="643" width="124" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="RL5-7q-LiT"/>
+                                    <constraint firstAttribute="height" constant="135" id="fyQ-8b-eav"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCg-qY-G3f">
+                                <rect key="frame" x="100" y="611" width="175" height="38"/>
+                                <color key="backgroundColor" name="buttonRight"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="8nK-lR-4bG"/>
+                                    <constraint firstAttribute="width" constant="175" id="ETp-nc-rOP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
+                                <state key="normal" title="대화 시작하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연애" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-8E-fJE">
+                                <rect key="frame" x="172.66666666666666" y="476" width="30" height="18"/>
+                                <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" name="lightPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dvE-zA-VPR" firstAttribute="top" secondItem="G2L-oK-YxH" secondAttribute="centerY" multiplier="133:389" id="5IJ-AW-ROV"/>
+                            <constraint firstItem="uAM-Iz-mwd" firstAttribute="top" secondItem="OVw-gI-g0s" secondAttribute="bottom" constant="8" id="7rQ-fV-eDw"/>
+                            <constraint firstItem="OVw-gI-g0s" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="E5e-KL-ZIL"/>
+                            <constraint firstItem="ce5-ng-JOQ" firstAttribute="bottom" secondItem="Sp6-wP-16j" secondAttribute="bottom" id="EFq-kE-ZU1"/>
+                            <constraint firstItem="id1-77-Oke" firstAttribute="top" secondItem="dvE-zA-VPR" secondAttribute="bottom" constant="8" id="EGC-9r-VrL"/>
+                            <constraint firstItem="q5k-8E-fJE" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="HhB-4o-w0A"/>
+                            <constraint firstItem="pCg-qY-G3f" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="T1H-Kb-Qr7"/>
+                            <constraint firstItem="q5k-8E-fJE" firstAttribute="top" secondItem="uAM-Iz-mwd" secondAttribute="bottom" constant="14" id="WqF-CW-GUH"/>
+                            <constraint firstItem="uAM-Iz-mwd" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="Zwu-0L-jBT"/>
+                            <constraint firstItem="OVw-gI-g0s" firstAttribute="top" secondItem="Kfr-ZF-Y7D" secondAttribute="bottom" constant="14" id="cZY-Jj-A6k"/>
+                            <constraint firstItem="Kfr-ZF-Y7D" firstAttribute="top" secondItem="G2L-oK-YxH" secondAttribute="centerY" multiplier="317:389" id="dAz-e7-DMf"/>
+                            <constraint firstItem="dvE-zA-VPR" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="daP-nP-kKr"/>
+                            <constraint firstItem="ce5-ng-JOQ" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="e8i-in-dcs"/>
+                            <constraint firstItem="id1-77-Oke" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="ion-1A-8AQ"/>
+                            <constraint firstItem="Kfr-ZF-Y7D" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="r85-yz-dME"/>
+                            <constraint firstItem="ce5-ng-JOQ" firstAttribute="top" secondItem="pCg-qY-G3f" secondAttribute="bottom" constant="-6" id="yXt-s5-wEA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sp6-wP-16j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mza-B7-UGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="895.56650246305423"/>
         </scene>
         <!--Pop Up View Controller3-->
         <scene sceneID="R1s-tG-Oy0">
@@ -1229,6 +1335,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chatImgFinishwillson" width="115.66666412353516" height="94.666664123535156"/>
         <image name="imgTimer" width="18" height="18"/>
         <image name="imgTimerYellow" width="18" height="18"/>
         <image name="requestImgAlertWillson" width="92.333335876464844" height="81"/>

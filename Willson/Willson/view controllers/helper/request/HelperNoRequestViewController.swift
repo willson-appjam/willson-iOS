@@ -1,5 +1,5 @@
 //
-//  HelperRequestViewController.swift
+//  HelperNoRequestViewController.swift
 //  Willson
 //
 //  Created by JHKim on 06/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HelperRequestViewController: UIViewController {
+class HelperNoRequestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

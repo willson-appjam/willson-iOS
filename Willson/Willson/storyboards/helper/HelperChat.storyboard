@@ -5,25 +5,123 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareB.ttf">
+            <string>NanumSquareB</string>
+        </array>
+        <array key="NanumSquareR.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Helper Chat List View Controller-->
+        <!--상담하기-->
         <scene sceneID="mSN-K1-iFa">
             <objects>
-                <viewController id="4hd-3f-Ntu" customClass="HelperChatListViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelperChatListViewController" id="4hd-3f-Ntu" customClass="HelperChatListViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fH-0F-bqo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JmK-Eb-y08">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListTableViewCell" rowHeight="92" id="M9w-VC-dQD" customClass="ChatListTableViewCell" customModule="Willson" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M9w-VC-dQD" id="eXm-Mq-aDd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImgHelperprofile" translatesAutoresizingMaskIntoConstraints="NO" id="OXQ-f2-pud">
+                                                    <rect key="frame" x="19" y="16" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="YzP-zF-uXS"/>
+                                                        <constraint firstAttribute="width" constant="60" id="g7b-Bn-CpD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세인트버나드 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d15-wz-lAa">
+                                                    <rect key="frame" x="91" y="24" width="118.5" height="16"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="14"/>
+                                                    <color key="textColor" name="darkPurple"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 톡방이 개설되었습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgP-yq-Mqq">
+                                                    <rect key="frame" x="91" y="53" width="148" height="14"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                    <color key="textColor" name="grey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 04:13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tU-76-zn1">
+                                                    <rect key="frame" x="343" y="24" width="53" height="13"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
+                                                    <color key="textColor" name="grey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImgAlert" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-lg-UKf">
+                                                    <rect key="frame" x="373" y="44" width="23" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="23" id="1zS-0b-jiQ"/>
+                                                        <constraint firstAttribute="height" constant="23" id="pRw-pc-SfA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5tU-76-zn1" secondAttribute="trailing" constant="18" id="8f5-9R-6Ql"/>
+                                                <constraint firstItem="OXQ-f2-pud" firstAttribute="leading" secondItem="eXm-Mq-aDd" secondAttribute="leading" constant="19" id="KK4-E4-qQN"/>
+                                                <constraint firstItem="5tU-76-zn1" firstAttribute="top" secondItem="d15-wz-lAa" secondAttribute="top" id="buJ-lD-wFq"/>
+                                                <constraint firstItem="XgP-yq-Mqq" firstAttribute="top" secondItem="d15-wz-lAa" secondAttribute="bottom" constant="13" id="hk0-8o-GSa"/>
+                                                <constraint firstItem="5tU-76-zn1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d15-wz-lAa" secondAttribute="trailing" constant="2" id="lFd-JL-e0b"/>
+                                                <constraint firstItem="cIS-lg-UKf" firstAttribute="trailing" secondItem="5tU-76-zn1" secondAttribute="trailing" id="q1f-aN-bEE"/>
+                                                <constraint firstItem="d15-wz-lAa" firstAttribute="top" secondItem="eXm-Mq-aDd" secondAttribute="top" constant="24" id="sil-Gi-O6m"/>
+                                                <constraint firstItem="cIS-lg-UKf" firstAttribute="bottom" secondItem="XgP-yq-Mqq" secondAttribute="bottom" id="vLc-Zw-6j6"/>
+                                                <constraint firstItem="d15-wz-lAa" firstAttribute="leading" secondItem="OXQ-f2-pud" secondAttribute="trailing" constant="12" id="wi6-cS-pz5"/>
+                                                <constraint firstItem="OXQ-f2-pud" firstAttribute="centerY" secondItem="eXm-Mq-aDd" secondAttribute="centerY" id="xRY-5k-osF"/>
+                                                <constraint firstItem="XgP-yq-Mqq" firstAttribute="leading" secondItem="d15-wz-lAa" secondAttribute="leading" id="xVi-Oi-2yC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <viewLayoutGuide key="safeArea" id="ukm-Jr-jRn"/>
+                                        <connections>
+                                            <outlet property="alertImageView" destination="cIS-lg-UKf" id="W3V-ol-yxr"/>
+                                            <outlet property="detailLabel" destination="XgP-yq-Mqq" id="sRq-HD-VkR"/>
+                                            <outlet property="helperNameLabel" destination="d15-wz-lAa" id="GgS-ev-Q2j"/>
+                                            <outlet property="helperProfileImageView" destination="OXQ-f2-pud" id="JBe-TI-NP5"/>
+                                            <outlet property="timeLabel" destination="5tU-76-zn1" id="Tbu-VW-tH6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 진행 중인 상담" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-kU-CEv">
+                                <rect key="frame" x="19" y="102" width="373" height="16"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="14"/>
+                                <color key="textColor" name="darkPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JmK-Eb-y08" firstAttribute="leading" secondItem="Ow0-x4-imc" secondAttribute="leading" id="0zA-K2-9gk"/>
+                            <constraint firstItem="qUb-kU-CEv" firstAttribute="top" secondItem="Ow0-x4-imc" secondAttribute="top" constant="14" id="DZX-iD-sR0"/>
+                            <constraint firstItem="qUb-kU-CEv" firstAttribute="leading" secondItem="Ow0-x4-imc" secondAttribute="leading" constant="19" id="Iwz-P8-bEk"/>
+                            <constraint firstItem="JmK-Eb-y08" firstAttribute="trailing" secondItem="Ow0-x4-imc" secondAttribute="trailing" id="VTz-tU-Qfk"/>
+                            <constraint firstItem="JmK-Eb-y08" firstAttribute="top" secondItem="qUb-kU-CEv" secondAttribute="bottom" constant="14" id="Wam-HT-Isb"/>
+                            <constraint firstItem="Ow0-x4-imc" firstAttribute="trailing" secondItem="qUb-kU-CEv" secondAttribute="trailing" constant="22" id="WjP-61-gqU"/>
+                            <constraint firstItem="JmK-Eb-y08" firstAttribute="bottom" secondItem="Ow0-x4-imc" secondAttribute="bottom" id="wwm-75-tgd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ow0-x4-imc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3pX-P4-coL"/>
+                    <navigationItem key="navigationItem" title="상담하기" id="3pX-P4-coL"/>
+                    <connections>
+                        <outlet property="chatListTableView" destination="JmK-Eb-y08" id="1th-Sm-7ef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53i-ad-bK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="-181.47321428571428"/>
+            <point key="canvasLocation" x="1298.5507246376812" y="-181.47321428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="keE-7M-sQT">
@@ -44,4 +142,14 @@
             <point key="canvasLocation" x="389.85507246376812" y="-181.47321428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chatImgAlert" width="23.5" height="23"/>
+        <image name="chatImgHelperprofile" width="60" height="60"/>
+        <namedColor name="darkPurple">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey">
+            <color red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
