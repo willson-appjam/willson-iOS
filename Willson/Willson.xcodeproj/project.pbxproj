@@ -32,6 +32,7 @@
 		663F829622CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */; };
 		663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */; };
 		663F829C22D068B300EAD932 /* HelperEnrollInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */; };
+		663F829E22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829D22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift */; };
 		669624F722CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */; };
 		669624F822CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */; };
 		66AF81B022CFA4DC00722FF2 /* HelperEnrollStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */; };
@@ -117,6 +118,7 @@
 		663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollExperienceViewController.swift; path = "Willson/view controllers/helper/HelperEnrollExperienceViewController.swift"; sourceTree = SOURCE_ROOT; };
 		663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollIntroViewController.swift; path = "Willson/view controllers/helper/HelperEnrollIntroViewController.swift"; sourceTree = SOURCE_ROOT; };
 		663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollInfoViewController.swift; path = "Willson/view controllers/helper/HelperEnrollInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
+		663F829D22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollCertificateViewController.swift; path = "Willson/view controllers/helper/HelperEnrollCertificateViewController.swift"; sourceTree = SOURCE_ROOT; };
 		669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperReviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollStartViewController.swift; path = "Willson/view controllers/helper/HelperEnrollStartViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -444,6 +446,7 @@
 				663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */,
 				663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */,
 				663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */,
+				663F829D22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift */,
 			);
 			path = "sign up";
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,
 				663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */,
 				663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */,
+				663F829E22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift in Sources */,
 				D9AC039022CE917200E16AD8 /* ReviewStarViewController.swift in Sources */,
 				663835C622CA33F9003265C7 /* CustonView.swift in Sources */,
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
