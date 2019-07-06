@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NanumSquareB.ttf">
+            <string>NanumSquareB</string>
+        </array>
         <array key="NanumSquareR.ttf">
             <string>NanumSquareR</string>
         </array>
@@ -57,67 +60,70 @@
                                     <constraint firstAttribute="height" constant="1" id="pOv-hX-tF8"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="GPO-Ga-oO9">
-                                <rect key="frame" x="111" y="204.66666666666666" width="51" height="59.666666666666657"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="rfS-8a-kYB">
+                                <rect key="frame" x="111.66666666666669" y="205" width="152" height="61.666666666666686"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="mypageBtnReviewsetting" translatesAutoresizingMaskIntoConstraints="NO" id="RkD-hX-va9">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="23"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후기관리" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-uU-t86">
-                                        <rect key="frame" x="0.0" y="44" width="51" height="15.666666666666664"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
-                                        <color key="textColor" name="darkPurple"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="LpM-lh-eP6">
-                                <rect key="frame" x="212.66666666666666" y="204.66666666666666" width="50.999999999999972" height="61.666666666666657"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnMatchinglist" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-iN-FiN">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="25"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매칭내역" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-7f-bo6">
-                                        <rect key="frame" x="0.0" y="46" width="51" height="15.666666666666664"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
-                                        <color key="textColor" name="darkPurple"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="GPO-Ga-oO9">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="61.666666666666664"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="mypageBtnReviewsetting" translatesAutoresizingMaskIntoConstraints="NO" id="RkD-hX-va9">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="23"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="후기관리" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-uU-t86">
+                                                <rect key="frame" x="0.0" y="44" width="51" height="17.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                                <color key="textColor" name="darkPurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="LpM-lh-eP6">
+                                        <rect key="frame" x="100.99999999999999" y="0.0" width="51.000000000000014" height="61.666666666666664"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnMatchinglist" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-iN-FiN">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="25"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매칭내역" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-7f-bo6">
+                                                <rect key="frame" x="0.0" y="46" width="51" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                                <color key="textColor" name="darkPurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFp-HU-TQr">
-                                <rect key="frame" x="0.0" y="297" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="299.66666666666674" width="375" height="478.33333333333326"/>
                                 <connections>
                                     <segue destination="m6P-9N-z3e" kind="embed" id="5SR-2y-g9n"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이페이지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ3-2f-Qkt">
                                 <rect key="frame" x="139.66666666666666" y="54.000000000000007" width="95.666666666666657" height="23.333333333333336"/>
-                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iFp-HU-TQr" firstAttribute="bottom" secondItem="CJB-25-QP1" secondAttribute="bottom" constant="34" id="2jZ-1J-F5k"/>
+                            <constraint firstItem="iFp-HU-TQr" firstAttribute="top" secondItem="rfS-8a-kYB" secondAttribute="bottom" constant="33" id="285-Qw-xkj"/>
                             <constraint firstItem="fZ3-2f-Qkt" firstAttribute="centerX" secondItem="CJB-25-QP1" secondAttribute="centerX" id="8Oq-im-SJf"/>
                             <constraint firstItem="aTr-ua-lCJ" firstAttribute="leading" secondItem="BXd-14-nv0" secondAttribute="trailing" constant="12" id="8s6-uc-00M"/>
                             <constraint firstItem="hxG-A6-pqN" firstAttribute="leading" secondItem="BXd-14-nv0" secondAttribute="trailing" constant="10" id="Bng-sr-TJW"/>
+                            <constraint firstItem="rfS-8a-kYB" firstAttribute="top" secondItem="4Wb-6e-uso" secondAttribute="bottom" constant="32" id="FpY-De-EFk"/>
                             <constraint firstItem="4Wb-6e-uso" firstAttribute="top" secondItem="fZ3-2f-Qkt" secondAttribute="bottom" constant="94.666666666666657" id="IDK-qV-TF8"/>
-                            <constraint firstItem="CJB-25-QP1" firstAttribute="trailing" secondItem="LpM-lh-eP6" secondAttribute="trailing" constant="111.33333333333331" id="Lfh-3C-HDw"/>
+                            <constraint firstItem="CJB-25-QP1" firstAttribute="bottom" secondItem="iFp-HU-TQr" secondAttribute="bottom" id="MOn-be-l09"/>
                             <constraint firstItem="4Wb-6e-uso" firstAttribute="centerX" secondItem="CJB-25-QP1" secondAttribute="centerX" id="Mm9-Hf-4Mx"/>
                             <constraint firstItem="BXd-14-nv0" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="65" id="O4Z-Wu-naI"/>
                             <constraint firstItem="aTr-ua-lCJ" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="71" id="QfV-2P-dXd"/>
-                            <constraint firstItem="GPO-Ga-oO9" firstAttribute="leading" secondItem="CJB-25-QP1" secondAttribute="leading" constant="111" id="S7I-9V-ehg"/>
                             <constraint firstItem="TsN-QV-DZo" firstAttribute="leading" secondItem="BXd-14-nv0" secondAttribute="trailing" constant="10" id="Tnq-JM-QrZ"/>
-                            <constraint firstItem="iFp-HU-TQr" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="253" id="XeI-CJ-HSk"/>
                             <constraint firstItem="fZ3-2f-Qkt" firstAttribute="top" secondItem="CJB-25-QP1" secondAttribute="top" constant="10" id="aDN-p4-NMV"/>
                             <constraint firstItem="CJB-25-QP1" firstAttribute="trailing" secondItem="aTr-ua-lCJ" secondAttribute="trailing" constant="217" id="ckY-T1-rxd"/>
                             <constraint firstItem="hxG-A6-pqN" firstAttribute="top" secondItem="aTr-ua-lCJ" secondAttribute="bottom" constant="6" id="clI-FC-ai1"/>
-                            <constraint firstItem="iFp-HU-TQr" firstAttribute="top" secondItem="LpM-lh-eP6" secondAttribute="bottom" constant="30.666666666666686" id="cy5-47-Mfy"/>
                             <constraint firstItem="iFp-HU-TQr" firstAttribute="leading" secondItem="CJB-25-QP1" secondAttribute="leading" id="euI-H9-ZeC"/>
-                            <constraint firstItem="iFp-HU-TQr" firstAttribute="top" secondItem="GPO-Ga-oO9" secondAttribute="bottom" constant="32.666666666666686" id="hez-pe-2gS"/>
+                            <constraint firstItem="rfS-8a-kYB" firstAttribute="centerX" secondItem="0i8-Fu-RM0" secondAttribute="centerX" id="heI-8X-K02"/>
                             <constraint firstItem="BXd-14-nv0" firstAttribute="leading" secondItem="CJB-25-QP1" secondAttribute="leading" constant="38" id="hp7-yo-zQY"/>
                             <constraint firstItem="CJB-25-QP1" firstAttribute="trailing" secondItem="iFp-HU-TQr" secondAttribute="trailing" id="jxY-VP-CIC"/>
                             <constraint firstItem="4Wb-6e-uso" firstAttribute="leading" secondItem="0i8-Fu-RM0" secondAttribute="leadingMargin" constant="18" id="wkP-eG-Dmr"/>
@@ -128,14 +134,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNe-pg-Ktr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="-214"/>
+            <point key="canvasLocation" x="773.60000000000002" y="-214.28571428571431"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="HfX-hQ-wI9">
             <objects>
                 <tableViewController id="m6P-9N-z3e" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="46" sectionFooterHeight="28" id="nQo-kb-xeq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="515"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="478.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
