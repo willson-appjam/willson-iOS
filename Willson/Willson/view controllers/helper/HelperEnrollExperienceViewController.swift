@@ -11,8 +11,14 @@ import UIKit
 class HelperEnrollExperienceViewController: UIViewController,  UITextViewDelegate {
 
     @IBOutlet weak var experienceText: UITextView!
-    
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var tf1: UITextField!
+    @IBOutlet weak var tf2: UITextField!
+    @IBOutlet weak var tf3: UITextField!
+    
+    var isKeyboardAppear = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +26,13 @@ class HelperEnrollExperienceViewController: UIViewController,  UITextViewDelegat
         
         experienceText.delegate = self
         
+        tf1.borderStyle = .none
+        tf2.borderStyle = .none
+        tf3.borderStyle = .none
         self.updateCharacterCount()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func updateCharacterCount() {
@@ -41,6 +53,26 @@ class HelperEnrollExperienceViewController: UIViewController,  UITextViewDelegat
         return false
     }
     
-
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if !isKeyboardAppear {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0{
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+            isKeyboardAppear = true
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if isKeyboardAppear {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y != 0{
+                    self.view.frame.origin.y += keyboardSize.height
+                }
+            }
+            isKeyboardAppear = false
+        }
+    }
 }
 
