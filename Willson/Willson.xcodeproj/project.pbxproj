@@ -69,7 +69,7 @@
 		D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC422CA025200458662 /* AskerList1_CategoryViewController.swift */; };
 		D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC622CA0B2A00458662 /* AskerList2_FeelViewController.swift */; };
 		D98BA5C022D0119800E72C02 /* HelperRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98BA5BF22D0119800E72C02 /* HelperRequestViewController.swift */; };
-		D98BA5C422D0131500E72C02 /* HelperRequest\CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98BA5C222D0131500E72C02 /* HelperRequest\CollectionViewCell.swift */; };
+		D98BA5C422D0131500E72C02 /* HelperRequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98BA5C222D0131500E72C02 /* HelperRequestCollectionViewCell.swift */; };
 		D98BA5C522D0131500E72C02 /* HelperRequestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98BA5C322D0131500E72C02 /* HelperRequestCollectionViewCell.xib */; };
 		D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC036922CDEB7200E16AD8 /* HelperModeProfileViewController.swift */; };
 		D9AC036C22CE18F500E16AD8 /* AskerList4_DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC036B22CE18F500E16AD8 /* AskerList4_DetailViewController.swift */; };
@@ -158,7 +158,7 @@
 		D982BCC422CA025200458662 /* AskerList1_CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList1_CategoryViewController.swift; sourceTree = "<group>"; };
 		D982BCC622CA0B2A00458662 /* AskerList2_FeelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList2_FeelViewController.swift; sourceTree = "<group>"; };
 		D98BA5BF22D0119800E72C02 /* HelperRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperRequestViewController.swift; sourceTree = "<group>"; };
-		D98BA5C222D0131500E72C02 /* HelperRequest\CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HelperRequest\\CollectionViewCell.swift"; sourceTree = "<group>"; };
+		D98BA5C222D0131500E72C02 /* HelperRequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperRequestCollectionViewCell.swift; sourceTree = "<group>"; };
 		D98BA5C322D0131500E72C02 /* HelperRequestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperRequestCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9AC036922CDEB7200E16AD8 /* HelperModeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperModeProfileViewController.swift; sourceTree = "<group>"; };
 		D9AC036B22CE18F500E16AD8 /* AskerList4_DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList4_DetailViewController.swift; sourceTree = "<group>"; };
@@ -514,7 +514,7 @@
 		D98BA5C122D0125C00E72C02 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				D98BA5C222D0131500E72C02 /* HelperRequest\CollectionViewCell.swift */,
+				D98BA5C222D0131500E72C02 /* HelperRequestCollectionViewCell.swift */,
 				D98BA5C322D0131500E72C02 /* HelperRequestCollectionViewCell.xib */,
 			);
 			path = views;
@@ -727,7 +727,7 @@
 				663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */,
 				66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */,
 				66AF81B222CFAA7000722FF2 /* UINavigationbar_Extension.swift in Sources */,
-				D98BA5C422D0131500E72C02 /* HelperRequest\CollectionViewCell.swift in Sources */,
+				D98BA5C422D0131500E72C02 /* HelperRequestCollectionViewCell.swift in Sources */,
 				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,
 				663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */,
 				663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */,
