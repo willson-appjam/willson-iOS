@@ -38,6 +38,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oew-Yy-mlT">
                                 <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <color key="backgroundColor" name="bgColor"/>
+                                <color key="sectionIndexBackgroundColor" name="bgColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListTableViewCell" rowHeight="92" id="kdy-Eo-YH3" customClass="ChatListTableViewCell" customModule="Willson" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="92"/>
@@ -107,10 +108,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jrp-aq-ryX" firstAttribute="bottom" secondItem="Oew-Yy-mlT" secondAttribute="bottom" id="0o0-SW-CoF"/>
                             <constraint firstItem="Oew-Yy-mlT" firstAttribute="leading" secondItem="jrp-aq-ryX" secondAttribute="leading" id="7rn-DT-4ad"/>
                             <constraint firstItem="h6W-pp-9PF" firstAttribute="top" secondItem="jrp-aq-ryX" secondAttribute="top" constant="14" id="Lcr-Za-Ads"/>
-                            <constraint firstItem="Oew-Yy-mlT" firstAttribute="top" secondItem="h6W-pp-9PF" secondAttribute="bottom" constant="14" id="n7D-jO-zl2"/>
+                            <constraint firstItem="Oew-Yy-mlT" firstAttribute="bottom" secondItem="jrp-aq-ryX" secondAttribute="bottom" id="Yw8-7o-pJA"/>
+                            <constraint firstItem="Oew-Yy-mlT" firstAttribute="top" secondItem="jrp-aq-ryX" secondAttribute="top" constant="44" id="rZz-8p-fVN"/>
                             <constraint firstItem="jrp-aq-ryX" firstAttribute="trailing" secondItem="Oew-Yy-mlT" secondAttribute="trailing" id="rag-Dc-44u"/>
                             <constraint firstItem="h6W-pp-9PF" firstAttribute="leading" secondItem="jrp-aq-ryX" secondAttribute="leading" constant="19" id="sVk-yf-gBu"/>
                         </constraints>
@@ -133,6 +134,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S8R-jn-JNe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
