@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-1455" y="146"/>
         </scene>
-        <!--HelperModeProfileViewController-->
+        <!--helperProfileNavi-->
         <scene sceneID="dKP-Pd-gb6">
             <objects>
-                <viewControllerPlaceholder storyboardName="HelperProfile" referencedIdentifier="HelperModeProfileViewController" id="hdv-AO-bYU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HelperProfile" referencedIdentifier="helperProfileNavi" id="hdv-AO-bYU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FqL-ad-aRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-859" y="146"/>

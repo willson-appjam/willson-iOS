@@ -70,7 +70,7 @@
 		D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D982BCC622CA0B2A00458662 /* AskerList2_FeelViewController.swift */; };
 		D98BA5C022D0119800E72C02 /* HelperRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98BA5BF22D0119800E72C02 /* HelperRequestViewController.swift */; };
 		D98BA5C422D0131500E72C02 /* HelperRequest\CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98BA5C222D0131500E72C02 /* HelperRequest\CollectionViewCell.swift */; };
-		D98BA5C522D0131500E72C02 /* HelperRequest\CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98BA5C322D0131500E72C02 /* HelperRequest\CollectionViewCell.xib */; };
+		D98BA5C522D0131500E72C02 /* HelperRequestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98BA5C322D0131500E72C02 /* HelperRequestCollectionViewCell.xib */; };
 		D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC036922CDEB7200E16AD8 /* HelperModeProfileViewController.swift */; };
 		D9AC036C22CE18F500E16AD8 /* AskerList4_DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC036B22CE18F500E16AD8 /* AskerList4_DetailViewController.swift */; };
 		D9AC036E22CE192D00E16AD8 /* AskerList3_ImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC036D22CE192D00E16AD8 /* AskerList3_ImpactViewController.swift */; };
@@ -159,7 +159,7 @@
 		D982BCC622CA0B2A00458662 /* AskerList2_FeelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList2_FeelViewController.swift; sourceTree = "<group>"; };
 		D98BA5BF22D0119800E72C02 /* HelperRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperRequestViewController.swift; sourceTree = "<group>"; };
 		D98BA5C222D0131500E72C02 /* HelperRequest\CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HelperRequest\\CollectionViewCell.swift"; sourceTree = "<group>"; };
-		D98BA5C322D0131500E72C02 /* HelperRequest\CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "HelperRequest\\CollectionViewCell.xib"; sourceTree = "<group>"; };
+		D98BA5C322D0131500E72C02 /* HelperRequestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperRequestCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9AC036922CDEB7200E16AD8 /* HelperModeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperModeProfileViewController.swift; sourceTree = "<group>"; };
 		D9AC036B22CE18F500E16AD8 /* AskerList4_DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList4_DetailViewController.swift; sourceTree = "<group>"; };
 		D9AC036D22CE192D00E16AD8 /* AskerList3_ImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerList3_ImpactViewController.swift; sourceTree = "<group>"; };
@@ -515,7 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				D98BA5C222D0131500E72C02 /* HelperRequest\CollectionViewCell.swift */,
-				D98BA5C322D0131500E72C02 /* HelperRequest\CollectionViewCell.xib */,
+				D98BA5C322D0131500E72C02 /* HelperRequestCollectionViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -625,7 +625,7 @@
 				D965853B22C4EBC00072CC5E /* HelperMypage.storyboard in Resources */,
 				D9AC038E22CE8B9300E16AD8 /* ChatListTableViewCell.xib in Resources */,
 				6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */,
-				D98BA5C522D0131500E72C02 /* HelperRequest\CollectionViewCell.xib in Resources */,
+				D98BA5C522D0131500E72C02 /* HelperRequestCollectionViewCell.xib in Resources */,
 				6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */,
 				D965853D22C4EBCA0072CC5E /* HelperProfile.storyboard in Resources */,
 			);
@@ -889,7 +889,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3V828TVJJT;
+				DEVELOPMENT_TEAM = 2F465AG84W;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -934,7 +934,7 @@
 					"-weak_framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Willson;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Willson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -947,7 +947,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3V828TVJJT;
+				DEVELOPMENT_TEAM = 2F465AG84W;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -992,7 +992,7 @@
 					"-weak_framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Willson;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Willson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -1,5 +1,5 @@
 //
-//  HelperRequest\CollectionViewCell.swift
+//  HelperRequestCollectionViewCell.swift
 //  Willson
 //
 //  Created by JHKim on 06/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HelperRequest_CollectionViewCell: UICollectionViewCell {
+class HelperRequestCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
