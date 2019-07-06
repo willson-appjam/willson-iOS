@@ -84,6 +84,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="1OB-qH-Kq3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-36" id="CwK-C3-Kgc"/>
                     <constraint firstAttribute="bottom" secondItem="6ko-g1-bOB" secondAttribute="bottom" id="PL6-Ew-Czb"/>
@@ -92,6 +93,7 @@
                     <constraint firstItem="1OB-qH-Kq3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="343:137" id="sig-EM-ICh"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="notificationContent" destination="Su1-Jb-aQX" id="kme-9t-iVr"/>

@@ -943,7 +943,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helperSignupImgId" translatesAutoresizingMaskIntoConstraints="NO" id="gmg-gH-tqJ">
-                                <rect key="frame" x="78" y="227" width="219" height="163.66666666666663"/>
+                                <rect key="frame" x="176.66666666666666" y="227" width="21.666666666666657" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gmg-gH-tqJ" secondAttribute="height" multiplier="218:163" id="7GO-bu-1c1"/>
                                 </constraints>

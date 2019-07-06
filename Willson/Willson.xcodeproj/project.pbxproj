@@ -242,13 +242,13 @@
 			name = views;
 			sourceTree = "<group>";
 		};
-		663F82A122D0C24900EAD932 /* New Group */ = {
+		663F82A122D0C24900EAD932 /* views */ = {
 			isa = PBXGroup;
 			children = (
 				663F82A622D0C40F00EAD932 /* ChatHeaderTableViewCell.swift */,
 				663F82A722D0C41000EAD932 /* ChatHeaderTableViewCell.xib */,
 			);
-			path = "New Group";
+			path = views;
 			sourceTree = "<group>";
 		};
 		8AAEB99BB84F1A480BBCC225 /* Frameworks */ = {
@@ -480,7 +480,7 @@
 		D965852922C4EA510072CC5E /* chat */ = {
 			isa = PBXGroup;
 			children = (
-				663F82A122D0C24900EAD932 /* New Group */,
+				663F82A122D0C24900EAD932 /* views */,
 				D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */,
 				663F829F22D0A76800EAD932 /* HelperChatRoomViewController.swift */,
 			);
