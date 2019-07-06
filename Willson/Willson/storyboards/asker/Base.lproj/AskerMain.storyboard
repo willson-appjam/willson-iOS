@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-Pb-WHQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1415"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYF-eT-vph" userLabel="ContentView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
@@ -338,7 +338,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wM-IM-dJd" userLabel="ReviewView">
-                                                <rect key="frame" x="0.0" y="903" width="375" height="512"/>
+                                                <rect key="frame" x="0.0" y="903" width="375" height="397"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질문자들의" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ch-SH-QkH">
                                                         <rect key="frame" x="20.999999999999993" y="36" width="109.33333333333331" height="26.666666666666671"/>
@@ -386,7 +386,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1415" id="7wH-q9-BVc"/>
+                                            <constraint firstAttribute="height" constant="1300" id="7wH-q9-BVc"/>
                                             <constraint firstItem="sYF-eT-vph" firstAttribute="top" secondItem="Ah9-Pb-WHQ" secondAttribute="top" id="8Df-cm-uOu"/>
                                             <constraint firstAttribute="bottom" secondItem="8wM-IM-dJd" secondAttribute="bottom" id="E7L-gK-fdk"/>
                                             <constraint firstAttribute="trailing" secondItem="Cmt-fj-7GM" secondAttribute="trailing" id="MbJ-ZW-hb8"/>
@@ -409,7 +409,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" name="bgColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ztI-z5-BPs" firstAttribute="trailing" secondItem="HX1-76-kOg" secondAttribute="trailing" id="615-fH-lHc"/>
                             <constraint firstItem="ztI-z5-BPs" firstAttribute="top" secondItem="HX1-76-kOg" secondAttribute="top" id="By1-L4-ech"/>
