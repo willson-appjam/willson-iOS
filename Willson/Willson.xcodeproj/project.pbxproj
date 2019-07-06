@@ -30,6 +30,8 @@
 		663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835D122CA87A8003265C7 /* PopUpViewController.swift */; };
 		663835D422CAFDD7003265C7 /* AskerSNSSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835D322CAFDD7003265C7 /* AskerSNSSignUpViewController.swift */; };
 		663F829622CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */; };
+		663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */; };
+		663F829C22D068B300EAD932 /* HelperEnrollInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */; };
 		669624F722CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */; };
 		669624F822CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */; };
 		66AF81B022CFA4DC00722FF2 /* HelperEnrollStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */; };
@@ -106,6 +108,8 @@
 		663835D122CA87A8003265C7 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		663835D322CAFDD7003265C7 /* AskerSNSSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSNSSignUpViewController.swift; path = Willson/AskerSNSSignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollExperienceViewController.swift; path = "Willson/view controllers/helper/HelperEnrollExperienceViewController.swift"; sourceTree = SOURCE_ROOT; };
+		663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollIntroViewController.swift; path = "Willson/view controllers/helper/HelperEnrollIntroViewController.swift"; sourceTree = SOURCE_ROOT; };
+		663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollInfoViewController.swift; path = "Willson/view controllers/helper/HelperEnrollInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
 		669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperReviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		66AF81AF22CFA4DC00722FF2 /* HelperEnrollStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollStartViewController.swift; path = "Willson/view controllers/helper/HelperEnrollStartViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -421,6 +425,8 @@
 				66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */,
 				66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */,
 				663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */,
+				663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */,
+				663F829B22D068B300EAD932 /* HelperEnrollInfoViewController.swift */,
 			);
 			path = "sign up";
 			sourceTree = "<group>";
@@ -648,6 +654,7 @@
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
 				669624F722CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift in Sources */,
+				663F829C22D068B300EAD932 /* HelperEnrollInfoViewController.swift in Sources */,
 				D9AC038222CE1DA400E16AD8 /* ConcernCollectionViewCell.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				66AF81B022CFA4DC00722FF2 /* HelperEnrollStartViewController.swift in Sources */,
@@ -668,6 +675,7 @@
 				663835B922C9BC30003265C7 /* Slide.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
 				D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */,
+				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
 				D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */,
 				66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */,
 				D9AC037422CE1A1100E16AD8 /* AskerList7_HelperExperienceViewController.swift in Sources */,
