@@ -10,6 +10,9 @@ import UIKit
 
 class ChatHeaderTVC: UITableViewHeaderFooterView {
 
+    static let reuseIdentifier: String = String(describing: self)
+   
+    
     @IBOutlet weak var notificationTitle: UILabel!
     @IBOutlet weak var notificationContent: UILabel!
     @IBOutlet weak var timeStamp: UILabel!

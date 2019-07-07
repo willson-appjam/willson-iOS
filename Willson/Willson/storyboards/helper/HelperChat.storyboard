@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="1298.5507246376812" y="-181.47321428571428"/>
         </scene>
-        <!--Title-->
+        <!--리트리버 님-->
         <scene sceneID="pY8-Dh-EDo">
             <objects>
                 <viewController id="X4Q-25-H5H" customClass="HelperChatRoomViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,8 +141,96 @@
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" name="bgColor"/>
                                 <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatHeaderTVC" id="IHV-l4-gf6" customClass="ChatHeaderTVC" customModule="Willson" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IHV-l4-gf6" id="DK4-1j-ojd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqT-IX-uUx">
+                                                    <rect key="frame" x="16" y="19" width="343" height="98"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK6-jf-3Re">
+                                                            <rect key="frame" x="-99" y="47" width="306" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="AN6-8q-Cqo"/>
+                                                                <constraint firstAttribute="width" constant="306" id="pvS-Ko-01w"/>
+                                                            </constraints>
+                                                            <string key="text">질문자(답변자) 10분 이내 미 접속 시 대화 자동 종료 및 재 
+매칭됩니다.</string>
+                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                            <color key="textColor" name="black"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImgAnnouncement" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-lD-Vwm">
+                                                            <rect key="frame" x="20" y="14" width="13" height="13"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="13" id="nJ1-2r-ebo"/>
+                                                                <constraint firstAttribute="height" constant="13" id="zsf-uh-PmX"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDt-Q5-fXt">
+                                                            <rect key="frame" x="-99" y="34" width="307" height="1"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="tintColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="307" id="0cf-WG-hI9"/>
+                                                                <constraint firstAttribute="height" constant="1" id="DmH-JC-xLA"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상담 대기 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPc-Id-ARz">
+                                                            <rect key="frame" x="40" y="12" width="84" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="8cV-8K-awz"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                                            <color key="textColor" name="darkPurple"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="hK6-jf-3Re" firstAttribute="centerX" secondItem="wqT-IX-uUx" secondAttribute="centerX" constant="-0.5" id="Bpo-Zf-bMV"/>
+                                                        <constraint firstItem="eNY-lD-Vwm" firstAttribute="top" secondItem="wqT-IX-uUx" secondAttribute="top" constant="14" id="DBf-Ek-ANc"/>
+                                                        <constraint firstItem="hPc-Id-ARz" firstAttribute="top" secondItem="wqT-IX-uUx" secondAttribute="top" constant="12" id="HFw-tq-qOl"/>
+                                                        <constraint firstItem="hK6-jf-3Re" firstAttribute="top" secondItem="LDt-Q5-fXt" secondAttribute="bottom" constant="12" id="a2a-l2-FZv"/>
+                                                        <constraint firstItem="hPc-Id-ARz" firstAttribute="leading" secondItem="eNY-lD-Vwm" secondAttribute="trailing" constant="7" id="a9O-4f-mhH"/>
+                                                        <constraint firstItem="LDt-Q5-fXt" firstAttribute="centerX" secondItem="wqT-IX-uUx" secondAttribute="centerX" id="gS1-Ab-UIE"/>
+                                                        <constraint firstItem="LDt-Q5-fXt" firstAttribute="top" secondItem="hPc-Id-ARz" secondAttribute="bottom" constant="6" id="qbS-qq-f1O"/>
+                                                        <constraint firstItem="eNY-lD-Vwm" firstAttribute="leading" secondItem="wqT-IX-uUx" secondAttribute="leading" constant="20" id="snB-Bn-PTb"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 03:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmP-B6-fn4">
+                                                    <rect key="frame" x="315" y="32" width="44" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="JmP-B6-fn4" secondAttribute="height" multiplier="11:3" id="vTV-LF-qdy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="10"/>
+                                                    <color key="textColor" name="black"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="wqT-IX-uUx" firstAttribute="width" secondItem="DK4-1j-ojd" secondAttribute="height" multiplier="343:137" constant="-1.2518248175182976" id="0Qx-aw-mEO"/>
+                                                <constraint firstAttribute="bottom" secondItem="JmP-B6-fn4" secondAttribute="bottom" id="Zk0-yl-Nlb"/>
+                                                <constraint firstItem="wqT-IX-uUx" firstAttribute="centerX" secondItem="DK4-1j-ojd" secondAttribute="centerX" id="dVn-9z-t1I"/>
+                                                <constraint firstItem="wqT-IX-uUx" firstAttribute="centerY" secondItem="DK4-1j-ojd" secondAttribute="centerY" id="nl4-tV-3uf"/>
+                                                <constraint firstAttribute="trailing" secondItem="JmP-B6-fn4" secondAttribute="trailing" constant="16" id="qYU-OJ-8ag"/>
+                                                <constraint firstItem="wqT-IX-uUx" firstAttribute="top" secondItem="DK4-1j-ojd" secondAttribute="topMargin" constant="-36" id="rDR-Zi-NX9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="XjQ-UT-gbL"/>
+                                        <connections>
+                                            <outlet property="notificationContent" destination="hK6-jf-3Re" id="rty-tG-s6z"/>
+                                            <outlet property="notificationTitle" destination="hPc-Id-ARz" id="S9v-BW-s71"/>
+                                            <outlet property="timeStamp" destination="JmP-B6-fn4" id="h2M-F6-Gei"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewCell" rowHeight="40" id="2ws-YQ-nCY" customClass="ChatTableViewCell" customModule="Willson" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ws-YQ-nCY" id="GLe-G1-tIt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
@@ -284,7 +372,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3fY-jV-nKd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="vj1-pC-OVj">
+                    <navigationItem key="navigationItem" title="리트리버 님" id="vj1-pC-OVj">
                         <rightBarButtonItems>
                             <barButtonItem title="60:00" id="G57-uV-NwV"/>
                             <barButtonItem title="Item" image="imgTimer" width="18" id="uA6-0Z-94q">
@@ -294,6 +382,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chatRoomTableView" destination="uRM-dt-heb" id="V8D-Zj-wBd"/>
+                        <outlet property="keyboardView" destination="Ky8-DU-Vfe" id="FbQ-5e-8dm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2O-tz-Dnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -324,6 +413,7 @@
     <resources>
         <image name="chatBtnSend" width="21" height="18"/>
         <image name="chatImgAlert" width="23.333333969116211" height="23"/>
+        <image name="chatImgAnnouncement" width="13" height="13"/>
         <image name="chatImgHelperprofile" width="60" height="60"/>
         <image name="helperChatImgProfileWoman" width="36" height="36"/>
         <image name="imgTimer" width="18" height="18"/>
