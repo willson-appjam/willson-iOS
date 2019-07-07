@@ -40,21 +40,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxG-A6-pqN">
-                                <rect key="frame" x="96" y="139.66666666666666" width="40" height="18"/>
+                                <rect key="frame" x="96" y="139.66666666666666" width="37" height="16"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsN-QV-DZo">
-                                        <rect key="frame" x="0.0" y="0.0" width="22" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="21" height="16"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                         <color key="textColor" name="bdbdbd"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnSetting" translatesAutoresizingMaskIntoConstraints="NO" id="miE-nl-Mop">
-                                        <rect key="frame" x="22" y="0.0" width="18" height="18"/>
+                                        <rect key="frame" x="21" y="0.0" width="16" height="16"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wb-6e-uso">
-                                <rect key="frame" x="34" y="172" width="307" height="1"/>
+                                <rect key="frame" x="34" y="173.33333333333334" width="307" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="pOv-hX-tF8"/>
@@ -161,7 +161,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnArrow" translatesAutoresizingMaskIntoConstraints="NO" id="XjH-O8-H87">
-                                                    <rect key="frame" x="349" y="13.666666666666664" width="7" height="12"/>
+                                                    <rect key="frame" x="340" y="11.666666666666664" width="16" height="16"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -188,7 +188,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnArrow" translatesAutoresizingMaskIntoConstraints="NO" id="rNk-Up-ZGn">
-                                                    <rect key="frame" x="349" y="13.666666666666664" width="7" height="12"/>
+                                                    <rect key="frame" x="340" y="11.666666666666664" width="16" height="16"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -213,7 +213,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnArrow" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-zS-7KA">
-                                                    <rect key="frame" x="349" y="13.666666666666664" width="7" height="12"/>
+                                                    <rect key="frame" x="340" y="11.666666666666664" width="16" height="16"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -242,7 +242,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnArrow" translatesAutoresizingMaskIntoConstraints="NO" id="mjg-db-kgO">
-                                                    <rect key="frame" x="349" y="13.666666666666664" width="7" height="12"/>
+                                                    <rect key="frame" x="340" y="11.666666666666664" width="16" height="16"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -267,7 +267,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypageBtnArrow" translatesAutoresizingMaskIntoConstraints="NO" id="FFL-xG-0ne">
-                                                    <rect key="frame" x="349" y="13.666666666666664" width="7" height="12"/>
+                                                    <rect key="frame" x="340" y="11.666666666666664" width="16" height="16"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
