@@ -52,9 +52,9 @@ class AskerLoginViewController: UIViewController {
     
     // 일반 로그인
     @IBAction func tappedLoginButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "AskerMain", bundle: nil)
+        let storyboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
-        present(viewController, animated: true)
+        self.present(viewController, animated: true)
     }
     
     // 페이스북 로그인

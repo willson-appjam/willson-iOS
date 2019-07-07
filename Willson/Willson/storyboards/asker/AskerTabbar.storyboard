@@ -29,7 +29,7 @@
                         <constraints>
                             <constraint firstItem="baC-dW-eHS" firstAttribute="leading" secondItem="ZPb-ER-jak" secondAttribute="leading" id="2NW-O2-PTm"/>
                             <constraint firstItem="ZPb-ER-jak" firstAttribute="trailing" secondItem="baC-dW-eHS" secondAttribute="trailing" id="A1G-2D-TTE"/>
-                            <constraint firstItem="ZPb-ER-jak" firstAttribute="bottom" secondItem="baC-dW-eHS" secondAttribute="bottom" id="FmA-Fr-Oql"/>
+                            <constraint firstAttribute="bottom" secondItem="baC-dW-eHS" secondAttribute="bottom" id="FmA-Fr-Oql"/>
                             <constraint firstItem="baC-dW-eHS" firstAttribute="top" secondItem="ZPb-ER-jak" secondAttribute="top" id="KIx-Lf-10N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZPb-ER-jak"/>
@@ -58,8 +58,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KfV-ML-IHM" firstAttribute="leading" secondItem="Bkr-zk-e9P" secondAttribute="leading" id="6PX-5m-Tnv"/>
+                            <constraint firstItem="KfV-ML-IHM" firstAttribute="bottom" secondItem="cdd-JC-o6g" secondAttribute="bottom" id="BZB-nV-XF6"/>
                             <constraint firstItem="Bkr-zk-e9P" firstAttribute="trailing" secondItem="KfV-ML-IHM" secondAttribute="trailing" id="Htp-AM-QjI"/>
-                            <constraint firstItem="Bkr-zk-e9P" firstAttribute="bottom" secondItem="KfV-ML-IHM" secondAttribute="bottom" id="dOv-Cb-YxP"/>
                             <constraint firstItem="KfV-ML-IHM" firstAttribute="top" secondItem="Bkr-zk-e9P" secondAttribute="top" id="vPW-U5-uKY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bkr-zk-e9P"/>
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlT-xn-24s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1214" y="-305"/>
+            <point key="canvasLocation" x="1213.5999999999999" y="-305.17241379310349"/>
         </scene>
         <!--AskerMainViewController-->
         <scene sceneID="0hf-Vd-MiD">
@@ -127,7 +127,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eFG-iS-Tms" firstAttribute="bottom" secondItem="w1b-pl-hyp" secondAttribute="bottom" id="6bC-Tv-u4x"/>
+                            <constraint firstAttribute="bottom" secondItem="w1b-pl-hyp" secondAttribute="bottom" id="6bC-Tv-u4x"/>
                             <constraint firstItem="eFG-iS-Tms" firstAttribute="trailing" secondItem="w1b-pl-hyp" secondAttribute="trailing" id="Ii9-Fi-aI7"/>
                             <constraint firstItem="w1b-pl-hyp" firstAttribute="leading" secondItem="eFG-iS-Tms" secondAttribute="leading" id="RJJ-za-G0S"/>
                             <constraint firstItem="w1b-pl-hyp" firstAttribute="top" secondItem="eFG-iS-Tms" secondAttribute="top" id="SGQ-1d-2QS"/>
@@ -159,7 +159,7 @@
                         <constraints>
                             <constraint firstItem="gr9-q6-uH3" firstAttribute="trailing" secondItem="39n-5S-SDZ" secondAttribute="trailing" id="8RN-lX-9et"/>
                             <constraint firstItem="39n-5S-SDZ" firstAttribute="leading" secondItem="gr9-q6-uH3" secondAttribute="leading" id="Arm-f7-euX"/>
-                            <constraint firstItem="gr9-q6-uH3" firstAttribute="bottom" secondItem="39n-5S-SDZ" secondAttribute="bottom" id="fZx-K1-4d5"/>
+                            <constraint firstAttribute="bottom" secondItem="39n-5S-SDZ" secondAttribute="bottom" id="fZx-K1-4d5"/>
                             <constraint firstItem="39n-5S-SDZ" firstAttribute="top" secondItem="gr9-q6-uH3" secondAttribute="top" id="rmk-sa-XbA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gr9-q6-uH3"/>
