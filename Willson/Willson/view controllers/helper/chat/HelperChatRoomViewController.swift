@@ -13,9 +13,11 @@ class HelperChatRoomViewController: UIViewController {
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     let chatHeaderTableViewCellIdentifier: String = "ChatHeaderTVC"
     var isKeyboardAppear = false
+    var isTextFieldActive = false
     
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,38 +29,45 @@ class HelperChatRoomViewController: UIViewController {
         chatRoomTableView.dataSource = self
         chatRoomTableView.rowHeight = 40
         
+        textField.delegate = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-      
-        
-        /*self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)*/
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
+        view.addGestureRecognizer(tap) /*self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)*/
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        if !isKeyboardAppear {
+        if isTextFieldActive {
             if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
                 if self.view.frame.origin.y == 0{
                     //self.view.frame.origin.y -= keyboardSize.height
                     self.keyboardView.frame.origin.y -= keyboardSize.height
                 }
             }
-            isKeyboardAppear = true
+        
         }
     }
     
+    
     @objc func keyboardWillHide(notification: NSNotification) {
-        if isKeyboardAppear {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y != 0{
-                    //self.view.frame.origin.y += keyboardSize.height
-                    self.keyboardView.frame.origin.y += keyboardSize.height
+        if !isTextFieldActive {
+                if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                   //if self.view.frame.origin.y != 0{
+                        //self.view.frame.origin.y += keyboardSize.height
+                        self.keyboardView.frame.origin.y += keyboardSize.height
+                    //}
                 }
-            }
-            isKeyboardAppear = false
+           
+        
         }
     }
-    /*
+  
+ 
+    
+    
+   /*
     func keyboardWasShown(notification: NSNotification) {
         let info = notification.userInfo!
         let keyboardFrame: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -131,4 +140,20 @@ extension HelperChatRoomViewController: UITableViewDataSource {
     }*/
     
    
+}
+
+extension HelperChatRoomViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        isTextFieldActive = true
+        //keyboardWillShow()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        isTextFieldActive = false
+    }
+    
+    //빈 화면 탭했을 때 키보드 내리기
+    @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }

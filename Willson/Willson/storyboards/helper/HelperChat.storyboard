@@ -339,6 +339,9 @@
                                         <color key="textColor" name="black"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textField:" destination="dgB-Gm-kcK" eventType="editingDidEnd" id="3WH-JC-uSd"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xz1-YR-yzW">
                                         <rect key="frame" x="337" y="15" width="21" height="22"/>
@@ -383,11 +386,13 @@
                     <connections>
                         <outlet property="chatRoomTableView" destination="uRM-dt-heb" id="V8D-Zj-wBd"/>
                         <outlet property="keyboardView" destination="Ky8-DU-Vfe" id="FbQ-5e-8dm"/>
+                        <outlet property="textField" destination="iKQ-7N-Qaf" id="znc-an-3Pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2O-tz-Dnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dgB-Gm-kcK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2048.8000000000002" y="-181.0344827586207"/>
+            <point key="canvasLocation" x="2041" y="-215"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="keE-7M-sQT">
