@@ -49,13 +49,15 @@
 		66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */; };
 		66E5E78222CB809C00B43D93 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E78122CB809C00B43D93 /* PopUpVC.swift */; };
 		66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */; };
+		D915535222D1FB9C00A38390 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D915535122D1FB9C00A38390 /* Splash.storyboard */; };
+		D915535422D1FBC100A38390 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915535322D1FBC100A38390 /* SplashViewController.swift */; };
+		D915535622D20EC400A38390 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915535522D20EC400A38390 /* CustomButton.swift */; };
 		D915F8A222CDCB40009DA734 /* AskerTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D915F8A122CDCB40009DA734 /* AskerTabbar.storyboard */; };
 		D915F8A422CDCE60009DA734 /* AskerChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915F8A322CDCE60009DA734 /* AskerChatListViewController.swift */; };
 		D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */; };
 		D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */; };
 		D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */; };
 		D92C2C5122D00A70004F7CAB /* HelperNoRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C5022D00A70004F7CAB /* HelperNoRequestViewController.swift */; };
-		D92C2C5322D00D16004F7CAB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C5222D00D16004F7CAB /* SplashViewController.swift */; };
 		D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965850522C4E7E40072CC5E /* AppDelegate.swift */; };
 		D965850B22C4E7E40072CC5E /* AskerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965850922C4E7E40072CC5E /* AskerMain.storyboard */; };
 		D965850D22C4E7E60072CC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965850C22C4E7E60072CC5E /* Assets.xcassets */; };
@@ -142,13 +144,15 @@
 		66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Extension.swift; sourceTree = "<group>"; };
 		9794B654C502E453FEF56F6A /* Pods_Willson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Willson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF23D3E76D75D4A1670D121 /* Pods-Willson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.debug.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.debug.xcconfig"; sourceTree = "<group>"; };
+		D915535122D1FB9C00A38390 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		D915535322D1FBC100A38390 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D915535522D20EC400A38390 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D915F8A122CDCB40009DA734 /* AskerTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AskerTabbar.storyboard; sourceTree = "<group>"; };
 		D915F8A322CDCE60009DA734 /* AskerChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerChatListViewController.swift; sourceTree = "<group>"; };
 		D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishChatViewController.swift; sourceTree = "<group>"; };
 		D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteReviewViewController.swift; sourceTree = "<group>"; };
 		D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExaminHelperViewController.swift; sourceTree = "<group>"; };
 		D92C2C5022D00A70004F7CAB /* HelperNoRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperNoRequestViewController.swift; sourceTree = "<group>"; };
-		D92C2C5222D00D16004F7CAB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D965850222C4E7E40072CC5E /* Willson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Willson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D965850522C4E7E40072CC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D965850A22C4E7E40072CC5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AskerMain.storyboard; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				D965850E22C4E7E60072CC5E /* LaunchScreen.storyboard */,
 				D965851122C4E7E60072CC5E /* Info.plist */,
 				663835C522CA33F9003265C7 /* CustonView.swift */,
+				D915535522D20EC400A38390 /* CustomButton.swift */,
 				66E5E78122CB809C00B43D93 /* PopUpVC.swift */,
 				66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */,
 				66AF81B122CFAA6F00722FF2 /* UINavigationbar_Extension.swift */,
@@ -324,6 +329,7 @@
 		D965851922C4E8020072CC5E /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D915535122D1FB9C00A38390 /* Splash.storyboard */,
 				D965853822C4EB990072CC5E /* asker */,
 				D965853922C4EBA40072CC5E /* helper */,
 			);
@@ -373,6 +379,7 @@
 		D965851F22C4E9C80072CC5E /* splash */ = {
 			isa = PBXGroup;
 			children = (
+				D915535322D1FBC100A38390 /* SplashViewController.swift */,
 			);
 			path = splash;
 			sourceTree = "<group>";
@@ -400,7 +407,6 @@
 			children = (
 				663835C222C9F68B003265C7 /* views */,
 				663835B422C9BAE3003265C7 /* AskerMainViewController.swift */,
-				D92C2C5222D00D16004F7CAB /* SplashViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -640,6 +646,7 @@
 				D965854122C4EBE50072CC5E /* HelperRequest.storyboard in Resources */,
 				D9AC038722CE601C00E16AD8 /* FeelCollectionViewCell.xib in Resources */,
 				669624F822CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib in Resources */,
+				D915535222D1FB9C00A38390 /* Splash.storyboard in Resources */,
 				D965852F22C4EB430072CC5E /* AskerLogin.storyboard in Resources */,
 				D965853322C4EB560072CC5E /* AskerChat.storyboard in Resources */,
 				D965850D22C4E7E60072CC5E /* Assets.xcassets in Resources */,
@@ -727,6 +734,7 @@
 				D9AC037822CE1A4D00E16AD8 /* AskerList9_AgreementViewController.swift in Sources */,
 				663835BF22C9ECDA003265C7 /* ReviewSlide.swift in Sources */,
 				D9AC037022CE196F00E16AD8 /* AskerList5_HelperSexViewController.swift in Sources */,
+				D915535422D1FBC100A38390 /* SplashViewController.swift in Sources */,
 				D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */,
 				663F829622CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift in Sources */,
 				D915F8A422CDCE60009DA734 /* AskerChatListViewController.swift in Sources */,
@@ -746,6 +754,7 @@
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
 				D9AC036C22CE18F500E16AD8 /* AskerList4_DetailViewController.swift in Sources */,
 				D9AC037222CE199500E16AD8 /* AskerList6_HelperCharacterViewController.swift in Sources */,
+				D915535622D20EC400A38390 /* CustomButton.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
 				D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */,
 				663835C422CA2A09003265C7 /* AskerRequestViewController.swift in Sources */,
@@ -771,7 +780,6 @@
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
 				66C661CC22CC8A01008A451F /* CollectionReusableView.swift in Sources */,
 				D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */,
-				D92C2C5322D00D16004F7CAB /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
