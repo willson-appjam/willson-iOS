@@ -1121,18 +1121,20 @@
                             <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="sbPopUp3ID" translatesAutoresizingMaskIntoConstraints="NO" id="bO4-qZ-RVq">
                                 <rect key="frame" x="26" y="320" width="323" height="173"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다른 헬퍼들이 기다리고있어요" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rda-Hx-Rin">
-                                        <rect key="frame" x="21" y="61" width="281" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rda-Hx-Rin">
+                                        <rect key="frame" x="21" y="60" width="281" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="XJL-31-Nke"/>
                                             <constraint firstAttribute="height" constant="36" id="pPi-kO-QF4"/>
                                         </constraints>
+                                        <string key="text">해당 헬퍼님은 다른 고민자와 매칭되었습니다.
+다른 헬퍼님의 프로필을 보러가볼까요?</string>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-WH-SGo">
-                                        <rect key="frame" x="70" y="112" width="183" height="38"/>
+                                        <rect key="frame" x="70" y="111" width="183" height="38"/>
                                         <color key="backgroundColor" name="buttonLeft"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="183" id="13y-aR-T3t"/>
@@ -1144,8 +1146,8 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앗! 이미 매칭된 헬퍼입니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-qi-8Ki">
-                                        <rect key="frame" x="21" y="28" width="281" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <rect key="frame" x="21" y="28" width="281" height="20"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1314,7 +1316,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="281" id="dlc-bh-ygM"/>
                                             <constraint firstAttribute="height" constant="48" id="tIz-Lw-AQm"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>

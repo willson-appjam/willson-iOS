@@ -56,6 +56,4 @@ extension AskerChatListViewController: UITableViewDataSource {
         cell.separatorInset = UIEdgeInsets(top: 3, left: 0, bottom: 3, right: 0)
         return cell
     }
-    
-    
 }
