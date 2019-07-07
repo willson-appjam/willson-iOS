@@ -42,7 +42,7 @@ class AskerChatRoomViewController: UIViewController {
         
         //유동적 셀높이 조정
         // 이거 한줄이면 됨... 왜?
-        chatRoomTableView.estimatedRowHeight = 0
+        //chatRoomTableView.estimatedRowHeight = 40
     }
     
    
@@ -116,7 +116,7 @@ extension AskerChatRoomViewController: UITableViewDataSource {
             cell.oppoText.text = messageArray[indexPath.item]
             cell.oppoTime.text = timeArray[indexPath.item]
             
-            //chatRoomTableView.rowHeight = CGFloat(cell.oppoText.numberOfVisibleLines * 40) //레이블 높이 조정
+           chatRoomTableView.rowHeight = CGFloat(cell.oppoText.numberOfVisibleLines * 40) //레이블 높이 조정
         } else {
             cell.profileImg.isHidden = true
             cell.oppoText.isHidden = true
@@ -126,11 +126,14 @@ extension AskerChatRoomViewController: UITableViewDataSource {
             cell.ownText.text = messageArray[indexPath.item]
             cell.ownTime.text = timeArray[indexPath.item]
             
-            //chatRoomTableView.rowHeight = CGFloat(cell.ownText.numberOfVisibleLines * 40) //레이블 높이 조정
+            chatRoomTableView.rowHeight = CGFloat(cell.ownText.numberOfVisibleLines * 40) //레이블 높이 조정
         }
         
         cell.selectionStyle = .none
         cell.separatorInset = UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
+        
+        cell.translatesAutoresizingMaskIntoConstraints = false
+        
         return cell
     }
     
@@ -156,7 +159,9 @@ extension AskerChatRoomViewController: UITableViewDataSource {
         return 138
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
 extension AskerChatRoomViewController: UITextFieldDelegate {

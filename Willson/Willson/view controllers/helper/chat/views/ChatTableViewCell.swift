@@ -30,6 +30,11 @@ class ChatTableViewCell: UITableViewCell {
         oppoTime.sizeToFit()
         ownTime.sizeToFit()
         
+        oppoText.translatesAutoresizingMaskIntoConstraints = false
+        oppoView.translatesAutoresizingMaskIntoConstraints = false
+        ownText.translatesAutoresizingMaskIntoConstraints = false
+        ownView.translatesAutoresizingMaskIntoConstraints = false
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
