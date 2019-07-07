@@ -32,7 +32,7 @@ class AskerChatListViewController: UIViewController {
 extension AskerChatListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "AskerChat", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ReviewStarViewController")
+        /*let viewController = storyboard.instantiateViewController(withIdentifier: "ReviewStarViewController")
         
         let vc = UIApplication.topViewController()
         
@@ -40,7 +40,7 @@ extension AskerChatListViewController: UITableViewDelegate {
         
         viewController.view.frame = vc?.view.frame ?? CGRect(x: 0, y: 0, width: 0, height: 0)
         vc?.view.addSubview(viewController.view)
-//        viewController.didMove(toParent: vc)
+//        viewController.didMove(toParent: vc)*/
     }
 }
 

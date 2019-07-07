@@ -1,21 +1,19 @@
 //
-//  HelperChatRoomViewController.swift
+//  AskerChatRoomViewController.swift
 //  Willson
 //
-//  Created by 박지수 on 06/07/2019.
+//  Created by 박지수 on 07/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
 
-class HelperChatRoomViewController: UIViewController {
+class AskerChatRoomViewController: UIViewController {
 
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
-    let chatHeaderTableViewCellIdentifier: String = "ChatHeaderTVC"
-    //var isKeyboardAppear = false
     var isTextFieldActive = false
     
-    var messageArray = ["안녕하세유-", "리트리버님?", "반가워용", "^^"]
+    var messageArray = ["속상하셨겠어요ㅠㅠㅠ", "지금은 그래도 나아지셨다하니 더 잘될 거에요!", "감사합니다..", "ㅎ"]
     var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
     var userArray = [0, 0, 1, 1]
     
@@ -25,7 +23,7 @@ class HelperChatRoomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = "리트리버" + " 님"
         
@@ -34,7 +32,7 @@ class HelperChatRoomViewController: UIViewController {
         chatRoomTableView.rowHeight = 40
         
         textField.delegate = self
-        
+
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
@@ -43,15 +41,15 @@ class HelperChatRoomViewController: UIViewController {
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
     }
     
+   
     @IBAction func sendMessageAction(_ sender: Any) {
         messageArray.append(textField.text!)
-        timeArray.append("PM 07:13")
+        timeArray.append("PM 07:52")
         userArray.append(1)
         
         let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
         self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
     }
-    
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if isTextFieldActive {
@@ -61,41 +59,31 @@ class HelperChatRoomViewController: UIViewController {
                     self.keyboardView.frame.origin.y -= keyboardSize.height
                 }
             }
-        
+            
         }
     }
     
     
     @objc func keyboardWillHide(notification: NSNotification) {
         if !isTextFieldActive {
-                if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                   //if self.view.frame.origin.y != 0{
-                        //self.view.frame.origin.y += keyboardSize.height
-                        self.keyboardView.frame.origin.y += keyboardSize.height
-                    //}
-                }
-           
-        
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                //if self.view.frame.origin.y != 0{
+                //self.view.frame.origin.y += keyboardSize.height
+                self.keyboardView.frame.origin.y += keyboardSize.height
+                //}
+            }
+            
+            
         }
     }
-  
- 
-    
-    
-   /*
-    func keyboardWasShown(notification: NSNotification) {
-        let info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        
-            keyboardView.bottomConstraint.constant = keyboardFrame.size.height + 20
-    }*/
+
 }
 
-extension HelperChatRoomViewController: UITableViewDelegate {
+extension AskerChatRoomViewController: UITableViewDelegate {
     
 }
 
-extension HelperChatRoomViewController: UITableViewDataSource {
+extension AskerChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
     }
@@ -114,6 +102,7 @@ extension HelperChatRoomViewController: UITableViewDataSource {
                 }
             }
             
+            cell.profileImg.image = UIImage(named: "chatImgHelperprofile")
             cell.ownText.isHidden = true
             cell.ownView.isHidden = true
             cell.ownTime.isHidden = true
@@ -147,7 +136,7 @@ extension HelperChatRoomViewController: UITableViewDataSource {
         
         return headerView
     }
-
+    
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let headerView: ChatHeaderTVC = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChatHeaderTVC.reuseIdentifier) as? ChatHeaderTVC else { return }
         
@@ -157,10 +146,10 @@ extension HelperChatRoomViewController: UITableViewDataSource {
         return 138
     }
     
-   
+    
 }
 
-extension HelperChatRoomViewController: UITextFieldDelegate {
+extension AskerChatRoomViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         isTextFieldActive = true
         //keyboardWillShow()
