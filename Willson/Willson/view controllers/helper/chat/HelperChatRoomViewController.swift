@@ -33,9 +33,10 @@ class HelperChatRoomViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
-        view.addGestureRecognizer(tap) /*self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)*/
+        view.addGestureRecognizer(tap)
+        self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -125,19 +126,27 @@ extension HelperChatRoomViewController: UITableViewDataSource {
         return cell
     }
     
-    /*func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChatHeaderTVC.reuseIdentifier) as! ChatHeaderTVC
+        guard let headerView: ChatHeaderTVC = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChatHeaderTVC.reuseIdentifier) as? ChatHeaderTVC else { return UIView() }
+        if let titleLabel = headerView.notificationTitle {
+            titleLabel.text = "상담 대기 안내"
+        }
+        if let contentLabel = headerView.notificationContent {
+            contentLabel.text = "질문자(답변자) 10분 이내 미 접속 시 대화 자동 종료 및 재매칭됩니다."
+        }
         
-        headerView.notificationTitle.text = "상담 대기 안내"
-        headerView.notificationContent.text = "질문자(답변자) 10분 이내 미 접속 시 대화 자동 종료 및 재매칭됩니다."
-    
         return headerView
     }
 
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let headerView: ChatHeaderTVC = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChatHeaderTVC.reuseIdentifier) as? ChatHeaderTVC else { return }
+        
+        headerView.clipsToBounds = true
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 138
-    }*/
+    }
     
    
 }

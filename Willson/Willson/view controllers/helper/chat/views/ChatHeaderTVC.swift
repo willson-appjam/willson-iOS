@@ -13,9 +13,9 @@ class ChatHeaderTVC: UITableViewHeaderFooterView {
     static let reuseIdentifier: String = String(describing: self)
    
     
-    @IBOutlet weak var notificationTitle: UILabel!
-    @IBOutlet weak var notificationContent: UILabel!
-    @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet var notificationTitle: UILabel!
+    @IBOutlet var notificationContent: UILabel!
+    @IBOutlet var timeStamp: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

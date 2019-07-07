@@ -31,15 +31,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gkt-pD-dgV">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkt-pD-dgV">
                         <rect key="frame" x="16" y="19" width="343" height="98"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzU-qY-UVO">
-                                <rect key="frame" x="18" y="47" width="306" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="306" id="lgc-dR-T9U"/>
-                                    <constraint firstAttribute="height" constant="35" id="u9P-lV-ZTk"/>
-                                </constraints>
+                                <rect key="frame" x="18" y="47" width="307" height="27"/>
                                 <string key="text">질문자(답변자) 10분 이내 미 접속 시 대화 자동 종료 및 재 
 매칭됩니다.</string>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
@@ -54,7 +50,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kU-PV-p0Y">
-                                <rect key="frame" x="18" y="34" width="307" height="1"/>
+                                <rect key="frame" x="6.5" y="34" width="307" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -64,9 +60,6 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상담 대기 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd1-DM-NoQ">
                                 <rect key="frame" x="40" y="12" width="84" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="drE-By-E5D"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
@@ -74,10 +67,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EzU-qY-UVO" firstAttribute="centerX" secondItem="Gkt-pD-dgV" secondAttribute="centerX" constant="-0.5" id="13T-my-P8Z"/>
-                            <constraint firstItem="0kU-PV-p0Y" firstAttribute="centerX" secondItem="Gkt-pD-dgV" secondAttribute="centerX" id="3j0-9k-mAs"/>
+                            <constraint firstItem="EzU-qY-UVO" firstAttribute="centerX" secondItem="Gkt-pD-dgV" secondAttribute="centerX" id="13T-my-P8Z"/>
+                            <constraint firstItem="0kU-PV-p0Y" firstAttribute="centerX" secondItem="Gkt-pD-dgV" secondAttribute="centerX" constant="-11.5" id="3j0-9k-mAs"/>
+                            <constraint firstAttribute="height" constant="98" id="GnJ-eb-0Hj"/>
                             <constraint firstItem="bp7-3m-Sst" firstAttribute="leading" secondItem="Gkt-pD-dgV" secondAttribute="leading" constant="20" id="I58-NL-FZZ"/>
+                            <constraint firstItem="EzU-qY-UVO" firstAttribute="leading" secondItem="Gkt-pD-dgV" secondAttribute="leading" constant="18" id="JwQ-8e-pYI"/>
                             <constraint firstItem="EzU-qY-UVO" firstAttribute="top" secondItem="0kU-PV-p0Y" secondAttribute="bottom" constant="12" id="N7F-l3-M3p"/>
+                            <constraint firstAttribute="trailing" secondItem="EzU-qY-UVO" secondAttribute="trailing" constant="18" id="gRu-vf-wuQ"/>
+                            <constraint firstAttribute="width" constant="343" id="gpI-Fy-quR"/>
                             <constraint firstItem="zd1-DM-NoQ" firstAttribute="leading" secondItem="bp7-3m-Sst" secondAttribute="trailing" constant="7" id="huR-Ef-nFe"/>
                             <constraint firstItem="zd1-DM-NoQ" firstAttribute="top" secondItem="Gkt-pD-dgV" secondAttribute="top" constant="12" id="i1b-ga-1lt"/>
                             <constraint firstItem="bp7-3m-Sst" firstAttribute="top" secondItem="Gkt-pD-dgV" secondAttribute="top" constant="14" id="zGH-1i-kLs"/>
@@ -85,10 +82,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 03:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKg-Mb-yAr">
-                        <rect key="frame" x="315" y="125.5" width="44" height="12"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="SKg-Mb-yAr" secondAttribute="height" multiplier="11:3" id="r5E-14-Sd5"/>
-                        </constraints>
+                        <rect key="frame" x="315" y="126" width="44" height="11.5"/>
                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="10"/>
                         <color key="textColor" name="black"/>
                         <nil key="highlightedColor"/>
@@ -96,20 +90,19 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Gkt-pD-dgV" firstAttribute="top" secondItem="mqd-IF-LTY" secondAttribute="topMargin" constant="-36" id="22y-Zg-Hak"/>
                     <constraint firstAttribute="bottom" secondItem="SKg-Mb-yAr" secondAttribute="bottom" id="3hN-LN-xMD"/>
-                    <constraint firstItem="Gkt-pD-dgV" firstAttribute="width" secondItem="mqd-IF-LTY" secondAttribute="height" multiplier="343:137" constant="-1.2518248175182976" id="8cU-LT-mki"/>
-                    <constraint firstItem="Gkt-pD-dgV" firstAttribute="centerY" secondItem="mqd-IF-LTY" secondAttribute="centerY" id="KyO-ea-xrr"/>
                     <constraint firstItem="Gkt-pD-dgV" firstAttribute="centerX" secondItem="mqd-IF-LTY" secondAttribute="centerX" id="U3H-97-NaT"/>
+                    <constraint firstItem="Gkt-pD-dgV" firstAttribute="top" secondItem="mqd-IF-LTY" secondAttribute="top" constant="19" id="fbL-qw-xYf"/>
+                    <constraint firstItem="SKg-Mb-yAr" firstAttribute="top" secondItem="Gkt-pD-dgV" secondAttribute="bottom" constant="9" id="ih7-fv-n7C"/>
                     <constraint firstAttribute="trailing" secondItem="SKg-Mb-yAr" secondAttribute="trailing" constant="16" id="s7U-NM-379"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="Ihe-ab-LlY"/>
             <connections>
-                <outlet property="notificationContent" destination="EzU-qY-UVO" id="sdh-DE-JOk"/>
-                <outlet property="notificationTitle" destination="zd1-DM-NoQ" id="1dY-tT-Euc"/>
-                <outlet property="timeStamp" destination="SKg-Mb-yAr" id="jtC-de-cid"/>
+                <outlet property="notificationContent" destination="EzU-qY-UVO" id="v1Y-M6-c1y"/>
+                <outlet property="notificationTitle" destination="zd1-DM-NoQ" id="KgV-20-0AG"/>
+                <outlet property="timeStamp" destination="SKg-Mb-yAr" id="nEu-U6-Tvv"/>
             </connections>
         </tableViewCell>
     </objects>

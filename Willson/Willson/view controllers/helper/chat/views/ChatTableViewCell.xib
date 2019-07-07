@@ -30,7 +30,7 @@
                             <constraint firstAttribute="height" constant="36" id="hAj-un-fNF"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWW-l1-ZJc" customClass="CustomView">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWW-l1-ZJc" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                         <rect key="frame" x="59" y="1.5" width="129" height="37"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해결이 되었어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-mz-ciy">
@@ -114,7 +114,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="helperChatImgProfileWoman" width="36" height="36"/>
+        <image name="helperChatImgProfileWoman" width="60" height="60"/>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -31,6 +31,8 @@ class AskerList2_FeelViewController: UIViewController {
         feelCollectionView.delegate = self
         feelCollectionView.dataSource = self
     }
+    
+    // MARK: - Methods
 }
 
 extension AskerList2_FeelViewController: UICollectionViewDelegate {
