@@ -15,6 +15,10 @@ class HelperChatRoomViewController: UIViewController {
     var isKeyboardAppear = false
     var isTextFieldActive = false
     
+    var messageArray = ["안녕하세유-", "리트리버님?", "반가워용", "^^"]
+    var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
+    var userArray = [0, 0, 1, 1]
+    
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
@@ -83,7 +87,7 @@ extension HelperChatRoomViewController: UITableViewDelegate {
 
 extension HelperChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return messageArray.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,36 +97,25 @@ extension HelperChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
         
-        switch indexPath.row {
-        case 0:
-            cell.profileImg.image = UIImage(named: "helperChatImgProfileWoman")
-            cell.ownText.text = ""
-            cell.oppoText.text = "안녕하세유-"
+        if userArray[indexPath.item] == 0 {
             cell.ownText.isHidden = true
             cell.ownView.isHidden = true
             cell.ownTime.isHidden = true
-            
-        
-        case 1:
+            //상대방
+            cell.oppoText.text = messageArray[indexPath.item]
+            cell.oppoTime.text = timeArray[indexPath.item]
+        } else {
             cell.profileImg.isHidden = true
-            cell.ownText.text = ""
-            cell.oppoText.text = "리트리버님???"
-            cell.ownText.isHidden = true
-            cell.ownView.isHidden = true
-            cell.ownTime.isHidden = true
-        case 2:
-            cell.profileImg.isHidden = true
-            cell.ownText.text = "넹"
-            cell.oppoText.text = ""
             cell.oppoText.isHidden = true
             cell.oppoView.isHidden = true
             cell.oppoTime.isHidden = true
-        default:
-            return cell
+            //자신
+            cell.ownText.text = messageArray[indexPath.item]
+            cell.ownTime.text = timeArray[indexPath.item]
         }
         
         cell.selectionStyle = .none
-        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cell.separatorInset = UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
         return cell
     }
     
