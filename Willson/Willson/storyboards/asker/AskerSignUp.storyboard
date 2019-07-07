@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NanumSquareB.ttf">
+            <string>NanumSquareB</string>
+        </array>
         <array key="NanumSquareR.ttf">
             <string>NanumSquareR</string>
         </array>
@@ -27,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8a-Qf-1aq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="723"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="example@willson.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bh0-LM-1vO">
                                                 <rect key="frame" x="33" y="55" width="309" height="40"/>
@@ -54,31 +57,19 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J2-Ye-TAt">
-                                                <rect key="frame" x="33" y="399" width="30" height="18"/>
+                                                <rect key="frame" x="33" y="399" width="29" height="18"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="middlePurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih9-2Z-Kc3">
-                                                <rect key="frame" x="33" y="120" width="59" height="18"/>
+                                                <rect key="frame" x="33" y="120" width="58" height="18"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="middlePurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-Xk-brt" customClass="DLRadioButton">
-                                                <rect key="frame" x="80" y="435" width="31" height="16"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="남성">
-                                                    <color key="titleColor" name="darkPurple"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxX-NI-cOa">
-                                                <rect key="frame" x="33" y="475" width="38" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxX-NI-cOa">
+                                                <rect key="frame" x="33" y="475" width="29" height="18"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="middlePurple"/>
                                                 <nil key="highlightedColor"/>
@@ -98,8 +89,8 @@
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7N-43-EOp" customClass="DLRadioButton">
-                                                <rect key="frame" x="58" y="596" width="264" height="29"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7N-43-EOp" customClass="DLRadioButton">
+                                                <rect key="frame" x="33" y="591" width="309" height="28"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="윌슨의 이용약관 및 개인정보취급방침에 동의합니다.">
                                                     <color key="titleColor" name="darkPurple"/>
@@ -110,7 +101,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="나이를 선택해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPI-wR-Rt1">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="나이를 선택해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPI-wR-Rt1">
                                                 <rect key="frame" x="33" y="503" width="309" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="A2T-Wd-Knh"/>
@@ -119,18 +110,32 @@
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7p-LK-WlL">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7p-LK-WlL">
                                                 <rect key="frame" x="33" y="636" width="309" height="48"/>
                                                 <color key="backgroundColor" name="grey"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="TBx-l2-efF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
                                                 <state key="normal" title="다음">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="nextBtnAction:" destination="naf-xC-oDk" eventType="touchUpInside" id="X5z-UQ-byB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tte-mC-M4H" customClass="DLRadioButton">
-                                                <rect key="frame" x="33" y="435" width="30" height="29"/>
+                                                <rect key="frame" x="33" y="435" width="50" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6BQ-6U-8VK"/>
+                                                    <constraint firstAttribute="height" constant="16" id="eRb-QB-B18"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="여성">
                                                     <color key="titleColor" name="darkPurple"/>
@@ -163,12 +168,27 @@
                                                 <rect key="frame" x="26" y="637" width="320" height="216"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-Xk-brt" customClass="DLRadioButton">
+                                                <rect key="frame" x="100" y="435" width="50" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="reB-Km-4gA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="남성">
+                                                    <color key="titleColor" name="darkPurple"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="0xd-n7-UJC" firstAttribute="top" secondItem="F3Q-xm-EDa" secondAttribute="bottom" constant="10" id="1cW-5B-DWb"/>
-                                            <constraint firstAttribute="trailing" secondItem="V7N-43-EOp" secondAttribute="trailing" constant="58" id="8k0-jd-4ES"/>
-                                            <constraint firstItem="V7N-43-EOp" firstAttribute="top" secondItem="XPI-wR-Rt1" secondAttribute="bottom" constant="53" id="9GB-s2-DVD"/>
+                                            <constraint firstItem="V7N-43-EOp" firstAttribute="top" secondItem="XPI-wR-Rt1" secondAttribute="bottom" constant="48" id="9GB-s2-DVD"/>
+                                            <constraint firstItem="a7p-LK-WlL" firstAttribute="top" secondItem="x8a-Qf-1aq" secondAttribute="top" constant="636" id="Bka-9h-wsN"/>
                                             <constraint firstItem="Ih9-2Z-Kc3" firstAttribute="top" secondItem="Bh0-LM-1vO" secondAttribute="bottom" constant="25" id="CQ3-jX-cmm"/>
                                             <constraint firstItem="FDd-hL-BU6" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="Dgo-XO-aoc"/>
                                             <constraint firstAttribute="trailing" secondItem="Bh0-LM-1vO" secondAttribute="trailing" constant="33" id="GKq-SA-02h"/>
@@ -178,23 +198,24 @@
                                             <constraint firstItem="a7p-LK-WlL" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="Jhv-Oe-7Cl"/>
                                             <constraint firstAttribute="trailing" secondItem="a7p-LK-WlL" secondAttribute="trailing" constant="33" id="PnM-dh-wOK"/>
                                             <constraint firstItem="AZ4-v3-MvS" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="QCq-Ib-uba"/>
-                                            <constraint firstAttribute="trailing" secondItem="V7N-43-EOp" secondAttribute="trailing" constant="58" id="Qn1-Ww-ojR"/>
                                             <constraint firstItem="XPI-wR-Rt1" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="R4h-9I-Gbw"/>
-                                            <constraint firstItem="a7p-LK-WlL" firstAttribute="top" secondItem="V7N-43-EOp" secondAttribute="bottom" constant="27" id="RYM-OJ-RUe"/>
-                                            <constraint firstAttribute="trailing" secondItem="XxX-NI-cOa" secondAttribute="trailing" constant="313" id="VIe-Ka-EGH"/>
-                                            <constraint firstItem="V7N-43-EOp" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="58" id="XVD-GX-Z0O"/>
+                                            <constraint firstItem="a7p-LK-WlL" firstAttribute="top" secondItem="V7N-43-EOp" secondAttribute="bottom" constant="17" id="RYM-OJ-RUe"/>
+                                            <constraint firstAttribute="trailing" secondItem="V7N-43-EOp" secondAttribute="trailing" constant="33" id="RsZ-vN-JfP"/>
                                             <constraint firstItem="Ih9-2Z-Kc3" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="YoF-NR-W23"/>
                                             <constraint firstItem="iMQ-4I-qlt" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="YtO-4q-7g0"/>
                                             <constraint firstItem="AZ4-v3-MvS" firstAttribute="top" secondItem="iMQ-4I-qlt" secondAttribute="bottom" constant="10" id="aCI-bK-eYm"/>
+                                            <constraint firstItem="xc3-Xk-brt" firstAttribute="leading" secondItem="Tte-mC-M4H" secondAttribute="trailing" constant="17" id="azC-Qf-heU"/>
                                             <constraint firstItem="Bh0-LM-1vO" firstAttribute="top" secondItem="FDd-hL-BU6" secondAttribute="bottom" constant="10" id="eLE-yD-7c9"/>
+                                            <constraint firstItem="xc3-Xk-brt" firstAttribute="height" secondItem="Tte-mC-M4H" secondAttribute="height" id="ew9-1a-cPQ"/>
                                             <constraint firstItem="F3Q-xm-EDa" firstAttribute="top" secondItem="AZ4-v3-MvS" secondAttribute="bottom" constant="25" id="ggz-7I-yn9"/>
                                             <constraint firstItem="Tte-mC-M4H" firstAttribute="top" secondItem="6J2-Ye-TAt" secondAttribute="bottom" constant="18" id="gr7-l6-6rV"/>
                                             <constraint firstAttribute="trailing" secondItem="oad-OR-RG6" secondAttribute="trailing" constant="33" id="h7M-3g-rkw"/>
                                             <constraint firstItem="0xd-n7-UJC" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="jbP-wp-fbF"/>
                                             <constraint firstItem="iMQ-4I-qlt" firstAttribute="top" secondItem="oad-OR-RG6" secondAttribute="bottom" constant="25" id="jws-rB-GPH"/>
+                                            <constraint firstItem="V7N-43-EOp" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="kNp-ao-X89"/>
                                             <constraint firstItem="oad-OR-RG6" firstAttribute="top" secondItem="Ih9-2Z-Kc3" secondAttribute="bottom" constant="10" id="kn8-pj-rEu"/>
+                                            <constraint firstItem="xc3-Xk-brt" firstAttribute="centerY" secondItem="Tte-mC-M4H" secondAttribute="centerY" id="mn0-tS-UUD"/>
                                             <constraint firstItem="6J2-Ye-TAt" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="ngM-v9-ydg"/>
-                                            <constraint firstAttribute="trailing" secondItem="xc3-Xk-brt" secondAttribute="trailing" constant="264" id="o7a-kf-04J"/>
                                             <constraint firstAttribute="bottom" secondItem="a7p-LK-WlL" secondAttribute="bottom" constant="39" id="oZU-Iq-6QB"/>
                                             <constraint firstAttribute="trailing" secondItem="0xd-n7-UJC" secondAttribute="trailing" constant="33" id="p2y-rz-WYq"/>
                                             <constraint firstItem="Bh0-LM-1vO" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="pJa-O6-wob"/>
@@ -202,8 +223,8 @@
                                             <constraint firstItem="XPI-wR-Rt1" firstAttribute="top" secondItem="XxX-NI-cOa" secondAttribute="bottom" constant="10" id="qTq-Xb-g1E"/>
                                             <constraint firstItem="Tte-mC-M4H" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="qXW-DF-LSa"/>
                                             <constraint firstItem="oad-OR-RG6" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="r7R-BK-9ca"/>
+                                            <constraint firstItem="XxX-NI-cOa" firstAttribute="top" secondItem="Tte-mC-M4H" secondAttribute="bottom" constant="24" id="t2v-8K-cI1"/>
                                             <constraint firstItem="XxX-NI-cOa" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="tG6-WY-56Z"/>
-                                            <constraint firstItem="xc3-Xk-brt" firstAttribute="top" secondItem="Tte-mC-M4H" secondAttribute="top" id="tbu-EQ-JCn"/>
                                             <constraint firstAttribute="trailing" secondItem="XPI-wR-Rt1" secondAttribute="trailing" constant="33" id="uOv-ct-hxL"/>
                                             <constraint firstItem="6J2-Ye-TAt" firstAttribute="top" secondItem="0xd-n7-UJC" secondAttribute="bottom" constant="25" id="vJi-3T-ga7"/>
                                         </constraints>
@@ -246,8 +267,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="나이를 선택해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbw-KX-vak">
-                                <rect key="frame" x="33" y="406" width="309" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="나이를 선택해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbw-KX-vak">
+                                <rect key="frame" x="33" y="419" width="309" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="309" id="CAe-4q-qI1"/>
                                     <constraint firstAttribute="height" constant="40" id="lHz-Xo-KLj"/>
@@ -256,11 +277,11 @@
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-lo-xvH">
-                                <rect key="frame" x="33" y="338" width="86" height="29"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-lo-xvH">
+                                <rect key="frame" x="33" y="338" width="120" height="29"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-Ek-dQ9" customClass="DLRadioButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="여성">
                                             <color key="titleColor" name="darkPurple"/>
@@ -275,7 +296,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCL-F5-8Jq" customClass="DLRadioButton">
-                                        <rect key="frame" x="56" y="0.0" width="30" height="29"/>
+                                        <rect key="frame" x="67.666666666666671" y="0.0" width="52.333333333333329" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="남성">
                                             <color key="titleColor" name="darkPurple"/>
@@ -288,17 +309,17 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="fTE-tr-NXh"/>
+                                    <constraint firstAttribute="width" constant="120" id="fTE-tr-NXh"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY7-mr-zG9">
-                                <rect key="frame" x="33" y="378" width="38" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY7-mr-zG9">
+                                <rect key="frame" x="33" y="391" width="29.333333333333329" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="middlePurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-id-CSM">
-                                <rect key="frame" x="33" y="302" width="40" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-id-CSM">
+                                <rect key="frame" x="33" y="302" width="29.333333333333329" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="middlePurple"/>
                                 <nil key="highlightedColor"/>
@@ -329,9 +350,9 @@
                                 <rect key="frame" x="27" y="627" width="320" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLB-Ff-4wa" customClass="DLRadioButton">
-                                <rect key="frame" x="33" y="677" width="284" height="29"/>
+                                <rect key="frame" x="33" y="686" width="309" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="YM3-nd-GJn"/>
+                                    <constraint firstAttribute="height" constant="20" id="YM3-nd-GJn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="윌슨의 이용약관 및 개인정보취급방침에 동의합니다.">
@@ -392,25 +413,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vY7-mr-zG9" firstAttribute="top" secondItem="Za0-Ek-dQ9" secondAttribute="bottom" constant="4" id="0Ys-FO-Abb"/>
+                            <constraint firstItem="vY7-mr-zG9" firstAttribute="top" secondItem="Za0-Ek-dQ9" secondAttribute="bottom" constant="24" id="0Ys-FO-Abb"/>
                             <constraint firstItem="Mbw-KX-vak" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="2eO-Yb-4Oq"/>
+                            <constraint firstItem="kWt-th-8ol" firstAttribute="trailing" secondItem="KLB-Ff-4wa" secondAttribute="trailing" constant="33" id="67d-5s-nho"/>
+                            <constraint firstItem="0RE-II-1nZ" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="916-HF-dcp"/>
                             <constraint firstItem="kWt-th-8ol" firstAttribute="bottom" secondItem="cNS-32-TiH" secondAttribute="bottom" constant="16" id="CAF-IR-e9i"/>
+                            <constraint firstItem="kWt-th-8ol" firstAttribute="trailing" secondItem="0RE-II-1nZ" secondAttribute="trailing" constant="33" id="CGt-wH-SeL"/>
                             <constraint firstItem="0RE-II-1nZ" firstAttribute="leading" secondItem="Wfn-gL-0fi" secondAttribute="leading" id="D9J-Ox-7wH"/>
                             <constraint firstItem="Wfn-gL-0fi" firstAttribute="top" secondItem="kWt-th-8ol" secondAttribute="top" constant="72" id="DQ8-BA-wCC"/>
                             <constraint firstItem="cNS-32-TiH" firstAttribute="centerX" secondItem="kWt-th-8ol" secondAttribute="centerX" id="G7K-mj-eKb"/>
-                            <constraint firstItem="kWt-th-8ol" firstAttribute="trailing" secondItem="KLB-Ff-4wa" secondAttribute="trailing" constant="58" id="Gds-xB-kSr"/>
                             <constraint firstItem="UKR-h7-0ZG" firstAttribute="centerX" secondItem="kWt-th-8ol" secondAttribute="centerX" id="Iqw-72-5H0"/>
+                            <constraint firstItem="kWt-th-8ol" firstAttribute="trailing" secondItem="Mbw-KX-vak" secondAttribute="trailing" constant="33" id="Jow-rg-pUN"/>
                             <constraint firstItem="Za0-Ek-dQ9" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="LRc-dL-yGx"/>
                             <constraint firstItem="0RE-II-1nZ" firstAttribute="centerX" secondItem="kWt-th-8ol" secondAttribute="centerX" id="Leq-oR-5Mk"/>
                             <constraint firstItem="kgn-0m-fCM" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="NQE-QK-BxB"/>
                             <constraint firstItem="Ej6-Je-C3A" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="27" id="Oy8-cq-1ww"/>
-                            <constraint firstItem="Za0-Ek-dQ9" firstAttribute="top" secondItem="mwR-id-CSM" secondAttribute="bottom" constant="18" id="QdW-tB-UV4"/>
+                            <constraint firstItem="kWt-th-8ol" firstAttribute="trailing" secondItem="kgn-0m-fCM" secondAttribute="trailing" constant="33" id="RxL-G0-P5K"/>
                             <constraint firstItem="kgn-0m-fCM" firstAttribute="top" secondItem="qZo-BV-xdM" secondAttribute="bottom" constant="10" id="S74-3q-0Zo"/>
                             <constraint firstItem="qZo-BV-xdM" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="Syo-5d-1EW"/>
                             <constraint firstItem="UKR-h7-0ZG" firstAttribute="top" secondItem="kWt-th-8ol" secondAttribute="top" constant="10" id="UFI-R1-3pn"/>
                             <constraint firstItem="vY7-mr-zG9" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="YhQ-Tq-13R"/>
                             <constraint firstItem="0RE-II-1nZ" firstAttribute="centerX" secondItem="Ej6-Je-C3A" secondAttribute="centerX" id="aht-xY-5Z0"/>
+                            <constraint firstItem="KLB-Ff-4wa" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="cL4-m8-5rs"/>
                             <constraint firstItem="UKR-h7-0ZG" firstAttribute="height" secondItem="wbk-Da-gIG" secondAttribute="height" id="cUR-pY-CoA"/>
+                            <constraint firstItem="xPD-lo-xvH" firstAttribute="leading" secondItem="mwR-id-CSM" secondAttribute="leading" id="cnf-mE-xBb"/>
                             <constraint firstItem="mwR-id-CSM" firstAttribute="top" secondItem="kgn-0m-fCM" secondAttribute="bottom" constant="25" id="dV7-ma-IGU"/>
                             <constraint firstItem="mwR-id-CSM" firstAttribute="leading" secondItem="kWt-th-8ol" secondAttribute="leading" constant="33" id="dgi-D3-ExH"/>
                             <constraint firstItem="qZo-BV-xdM" firstAttribute="top" secondItem="0RE-II-1nZ" secondAttribute="bottom" constant="23" id="frR-tR-Wsg"/>
@@ -420,6 +446,7 @@
                             <constraint firstItem="0RE-II-1nZ" firstAttribute="leading" secondItem="KLB-Ff-4wa" secondAttribute="leading" id="q9f-Yx-t5y"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Ej6-Je-C3A" secondAttribute="bottom" constant="-65" id="rSZ-Yk-jTB"/>
                             <constraint firstItem="0RE-II-1nZ" firstAttribute="top" secondItem="Wfn-gL-0fi" secondAttribute="bottom" constant="10" id="tjY-jd-mv3"/>
+                            <constraint firstItem="xPD-lo-xvH" firstAttribute="top" secondItem="mwR-id-CSM" secondAttribute="bottom" constant="18" id="vZv-de-x2a"/>
                             <constraint firstItem="Mbw-KX-vak" firstAttribute="top" secondItem="vY7-mr-zG9" secondAttribute="bottom" constant="10" id="yAF-zE-OKb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kWt-th-8ol"/>
@@ -433,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQG-dE-KGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="890"/>
+            <point key="canvasLocation" x="1857" y="905"/>
         </scene>
         <!--Asker Sign Up View Controller2-->
         <scene sceneID="pZr-fP-KWf">
@@ -443,8 +470,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3개를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMO-Pw-sTJ">
-                                <rect key="frame" x="22" y="178.33333333333331" width="134" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3개를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMO-Pw-sTJ">
+                                <rect key="frame" x="22" y="177.33333333333334" width="131" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -455,14 +482,50 @@
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O8p-aG-z1y">
+                                <rect key="frame" x="20" y="227.33333333333334" width="335" height="454.66666666666663"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SHK-4x-1FK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R04-1t-Nhf">
+                                <rect key="frame" x="33" y="714" width="309" height="48"/>
+                                <color key="backgroundColor" name="buttonRight"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="LWG-Na-LiG"/>
+                                    <constraint firstAttribute="width" constant="309" id="fla-bM-OgJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
+                                <state key="normal" title="월슨 시작하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnAction:" destination="naf-xC-oDk" eventType="touchUpInside" id="flZ-jI-nEr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5w5-dB-0bp" firstAttribute="trailing" secondItem="AMO-Pw-sTJ" secondAttribute="trailing" constant="223" id="1sN-Ou-DKn"/>
                             <constraint firstItem="IaP-GN-YNr" firstAttribute="leading" secondItem="5w5-dB-0bp" secondAttribute="leading" constant="22" id="9da-SG-EFC"/>
+                            <constraint firstItem="R04-1t-Nhf" firstAttribute="top" secondItem="O8p-aG-z1y" secondAttribute="bottom" constant="32" id="DSK-qB-cPp"/>
+                            <constraint firstItem="5w5-dB-0bp" firstAttribute="bottom" secondItem="R04-1t-Nhf" secondAttribute="bottom" constant="16" id="IPK-P8-eQf"/>
+                            <constraint firstItem="R04-1t-Nhf" firstAttribute="centerX" secondItem="bDS-Hd-ZPv" secondAttribute="centerX" id="Th1-33-zeT"/>
                             <constraint firstItem="AMO-Pw-sTJ" firstAttribute="top" secondItem="IaP-GN-YNr" secondAttribute="bottom" constant="8" id="V7e-x4-aY0"/>
-                            <constraint firstItem="5w5-dB-0bp" firstAttribute="trailing" secondItem="IaP-GN-YNr" secondAttribute="trailing" constant="100" id="bTv-CQ-kHF"/>
                             <constraint firstItem="AMO-Pw-sTJ" firstAttribute="leading" secondItem="5w5-dB-0bp" secondAttribute="leading" constant="22" id="ftf-ID-AVv"/>
+                            <constraint firstItem="O8p-aG-z1y" firstAttribute="leading" secondItem="5w5-dB-0bp" secondAttribute="leading" constant="20" id="gWD-Nd-tY2"/>
+                            <constraint firstItem="5w5-dB-0bp" firstAttribute="trailing" secondItem="O8p-aG-z1y" secondAttribute="trailing" constant="20" id="hMf-MH-f8b"/>
+                            <constraint firstItem="O8p-aG-z1y" firstAttribute="top" secondItem="AMO-Pw-sTJ" secondAttribute="bottom" constant="32" id="o7P-uj-WZk"/>
                             <constraint firstItem="IaP-GN-YNr" firstAttribute="top" secondItem="5w5-dB-0bp" secondAttribute="top" constant="103" id="oGp-nC-96x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5w5-dB-0bp"/>
@@ -480,6 +543,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k4A-0W-XHe">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -499,6 +563,9 @@
         </namedColor>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonRight">
+            <color red="0.28627450980392155" green="0.28627450980392155" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkPurple">
             <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
