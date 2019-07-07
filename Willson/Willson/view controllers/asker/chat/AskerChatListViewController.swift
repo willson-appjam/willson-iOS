@@ -32,7 +32,7 @@ class AskerChatListViewController: UIViewController {
 extension AskerChatListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "AskerChat", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ReviewStarViewController")
+        /*let viewController = storyboard.instantiateViewController(withIdentifier: "ReviewStarViewController")
         
         let vc = UIApplication.topViewController()
         
@@ -40,7 +40,7 @@ extension AskerChatListViewController: UITableViewDelegate {
         
         viewController.view.frame = vc?.view.frame ?? CGRect(x: 0, y: 0, width: 0, height: 0)
         vc?.view.addSubview(viewController.view)
-//        viewController.didMove(toParent: vc)
+//        viewController.didMove(toParent: vc)*/
     }
 }
 
@@ -53,7 +53,7 @@ extension AskerChatListViewController: UITableViewDataSource {
         guard let cell: ChatListTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatListTableViewCellIdentifier, for: indexPath) as? ChatListTableViewCell else { return UITableViewCell() }
         
         cell.selectionStyle = .none
-        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cell.separatorInset = UIEdgeInsets(top: 3, left: 0, bottom: 3, right: 0)
         return cell
     }
     
