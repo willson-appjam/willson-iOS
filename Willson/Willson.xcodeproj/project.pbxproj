@@ -10,6 +10,7 @@
 		46BD78418D4087C1A660D9DE /* Pods_Willson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794B654C502E453FEF56F6A /* Pods_Willson.framework */; };
 		660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */; };
 		66316A2622D202790033B519 /* AskerChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66316A2522D202790033B519 /* AskerChatRoomViewController.swift */; };
+		66316A2A22D20EED0033B519 /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66316A2922D20EED0033B519 /* UILabel_extension.swift */; };
 		6632768222D10671005DC6DC /* ChatHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6632768122D10671005DC6DC /* ChatHeaderTVC.swift */; };
 		6632768422D10686005DC6DC /* ChatHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6632768322D10686005DC6DC /* ChatHeaderTVC.xib */; };
 		663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663368C922CD36D800C3C694 /* PopUpViewController4.swift */; };
@@ -102,6 +103,7 @@
 		1BAEDD6E774F4EB08452D077 /* Pods-Willson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.release.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.release.xcconfig"; sourceTree = "<group>"; };
 		660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = Willson/MyPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		66316A2522D202790033B519 /* AskerChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerChatRoomViewController.swift; sourceTree = "<group>"; };
+		66316A2922D20EED0033B519 /* UILabel_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel_extension.swift; sourceTree = "<group>"; };
 		6632768122D10671005DC6DC /* ChatHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderTVC.swift; sourceTree = "<group>"; };
 		6632768322D10686005DC6DC /* ChatHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHeaderTVC.xib; sourceTree = "<group>"; };
 		663368C922CD36D800C3C694 /* PopUpViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController4.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				66E5E78122CB809C00B43D93 /* PopUpVC.swift */,
 				66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */,
 				66AF81B122CFAA6F00722FF2 /* UINavigationbar_Extension.swift */,
+				66316A2922D20EED0033B519 /* UILabel_extension.swift */,
 			);
 			path = "supporting files";
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
+				66316A2A22D20EED0033B519 /* UILabel_extension.swift in Sources */,
 				D98BA5C022D0119800E72C02 /* HelperRequestViewController.swift in Sources */,
 				669624F722CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift in Sources */,
 				6632768222D10671005DC6DC /* ChatHeaderTVC.swift in Sources */,

@@ -39,6 +39,10 @@ class AskerChatRoomViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         view.addGestureRecognizer(tap)
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
+        
+        //유동적 셀높이 조정
+        // 이거 한줄이면 됨... 왜?
+        chatRoomTableView.estimatedRowHeight = 0
     }
     
    
@@ -49,6 +53,8 @@ class AskerChatRoomViewController: UIViewController {
         
         let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
         self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        
+        textField.text = "" //텍스트 필드 초기화
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -109,6 +115,8 @@ extension AskerChatRoomViewController: UITableViewDataSource {
             //상대방
             cell.oppoText.text = messageArray[indexPath.item]
             cell.oppoTime.text = timeArray[indexPath.item]
+            
+            //chatRoomTableView.rowHeight = CGFloat(cell.oppoText.numberOfVisibleLines * 40) //레이블 높이 조정
         } else {
             cell.profileImg.isHidden = true
             cell.oppoText.isHidden = true
@@ -117,6 +125,8 @@ extension AskerChatRoomViewController: UITableViewDataSource {
             //자신
             cell.ownText.text = messageArray[indexPath.item]
             cell.ownTime.text = timeArray[indexPath.item]
+            
+            //chatRoomTableView.rowHeight = CGFloat(cell.ownText.numberOfVisibleLines * 40) //레이블 높이 조정
         }
         
         cell.selectionStyle = .none

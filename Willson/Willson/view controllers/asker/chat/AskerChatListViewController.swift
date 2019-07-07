@@ -53,7 +53,7 @@ extension AskerChatListViewController: UITableViewDataSource {
         guard let cell: ChatListTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatListTableViewCellIdentifier, for: indexPath) as? ChatListTableViewCell else { return UITableViewCell() }
         
         cell.selectionStyle = .none
-        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cell.separatorInset = UIEdgeInsets(top: 3, left: 0, bottom: 3, right: 0)
         return cell
     }
     
