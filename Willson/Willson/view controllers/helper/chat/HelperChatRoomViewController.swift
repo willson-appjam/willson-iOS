@@ -23,6 +23,8 @@ class HelperChatRoomViewController: UIViewController {
     @IBOutlet weak var chatRoomTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +44,16 @@ class HelperChatRoomViewController: UIViewController {
         view.addGestureRecognizer(tap)
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
     }
+    
+    @IBAction func sendMessageAction(_ sender: Any) {
+        messageArray.append(textField.text!)
+        timeArray.append("PM 07:13")
+        userArray.append(1)
+        
+        let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
+        self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+    }
+    
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if isTextFieldActive {
@@ -98,6 +110,12 @@ extension HelperChatRoomViewController: UITableViewDataSource {
         guard let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
         
         if userArray[indexPath.item] == 0 {
+            if(indexPath.item != 0) {
+                if(indexPath.item - 1 == 0) {
+                    cell.profileImg.isHidden = true
+                }
+            }
+            
             cell.ownText.isHidden = true
             cell.ownView.isHidden = true
             cell.ownTime.isHidden = true

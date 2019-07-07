@@ -343,6 +343,9 @@
                                             <constraint firstAttribute="height" constant="22" id="z4O-BL-GwI"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="chatBtnSend"/>
+                                        <connections>
+                                            <action selector="sendMessageAction:" destination="X4Q-25-H5H" eventType="touchUpInside" id="VR6-5C-RM9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -413,7 +416,7 @@
         <image name="chatImgAlert" width="23.333333969116211" height="23"/>
         <image name="chatImgAnnouncement" width="13" height="13"/>
         <image name="chatImgHelperprofile" width="60" height="60"/>
-        <image name="helperChatImgProfileWoman" width="60" height="60"/>
+        <image name="helperChatImgProfileWoman" width="36" height="36"/>
         <image name="imgTimer" width="18" height="18"/>
         <namedColor name="bgColor">
             <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
