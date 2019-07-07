@@ -13,18 +13,26 @@ import KakaoOpenSDK
 
 class AskerLoginViewController: UIViewController {
 
+    // MARK: - IBOutlet
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwTF: UITextField!
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var kakaotalkBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
     
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         iconTF()
     }
     
+    func viewWillApear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getAccessToken()
+    }
+    
+    // MARK: - Methods
     func iconTF() {
         emailTF.leftViewMode = UITextField.ViewMode.always
         let imageView = UIImageView(frame: CGRect(x: 21, y: 17, width: 13, height: 14))
@@ -39,11 +47,17 @@ class AskerLoginViewController: UIViewController {
         pwTF.leftView = imageView2
     }
     
-    func viewWillApear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        getAccessToken()
+    
+    // MARK: - IBAction
+    
+    // 일반 로그인
+    @IBAction func tappedLoginButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AskerMain", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
+        present(viewController, animated: true)
     }
     
+    // 페이스북 로그인
     @IBAction func facebookBtnAction(_ sender: Any) {
         var getEmail = ""
         let fbLoginManager : LoginManager = LoginManager()

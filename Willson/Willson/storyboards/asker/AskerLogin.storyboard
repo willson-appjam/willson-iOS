@@ -57,6 +57,9 @@
                                         <real key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedLoginButton:" destination="foO-jd-vxx" eventType="touchUpInside" id="S2h-xy-5IR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGC-w6-UMS" customClass="CustomButton" customModule="Willson" customModuleProvider="target">
                                 <rect key="frame" x="40" y="694" width="295" height="48"/>
