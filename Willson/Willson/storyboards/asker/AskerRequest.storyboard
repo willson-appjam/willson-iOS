@@ -768,7 +768,7 @@
                                 <rect key="frame" x="26" y="226" width="323" height="299"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="requestImgAlertWillson2" translatesAutoresizingMaskIntoConstraints="NO" id="sC0-J7-ONC">
-                                        <rect key="frame" x="109.66666666666667" y="23" width="104.00000000000004" height="106"/>
+                                        <rect key="frame" x="109.66666666666666" y="23" width="104" height="106"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="106" id="Gkx-tf-2Wa"/>
                                             <constraint firstAttribute="width" constant="103.99999999999997" id="gx1-VB-COy"/>
@@ -781,7 +781,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-Jg-tkf">
-                                        <rect key="frame" x="21" y="190" width="281" height="31"/>
+                                        <rect key="frame" x="21" y="191" width="281" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="05K-87-RXq"/>
                                             <constraint firstAttribute="height" constant="31" id="EhH-nt-590"/>
@@ -924,22 +924,29 @@
             </objects>
             <point key="canvasLocation" x="948" y="1913"/>
         </scene>
-        <!--View Controller-->
+        <!--Complete Request View Controller-->
         <scene sceneID="plZ-wc-xYO">
             <objects>
-                <viewController id="beQ-vp-7V7" sceneMemberID="viewController">
+                <viewController id="beQ-vp-7V7" customClass="CompleteRequestViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G2L-oK-YxH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJL-Sq-s3f">
+                                <rect key="frame" x="38.666666666666657" y="119" width="298" height="445"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="445" id="GZV-iU-dLf"/>
+                                    <constraint firstAttribute="width" constant="298" id="wuV-Ce-WWd"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대화가 확정되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvE-zA-VPR">
-                                <rect key="frame" x="86" y="138.66666666666666" width="203" height="24"/>
+                                <rect key="frame" x="91" y="138.66666666666666" width="193" height="24"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금 바로 대화를 시작해보세요 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id1-77-Oke">
-                                <rect key="frame" x="79.666666666666686" y="170.66666666666666" width="216" height="18"/>
+                                <rect key="frame" x="84.333333333333329" y="170.66666666666666" width="206.33333333333337" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
@@ -952,26 +959,26 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세인트버나드 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVw-gI-g0s">
-                                <rect key="frame" x="111.66666666666669" y="418" width="152" height="20"/>
+                                <rect key="frame" x="115.00000000000001" y="418" width="145.33333333333337" height="21"/>
                                 <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="18"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남성 / 20대 중반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAM-Iz-mwd">
-                                <rect key="frame" x="139" y="446" width="97" height="16"/>
+                                <rect key="frame" x="141.33333333333334" y="447" width="92.666666666666657" height="16"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImgFinishwillson" translatesAutoresizingMaskIntoConstraints="NO" id="ce5-ng-JOQ">
-                                <rect key="frame" x="125.66666666666669" y="643" width="124" height="135"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helperImgChatAlarm" translatesAutoresizingMaskIntoConstraints="NO" id="ce5-ng-JOQ">
+                                <rect key="frame" x="125.66666666666669" y="677" width="124" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="RL5-7q-LiT"/>
                                     <constraint firstAttribute="height" constant="135" id="fyQ-8b-eav"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCg-qY-G3f">
-                                <rect key="frame" x="100" y="611" width="175" height="38"/>
+                                <rect key="frame" x="100" y="645" width="175" height="38"/>
                                 <color key="backgroundColor" name="buttonRight"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="8nK-lR-4bG"/>
@@ -989,7 +996,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연애" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-8E-fJE">
-                                <rect key="frame" x="172.66666666666666" y="476" width="30" height="18"/>
+                                <rect key="frame" x="173.66666666666666" y="477" width="28" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="lightPurple"/>
                                 <nil key="highlightedColor"/>
@@ -1000,9 +1007,10 @@
                             <constraint firstItem="dvE-zA-VPR" firstAttribute="top" secondItem="G2L-oK-YxH" secondAttribute="centerY" multiplier="133:389" id="5IJ-AW-ROV"/>
                             <constraint firstItem="uAM-Iz-mwd" firstAttribute="top" secondItem="OVw-gI-g0s" secondAttribute="bottom" constant="8" id="7rQ-fV-eDw"/>
                             <constraint firstItem="OVw-gI-g0s" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="E5e-KL-ZIL"/>
-                            <constraint firstItem="ce5-ng-JOQ" firstAttribute="bottom" secondItem="Sp6-wP-16j" secondAttribute="bottom" id="EFq-kE-ZU1"/>
+                            <constraint firstItem="ce5-ng-JOQ" firstAttribute="bottom" secondItem="G2L-oK-YxH" secondAttribute="bottom" id="EFq-kE-ZU1"/>
                             <constraint firstItem="id1-77-Oke" firstAttribute="top" secondItem="dvE-zA-VPR" secondAttribute="bottom" constant="8" id="EGC-9r-VrL"/>
                             <constraint firstItem="q5k-8E-fJE" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="HhB-4o-w0A"/>
+                            <constraint firstItem="DJL-Sq-s3f" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="JxL-19-VLW"/>
                             <constraint firstItem="pCg-qY-G3f" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="T1H-Kb-Qr7"/>
                             <constraint firstItem="q5k-8E-fJE" firstAttribute="top" secondItem="uAM-Iz-mwd" secondAttribute="bottom" constant="14" id="WqF-CW-GUH"/>
                             <constraint firstItem="uAM-Iz-mwd" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="Zwu-0L-jBT"/>
@@ -1011,11 +1019,15 @@
                             <constraint firstItem="dvE-zA-VPR" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="daP-nP-kKr"/>
                             <constraint firstItem="ce5-ng-JOQ" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="e8i-in-dcs"/>
                             <constraint firstItem="id1-77-Oke" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="ion-1A-8AQ"/>
+                            <constraint firstItem="DJL-Sq-s3f" firstAttribute="top" secondItem="Sp6-wP-16j" secondAttribute="top" constant="75" id="qnR-i6-I8c"/>
                             <constraint firstItem="Kfr-ZF-Y7D" firstAttribute="centerX" secondItem="G2L-oK-YxH" secondAttribute="centerX" id="r85-yz-dME"/>
                             <constraint firstItem="ce5-ng-JOQ" firstAttribute="top" secondItem="pCg-qY-G3f" secondAttribute="bottom" constant="-6" id="yXt-s5-wEA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sp6-wP-16j"/>
                     </view>
+                    <connections>
+                        <outlet property="fireworksImageView" destination="DJL-Sq-s3f" id="ihO-YG-bWu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mza-B7-UGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1340,7 +1352,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chatImgFinishwillson" width="115.66666412353516" height="94.666664123535156"/>
+        <image name="helperImgChatAlarm" width="125.66666412353516" height="165.66667175292969"/>
         <image name="imgTimer" width="18" height="18"/>
         <image name="imgTimerYellow" width="18" height="18"/>
         <image name="requestImgAlertWillson" width="92.333335876464844" height="81"/>

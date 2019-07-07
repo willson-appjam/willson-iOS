@@ -96,6 +96,7 @@
 		D9AC038D22CE8B9300E16AD8 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038B22CE8B9300E16AD8 /* ChatListTableViewCell.swift */; };
 		D9AC038E22CE8B9300E16AD8 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC038C22CE8B9300E16AD8 /* ChatListTableViewCell.xib */; };
 		D9AC039022CE917200E16AD8 /* ReviewStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038F22CE917200E16AD8 /* ReviewStarViewController.swift */; };
+		D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */; };
 		D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */; };
 		D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */; };
 		D9E64E5122CDDFA4003265E4 /* HelperTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E64E5022CDDFA4003265E4 /* HelperTabbar.storyboard */; };
@@ -195,6 +196,7 @@
 		D9AC038B22CE8B9300E16AD8 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 		D9AC038C22CE8B9300E16AD8 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		D9AC038F22CE917200E16AD8 /* ReviewStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStarViewController.swift; sourceTree = "<group>"; };
+		D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRequestViewController.swift; sourceTree = "<group>"; };
 		D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperChatListViewController.swift; sourceTree = "<group>"; };
 		D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMypageViewController.swift; sourceTree = "<group>"; };
 		D9E64E5022CDDFA4003265E4 /* HelperTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelperTabbar.storyboard; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				663835CB22CA3EBC003265C7 /* HelperCollectionViewCell.xib */,
 				669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */,
 				669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */,
+				D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
 				D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */,
+				D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */,
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
 				D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */,
 				D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */,
