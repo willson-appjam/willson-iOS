@@ -14,7 +14,9 @@ class ConcernCollectionViewCell: UICollectionViewCell {
     @IBOutlet var concernTextField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        concernLabel.sizeToFit()
+        concernTextField.sizeToFit()
     }
 
 }

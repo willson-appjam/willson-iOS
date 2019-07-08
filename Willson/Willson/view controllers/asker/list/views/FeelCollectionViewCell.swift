@@ -13,7 +13,8 @@ class FeelCollectionViewCell: UICollectionViewCell {
     @IBOutlet var feelLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
+        feelLabel.sizeToFit()
     }
 
 }
