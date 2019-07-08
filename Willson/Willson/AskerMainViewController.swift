@@ -11,17 +11,28 @@ import UIKit
 class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: - properties
-    var slides:[Slide] = [];
-    var reviewSlides:[ReviewSlide] = [];
+    var slideList: [Slide] = []
+    var reviewSlides: [ReviewSlide] = []
     
     var timer = Timer()
     var timer2 = Timer()
+    
+    var helperStory: HelperStory?
 
     // MARK: - IBOutlet
     @IBOutlet weak var concern1View: UIView!
     
     @IBOutlet weak var scrollView: UIScrollView! //헬퍼들의 이야기 좌우스크롤뷰
     @IBOutlet weak var AskerScrollView: UIScrollView!
+    
+    // MARK: - life cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // helper story networking
+        getHelperStory()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +44,8 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         //헬퍼
         scrollView.delegate = self
         
-        slides = createSlides()
-        setupSlideScrollView(slides: slides)
+        slideList = createSlides()
+        setupSlideScrollView(slides: slideList)
         
 //        pageControl.numberOfPages = slides.count - 1
 //        pageControl.currentPage = 0
@@ -55,6 +66,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         timer = Timer.scheduledTimer(timeInterval:6, target:self, selector:#selector(AskerMainViewController.autoScroll), userInfo:nil, repeats:true)
     }
     
+    // MARK: - IBAction
     @IBAction func userTransition(_ sender: Any) {
         let storyboard  = UIStoryboard(name: "HelperTabbar", bundle: nil)
         
@@ -64,6 +76,33 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // MARK: - Methods
+    func getHelperStory() {
+        HelperStoryService.shared.getHelperStory { [ weak self] data in
+            guard let `self` = self else { return }
+            
+            switch data {
+            case .success(let res):
+//                guard let helperStoryList: HelperStory = res as? HelperStory else { return }
+                self.helperStory = res as? HelperStory
+                self.scrollView.reloadInputViews()
+                
+                break
+            case .requestErr(let err):
+                print(".requestErr(\(err)")
+                break
+            case .pathErr:
+                print("경로 에러")
+                break
+            case .serverErr:
+                print("서버 에러")
+                break
+            case .networkFail:
+                self.simpleAlert(title: "통신 실패", message: "네트워크 상태로 확인하세요.")
+                break
+            }
+        }
+    }
+    
     @objc func tappedconcern1(_ gesture: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "AskerList", bundle: nil)
         let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AskerListNavi")
@@ -76,6 +115,19 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func createSlides() -> [Slide] {
+        
+        guard let list = helperStory?.data else { return [Slide]() }
+        for data in list {
+            let slide = Slide()
+            slide.name.text = data.nickname
+            slide.category.text = data.category_name
+            slide.content.text = data.content
+            slideList.append(slide)
+        }
+        
+        print(slideList)
+        return slideList
+        /*
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.name.text = "앱잼파이팅 헬퍼님"
         slide1.category.text = "연애"
@@ -107,6 +159,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slide6.content.text = "- 20대에 억단위를 벌어본 경험\n- 3년간 투병생활\n- 20년간 어머니를 병간호한 경험"
         
         return [slide1, slide2, slide3, slide4, slide5, slide6]
+         */
     }
     
     func setupSlideScrollView(slides : [Slide]) {
@@ -138,24 +191,24 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
         if(percentOffset.x > 0 && percentOffset.x <= 0.2) {
-            slides[0].mask?.transform = CGAffineTransform(scaleX: (0.2-percentOffset.x)/0.2, y: (0.2-percentOffset.x)/0.2)
-            slides[1].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.2, y: percentOffset.x/0.2)
+            slideList[0].mask?.transform = CGAffineTransform(scaleX: (0.2-percentOffset.x)/0.2, y: (0.2-percentOffset.x)/0.2)
+            slideList[1].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.2, y: percentOffset.x/0.2)
             
         } else if(percentOffset.x > 0.2 && percentOffset.x <= 0.4) {
-            slides[1].mask?.transform = CGAffineTransform(scaleX: (0.4-percentOffset.x)/0.2, y: (0.4-percentOffset.x)/0.2)
-            slides[2].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.4, y: percentOffset.x/0.4)
+            slideList[1].mask?.transform = CGAffineTransform(scaleX: (0.4-percentOffset.x)/0.2, y: (0.4-percentOffset.x)/0.2)
+            slideList[2].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.4, y: percentOffset.x/0.4)
             
         } else if(percentOffset.x > 0.4 && percentOffset.x <= 0.6) {
-            slides[2].mask?.transform = CGAffineTransform(scaleX: (0.6-percentOffset.x)/0.2, y: (0.6-percentOffset.x)/0.2)
-            slides[3].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.6, y: percentOffset.x/0.6)
+            slideList[2].mask?.transform = CGAffineTransform(scaleX: (0.6-percentOffset.x)/0.2, y: (0.6-percentOffset.x)/0.2)
+            slideList[3].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.6, y: percentOffset.x/0.6)
             
         } else if(percentOffset.x > 0.6 && percentOffset.x <= 0.8) {
-            slides[3].mask?.transform = CGAffineTransform(scaleX: (0.8-percentOffset.x)/0.2, y: (0.8-percentOffset.x)/0.2)
-            slides[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.8, y: percentOffset.x/0.8)
+            slideList[3].mask?.transform = CGAffineTransform(scaleX: (0.8-percentOffset.x)/0.2, y: (0.8-percentOffset.x)/0.2)
+            slideList[4].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/0.8, y: percentOffset.x/0.8)
         } else if(percentOffset.x > 0.8 && percentOffset.x <= 1) {
 //            pageControl.currentPage = 0
-            slides[4].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.2, y: (1-percentOffset.x)/0.2)
-            slides[5].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
+            slideList[4].mask?.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.2, y: (1-percentOffset.x)/0.2)
+            slideList[5].mask?.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
            
         } else if(percentOffset.x > 1) {
             let offset = CGPoint(x: 0, y: -scrollView.adjustedContentInset.top)
