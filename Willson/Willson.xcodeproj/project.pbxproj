@@ -55,7 +55,6 @@
 		D915535622D20EC400A38390 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915535522D20EC400A38390 /* CustomButton.swift */; };
 		D915F8A222CDCB40009DA734 /* AskerTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D915F8A122CDCB40009DA734 /* AskerTabbar.storyboard */; };
 		D915F8A422CDCE60009DA734 /* AskerChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915F8A322CDCE60009DA734 /* AskerChatListViewController.swift */; };
-		D918A54622D39FB1001DCCBE /* ServerString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54522D39FB1001DCCBE /* ServerString.swift */; };
 		D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */; };
 		D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */; };
 		D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */; };
@@ -156,7 +155,6 @@
 		D915535522D20EC400A38390 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D915F8A122CDCB40009DA734 /* AskerTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AskerTabbar.storyboard; sourceTree = "<group>"; };
 		D915F8A322CDCE60009DA734 /* AskerChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerChatListViewController.swift; sourceTree = "<group>"; };
-		D918A54522D39FB1001DCCBE /* ServerString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerString.swift; sourceTree = "<group>"; };
 		D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishChatViewController.swift; sourceTree = "<group>"; };
 		D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteReviewViewController.swift; sourceTree = "<group>"; };
 		D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExaminHelperViewController.swift; sourceTree = "<group>"; };
@@ -337,7 +335,6 @@
 				66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */,
 				66AF81B122CFAA6F00722FF2 /* UINavigationbar_Extension.swift */,
 				66316A2922D20EED0033B519 /* UILabel_extension.swift */,
-				D918A54522D39FB1001DCCBE /* ServerString.swift */,
 			);
 			path = "supporting files";
 			sourceTree = "<group>";
@@ -771,7 +768,6 @@
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
 				D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */,
 				D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */,
-				D918A54622D39FB1001DCCBE /* ServerString.swift in Sources */,
 				66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */,
 				D9AC037422CE1A1100E16AD8 /* AskerList7_HelperExperienceViewController.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
