@@ -18,6 +18,22 @@ class FeelCollectionViewCell: UICollectionViewCell {
        
         view.sizeToFit()
         feelLabel.sizeToFit()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
+        self.addGestureRecognizer(tapGesture)
     }
-
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        self.isSelected = !self.isSelected
+        
+        if (self.isSelected)
+        {
+            view.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
+            feelLabel.textColor = UIColor.white
+        }
+        else
+        {
+            view.backgroundColor = UIColor.white
+            feelLabel.textColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
+        }
+    }
 }

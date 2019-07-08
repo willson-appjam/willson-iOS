@@ -74,6 +74,7 @@
             <connections>
                 <outlet property="concernLabel" destination="jAe-xo-cI3" id="DS7-1C-gci"/>
                 <outlet property="concernTextField" destination="psJ-Kq-6LM" id="tIf-iQ-lHu"/>
+                <outlet property="view" destination="Kyc-bs-yMo" id="ToE-VI-hsB"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="35.15625"/>
         </collectionViewCell>

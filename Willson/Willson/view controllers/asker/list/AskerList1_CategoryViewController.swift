@@ -15,7 +15,7 @@ class AskerList1_CategoryViewController: UIViewController {
     var placeHolder = ""
     // MARK: - IBOutlet
     @IBOutlet weak var concernCollectionView: UICollectionView!
-    
+
     // MARK: - IBAction
     @IBAction func tappedCancelBarButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -30,7 +30,9 @@ class AskerList1_CategoryViewController: UIViewController {
         concernCollectionView.dataSource = self
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
-        view.addGestureRecognizer(tap)
+        
+        view.addGestureRecognizer(tap) //밖의 뷰를 탭했을 경우
+        //concernCell.addGestureRecognizer(tap) //셀을 탭했을 경우
     }
     
     @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
