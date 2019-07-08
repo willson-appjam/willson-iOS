@@ -32,6 +32,7 @@ class AskerList6_HelperCharacterViewController: UIViewController {
         characterCollectionView.delegate = self
         characterCollectionView.dataSource = self
         
+        characterCollectionView.reloadData()
         //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         //self.addGestureRecognizer(tapGesture)
 
