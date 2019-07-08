@@ -55,6 +55,7 @@
 		D915535622D20EC400A38390 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915535522D20EC400A38390 /* CustomButton.swift */; };
 		D915F8A222CDCB40009DA734 /* AskerTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D915F8A122CDCB40009DA734 /* AskerTabbar.storyboard */; };
 		D915F8A422CDCE60009DA734 /* AskerChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915F8A322CDCE60009DA734 /* AskerChatListViewController.swift */; };
+		D918A54922D3A97D001DCCBE /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */; };
 		D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */; };
 		D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */; };
 		D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */; };
@@ -98,7 +99,6 @@
 		D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */; };
 		D9BA14B422D2A3E5001FEC6D /* NoChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BA14B222D2A3E5001FEC6D /* NoChatListTableViewCell.swift */; };
 		D9BA14B522D2A3E5001FEC6D /* NoChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BA14B322D2A3E5001FEC6D /* NoChatListTableViewCell.xib */; };
-		D9DC536B22D321F9004E1397 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DC536A22D321F9004E1397 /* CollectionReusableView.swift */; };
 		D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */; };
 		D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */; };
 		D9E64E5122CDDFA4003265E4 /* HelperTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E64E5022CDDFA4003265E4 /* HelperTabbar.storyboard */; };
@@ -155,6 +155,7 @@
 		D915535522D20EC400A38390 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D915F8A122CDCB40009DA734 /* AskerTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AskerTabbar.storyboard; sourceTree = "<group>"; };
 		D915F8A322CDCE60009DA734 /* AskerChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerChatListViewController.swift; sourceTree = "<group>"; };
+		D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishChatViewController.swift; sourceTree = "<group>"; };
 		D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteReviewViewController.swift; sourceTree = "<group>"; };
 		D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExaminHelperViewController.swift; sourceTree = "<group>"; };
@@ -200,7 +201,6 @@
 		D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRequestViewController.swift; sourceTree = "<group>"; };
 		D9BA14B222D2A3E5001FEC6D /* NoChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoChatListTableViewCell.swift; sourceTree = "<group>"; };
 		D9BA14B322D2A3E5001FEC6D /* NoChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoChatListTableViewCell.xib; sourceTree = "<group>"; };
-		D9DC536A22D321F9004E1397 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionReusableView.swift; path = ../../../../../../../../.Trash/CollectionReusableView.swift; sourceTree = "<group>"; };
 		D9E64E4A22CDDF1A003265E4 /* HelperChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperChatListViewController.swift; sourceTree = "<group>"; };
 		D9E64E4E22CDDF76003265E4 /* HelperMypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMypageViewController.swift; sourceTree = "<group>"; };
 		D9E64E5022CDDFA4003265E4 /* HelperTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelperTabbar.storyboard; sourceTree = "<group>"; };
@@ -252,12 +252,12 @@
 		663835C822CA3A64003265C7 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				D9DC536A22D321F9004E1397 /* CollectionReusableView.swift */,
 				663835C922CA3E54003265C7 /* HelperCollectionViewCell.swift */,
 				663835CB22CA3EBC003265C7 /* HelperCollectionViewCell.xib */,
 				669624F522CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift */,
 				669624F622CC5F2D00599E96 /* HelperReviewCollectionViewCell.xib */,
 				D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */,
+				D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -752,7 +752,7 @@
 				663835BF22C9ECDA003265C7 /* ReviewSlide.swift in Sources */,
 				D9AC037022CE196F00E16AD8 /* AskerList5_HelperSexViewController.swift in Sources */,
 				D915535422D1FBC100A38390 /* SplashViewController.swift in Sources */,
-				D9DC536B22D321F9004E1397 /* CollectionReusableView.swift in Sources */,
+				D918A54922D3A97D001DCCBE /* CollectionReusableView.swift in Sources */,
 				D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */,
 				663F829622CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift in Sources */,
 				D915F8A422CDCE60009DA734 /* AskerChatListViewController.swift in Sources */,

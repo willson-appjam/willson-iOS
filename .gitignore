@@ -9,6 +9,7 @@
 #           - Also handy if you have a large number of dependant pods
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
 Pods/
+/Willson/Willson/supporting files/ServerString.swift
 
 ### macOS ###
 # General
@@ -128,5 +129,8 @@ iOSInjectionProject/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+!.pbxproj
+!projectName.pbxproj
 
 # End of https://www.gitignore.io/api/swift,xcode,macos,cocoapods
