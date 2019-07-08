@@ -24,6 +24,13 @@ class AskerChatRoomViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     // MARK: - life cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,9 +43,6 @@ class AskerChatRoomViewController: UIViewController {
         
         textField.delegate = self
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         view.addGestureRecognizer(tap)
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
@@ -46,6 +50,12 @@ class AskerChatRoomViewController: UIViewController {
         //유동적 셀높이 조정
         // 이거 한줄이면 됨... 왜?
         //chatRoomTableView.estimatedRowHeight = 40
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // MARK: - IBAction
@@ -98,10 +108,6 @@ extension AskerChatRoomViewController: UITableViewDelegate {
 extension AskerChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
