@@ -19,18 +19,12 @@ class AskerList7_HelperExperienceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
+        view.addGestureRecognizer(tap)
     }
-    
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
-    */
-
 }

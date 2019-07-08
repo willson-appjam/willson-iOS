@@ -46,9 +46,14 @@ extension AskerList2_FeelViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: FeelCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: feelCollectionViewCellIdentifier, for: indexPath) as? FeelCollectionViewCell else { return UICollectionViewCell() }
+        
         if let label = cell.feelLabel {
             label.text = feelArray[indexPath.item]
         }
+        
+        cell.feelLabel.sizeToFit()
+        cell.view.sizeToFit()
+        
         return cell
     }
     

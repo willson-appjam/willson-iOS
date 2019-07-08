@@ -10,10 +10,13 @@ import UIKit
 
 class FeelCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet var view: CustonView!
     @IBOutlet var feelLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        
+        view.sizeToFit()
         feelLabel.sizeToFit()
     }
 
