@@ -12,28 +12,29 @@ class FeelCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var view: CustonView!
     @IBOutlet var feelLabel: UILabel!
+    var tabCount: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
        
         view.sizeToFit()
         feelLabel.sizeToFit()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
-        self.addGestureRecognizer(tapGesture)
+        tabCount = 0
     }
-    @objc func handleTap(sender: UITapGestureRecognizer) {
+    /*@objc func handleTap(sender: UITapGestureRecognizer) {
         self.isSelected = !self.isSelected
         
         if (self.isSelected)
         {
             view.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
             feelLabel.textColor = UIColor.white
+            tabCount = tabCount + 1
         }
         else
         {
             view.backgroundColor = UIColor.white
             feelLabel.textColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
+            tabCount = tabCount - 1
         }
-    }
+    }*/
 }
