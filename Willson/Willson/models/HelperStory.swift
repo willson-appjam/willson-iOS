@@ -8,14 +8,7 @@
 
 import Foundation
 
-struct HelperStory: Codable {
-    
-    struct CustomData: Codable {
-        let nickname: String
-        let category_name: String
-        let content: String
-    }
-    
+struct HelperStory: Codable {    
     let code: Int
     let data: [CustomData]?
 }
