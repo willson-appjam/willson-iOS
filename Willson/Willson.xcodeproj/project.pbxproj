@@ -949,7 +949,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2F465AG84W;
+				DEVELOPMENT_TEAM = 3V828TVJJT;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -994,7 +994,7 @@
 					"-weak_framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Willson;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Willson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1007,7 +1007,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2F465AG84W;
+				DEVELOPMENT_TEAM = 3V828TVJJT;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1052,7 +1052,7 @@
 					"-weak_framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Willson;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Willson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,34 +24,57 @@
                 <rect key="frame" x="0.0" y="0.0" width="154" height="51"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAe-xo-cI3">
-                        <rect key="frame" x="8" y="16.5" width="138" height="18"/>
-                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                        <color key="textColor" name="lightPurple"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+ 직접입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-Kq-6LM">
-                        <rect key="frame" x="8" y="16.5" width="138" height="18"/>
-                        <color key="textColor" name="lightPurple"/>
-                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyc-bs-yMo" customClass="CustonView" customModule="Willson" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="154" height="51"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+ 직접입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-Kq-6LM">
+                                <rect key="frame" x="0.0" y="16.666666666666668" width="154" height="18.000000000000004"/>
+                                <color key="textColor" name="lightPurple"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAe-xo-cI3">
+                                <rect key="frame" x="0.0" y="16.666666666666668" width="154" height="18.000000000000004"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" name="lightPurple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="psJ-Kq-6LM" firstAttribute="centerY" secondItem="Kyc-bs-yMo" secondAttribute="centerY" id="0sW-zf-9mc"/>
+                            <constraint firstItem="jAe-xo-cI3" firstAttribute="centerY" secondItem="Kyc-bs-yMo" secondAttribute="centerY" id="4Dc-YB-ynp"/>
+                            <constraint firstAttribute="trailing" secondItem="jAe-xo-cI3" secondAttribute="trailing" id="NB5-3x-7cu"/>
+                            <constraint firstAttribute="trailing" secondItem="psJ-Kq-6LM" secondAttribute="trailing" id="Nxk-iW-JQ9"/>
+                            <constraint firstItem="jAe-xo-cI3" firstAttribute="leading" secondItem="Kyc-bs-yMo" secondAttribute="leading" id="gpf-kt-gGE"/>
+                            <constraint firstItem="psJ-Kq-6LM" firstAttribute="leading" secondItem="Kyc-bs-yMo" secondAttribute="leading" id="j7h-pT-ahx"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="lightPurple"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="jAe-xo-cI3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="BB0-IP-RsR"/>
-                <constraint firstItem="psJ-Kq-6LM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Eff-Kj-joO"/>
-                <constraint firstItem="jAe-xo-cI3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="GtT-Nr-0Uh"/>
-                <constraint firstAttribute="trailing" secondItem="psJ-Kq-6LM" secondAttribute="trailing" constant="8" id="Kqo-F9-Ran"/>
-                <constraint firstAttribute="trailing" secondItem="jAe-xo-cI3" secondAttribute="trailing" constant="8" id="dDi-2E-0Ta"/>
-                <constraint firstItem="jAe-xo-cI3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="g6H-xo-sxB"/>
-                <constraint firstItem="psJ-Kq-6LM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ihy-Aa-X2K"/>
+                <constraint firstAttribute="trailing" secondItem="Kyc-bs-yMo" secondAttribute="trailing" id="6we-ca-TMQ"/>
+                <constraint firstAttribute="bottom" secondItem="Kyc-bs-yMo" secondAttribute="bottom" id="A67-Vx-zZc"/>
+                <constraint firstItem="Kyc-bs-yMo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mf1-2s-vVj"/>
+                <constraint firstAttribute="top" secondItem="Kyc-bs-yMo" secondAttribute="top" id="sPR-eM-fQv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="concernLabel" destination="jAe-xo-cI3" id="9is-yh-gZ3"/>
-                <outlet property="concernTextField" destination="psJ-Kq-6LM" id="1sd-VD-4gb"/>
+                <outlet property="concernLabel" destination="jAe-xo-cI3" id="DS7-1C-gci"/>
+                <outlet property="concernTextField" destination="psJ-Kq-6LM" id="tIf-iQ-lHu"/>
+                <outlet property="view" destination="Kyc-bs-yMo" id="ToE-VI-hsB"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="35.15625"/>
         </collectionViewCell>

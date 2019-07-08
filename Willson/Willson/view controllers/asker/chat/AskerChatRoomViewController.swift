@@ -39,7 +39,7 @@ class AskerChatRoomViewController: UIViewController {
         
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
-        chatRoomTableView.rowHeight = 40
+        //chatRoomTableView.rowHeight = 40
         
         textField.delegate = self
 
@@ -47,6 +47,7 @@ class AskerChatRoomViewController: UIViewController {
         view.addGestureRecognizer(tap)
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
         
+        chatRoomTableView.reloadData()
         //유동적 셀높이 조정
         // 이거 한줄이면 됨... 왜?
         //chatRoomTableView.estimatedRowHeight = 40
@@ -128,7 +129,7 @@ extension AskerChatRoomViewController: UITableViewDataSource {
             cell.oppoText.text = messageArray[indexPath.item]
             cell.oppoTime.text = timeArray[indexPath.item]
             
-           chatRoomTableView.rowHeight = CGFloat(cell.oppoText.numberOfVisibleLines * 40) //레이블 높이 조정
+           //chatRoomTableView.rowHeight = CGFloat(cell.oppoText.numberOfVisibleLines * 40) //레이블 높이 조정
         } else {
             cell.profileImg.isHidden = true
             cell.oppoText.isHidden = true
@@ -138,7 +139,7 @@ extension AskerChatRoomViewController: UITableViewDataSource {
             cell.ownText.text = messageArray[indexPath.item]
             cell.ownTime.text = timeArray[indexPath.item]
             
-            chatRoomTableView.rowHeight = CGFloat(cell.ownText.numberOfVisibleLines * 40) //레이블 높이 조정
+            //chatRoomTableView.rowHeight = CGFloat(cell.ownText.numberOfVisibleLines * 40) //레이블 높이 조정
         }
         
         cell.selectionStyle = .none
@@ -172,7 +173,19 @@ extension AskerChatRoomViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        if indexPath.section == 0 {
+            return UITableView.automaticDimension
+        } else {
+            return 40
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return UITableView.automaticDimension
+        } else {
+            return 40
+        }
     }
 }
 

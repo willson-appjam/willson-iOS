@@ -10,6 +10,8 @@ import UIKit
 
 class AskerList4_DetailViewController: UIViewController {
 
+    @IBOutlet weak var detailText: UITextView!
+    @IBOutlet weak var countLabel: UILabel!
     // MARK: - IBAction
     @IBAction func tappedCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -18,19 +20,64 @@ class AskerList4_DetailViewController: UIViewController {
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //글자 수 카운트
+        detailText.delegate = self
+        self.updateCharacterCount()
+        
+        //화면 탭하면 키보드 사라짐
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
+        view.addGestureRecognizer(tap)
     }
     
 
-    /*
     // MARK: - Navigation
+    
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension AskerList4_DetailViewController: UITextViewDelegate {
+    
+    func updateCharacterCount() {
+        let count = self.detailText.text.count
+        self.countLabel.text = "\((0) + count)/300자"
     }
-    */
-
+    
+    func textViewDidChange(_ textView: UITextView) {
+        self.updateCharacterCount()
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool{
+        if(textView == detailText){
+            return textView.text.count +  (text.count - range.length) <= 300
+        }
+        return false
+        
+        /*if text == "\n" {
+            textView.resignFirstResponder()
+        }
+        return true*/
+    }
+    
+    @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    /*
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textViewSetupView()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if detailText.text == "" {
+            textViewSetupView()
+        }
+    }
+    
+    func textViewSetupView() {
+        if detailText.text == "ex) 연애에 있어서 다양한 고민이 복잡하게 얽혀있어 머릿속이 복잡해요." {
+            detailText.textColor = UIColor.lightGray
+        } else if detailText.text == "" {
+            detailText.text == "ex) 연애에 있어서 다양한 고민이 복잡하게 얽혀있어 머릿속이 복잡해요."
+            detailText.textColor = UIColor.black
+        }
+    }*/
 }

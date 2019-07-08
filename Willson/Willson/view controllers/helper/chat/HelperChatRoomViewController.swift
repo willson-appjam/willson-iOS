@@ -31,7 +31,6 @@ class HelperChatRoomViewController: UIViewController {
         
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
-        chatRoomTableView.rowHeight = 40
         
         textField.delegate = self
         
@@ -79,7 +78,21 @@ class HelperChatRoomViewController: UIViewController {
         }
     }
   
- 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return UITableView.automaticDimension
+        } else {
+            return 40
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return UITableView.automaticDimension
+        } else {
+            return 40
+        }
+    }
     
     
    /*

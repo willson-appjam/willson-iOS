@@ -90,6 +90,7 @@ PODS:
   - ObjectMapper (3.4.2)
   - SwiftGifOrigin (1.7.0)
   - SwiftLint (0.33.0)
+  - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
@@ -103,6 +104,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.4.2)
   - SwiftGifOrigin (~> 1.7.0)
   - SwiftLint (~> 0.33.0)
+  - Toast-Swift (~> 5.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -119,6 +121,7 @@ SPEC REPOS:
     - ObjectMapper
     - SwiftGifOrigin
     - SwiftLint
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -134,7 +137,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 485a991187ad4b1bc3c6a2b20b8006379a4fc546
+PODFILE CHECKSUM: bce2e1e8f61025f0834ebf0b92f456c124dc6d31
 
 COCOAPODS: 1.7.3
