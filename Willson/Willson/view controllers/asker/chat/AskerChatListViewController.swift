@@ -20,6 +20,8 @@ class AskerChatListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        self.tabBarController?.tabBar.isHidden = false
+        
         // UITableView delegate, dataSource
         chatListTableView.delegate = self
         chatListTableView.dataSource = self

@@ -55,6 +55,7 @@ class AskerLoginViewController: UIViewController {
         let storyboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
         self.present(viewController, animated: true)
+//        self.navigationController?.show(viewController, sender: nil)
     }
     
     // 페이스북 로그인

@@ -10,6 +10,7 @@ import UIKit
 
 class AskerChatRoomViewController: UIViewController {
 
+    // MARK: - properties
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     var isTextFieldActive = false
     
@@ -17,14 +18,16 @@ class AskerChatRoomViewController: UIViewController {
     var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
     var userArray = [0, 0, 1, 1]
     
+    // MARK: - IBOutlet
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController?.tabBar.isHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = "리트리버" + " 님"
         
         chatRoomTableView.delegate = self
@@ -45,7 +48,7 @@ class AskerChatRoomViewController: UIViewController {
         //chatRoomTableView.estimatedRowHeight = 40
     }
     
-   
+    // MARK: - IBAction
     @IBAction func sendMessageAction(_ sender: Any) {
         messageArray.append(textField.text!)
         timeArray.append("PM 07:52")
@@ -57,6 +60,7 @@ class AskerChatRoomViewController: UIViewController {
         textField.text = "" //텍스트 필드 초기화
     }
     
+    // MARK: - Methods
     @objc func keyboardWillShow(notification: NSNotification) {
         if isTextFieldActive {
             if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -85,10 +89,12 @@ class AskerChatRoomViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDelegate
 extension AskerChatRoomViewController: UITableViewDelegate {
     
 }
 
+// MARK: - UITableViewDataSource
 extension AskerChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
@@ -164,6 +170,7 @@ extension AskerChatRoomViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension AskerChatRoomViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         isTextFieldActive = true
@@ -179,3 +186,4 @@ extension AskerChatRoomViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
 }
+

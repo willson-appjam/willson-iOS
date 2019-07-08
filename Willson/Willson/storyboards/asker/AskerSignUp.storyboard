@@ -110,6 +110,55 @@
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tte-mC-M4H" customClass="DLRadioButton">
+                                                <rect key="frame" x="33" y="435" width="50" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6BQ-6U-8VK"/>
+                                                    <constraint firstAttribute="height" constant="16" id="eRb-QB-B18"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="여성">
+                                                    <color key="titleColor" name="darkPurple"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="otherButtons" destination="xc3-Xk-brt" id="xpB-bg-zhy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-Xk-brt" customClass="DLRadioButton">
+                                                <rect key="frame" x="100" y="435" width="50" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="reB-Km-4gA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="남성">
+                                                    <color key="titleColor" name="darkPurple"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8자리 이상 숫자, 문자 조합" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oad-OR-RG6">
+                                                <rect key="frame" x="33" y="148" width="309" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="HJ6-XO-YFo"/>
+                                                </constraints>
+                                                <color key="textColor" name="bdbdbd"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3Q-xm-EDa">
+                                                <rect key="frame" x="33" y="306" width="44" height="18"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                                <color key="textColor" name="middlePurple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7p-LK-WlL">
                                                 <rect key="frame" x="33" y="636" width="309" height="48"/>
                                                 <color key="backgroundColor" name="grey"/>
@@ -130,59 +179,10 @@
                                                     <action selector="nextBtnAction:" destination="naf-xC-oDk" eventType="touchUpInside" id="X5z-UQ-byB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tte-mC-M4H" customClass="DLRadioButton">
-                                                <rect key="frame" x="33" y="435" width="50" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="6BQ-6U-8VK"/>
-                                                    <constraint firstAttribute="height" constant="16" id="eRb-QB-B18"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="여성">
-                                                    <color key="titleColor" name="darkPurple"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outletCollection property="otherButtons" destination="xc3-Xk-brt" id="xpB-bg-zhy"/>
-                                                </connections>
-                                            </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8자리 이상 숫자, 문자 조합" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oad-OR-RG6">
-                                                <rect key="frame" x="33" y="148" width="309" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="HJ6-XO-YFo"/>
-                                                </constraints>
-                                                <color key="textColor" name="bdbdbd"/>
-                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3Q-xm-EDa">
-                                                <rect key="frame" x="33" y="306" width="44" height="18"/>
-                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                                <color key="textColor" name="middlePurple"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T3O-Zm-lUq">
-                                                <rect key="frame" x="26" y="637" width="320" height="216"/>
+                                                <rect key="frame" x="26" y="733" width="310" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </pickerView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-Xk-brt" customClass="DLRadioButton">
-                                                <rect key="frame" x="100" y="435" width="50" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="reB-Km-4gA"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="남성">
-                                                    <color key="titleColor" name="darkPurple"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -376,6 +376,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextBtnAction:" destination="naf-xC-oDk" eventType="touchUpInside" id="SrS-1l-Gmp"/>
+                                    <segue destination="b0S-Ma-r0x" kind="show" id="mJs-jA-ucr"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RE-II-1nZ" customClass="CustonView" customModule="Willson" customModuleProvider="target">
@@ -512,6 +513,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtnAction:" destination="naf-xC-oDk" eventType="touchUpInside" id="flZ-jI-nEr"/>
+                                    <action selector="tappedStartWillsonBtn:" destination="b0S-Ma-r0x" eventType="touchUpInside" id="fmq-VW-Epb"/>
                                 </connections>
                             </button>
                         </subviews>

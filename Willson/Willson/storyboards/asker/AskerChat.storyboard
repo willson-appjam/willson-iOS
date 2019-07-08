@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oew-Yy-mlT">
-                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
                                 <color key="backgroundColor" name="bgColor"/>
                                 <color key="sectionIndexBackgroundColor" name="bgColor"/>
                                 <prototypes>
@@ -111,7 +111,7 @@
                         <constraints>
                             <constraint firstItem="Oew-Yy-mlT" firstAttribute="leading" secondItem="jrp-aq-ryX" secondAttribute="leading" id="7rn-DT-4ad"/>
                             <constraint firstItem="h6W-pp-9PF" firstAttribute="top" secondItem="jrp-aq-ryX" secondAttribute="top" constant="14" id="Lcr-Za-Ads"/>
-                            <constraint firstItem="Oew-Yy-mlT" firstAttribute="bottom" secondItem="jrp-aq-ryX" secondAttribute="bottom" id="Yw8-7o-pJA"/>
+                            <constraint firstItem="Oew-Yy-mlT" firstAttribute="bottom" secondItem="xcM-YN-yQZ" secondAttribute="bottom" id="Yw8-7o-pJA"/>
                             <constraint firstItem="Oew-Yy-mlT" firstAttribute="top" secondItem="jrp-aq-ryX" secondAttribute="top" constant="44" id="rZz-8p-fVN"/>
                             <constraint firstItem="jrp-aq-ryX" firstAttribute="trailing" secondItem="Oew-Yy-mlT" secondAttribute="trailing" id="rag-Dc-44u"/>
                             <constraint firstItem="h6W-pp-9PF" firstAttribute="leading" secondItem="jrp-aq-ryX" secondAttribute="leading" constant="19" id="sVk-yf-gBu"/>
@@ -121,6 +121,7 @@
                     <navigationItem key="navigationItem" title="상담하기" id="CcS-XA-4Zr">
                         <barButtonItem key="backBarButtonItem" title=" " id="ZTA-7p-2sG"/>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chatListTableView" destination="Oew-Yy-mlT" id="0U6-zj-ffl"/>
                     </connections>
@@ -458,7 +459,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i25-JJ-fJL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="719"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="723"/>
                                 <color key="backgroundColor" name="bgColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -646,12 +647,11 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xa-qF-9Ge">
-                                <rect key="frame" x="0.0" y="807" width="414" height="55"/>
+                                <rect key="frame" x="0.0" y="811" width="414" height="51"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="내용을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdT-EF-obJ">
-                                        <rect key="frame" x="21" y="8" width="305" height="35"/>
+                                        <rect key="frame" x="21" y="8" width="344" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="305" id="3fu-Ca-Hps"/>
                                             <constraint firstAttribute="height" constant="35" id="5zR-Cf-gl7"/>
                                         </constraints>
                                         <color key="textColor" name="black"/>
@@ -662,9 +662,9 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2N-PH-MH3">
-                                        <rect key="frame" x="337" y="15" width="21" height="22"/>
+                                        <rect key="frame" x="376" y="15" width="21" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="A0C-aq-dG2"/>
+                                            <constraint firstAttribute="height" constant="18" id="A0C-aq-dG2"/>
                                             <constraint firstAttribute="width" constant="21" id="yUh-Zf-rTO"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="chatBtnSend"/>
@@ -675,12 +675,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="pdT-EF-obJ" firstAttribute="top" secondItem="1Xa-qF-9Ge" secondAttribute="top" constant="8" id="T3V-Kp-Xtm"/>
+                                    <constraint firstItem="pdT-EF-obJ" firstAttribute="centerY" secondItem="1Xa-qF-9Ge" secondAttribute="centerY" id="Lsh-oh-9Bg"/>
                                     <constraint firstItem="pdT-EF-obJ" firstAttribute="leading" secondItem="1Xa-qF-9Ge" secondAttribute="leading" constant="21" id="VOH-ie-1dt"/>
                                     <constraint firstAttribute="trailing" secondItem="i2N-PH-MH3" secondAttribute="trailing" constant="17" id="Xef-JK-jqf"/>
                                     <constraint firstItem="i2N-PH-MH3" firstAttribute="top" secondItem="1Xa-qF-9Ge" secondAttribute="top" constant="15" id="hYD-GC-xmL"/>
                                     <constraint firstItem="i2N-PH-MH3" firstAttribute="leading" secondItem="pdT-EF-obJ" secondAttribute="trailing" constant="11" id="xcE-rU-Klc"/>
-                                    <constraint firstAttribute="height" constant="55" id="yHM-oG-7XL"/>
+                                    <constraint firstAttribute="height" constant="51" id="yHM-oG-7XL"/>
                                 </constraints>
                             </view>
                         </subviews>
