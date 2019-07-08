@@ -237,10 +237,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-0V-HtX" customClass="CustonView" customModule="Willson" customModuleProvider="target">
-                                                    <rect key="frame" x="58.999999999999993" y="2" width="124.33333333333331" height="36"/>
+                                                    <rect key="frame" x="59" y="2" width="128.66666666666666" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해결이 되었어요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkW-uo-7Pm">
-                                                            <rect key="frame" x="11" y="11" width="92.333333333333329" height="15"/>
+                                                            <rect key="frame" x="11" y="11" width="96.666666666666671" height="15"/>
                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                             <color key="textColor" name="black"/>
                                                             <nil key="highlightedColor"/>
@@ -256,7 +256,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 03:22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp9-oB-U0r">
-                                                    <rect key="frame" x="188.33333333333334" y="27" width="44" height="12"/>
+                                                    <rect key="frame" x="192.66666666666666" y="27" width="44" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="lBA-0O-HsJ"/>
                                                     </constraints>
@@ -265,10 +265,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wh-gF-NCI" customClass="CustonView" customModule="Willson" customModuleProvider="target">
-                                                    <rect key="frame" x="265.66666666666669" y="2" width="87.333333333333314" height="36"/>
+                                                    <rect key="frame" x="262.33333333333331" y="2" width="90.666666666666686" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다행이에요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZs-3o-Fuj">
-                                                            <rect key="frame" x="9" y="8" width="64.333333333333329" height="19"/>
+                                                            <rect key="frame" x="9" y="8" width="67.666666666666671" height="19"/>
                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                             <color key="textColor" name="white"/>
                                                             <nil key="highlightedColor"/>
@@ -284,7 +284,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 03:23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O47-4z-gkM">
-                                                    <rect key="frame" x="214.66666666666666" y="25" width="43.999999999999972" height="12"/>
+                                                    <rect key="frame" x="211.33333333333334" y="25" width="44" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="MeX-Hy-EvK"/>
                                                     </constraints>
@@ -389,6 +389,7 @@
                         <outlet property="chatRoomTableView" destination="uRM-dt-heb" id="V8D-Zj-wBd"/>
                         <outlet property="keyboardView" destination="Ky8-DU-Vfe" id="FbQ-5e-8dm"/>
                         <outlet property="textField" destination="iKQ-7N-Qaf" id="znc-an-3Pc"/>
+                        <outlet property="textFieldViewBottom" destination="p1r-i8-MUF" id="Exj-4n-3Gv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2O-tz-Dnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -422,7 +423,7 @@
         <image name="chatImgAlert" width="23.333333969116211" height="23"/>
         <image name="chatImgAnnouncement" width="13" height="13"/>
         <image name="chatImgHelperprofile" width="60" height="60"/>
-        <image name="helperChatImgProfileWoman" width="36" height="36"/>
+        <image name="helperChatImgProfileWoman" width="60" height="60"/>
         <image name="imgTimer" width="18" height="18"/>
         <namedColor name="bgColor">
             <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

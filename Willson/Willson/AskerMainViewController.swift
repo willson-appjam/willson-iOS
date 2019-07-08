@@ -17,7 +17,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     var timer = Timer()
     var timer2 = Timer()
     
-    var helperStory: HelperStory?
+    var helperStory = HelperStory.init()
 
     // MARK: - IBOutlet
     @IBOutlet weak var concern1View: UIView!
@@ -83,7 +83,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
             switch data {
             case .success(let res):
 //                guard let helperStoryList: HelperStory = res as? HelperStory else { return }
-                self.helperStory = res as? HelperStory
+                self.helperStory = res as! HelperStory
                 self.scrollView.reloadInputViews()
                 
                 break
@@ -115,8 +115,8 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func createSlides() -> [Slide] {
-        
-        guard let list = helperStory?.data else { return [Slide]() }
+        /*
+        guard let list = helperStory.data else { return [Slide]() }
         for data in list {
             let slide = Slide()
             slide.name.text = data.nickname
@@ -127,7 +127,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         print(slideList)
         return slideList
-        /*
+        */
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.name.text = "앱잼파이팅 헬퍼님"
         slide1.category.text = "연애"
@@ -159,7 +159,6 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slide6.content.text = "- 20대에 억단위를 벌어본 경험\n- 3년간 투병생활\n- 20년간 어머니를 병간호한 경험"
         
         return [slide1, slide2, slide3, slide4, slide5, slide6]
-         */
     }
     
     func setupSlideScrollView(slides : [Slide]) {

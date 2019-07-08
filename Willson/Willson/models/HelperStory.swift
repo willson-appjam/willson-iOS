@@ -18,4 +18,9 @@ struct HelperStory: Codable {
     
     let code: Int
     let data: [CustomData]?
+    
+    init() {
+        code = 0
+        data = []
+    }
 }
