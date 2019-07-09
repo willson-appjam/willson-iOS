@@ -11,6 +11,7 @@ import UIKit
 class HelperRequestViewController: UIViewController {
     
     // MARK: - prorperties
+    let requestTitleCollectionCellIdentifier: String = "HelperRequestTitleCollectionViewCell"
     let requestCollectionCellIdentifier: String = "HelperRequestCollectionViewCell"
     
     private var rightBarButton = UIBarButtonItem()
@@ -32,7 +33,7 @@ class HelperRequestViewController: UIViewController {
         // UINavagationBar right button - Switch Asker
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "btnSwitch"), for: .normal)
-        button.setTitle("질문자전환", for: .normal)
+        button.setTitle("고민자전환", for: .normal)
         button.titleLabel?.font = UIFont(name: "NanumSquareB", size: 12)
         button.tintColor = #colorLiteral(red: 0.1725490196, green: 0.1725490196, blue: 0.3019607843, alpha: 1)
         button.sizeToFit()
@@ -75,20 +76,39 @@ extension HelperRequestViewController: UICollectionViewDelegate {
 
 // MARK: - UICollectionViewDataSource
 extension HelperRequestViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        switch section {
+        case 0: return 1
+        case 1: return 5
+        default: return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell: HelperRequestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell else { return UICollectionViewCell() }
-        
-        return cell
+        switch indexPath.section {
+        case 0:
+            guard let cell: HelperRequestTitleCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestTitleCollectionCellIdentifier, for: indexPath) as? HelperRequestTitleCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case 1:
+            guard let cell: HelperRequestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension HelperRequestViewController: UICollectionViewDelegateFlowLayout {
-    override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        return CGSize(width: 333, height: 264)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch indexPath.section {
+        case 0: return CGSize(width: view.bounds.width, height: 110)
+        case 1: return CGSize(width: 333, height: 264)
+        default: return CGSize(width: 0, height: 0)
+        }
     }
 }

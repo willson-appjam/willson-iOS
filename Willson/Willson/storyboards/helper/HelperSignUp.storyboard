@@ -106,6 +106,10 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="black"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -943,7 +947,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helperSignupImgId" translatesAutoresizingMaskIntoConstraints="NO" id="gmg-gH-tqJ">
-                                <rect key="frame" x="176.66666666666666" y="227" width="21.666666666666657" height="16"/>
+                                <rect key="frame" x="78" y="227" width="219" height="163.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gmg-gH-tqJ" secondAttribute="height" multiplier="218:163" id="7GO-bu-1c1"/>
                                 </constraints>
