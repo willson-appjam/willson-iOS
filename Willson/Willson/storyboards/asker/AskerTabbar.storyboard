@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="9j7-P7-lYU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fGc-e1-enk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baC-dW-eHS">
@@ -29,7 +29,7 @@
                         <constraints>
                             <constraint firstItem="baC-dW-eHS" firstAttribute="leading" secondItem="ZPb-ER-jak" secondAttribute="leading" id="2NW-O2-PTm"/>
                             <constraint firstItem="ZPb-ER-jak" firstAttribute="trailing" secondItem="baC-dW-eHS" secondAttribute="trailing" id="A1G-2D-TTE"/>
-                            <constraint firstAttribute="bottom" secondItem="baC-dW-eHS" secondAttribute="bottom" id="FmA-Fr-Oql"/>
+                            <constraint firstItem="ZPb-ER-jak" firstAttribute="bottom" secondItem="baC-dW-eHS" secondAttribute="bottom" id="FmA-Fr-Oql"/>
                             <constraint firstItem="baC-dW-eHS" firstAttribute="top" secondItem="ZPb-ER-jak" secondAttribute="top" id="KIx-Lf-10N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZPb-ER-jak"/>
@@ -45,7 +45,7 @@
             <objects>
                 <viewController id="RZl-Q2-DCt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdd-JC-o6g">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-ML-IHM">
@@ -58,7 +58,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KfV-ML-IHM" firstAttribute="leading" secondItem="Bkr-zk-e9P" secondAttribute="leading" id="6PX-5m-Tnv"/>
-                            <constraint firstItem="KfV-ML-IHM" firstAttribute="bottom" secondItem="cdd-JC-o6g" secondAttribute="bottom" id="BZB-nV-XF6"/>
+                            <constraint firstItem="KfV-ML-IHM" firstAttribute="bottom" secondItem="Bkr-zk-e9P" secondAttribute="bottom" id="BZB-nV-XF6"/>
                             <constraint firstItem="Bkr-zk-e9P" firstAttribute="trailing" secondItem="KfV-ML-IHM" secondAttribute="trailing" id="Htp-AM-QjI"/>
                             <constraint firstItem="KfV-ML-IHM" firstAttribute="top" secondItem="Bkr-zk-e9P" secondAttribute="top" id="vPW-U5-uKY"/>
                         </constraints>
@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="373" y="621"/>
         </scene>
-        <!--MyPageViewController-->
+        <!--mypageNavi-->
         <scene sceneID="XjS-Kb-BzR">
             <objects>
-                <viewControllerPlaceholder storyboardName="AskerMypage" referencedIdentifier="MyPageViewController" id="YyS-zJ-xe7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AskerMypage" referencedIdentifier="mypageNavi" id="YyS-zJ-xe7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8CZ-0N-e3S"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvX-ez-ppP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -115,7 +115,7 @@
             <objects>
                 <viewController id="xbf-fG-wUV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tEp-y1-0SB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-pl-hyp">
@@ -127,7 +127,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="w1b-pl-hyp" secondAttribute="bottom" id="6bC-Tv-u4x"/>
+                            <constraint firstItem="eFG-iS-Tms" firstAttribute="bottom" secondItem="w1b-pl-hyp" secondAttribute="bottom" id="6bC-Tv-u4x"/>
                             <constraint firstItem="eFG-iS-Tms" firstAttribute="trailing" secondItem="w1b-pl-hyp" secondAttribute="trailing" id="Ii9-Fi-aI7"/>
                             <constraint firstItem="w1b-pl-hyp" firstAttribute="leading" secondItem="eFG-iS-Tms" secondAttribute="leading" id="RJJ-za-G0S"/>
                             <constraint firstItem="w1b-pl-hyp" firstAttribute="top" secondItem="eFG-iS-Tms" secondAttribute="top" id="SGQ-1d-2QS"/>
@@ -145,7 +145,7 @@
             <objects>
                 <viewController id="U08-Wl-HbH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d5E-VN-wOU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39n-5S-SDZ">
@@ -159,7 +159,7 @@
                         <constraints>
                             <constraint firstItem="gr9-q6-uH3" firstAttribute="trailing" secondItem="39n-5S-SDZ" secondAttribute="trailing" id="8RN-lX-9et"/>
                             <constraint firstItem="39n-5S-SDZ" firstAttribute="leading" secondItem="gr9-q6-uH3" secondAttribute="leading" id="Arm-f7-euX"/>
-                            <constraint firstAttribute="bottom" secondItem="39n-5S-SDZ" secondAttribute="bottom" id="fZx-K1-4d5"/>
+                            <constraint firstItem="gr9-q6-uH3" firstAttribute="bottom" secondItem="39n-5S-SDZ" secondAttribute="bottom" id="fZx-K1-4d5"/>
                             <constraint firstItem="39n-5S-SDZ" firstAttribute="top" secondItem="gr9-q6-uH3" secondAttribute="top" id="rmk-sa-XbA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gr9-q6-uH3"/>
@@ -173,13 +173,14 @@
         <!--Tab Bar Controller-->
         <scene sceneID="WeL-Ol-VNs">
             <objects>
-                <tabBarController storyboardIdentifier="AskerTabbar" automaticallyAdjustsScrollViewInsets="NO" id="CdY-14-yRH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AskerTabbar" id="CdY-14-yRH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zoO-BS-C5f">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="zoO-BS-C5f">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="darkPurple"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="9j7-P7-lYU" kind="relationship" relationship="viewControllers" id="x6l-KH-82V"/>
@@ -206,4 +207,5 @@
             <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

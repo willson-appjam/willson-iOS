@@ -28,7 +28,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JmK-Eb-y08">
                                 <rect key="frame" x="0.0" y="132" width="375" height="646"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="bgColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListTableViewCell" rowHeight="92" id="M9w-VC-dQD" customClass="ChatListTableViewCell" customModule="Willson" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
@@ -395,7 +395,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2O-tz-Dnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dgB-Gm-kcK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2040.8" y="-215.02463054187194"/>
+            <point key="canvasLocation" x="2134" y="-182"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="keE-7M-sQT">

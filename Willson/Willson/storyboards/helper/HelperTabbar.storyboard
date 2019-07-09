@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="61" y="146"/>
         </scene>
-        <!--MyPageViewController-->
+        <!--mypageNavi-->
         <scene sceneID="lop-ps-LOt">
             <objects>
-                <viewControllerPlaceholder storyboardName="HelperMypage" referencedIdentifier="MyPageViewController" id="DZ0-qP-hJ8" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HelperMypage" referencedIdentifier="mypageNavi" id="DZ0-qP-hJ8" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibz-Y4-F4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="668" y="146"/>
@@ -200,4 +200,5 @@
             <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

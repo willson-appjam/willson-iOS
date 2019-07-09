@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oew-Yy-mlT">
-                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <color key="backgroundColor" name="bgColor"/>
                                 <color key="sectionIndexBackgroundColor" name="bgColor"/>
                                 <prototypes>
@@ -111,7 +111,7 @@
                         <constraints>
                             <constraint firstItem="Oew-Yy-mlT" firstAttribute="leading" secondItem="jrp-aq-ryX" secondAttribute="leading" id="7rn-DT-4ad"/>
                             <constraint firstItem="h6W-pp-9PF" firstAttribute="top" secondItem="jrp-aq-ryX" secondAttribute="top" constant="14" id="Lcr-Za-Ads"/>
-                            <constraint firstItem="Oew-Yy-mlT" firstAttribute="bottom" secondItem="xcM-YN-yQZ" secondAttribute="bottom" id="Yw8-7o-pJA"/>
+                            <constraint firstItem="Oew-Yy-mlT" firstAttribute="bottom" secondItem="jrp-aq-ryX" secondAttribute="bottom" id="Yw8-7o-pJA"/>
                             <constraint firstItem="Oew-Yy-mlT" firstAttribute="top" secondItem="jrp-aq-ryX" secondAttribute="top" constant="44" id="rZz-8p-fVN"/>
                             <constraint firstItem="jrp-aq-ryX" firstAttribute="trailing" secondItem="Oew-Yy-mlT" secondAttribute="trailing" id="rag-Dc-44u"/>
                             <constraint firstItem="h6W-pp-9PF" firstAttribute="leading" secondItem="jrp-aq-ryX" secondAttribute="leading" constant="19" id="sVk-yf-gBu"/>
@@ -135,7 +135,7 @@
             <objects>
                 <navigationController storyboardIdentifier="askerChatListNavi" automaticallyAdjustsScrollViewInsets="NO" id="kNh-gO-0Wb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S8R-jn-JNe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S8R-jn-JNe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -317,7 +317,7 @@
                                 <rect key="frame" x="35.5" y="360.5" width="343" height="175"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상담이 종료되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsj-tN-tL1">
-                                        <rect key="frame" x="98" y="28" width="147" height="19"/>
+                                        <rect key="frame" x="94.5" y="28" width="154.5" height="18"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -341,7 +341,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-LM-FYh">
-                                        <rect key="frame" x="51" y="70" width="241.5" height="28"/>
+                                        <rect key="frame" x="46" y="69" width="251" height="27"/>
                                         <string key="text">헬퍼와의 상담을 통해 조금이나마 보탬이 되었나요?
 후기를 남겨서 더 나은 윌슨을 만들어주세요!</string>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>

@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEZ-ty-4me">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="같은 고민" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp5-Le-oqk">
                                         <rect key="frame" x="22.000000000000007" y="71" width="93.666666666666686" height="26.666666666666671"/>
@@ -94,7 +94,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n4x-eH-soZ">
-                                        <rect key="frame" x="0.0" y="202" width="375" height="610"/>
+                                        <rect key="frame" x="0.0" y="202" width="375" height="488"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4F5-3g-sf7">
                                             <size key="itemSize" width="50" height="50"/>
@@ -121,7 +121,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="헬퍼를 찾았어요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vl9-za-pw2">
-                                        <rect key="frame" x="22" y="105.66666666666667" width="166" height="26.666666666666671"/>
+                                        <rect key="frame" x="22" y="105.66666666666666" width="166" height="26.666666666666657"/>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="24"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>
@@ -136,7 +136,7 @@
                                     <constraint firstItem="Vl9-za-pw2" firstAttribute="leading" secondItem="Bp5-Le-oqk" secondAttribute="leading" id="FqR-sV-vir"/>
                                     <constraint firstAttribute="trailing" secondItem="R0N-0h-rU0" secondAttribute="trailing" constant="22" id="Gi3-O2-WUC"/>
                                     <constraint firstItem="Bp5-Le-oqk" firstAttribute="top" secondItem="eEZ-ty-4me" secondAttribute="top" constant="71" id="Id7-dO-5oj"/>
-                                    <constraint firstAttribute="bottom" secondItem="n4x-eH-soZ" secondAttribute="bottom" id="MZL-Ts-Tfj"/>
+                                    <constraint firstAttribute="bottom" secondItem="n4x-eH-soZ" secondAttribute="bottom" id="JOF-Fx-ZLz"/>
                                     <constraint firstItem="R0N-0h-rU0" firstAttribute="leading" secondItem="eEZ-ty-4me" secondAttribute="leading" constant="22" id="NAm-97-apN"/>
                                     <constraint firstItem="n4x-eH-soZ" firstAttribute="leading" secondItem="eEZ-ty-4me" secondAttribute="leading" id="PIF-AI-Ge2"/>
                                     <constraint firstAttribute="trailing" secondItem="fgb-tH-Hkd" secondAttribute="trailing" constant="48" id="b0C-SB-lFW"/>
@@ -151,9 +151,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="eEZ-ty-4me" secondAttribute="bottom" id="Ezi-cJ-aGC"/>
+                            <constraint firstItem="f4k-Ci-r3z" firstAttribute="bottom" secondItem="eEZ-ty-4me" secondAttribute="bottom" id="Ezi-cJ-aGC"/>
                             <constraint firstItem="eEZ-ty-4me" firstAttribute="leading" secondItem="9Hn-Wi-li3" secondAttribute="leading" id="rAz-ZH-jtZ"/>
-                            <constraint firstItem="eEZ-ty-4me" firstAttribute="top" secondItem="9Hn-Wi-li3" secondAttribute="top" id="sSf-Qd-GC0"/>
+                            <constraint firstItem="eEZ-ty-4me" firstAttribute="top" secondItem="f4k-Ci-r3z" secondAttribute="top" id="sSf-Qd-GC0"/>
                             <constraint firstAttribute="trailing" secondItem="eEZ-ty-4me" secondAttribute="trailing" id="ycB-X0-B1k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f4k-Ci-r3z"/>

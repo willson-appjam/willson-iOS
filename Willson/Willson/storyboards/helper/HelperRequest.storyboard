@@ -95,19 +95,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="같은 고민이 있었다면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeL-uQ-v7y">
-                                <rect key="frame" x="21" y="146.5" width="200.5" height="28"/>
+                                <rect key="frame" x="21" y="146.5" width="209" height="27"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="24"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 대화해주시겠어요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmr-LJ-nFj">
-                                <rect key="frame" x="21" y="179.5" width="228" height="28"/>
+                                <rect key="frame" x="21" y="178.5" width="238" height="27"/>
                                 <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="24"/>
                                 <color key="textColor" name="lightPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T5i-mJ-Mtr">
-                                <rect key="frame" x="0.0" y="232.5" width="414" height="629.5"/>
+                                <rect key="frame" x="0.0" y="230.5" width="414" height="631.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ier-po-rYM">
                                     <size key="itemSize" width="333" height="264"/>
@@ -278,6 +278,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2o9-0h-H03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1131.8840579710145" y="902.67857142857133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="42P-Rd-qEq">
+            <objects>
+                <viewController id="NLS-UK-wzD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yT2-9P-v8D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bkD-HU-r7N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATv-JG-EfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="880"/>
         </scene>
         <!--Helper No Request View Controller-->
         <scene sceneID="hkv-tm-4CN">

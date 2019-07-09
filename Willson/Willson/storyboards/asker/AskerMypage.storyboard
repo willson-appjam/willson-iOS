@@ -313,11 +313,12 @@
         <!--Navigation Controller-->
         <scene sceneID="hZI-0T-Dpb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5vK-7R-2kE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mypageNavi" automaticallyAdjustsScrollViewInsets="NO" id="5vK-7R-2kE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cyF-gc-dlL">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -55,7 +55,7 @@
                                 </subviews>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWV-5z-HVq">
-                                <rect key="frame" x="0.0" y="171" width="414" height="641"/>
+                                <rect key="frame" x="0.0" y="171" width="414" height="691"/>
                                 <connections>
                                     <segue destination="zBC-bQ-hhQ" kind="embed" id="y4J-wK-yWi"/>
                                 </connections>
@@ -71,7 +71,7 @@
                             <constraint firstItem="Zip-Fx-dti" firstAttribute="leading" secondItem="9tB-HD-hrr" secondAttribute="trailing" constant="10" id="bC1-Ti-TVJ"/>
                             <constraint firstItem="9tB-HD-hrr" firstAttribute="top" secondItem="O9i-mQ-FB4" secondAttribute="top" constant="20" id="f8Q-EL-Nt3"/>
                             <constraint firstItem="A8a-OW-ItC" firstAttribute="top" secondItem="Zip-Fx-dti" secondAttribute="bottom" constant="6" id="fkp-fv-8jN"/>
-                            <constraint firstItem="gWV-5z-HVq" firstAttribute="bottom" secondItem="O9i-mQ-FB4" secondAttribute="bottom" constant="-50" id="hl2-wu-FeN"/>
+                            <constraint firstItem="gWV-5z-HVq" firstAttribute="bottom" secondItem="O9i-mQ-FB4" secondAttribute="bottom" id="hl2-wu-FeN"/>
                             <constraint firstItem="Zip-Fx-dti" firstAttribute="top" secondItem="O9i-mQ-FB4" secondAttribute="top" constant="20" id="j4K-1b-CGz"/>
                             <constraint firstItem="A8a-OW-ItC" firstAttribute="leading" secondItem="9tB-HD-hrr" secondAttribute="trailing" constant="10" id="sEH-cq-dXN"/>
                         </constraints>
@@ -88,7 +88,7 @@
             <objects>
                 <tableViewController id="zBC-bQ-hhQ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="46" sectionFooterHeight="28" id="BoR-fX-hmk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="691"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -271,7 +271,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yD5-QZ-a6b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g1U-7H-5OK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mypageNavi" automaticallyAdjustsScrollViewInsets="NO" id="g1U-7H-5OK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tzp-Ve-NDJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
