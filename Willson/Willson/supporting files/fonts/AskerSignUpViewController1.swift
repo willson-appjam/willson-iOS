@@ -43,8 +43,13 @@ class AskerSignUpViewController1: UIViewController, UIPickerViewDataSource, UIPi
     
     // MARK: - IBAction
     @IBAction func agreeChkAction(_ sender: Any) {
-        let button : UIButton = nextBtn
-        changeBtnColor(button: button)
+        if agreeChk.isSelected == true {
+            nextBtn.isEnabled = false
+            agreeChk.isEnabled = false
+        } else {
+            nextBtn.isSelected = true
+            agreeChk.isEnabled = true
+        }
     }
     
     @IBAction func nextBtnAction(_ sender: Any) {
