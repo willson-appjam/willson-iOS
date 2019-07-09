@@ -106,7 +106,7 @@ extension HelperRequestViewController: UICollectionViewDataSource {
 extension HelperRequestViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
-        case 0: return CGSize(width: view.bounds.width, height: 110)
+        case 0: return CGSize(width: view.bounds.width, height: 130)
         case 1: return CGSize(width: 333, height: 264)
         default: return CGSize(width: 0, height: 0)
         }

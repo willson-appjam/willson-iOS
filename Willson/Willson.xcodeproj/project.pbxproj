@@ -63,6 +63,10 @@
 		D9162FA922D4F4750018E471 /* ProblemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9162FA822D4F4750018E471 /* ProblemDetailViewController.swift */; };
 		D9162FAC22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9162FAA22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.swift */; };
 		D9162FAD22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9162FAB22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.xib */; };
+		D9162FB022D511870018E471 /* ProblemDetailTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9162FAE22D511870018E471 /* ProblemDetailTitleTableViewCell.swift */; };
+		D9162FB122D511870018E471 /* ProblemDetailTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9162FAF22D511870018E471 /* ProblemDetailTitleTableViewCell.xib */; };
+		D9162FB422D519D20018E471 /* ProblemDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9162FB222D519D20018E471 /* ProblemDetailTableViewCell.swift */; };
+		D9162FB522D519D20018E471 /* ProblemDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9162FB322D519D20018E471 /* ProblemDetailTableViewCell.xib */; };
 		D918A54922D3A97D001DCCBE /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */; };
 		D918A54B22D3ACD2001DCCBE /* HelperStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54A22D3ACD2001DCCBE /* HelperStory.swift */; };
 		D918A54D22D3ADC3001DCCBE /* HelperStoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */; };
@@ -173,6 +177,10 @@
 		D9162FA822D4F4750018E471 /* ProblemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProblemDetailViewController.swift; path = "Willson/view controllers/helper/request/ProblemDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D9162FAA22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperRequestTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9162FAB22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperRequestTitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		D9162FAE22D511870018E471 /* ProblemDetailTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetailTitleTableViewCell.swift; sourceTree = "<group>"; };
+		D9162FAF22D511870018E471 /* ProblemDetailTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProblemDetailTitleTableViewCell.xib; sourceTree = "<group>"; };
+		D9162FB222D519D20018E471 /* ProblemDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D9162FB322D519D20018E471 /* ProblemDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProblemDetailTableViewCell.xib; sourceTree = "<group>"; };
 		D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		D918A54A22D3ACD2001DCCBE /* HelperStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStory.swift; sourceTree = "<group>"; };
 		D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStoryService.swift; sourceTree = "<group>"; };
@@ -591,6 +599,10 @@
 				D9162FAB22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.xib */,
 				D98BA5C222D0131500E72C02 /* HelperRequestCollectionViewCell.swift */,
 				D98BA5C322D0131500E72C02 /* HelperRequestCollectionViewCell.xib */,
+				D9162FAE22D511870018E471 /* ProblemDetailTitleTableViewCell.swift */,
+				D9162FAF22D511870018E471 /* ProblemDetailTitleTableViewCell.xib */,
+				D9162FB222D519D20018E471 /* ProblemDetailTableViewCell.swift */,
+				D9162FB322D519D20018E471 /* ProblemDetailTableViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -702,6 +714,7 @@
 				D965853522C4EB6B0072CC5E /* AskerMypage.storyboard in Resources */,
 				D965854322C4EBF60072CC5E /* HelperSignUp.storyboard in Resources */,
 				D915F8A222CDCB40009DA734 /* AskerTabbar.storyboard in Resources */,
+				D9162FB122D511870018E471 /* ProblemDetailTitleTableViewCell.xib in Resources */,
 				D965853122C4EB4F0072CC5E /* AskerRequest.storyboard in Resources */,
 				663835BB22C9C82D003265C7 /* Slide.xib in Resources */,
 				D965853B22C4EBC00072CC5E /* HelperMypage.storyboard in Resources */,
@@ -710,6 +723,7 @@
 				D98BA5C522D0131500E72C02 /* HelperRequestCollectionViewCell.xib in Resources */,
 				6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */,
 				D965853D22C4EBCA0072CC5E /* HelperProfile.storyboard in Resources */,
+				D9162FB522D519D20018E471 /* ProblemDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,11 +828,13 @@
 				D9AC037222CE199500E16AD8 /* AskerList6_HelperCharacterViewController.swift in Sources */,
 				D915535622D20EC400A38390 /* CustomButton.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
+				D9162FB422D519D20018E471 /* ProblemDetailTableViewCell.swift in Sources */,
 				D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */,
 				663835C422CA2A09003265C7 /* AskerRequestViewController.swift in Sources */,
 				66C661CE22CC8F3D008A451F /* PopUpViewController3.swift in Sources */,
 				663F82A022D0A76800EAD932 /* HelperChatRoomViewController.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
+				D9162FB022D511870018E471 /* ProblemDetailTitleTableViewCell.swift in Sources */,
 				66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */,
 				66316A2622D202790033B519 /* AskerChatRoomViewController.swift in Sources */,
 				D9AC038622CE601C00E16AD8 /* FeelCollectionViewCell.swift in Sources */,
