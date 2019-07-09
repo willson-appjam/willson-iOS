@@ -199,6 +199,11 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" name="white"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="rt9-1W-VFv" kind="show" id="QQe-lh-AYj"/>
                                 </connections>
@@ -303,6 +308,11 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" name="white"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtn:" destination="rt9-1W-VFv" eventType="touchUpInside" id="xc5-Vd-n78"/>
                                     <segue destination="ppl-hY-jj4" kind="show" id="3ZC-Lk-Mhm"/>
@@ -553,6 +563,11 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" name="white"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtn:" destination="rt9-1W-VFv" eventType="touchUpInside" id="tfX-Ot-g4w"/>
                                     <segue destination="VC3-Zv-dCi" kind="show" id="tEs-gB-t0e"/>
@@ -686,6 +701,11 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" name="white"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtn:" destination="rt9-1W-VFv" eventType="touchUpInside" id="iBS-Zg-ajb"/>
                                     <segue destination="vQc-ZJ-a8I" kind="show" id="J7x-le-aDg"/>
@@ -869,6 +889,11 @@
                                 <state key="normal" title="다음">
                                     <color key="titleColor" name="white"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtn:" destination="rt9-1W-VFv" eventType="touchUpInside" id="q1w-Na-a3R"/>
                                     <segue destination="heQ-tL-RF5" kind="show" id="voj-Ft-p8D"/>
