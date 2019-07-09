@@ -88,7 +88,7 @@
         <scene sceneID="4um-mv-syJ">
             <objects>
                 <tableViewController id="zBC-bQ-hhQ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="46" sectionFooterHeight="28" id="BoR-fX-hmk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="2" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="46" sectionFooterHeight="28" id="BoR-fX-hmk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="691"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="bgColor"/>
