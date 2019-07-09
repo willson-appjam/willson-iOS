@@ -92,17 +92,17 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HelperRequestTitleCollectionViewCell" id="slv-H2-uf6" customClass="HelperRequestTitleCollectionViewCell" customModule="Willson" customModuleProvider="target">
-                                        <rect key="frame" x="40.5" y="274" width="333" height="264"/>
+                                        <rect key="frame" x="40.5" y="0.0" width="333" height="264"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="333" height="264"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwo-8M-Zw1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="264"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d47-KT-MdU">
-                                                            <rect key="frame" x="21" y="46" width="238" height="59"/>
+                                                            <rect key="frame" x="21" y="180" width="238" height="59"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="같은 고민이 있었다면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpp-WH-deC">
                                                                     <rect key="frame" x="0.0" y="0.0" width="209" height="27"/>
@@ -136,7 +136,7 @@
                                         <viewLayoutGuide key="safeArea" id="LTF-uu-3ll"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HelperRequestCollectionViewCell" id="9Tr-Lj-C0t" customClass="HelperRequestCollectionViewCell" customModule="Willson" customModuleProvider="target">
-                                        <rect key="frame" x="40.5" y="0.0" width="333" height="264"/>
+                                        <rect key="frame" x="40.5" y="274" width="333" height="264"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="333" height="264"/>
@@ -164,7 +164,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLW-PB-2sm">
-                                                                    <rect key="frame" x="31" y="5.5" width="31.5" height="19"/>
+                                                                    <rect key="frame" x="31" y="6" width="35" height="18"/>
                                                                     <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                     <color key="textColor" name="middlePurple"/>
                                                                     <nil key="highlightedColor"/>
@@ -181,16 +181,16 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="goO-67-uJS">
-                                                            <rect key="frame" x="93.5" y="63" width="146.5" height="16.5"/>
+                                                            <rect key="frame" x="90" y="63" width="153" height="15.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세인트 님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPF-vx-kXT">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="52.5" height="16.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="54.5" height="15.5"/>
                                                                     <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="14"/>
                                                                     <color key="textColor" name="black"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(남 / 20대 중반)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPD-NA-1kZ">
-                                                                    <rect key="frame" x="58.5" y="0.0" width="88" height="16.5"/>
+                                                                    <rect key="frame" x="60.5" y="0.0" width="92.5" height="15.5"/>
                                                                     <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                                     <color key="textColor" name="black"/>
                                                                     <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-5R-aGL">
-                                                            <rect key="frame" x="15" y="97.5" width="303" height="1"/>
+                                                            <rect key="frame" x="15" y="96.5" width="303" height="1"/>
                                                             <color key="backgroundColor" name="veryLightPink"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="b8X-Df-jjJ"/>
@@ -206,10 +206,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-FE-5Yx">
-                                                            <rect key="frame" x="145" y="115.5" width="43" height="30"/>
+                                                            <rect key="frame" x="145" y="114.5" width="43" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-wT-YAr">
-                                                                    <rect key="frame" x="3" y="7.5" width="37" height="15.5"/>
+                                                                    <rect key="frame" x="3" y="8" width="37" height="14.5"/>
                                                                     <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="13"/>
                                                                     <color key="textColor" name="middlePurple"/>
                                                                     <nil key="highlightedColor"/>
@@ -227,7 +227,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“ 단짝 친구의 남동생을 좋아하고 있어요. 아무에게도 말 못하고 혼자 끙끙 앓고 있는데 제가 … ”" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yop-SL-PXU">
-                                                            <rect key="frame" x="15" y="161.5" width="303" height="35"/>
+                                                            <rect key="frame" x="15" y="160.5" width="303" height="33.5"/>
                                                             <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="15"/>
                                                             <color key="textColor" name="black"/>
                                                             <nil key="highlightedColor"/>

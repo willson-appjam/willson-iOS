@@ -35,23 +35,25 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         // helper story networking
         
         getHelperStory()
-        
+        self.slideList = self.createSlides()
+        self.setupSlideScrollView(slides: self.slideList)
     }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        getHelperStory()
+//        getHelperStory()
         // 카테고리 UIView에 touch Action 추가
         let concern1Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern1(_:)))
         concern1View.addGestureRecognizer(concern1Gesture)
         
         //헬퍼
         
-        getHelperStory()
+//        getHelperStory()
         
-        //slideList = createSlides()
-        setupSlideScrollView(slides: slideList)
+//        slideList = createSlides()
+//        setupSlideScrollView(slides: slideList)
+        
         scrollView.delegate = self
         
 //        pageControl.numberOfPages = slides.count - 1
@@ -149,25 +151,70 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func createSlides() -> [Slide] {
-        var appendSlide = Slide()
-        var num = 0
+//        var appendSlide = Slide()
+//        var num = 0
         
+        /*
         //DispatchQueue.main.async{
-            for data in self.dataList ?? [HelperStoryData]() {
-                let slide:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-                slide.name.text = data.nickname
-                slide.category.text = data.categoryName
-                slide.content.text = data.content
-                self.slideList.append(slide)
-                if(num == 0){
-                    appendSlide = slide
-                    num = num + 1
-                }
+        for data in self.dataList ?? [HelperStoryData]() {
+            let slide: Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as? Slide ?? Slide()
+            slide.name.text = data.nickname
+            slide.category.text = data.categoryName
+            slide.content.text = data.content
+            self.slideList.append(slide)
+            if(num == 0) {
+                appendSlide = slide
+                num = num + 1
             }
+        }
         //}
+        */
         
-        slideList.append(appendSlide)
+        let Slide0:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         
+        Slide0.name.text = dataList?[0].nickname
+        Slide0.content.text = dataList?[0].content
+        Slide0.category.text = dataList?[0].categoryName
+        
+        let Slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+        
+        Slide1.name.text = dataList?[1].nickname
+        Slide1.content.text = dataList?[1].content
+        Slide1.category.text = dataList?[1].categoryName
+        
+        let Slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+        
+        Slide2.name.text = dataList?[2].nickname
+        Slide2.content.text = dataList?[2].content
+        Slide2.category.text = dataList?[2].categoryName
+        
+        let Slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+        
+        Slide3.name.text = dataList?[3].nickname
+        Slide3.content.text = dataList?[3].content
+        Slide3.category.text = dataList?[3].categoryName
+        
+        let Slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+        
+        Slide4.name.text = dataList?[4].nickname
+        Slide4.content.text = dataList?[4].content
+        Slide4.category.text = dataList?[4].categoryName
+        
+        let Slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+        
+        Slide5.name.text = dataList?[0].nickname
+        Slide5.content.text = dataList?[0].content
+        Slide5.category.text = dataList?[0].categoryName
+        
+        return [Slide0, Slide1, Slide2, Slide3, Slide4, Slide5]
+        
+        
+//        slideList.append(appendSlide)
+        
+//        return slideList
+    }
+    
+    func setupSlideScrollView(slides : [Slide]) {
         scrollView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
         scrollView.contentSize = CGSize(width: scrollView.frame.width * CGFloat(slideList.count), height: scrollView.frame.height)
         scrollView.isPagingEnabled = true
@@ -176,12 +223,6 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
             slideList[i].frame = CGRect(x: scrollView.frame.width * CGFloat(i), y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
             scrollView.addSubview(slideList[i])
         }
-        
-        return slideList
-    }
-    
-    func setupSlideScrollView(slides : [Slide]) {
-       
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
