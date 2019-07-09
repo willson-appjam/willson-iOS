@@ -19,6 +19,8 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     var helperStory: HelperStory?
     var dataList: [HelperStoryData]?
+    
+    private var rightBarButton = UIBarButtonItem()
 
     // MARK: - IBOutlet
     @IBOutlet weak var concern1View: UIView!
@@ -65,6 +67,36 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         //자동 스크롤
         timer = Timer.scheduledTimer(timeInterval:6, target:self, selector:#selector(AskerMainViewController.autoScroll), userInfo:nil, repeats:true)
+    
+        // UINavagationBar Title Logo
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "imgLogo"))
+        
+        // UINavagationBar right button - Switch Asker
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "btnSwitch"), for: .normal)
+        button.setTitle("질문자전환", for: .normal)
+        button.titleLabel?.font = UIFont(name: "NanumSquareB", size: 12)
+        button.tintColor = #colorLiteral(red: 0.1725490196, green: 0.1725490196, blue: 0.3019607843, alpha: 1)
+        button.sizeToFit()
+        self.rightBarButton = UIBarButtonItem(customView: button)
+        
+        button.addTarget(self, action: #selector(someAction), for: .touchUpInside)
+        
+        navigationItem.rightBarButtonItem = self.rightBarButton
+        
+        // UINavigation bar hide line
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        // UITabBar hide line
+        /* 적용이 안돼요
+         self.tabBarController?.tabBar.layer.shadowColor = UIColor.black.cgColor
+         self.tabBarController?.tabBar.layer.shadowOffset = CGSize(width: 3.0, height: 0.0)
+         self.tabBarController?.tabBar.layer.shadowRadius = 6
+         self.tabBarController?.tabBar.layer.shadowOpacity = 0.16
+         */
+        self.tabBarController?.tabBar.shadowImage = UIImage()
+        self.tabBarController?.tabBar.backgroundImage = UIImage()
     }
     
     // MARK: - IBAction
@@ -77,6 +109,12 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // MARK: - Methods
+    @objc func someAction() {
+        let storyboard = UIStoryboard(name: "HelperTabbar", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "HelperTabbar")
+        present(viewController, animated: true)
+    }
+    
     func getHelperStory() {/*
         HelperStoryService.shared.getHelperStory { [ weak self] data in
             guard let `self` = self else { return }
@@ -139,7 +177,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         print(slideList)
         return slideList
-        */
+        
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.name.text = "앱잼파이팅 헬퍼님"
         slide1.category.text = "연애"

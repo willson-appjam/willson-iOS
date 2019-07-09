@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1213.5999999999999" y="-305.17241379310349"/>
         </scene>
-        <!--AskerMainViewController-->
+        <!--askerMainNavi-->
         <scene sceneID="0hf-Vd-MiD">
             <objects>
-                <viewControllerPlaceholder storyboardName="AskerMain" referencedIdentifier="AskerMainViewController" id="Stt-DT-DlQ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AskerMain" referencedIdentifier="askerMainNavi" id="Stt-DT-DlQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wZn-Qu-paI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aU-Gg-wr9" userLabel="First Responder" sceneMemberID="firstResponder"/>

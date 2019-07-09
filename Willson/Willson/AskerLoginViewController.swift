@@ -30,6 +30,11 @@ class AskerLoginViewController: UIViewController {
         iconTF()
         emailTF.delegate = self
         pwTF.delegate = self
+        
+        // view tapped
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
+        view.addGestureRecognizer(tap)
+
     }
     
     func viewWillApear(_ animated: Bool) {
@@ -190,6 +195,10 @@ class AskerLoginViewController: UIViewController {
     }
     
     // MARK: - Methods
+    @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     func getAccessToken() {
         guard let token = AccessToken.current else { return }
         
