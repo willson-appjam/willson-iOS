@@ -22,6 +22,7 @@ class AskerChatRoomViewController: UIViewController {
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textFieldViewBottom: NSLayoutConstraint!
     
     // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -73,29 +74,28 @@ class AskerChatRoomViewController: UIViewController {
     
     // MARK: - Methods
     @objc func keyboardWillShow(notification: NSNotification) {
-        if isTextFieldActive {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y == 0{
-                    //self.view.frame.origin.y -= keyboardSize.height
-                    self.keyboardView.frame.origin.y -= keyboardSize.height
-                }
-            }
-            
-        }
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
+        
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
+        
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.textFieldViewBottom.constant = -keyboardHeight
+        })
+        self.view.layoutIfNeeded()
     }
     
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if !isTextFieldActive {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                //if self.view.frame.origin.y != 0{
-                //self.view.frame.origin.y += keyboardSize.height
-                self.keyboardView.frame.origin.y += keyboardSize.height
-                //}
-            }
-            
-            
-        }
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.textFieldViewBottom.constant = 0
+        })
+        
+        self.view.layoutIfNeeded()
     }
 
 }

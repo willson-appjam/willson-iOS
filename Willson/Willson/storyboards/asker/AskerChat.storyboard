@@ -317,7 +317,7 @@
                                 <rect key="frame" x="35.5" y="360.5" width="343" height="175"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상담이 종료되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsj-tN-tL1">
-                                        <rect key="frame" x="94" y="28" width="155" height="18"/>
+                                        <rect key="frame" x="98" y="28" width="147" height="19"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -341,7 +341,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-LM-FYh">
-                                        <rect key="frame" x="46" y="69" width="251" height="27"/>
+                                        <rect key="frame" x="51" y="70" width="241.5" height="28"/>
                                         <string key="text">헬퍼와의 상담을 통해 조금이나마 보탬이 되었나요?
 후기를 남겨서 더 나은 윌슨을 만들어주세요!</string>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
@@ -459,7 +459,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i25-JJ-fJL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="719"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="723"/>
                                 <color key="backgroundColor" name="bgColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -712,6 +712,7 @@
                         <outlet property="chatRoomTableView" destination="i25-JJ-fJL" id="H7b-0z-w7n"/>
                         <outlet property="keyboardView" destination="1Xa-qF-9Ge" id="FTA-OK-bTO"/>
                         <outlet property="textField" destination="pdT-EF-obJ" id="W0e-j4-y62"/>
+                        <outlet property="textFieldViewBottom" destination="X29-Ct-mHu" id="gNo-X5-U8M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGQ-GL-qH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
