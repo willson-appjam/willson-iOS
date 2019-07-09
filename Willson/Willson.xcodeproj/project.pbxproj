@@ -16,7 +16,7 @@
 		663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663368C922CD36D800C3C694 /* PopUpViewController4.swift */; };
 		6633E3EB22D3CAE600DF81AC /* ServerString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3EA22D3CAE600DF81AC /* ServerString.swift */; };
 		6633E3F122D3D63100DF81AC /* UserSigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F022D3D63100DF81AC /* UserSigninService.swift */; };
-		6633E3F922D436D400DF81AC /* signIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F822D436D300DF81AC /* signIn.swift */; };
+		6633E3F922D436D400DF81AC /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F822D436D300DF81AC /* SignIn.swift */; };
 		6633E3FD22D4840300DF81AC /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3FC22D4840300DF81AC /* SignInData.swift */; };
 		6633E3FF22D4947100DF81AC /* HelperStoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3FE22D4947100DF81AC /* HelperStoryData.swift */; };
 		6634344222C67ED500D419EC /* NanumSquareEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344122C67E8300D419EC /* NanumSquareEB.ttf */; };
@@ -52,6 +52,8 @@
 		66AF81B422CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */; };
 		66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */; };
 		66C661CE22CC8F3D008A451F /* PopUpViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */; };
+		66D7E07122D4F16300AC0C9B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7E07022D4F16300AC0C9B /* SignUp.swift */; };
+		66D7E07322D4F19300AC0C9B /* SignUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7E07222D4F19300AC0C9B /* SignUpData.swift */; };
 		66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */; };
 		66E5E78222CB809C00B43D93 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E78122CB809C00B43D93 /* PopUpVC.swift */; };
 		66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */; };
@@ -128,7 +130,7 @@
 		663368C922CD36D800C3C694 /* PopUpViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController4.swift; sourceTree = "<group>"; };
 		6633E3EA22D3CAE600DF81AC /* ServerString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerString.swift; sourceTree = "<group>"; };
 		6633E3F022D3D63100DF81AC /* UserSigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninService.swift; sourceTree = "<group>"; };
-		6633E3F822D436D300DF81AC /* signIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signIn.swift; sourceTree = "<group>"; };
+		6633E3F822D436D300DF81AC /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		6633E3FC22D4840300DF81AC /* SignInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
 		6633E3FE22D4947100DF81AC /* HelperStoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStoryData.swift; sourceTree = "<group>"; };
 		6634343E22C67E0E00D419EC /* NanumSquareL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.ttf; sourceTree = "<group>"; };
@@ -164,6 +166,8 @@
 		66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollCategoryViewController.swift; path = "Willson/view controllers/helper/HelperEnrollCategoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollDetailCategoryViewController.swift; path = "Willson/view controllers/helper/HelperEnrollDetailCategoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController3.swift; sourceTree = "<group>"; };
+		66D7E07022D4F16300AC0C9B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		66D7E07222D4F19300AC0C9B /* SignUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpData.swift; sourceTree = "<group>"; };
 		66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController2.swift; sourceTree = "<group>"; };
 		66E5E78122CB809C00B43D93 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Extension.swift; sourceTree = "<group>"; };
@@ -392,8 +396,10 @@
 			children = (
 				D918A54A22D3ACD2001DCCBE /* HelperStory.swift */,
 				6633E3FE22D4947100DF81AC /* HelperStoryData.swift */,
-				6633E3F822D436D300DF81AC /* signIn.swift */,
+				6633E3F822D436D300DF81AC /* SignIn.swift */,
 				6633E3FC22D4840300DF81AC /* SignInData.swift */,
+				66D7E07022D4F16300AC0C9B /* SignUp.swift */,
+				66D7E07222D4F19300AC0C9B /* SignUpData.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -777,7 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */,
-				6633E3F922D436D400DF81AC /* signIn.swift in Sources */,
+				6633E3F922D436D400DF81AC /* SignIn.swift in Sources */,
 				660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
@@ -791,6 +797,7 @@
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				66AF81B022CFA4DC00722FF2 /* HelperEnrollStartViewController.swift in Sources */,
 				66AF81B422CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift in Sources */,
+				66D7E07122D4F16300AC0C9B /* SignUp.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
 				D9AC038D22CE8B9300E16AD8 /* ChatListTableViewCell.swift in Sources */,
 				D9AC036E22CE192D00E16AD8 /* AskerList3_ImpactViewController.swift in Sources */,
@@ -808,6 +815,7 @@
 				663835D422CAFDD7003265C7 /* AskerSNSSignUpViewController.swift in Sources */,
 				663835D022CA6A53003265C7 /* HelperProfileViewController.swift in Sources */,
 				6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */,
+				66D7E07322D4F19300AC0C9B /* SignUpData.swift in Sources */,
 				663835B922C9BC30003265C7 /* Slide.swift in Sources */,
 				D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */,
 				D9BA14B422D2A3E5001FEC6D /* NoChatListTableViewCell.swift in Sources */,

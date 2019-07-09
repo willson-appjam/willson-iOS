@@ -56,7 +56,7 @@ class AskerLoginViewController: UIViewController {
             case 200:
                 self.signIn = signIn
                 self.statusCode = statusCode
-                
+                //print(signIn.message)
                 UserDefaults.standard.set(signIn.data.token, forKey: "token")
                 
                 

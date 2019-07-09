@@ -12,9 +12,8 @@ import Alamofire
 struct HelperStoryService {
     static let shared = HelperStoryService()
     
-    /*func getHelperStory(completion: @escaping (NetworkResult<Any>) -> Void) {
+    func getHelperStory(completionHandler: @escaping (HelperStory, Int) -> Void) {
         let URL = "\(SERVER_URL)/helper/story"
-        print(URL)
         
         Alamofire.request(URL,
                           method: .get,
@@ -22,42 +21,20 @@ struct HelperStoryService {
                           encoding: JSONEncoding.default,
                           headers: nil).responseData { response in
                             switch response.result {
-                            case .success:
-                                if let value = response.result.value {
-                                    if let status = response.response?.statusCode {
-                                        switch status {
-                                        case 200:
-                                            do {
-                                                let decoder = JSONDecoder()
-                                                let result = try decoder.decode(ResponseArray<HelperStory>.self, from: value)
-                                                
-                                                if (result.code == 200) {
-                                                    completion(.success(response.data!))
-                                                }
-                                                else{
-                                                    //completion(.requestErr(result.message))
-                                                }
-                                            } catch {
-//                                                completion(.pathErr)
-                                                print("catch로 들어왔어여...")
-                                            }
-                                        case 400:
-                                            completion(.pathErr)
-                                        case 500:
-                                            completion(.serverErr)
-     
-     default:
-                                            break
-                                        }
-                                    }
+                            case .success(let data): do {
+                                let helperStory = try JSONDecoder().decode(HelperStory.self, from: data)
+                                guard let statusCode = response.response?.statusCode else { return }
+                                completionHandler(helperStory, statusCode)
+                                print("**************helper story success*************")
+                            } catch {
+                                print("Got and error: \(error)")
                                 }
-                                
                             case .failure(let err):
                                 print(err.localizedDescription)
-                                completion(.networkFail)
+                                //completion(.networkFail)
                                 break
                             }
         }
         
-    }*/
+    }
 }
