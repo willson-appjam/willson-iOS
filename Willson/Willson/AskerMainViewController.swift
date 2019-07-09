@@ -33,27 +33,27 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         // helper story networking
-        DispatchQueue.global().sync{
-            getHelperStory()
-        }
+        
+        getHelperStory()
+        
     }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        getHelperStory()
         // 카테고리 UIView에 touch Action 추가
         let concern1Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern1(_:)))
         concern1View.addGestureRecognizer(concern1Gesture)
         
         //헬퍼
         
-        //getHelperStory()
-        DispatchQueue.global().async{
-            self.slideList = self.createSlides()
-            self.setupSlideScrollView(slides: self.slideList)
-            self.scrollView.delegate = self
-        }
+        getHelperStory()
+        
+        //slideList = createSlides()
+        setupSlideScrollView(slides: slideList)
+        scrollView.delegate = self
+        
 //        pageControl.numberOfPages = slides.count - 1
 //        pageControl.currentPage = 0
 //        scrollView.bringSubviewToFront(pageControl)
@@ -103,7 +103,6 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         self.tabBarController?.tabBar.backgroundImage = UIImage()
     }
     
-    
     // MARK: - IBAction
     @IBAction func userTransition(_ sender: Any) {
         let storyboard  = UIStoryboard(name: "HelperTabbar", bundle: nil)
@@ -119,8 +118,6 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         let viewController = storyboard.instantiateViewController(withIdentifier: "HelperTabbar")
         present(viewController, animated: true)
     }
-    
-   
     
     @objc func tappedconcern1(_ gesture: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "AskerList", bundle: nil)
@@ -147,23 +144,28 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
                 break;
             }
         }
+        //slideList = createSlides()
+        
     }
     
     func createSlides() -> [Slide] {
         var appendSlide = Slide()
         var num = 0
         
-        for data in dataList ?? [HelperStoryData]() {
-            let slide:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-            slide.name.text = data.nickname
-            slide.category.text = data.categoryName
-            slide.content.text = data.content
-            slideList.append(slide)
-            if(num == 0){
-                appendSlide = slide
-                num = num + 1
+        //DispatchQueue.main.async{
+            for data in self.dataList ?? [HelperStoryData]() {
+                let slide:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+                slide.name.text = data.nickname
+                slide.category.text = data.categoryName
+                slide.content.text = data.content
+                self.slideList.append(slide)
+                if(num == 0){
+                    appendSlide = slide
+                    num = num + 1
+                }
             }
-        }
+        //}
+        
         slideList.append(appendSlide)
         
         scrollView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
