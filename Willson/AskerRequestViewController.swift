@@ -10,8 +10,7 @@ import UIKit
 
 class AskerRequestViewController: UIViewController {
     
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var helperCollectionView: UICollectionView!
+    // MARK: - properties
     //===================================
     //임시 데이터 저장 코드
     var helpers:[HelperCollectionViewCell] = [];
@@ -22,6 +21,12 @@ class AskerRequestViewController: UIViewController {
     var extended = false
     var completionHandlers: [() -> Void] = []
     //===================================
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var helperCollectionView: UICollectionView!
+    
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +43,17 @@ class AskerRequestViewController: UIViewController {
         self.helperCollectionView.addGestureRecognizer(gesture)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    // MARK: - Methods
     @objc func goPage(sender:UIGestureRecognizer)
         
     {
@@ -45,7 +61,7 @@ class AskerRequestViewController: UIViewController {
    
         let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController") as! HelperProfileViewController
         
-        self.navigationController!.pushViewController(vc, animated: true)
+        self.navigationController?.show(vc, sender: nil)
     }
     
     @objc func timeLimit() {
@@ -121,15 +137,6 @@ class AskerRequestViewController: UIViewController {
         return [helper1, helper2, helper3]
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
 }
 
 extension AskerRequestViewController: UICollectionViewDataSource {
@@ -154,17 +161,19 @@ extension AskerRequestViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension AskerRequestViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
 extension AskerRequestViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width: CGFloat = (helperCollectionView.frame.width)
-        let height: CGFloat = 251
+        let height: CGFloat = 284
         
         return CGSize(width: width, height: height)
     }

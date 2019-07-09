@@ -57,6 +57,9 @@
                                                 <state key="normal" title="수정">
                                                     <color key="titleColor" name="brownishGrey"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedCategoryEditButton:" destination="Mfj-Ci-9kS" eventType="touchUpInside" id="VpS-i8-weW"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구체적 경험" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-XW-GpR">
                                                 <rect key="frame" x="23" y="179" width="96" height="23"/>
@@ -137,6 +140,9 @@
                                                 <state key="normal" title="수정">
                                                     <color key="titleColor" name="brownishGrey"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedProfileEditButton:" destination="Mfj-Ci-9kS" eventType="touchUpInside" id="9ww-Bh-rgR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
