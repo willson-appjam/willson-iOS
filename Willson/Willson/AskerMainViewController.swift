@@ -166,6 +166,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
             slideList.append(slide)
         }
          */
+        /*
         guard let list = dataList else { return [Slide]() }
         for data in list {
             let slide = Slide()
@@ -177,6 +178,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         print(slideList)
         return slideList
+        */
         
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.name.text = "앱잼파이팅 헬퍼님"
