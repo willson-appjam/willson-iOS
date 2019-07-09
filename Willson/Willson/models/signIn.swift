@@ -1,5 +1,5 @@
 //
-//  CustomData.swift
+//  signinData.swift
 //  Willson
 //
 //  Created by 박지수 on 09/07/2019.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct CustomData: Codable {
-    let nickname: String
-    let category_name: String
-    let content: String
+// MARK: - signinData
+struct SignIn: Codable {
+    let code: Int
+    let data: SignInData
 }
+

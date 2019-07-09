@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct HelperStory: Codable {    
+// MARK: - Welcome
+struct HelperStory: Codable {
     let code: Int
-    let data: [CustomData]?
+    let data: [HelperStoryData]
 }
+

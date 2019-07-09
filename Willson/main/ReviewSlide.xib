@@ -24,14 +24,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uQ-II-WSx">
                     <rect key="frame" x="0.0" y="0.0" width="333" height="205"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJj-hL-T1v">
-                            <rect key="frame" x="145" y="27.000000000000004" width="43" height="15.666666666666668"/>
-                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
-                            <color key="textColor" name="lightPurple"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P9m-lM-r84">
-                            <rect key="frame" x="0.0" y="69.666666666666671" width="333" height="63.333333333333329"/>
+                            <rect key="frame" x="0.0" y="76.333333333333329" width="333" height="56.666666666666671"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <string key="text">“ 큰 기대하지 않고 진로에 대한 고민을 신청했는데
 답변자님이 정말 진지하게 전문적으로 상담해주셔서
@@ -50,27 +44,56 @@
                             <color key="textColor" name="darkPurple"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vXx-Oa-p45" customClass="CustonView" customModule="Willson" customModuleProvider="target">
+                            <rect key="frame" x="145" y="27" width="43" height="23"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJj-hL-T1v">
+                                    <rect key="frame" x="0.0" y="5" width="43" height="14"/>
+                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                    <color key="textColor" name="lightPurple"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="CJj-hL-T1v" secondAttribute="bottom" constant="4" id="4dy-Wh-zxg"/>
+                                <constraint firstItem="CJj-hL-T1v" firstAttribute="top" secondItem="vXx-Oa-p45" secondAttribute="top" constant="5" id="Jvl-sy-fbA"/>
+                                <constraint firstItem="CJj-hL-T1v" firstAttribute="leading" secondItem="vXx-Oa-p45" secondAttribute="leading" id="XC9-Lh-S0f"/>
+                                <constraint firstAttribute="trailing" secondItem="CJj-hL-T1v" secondAttribute="trailing" id="kIf-6H-DIs"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="lightPurple"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="P9m-lM-r84" firstAttribute="centerX" secondItem="6uQ-II-WSx" secondAttribute="centerX" id="005-WR-7Tn"/>
                         <constraint firstAttribute="bottom" secondItem="YZM-P8-BXP" secondAttribute="bottom" constant="49" id="1sh-4J-XWZ"/>
+                        <constraint firstItem="vXx-Oa-p45" firstAttribute="centerX" secondItem="6uQ-II-WSx" secondAttribute="centerX" id="5Tl-eH-k8c"/>
                         <constraint firstItem="YZM-P8-BXP" firstAttribute="top" secondItem="6uQ-II-WSx" secondAttribute="top" constant="155" id="6Zo-bG-dG7"/>
                         <constraint firstAttribute="trailing" secondItem="P9m-lM-r84" secondAttribute="trailing" id="Dd3-FR-nF2"/>
-                        <constraint firstItem="CJj-hL-T1v" firstAttribute="leading" secondItem="6uQ-II-WSx" secondAttribute="leading" constant="145" id="G3H-kf-cJV"/>
                         <constraint firstAttribute="trailing" secondItem="YZM-P8-BXP" secondAttribute="trailing" constant="14" id="QZQ-x2-xgA"/>
                         <constraint firstItem="P9m-lM-r84" firstAttribute="leading" secondItem="6uQ-II-WSx" secondAttribute="leading" id="Qci-HG-wd2"/>
                         <constraint firstItem="EEZ-cM-g4t" firstAttribute="top" secondItem="6uQ-II-WSx" secondAttribute="top" constant="169" id="Qq4-o0-Txc"/>
-                        <constraint firstItem="CJj-hL-T1v" firstAttribute="centerX" secondItem="6uQ-II-WSx" secondAttribute="centerX" id="R0J-rI-wnk"/>
                         <constraint firstItem="YZM-P8-BXP" firstAttribute="top" secondItem="P9m-lM-r84" secondAttribute="bottom" constant="22" id="RPJ-1q-VkL"/>
                         <constraint firstItem="EEZ-cM-g4t" firstAttribute="leading" secondItem="6uQ-II-WSx" secondAttribute="leading" id="ReF-f4-dKj"/>
                         <constraint firstItem="YZM-P8-BXP" firstAttribute="leading" secondItem="6uQ-II-WSx" secondAttribute="leading" constant="14" id="Rw9-U0-cSV"/>
+                        <constraint firstItem="vXx-Oa-p45" firstAttribute="top" secondItem="6uQ-II-WSx" secondAttribute="top" constant="27" id="bOM-LQ-fiw"/>
+                        <constraint firstAttribute="trailing" secondItem="vXx-Oa-p45" secondAttribute="trailing" constant="145" id="baN-XD-EwX"/>
                         <constraint firstItem="EEZ-cM-g4t" firstAttribute="centerX" secondItem="6uQ-II-WSx" secondAttribute="centerX" id="gdl-uz-J1w"/>
+                        <constraint firstItem="P9m-lM-r84" firstAttribute="top" secondItem="vXx-Oa-p45" secondAttribute="bottom" constant="24.666666666666671" id="h4o-8U-dTm"/>
                         <constraint firstAttribute="trailing" secondItem="EEZ-cM-g4t" secondAttribute="trailing" id="iez-cc-7nw"/>
                         <constraint firstItem="YZM-P8-BXP" firstAttribute="centerX" secondItem="6uQ-II-WSx" secondAttribute="centerX" id="iqh-pF-vJs"/>
-                        <constraint firstItem="CJj-hL-T1v" firstAttribute="top" secondItem="6uQ-II-WSx" secondAttribute="top" constant="27" id="jOg-gz-5x0"/>
-                        <constraint firstItem="P9m-lM-r84" firstAttribute="top" secondItem="CJj-hL-T1v" secondAttribute="bottom" constant="27" id="kN4-cD-dIX"/>
-                        <constraint firstAttribute="trailing" secondItem="CJj-hL-T1v" secondAttribute="trailing" constant="145" id="pow-oQ-FaZ"/>
+                        <constraint firstItem="vXx-Oa-p45" firstAttribute="leading" secondItem="6uQ-II-WSx" secondAttribute="leading" constant="145" id="sXR-UH-J41"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>

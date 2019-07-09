@@ -12,7 +12,7 @@ import Alamofire
 struct HelperStoryService {
     static let shared = HelperStoryService()
     
-    func getHelperStory(completion: @escaping (NetworkResult<Any>) -> Void) {
+    /*func getHelperStory(completion: @escaping (NetworkResult<Any>) -> Void) {
         let URL = "\(SERVER_URL)/helper/story"
         print(URL)
         
@@ -31,12 +31,11 @@ struct HelperStoryService {
                                                 let decoder = JSONDecoder()
                                                 let result = try decoder.decode(ResponseArray<HelperStory>.self, from: value)
                                                 
-                                                switch result.success {
-                                                case true:
-                                                    // 질문해봐요
+                                                if (result.code == 200) {
                                                     completion(.success(response.data!))
-                                                case false:
-                                                    completion(.requestErr(result.message))
+                                                }
+                                                else{
+                                                    //completion(.requestErr(result.message))
                                                 }
                                             } catch {
 //                                                completion(.pathErr)
@@ -46,7 +45,8 @@ struct HelperStoryService {
                                             completion(.pathErr)
                                         case 500:
                                             completion(.serverErr)
-                                        default:
+     
+     default:
                                             break
                                         }
                                     }
@@ -59,5 +59,5 @@ struct HelperStoryService {
                             }
         }
         
-    }
+    }*/
 }

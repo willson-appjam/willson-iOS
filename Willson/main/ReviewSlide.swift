@@ -21,8 +21,6 @@ class ReviewSlide: UIView {
         view.layer.shadowOpacity = 0.1
         view.layer.shadowRadius = 5
         
-        category.layer.borderWidth = 1.0
-        category.layer.borderColor = UIColor(red:82/255, green:82/255, blue:161/255, alpha: 1).cgColor
         
         category.sizeToFit()
         content.sizeToFit()

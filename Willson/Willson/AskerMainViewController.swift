@@ -18,6 +18,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     var timer2 = Timer()
     
     var helperStory: HelperStory?
+    var dataList: [HelperStoryData]?
 
     // MARK: - IBOutlet
     @IBOutlet weak var concern1View: UIView!
@@ -76,7 +77,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // MARK: - Methods
-    func getHelperStory() {
+    func getHelperStory() {/*
         HelperStoryService.shared.getHelperStory { [ weak self] data in
             guard let `self` = self else { return }
             
@@ -84,6 +85,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
             case .success(let res):
 //                guard let helperStoryList: HelperStory = res as? HelperStory else { return }
                 self.helperStory = res as? HelperStory
+                self.dataList = self.helperStory?.data
                 self.scrollView.reloadInputViews()
                 
                 break
@@ -100,7 +102,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
                 self.simpleAlert(title: "통신 실패", message: "네트워크 상태로 확인하세요.")
                 break
             }
-        }
+        }*/
     }
     
     @objc func tappedconcern1(_ gesture: UITapGestureRecognizer) {
@@ -116,11 +118,21 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
 
     func createSlides() -> [Slide] {
         
+        /*
         guard let list = helperStory?.data else { return [Slide]() }
         for data in list {
             let slide = Slide()
             slide.name.text = data.nickname
             slide.category.text = data.category_name
+            slide.content.text = data.content
+            slideList.append(slide)
+        }
+         */
+        guard let list = dataList else { return [Slide]() }
+        for data in list {
+            let slide = Slide()
+            slide.name.text = data.nickname
+            slide.category.text = data.categoryName
             slide.content.text = data.content
             slideList.append(slide)
         }

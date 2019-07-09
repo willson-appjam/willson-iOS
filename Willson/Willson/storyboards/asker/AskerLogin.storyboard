@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="E-mail" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-nC-jM2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-nC-jM2">
                                 <rect key="frame" x="24" y="212" width="327" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="TTA-2v-F06"/>
@@ -32,7 +32,7 @@
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s49-kc-BBM">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s49-kc-BBM">
                                 <rect key="frame" x="24" y="270" width="327" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="b3j-m7-ABr"/>
@@ -78,7 +78,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="signinBtnAction:" destination="foO-jd-vxx" eventType="touchUpInside" id="HnL-j2-tD0"/>
+                                    <action selector="signupBtnAction:" destination="foO-jd-vxx" eventType="touchUpInside" id="zUF-sL-okI"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upz-HB-joF">
@@ -253,12 +253,12 @@
                         <outlet property="facebookBtn" destination="Mke-eu-YFd" id="8Xv-9R-pvl"/>
                         <outlet property="kakaotalkBtn" destination="Nem-AM-iMK" id="Myz-ax-1zI"/>
                         <outlet property="pwTF" destination="s49-kc-BBM" id="AY8-qM-2tM"/>
-                        <outlet property="signinBtn" destination="PGC-w6-UMS" id="R1p-uF-wTs"/>
+                        <outlet property="signupBtn" destination="PGC-w6-UMS" id="TJg-Gu-Uaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueE-ie-5mG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3476" y="-1809.6059113300494"/>
+            <point key="canvasLocation" x="2860" y="-1818"/>
         </scene>
     </scenes>
     <resources>

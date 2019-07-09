@@ -18,8 +18,7 @@ class Slide: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        category.layer.borderWidth = 1.0
-        category.layer.borderColor = UIColor(red:82/255, green:82/255, blue:161/255, alpha: 1).cgColor
+        
         
         name.sizeToFit()
         category.sizeToFit()

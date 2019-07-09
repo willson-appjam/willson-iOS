@@ -15,9 +15,10 @@
 		6632768422D10686005DC6DC /* ChatHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6632768322D10686005DC6DC /* ChatHeaderTVC.xib */; };
 		663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663368C922CD36D800C3C694 /* PopUpViewController4.swift */; };
 		6633E3EB22D3CAE600DF81AC /* ServerString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3EA22D3CAE600DF81AC /* ServerString.swift */; };
-		6633E3ED22D3D18E00DF81AC /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3EC22D3D18E00DF81AC /* CustomData.swift */; };
 		6633E3F122D3D63100DF81AC /* UserSigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F022D3D63100DF81AC /* UserSigninService.swift */; };
-		6633E3F522D3D7D900DF81AC /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F422D3D7D900DF81AC /* ResponseString.swift */; };
+		6633E3F922D436D400DF81AC /* signIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F822D436D300DF81AC /* signIn.swift */; };
+		6633E3FD22D4840300DF81AC /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3FC22D4840300DF81AC /* SignInData.swift */; };
+		6633E3FF22D4947100DF81AC /* HelperStoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3FE22D4947100DF81AC /* HelperStoryData.swift */; };
 		6634344222C67ED500D419EC /* NanumSquareEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344122C67E8300D419EC /* NanumSquareEB.ttf */; };
 		6634344322C67EDF00D419EC /* NanumSquareB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634344022C67E4500D419EC /* NanumSquareB.ttf */; };
 		6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6634343F22C67E2F00D419EC /* NanumSquareR.ttf */; };
@@ -62,8 +63,6 @@
 		D918A54922D3A97D001DCCBE /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */; };
 		D918A54B22D3ACD2001DCCBE /* HelperStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54A22D3ACD2001DCCBE /* HelperStory.swift */; };
 		D918A54D22D3ADC3001DCCBE /* HelperStoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */; };
-		D918A54F22D3AE91001DCCBE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54E22D3AE91001DCCBE /* NetworkResult.swift */; };
-		D918A55322D3B1C4001DCCBE /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A55222D3B1C4001DCCBE /* ResponseArray.swift */; };
 		D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */; };
 		D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */; };
 		D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */; };
@@ -121,9 +120,10 @@
 		6632768322D10686005DC6DC /* ChatHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHeaderTVC.xib; sourceTree = "<group>"; };
 		663368C922CD36D800C3C694 /* PopUpViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController4.swift; sourceTree = "<group>"; };
 		6633E3EA22D3CAE600DF81AC /* ServerString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerString.swift; sourceTree = "<group>"; };
-		6633E3EC22D3D18E00DF81AC /* CustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomData.swift; sourceTree = "<group>"; };
 		6633E3F022D3D63100DF81AC /* UserSigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninService.swift; sourceTree = "<group>"; };
-		6633E3F422D3D7D900DF81AC /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		6633E3F822D436D300DF81AC /* signIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signIn.swift; sourceTree = "<group>"; };
+		6633E3FC22D4840300DF81AC /* SignInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
+		6633E3FE22D4947100DF81AC /* HelperStoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStoryData.swift; sourceTree = "<group>"; };
 		6634343E22C67E0E00D419EC /* NanumSquareL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.ttf; sourceTree = "<group>"; };
 		6634343F22C67E2F00D419EC /* NanumSquareR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.ttf; sourceTree = "<group>"; };
 		6634344022C67E4500D419EC /* NanumSquareB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareB.ttf; sourceTree = "<group>"; };
@@ -170,8 +170,6 @@
 		D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		D918A54A22D3ACD2001DCCBE /* HelperStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStory.swift; sourceTree = "<group>"; };
 		D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStoryService.swift; sourceTree = "<group>"; };
-		D918A54E22D3AE91001DCCBE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		D918A55222D3B1C4001DCCBE /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 		D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishChatViewController.swift; sourceTree = "<group>"; };
 		D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteReviewViewController.swift; sourceTree = "<group>"; };
 		D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExaminHelperViewController.swift; sourceTree = "<group>"; };
@@ -379,10 +377,9 @@
 			isa = PBXGroup;
 			children = (
 				D918A54A22D3ACD2001DCCBE /* HelperStory.swift */,
-				D918A54E22D3AE91001DCCBE /* NetworkResult.swift */,
-				D918A55222D3B1C4001DCCBE /* ResponseArray.swift */,
-				6633E3EC22D3D18E00DF81AC /* CustomData.swift */,
-				6633E3F422D3D7D900DF81AC /* ResponseString.swift */,
+				6633E3FE22D4947100DF81AC /* HelperStoryData.swift */,
+				6633E3F822D436D300DF81AC /* signIn.swift */,
+				6633E3FC22D4840300DF81AC /* SignInData.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -756,8 +753,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */,
+				6633E3F922D436D400DF81AC /* signIn.swift in Sources */,
 				660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */,
-				6633E3F522D3D7D900DF81AC /* ResponseString.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
 				66316A2A22D20EED0033B519 /* UILabel_extension.swift in Sources */,
@@ -774,12 +771,12 @@
 				D9AC036E22CE192D00E16AD8 /* AskerList3_ImpactViewController.swift in Sources */,
 				D9AC037622CE1A3000E16AD8 /* AskerList8_ChatDirectionViewController.swift in Sources */,
 				D9AC037822CE1A4D00E16AD8 /* AskerList9_AgreementViewController.swift in Sources */,
-				6633E3ED22D3D18E00DF81AC /* CustomData.swift in Sources */,
 				663835BF22C9ECDA003265C7 /* ReviewSlide.swift in Sources */,
 				D9AC037022CE196F00E16AD8 /* AskerList5_HelperSexViewController.swift in Sources */,
 				D915535422D1FBC100A38390 /* SplashViewController.swift in Sources */,
 				D918A54922D3A97D001DCCBE /* CollectionReusableView.swift in Sources */,
 				D965850622C4E7E40072CC5E /* AppDelegate.swift in Sources */,
+				6633E3FD22D4840300DF81AC /* SignInData.swift in Sources */,
 				663F829622CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift in Sources */,
 				D915F8A422CDCE60009DA734 /* AskerChatListViewController.swift in Sources */,
 				663835D422CAFDD7003265C7 /* AskerSNSSignUpViewController.swift in Sources */,
@@ -797,11 +794,11 @@
 				6633E3F122D3D63100DF81AC /* UserSigninService.swift in Sources */,
 				66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */,
 				D9AC037422CE1A1100E16AD8 /* AskerList7_HelperExperienceViewController.swift in Sources */,
-				D918A54F22D3AE91001DCCBE /* NetworkResult.swift in Sources */,
 				D918A54B22D3ACD2001DCCBE /* HelperStory.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
 				D9AC036C22CE18F500E16AD8 /* AskerList4_DetailViewController.swift in Sources */,
+				6633E3FF22D4947100DF81AC /* HelperStoryData.swift in Sources */,
 				D9AC037222CE199500E16AD8 /* AskerList6_HelperCharacterViewController.swift in Sources */,
 				D915535622D20EC400A38390 /* CustomButton.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
@@ -812,7 +809,6 @@
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 				66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */,
 				66316A2622D202790033B519 /* AskerChatRoomViewController.swift in Sources */,
-				D918A55322D3B1C4001DCCBE /* ResponseArray.swift in Sources */,
 				D9AC038622CE601C00E16AD8 /* FeelCollectionViewCell.swift in Sources */,
 				663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */,
 				66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */,

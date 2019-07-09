@@ -12,19 +12,24 @@ import FBSDKLoginKit
 import KakaoOpenSDK
 
 class AskerLoginViewController: UIViewController {
-
+    
     // MARK: - IBOutlet
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwTF: UITextField!
-    @IBOutlet weak var signinBtn: UIButton!
+    @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var kakaotalkBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
     
+    var model: UserSigninService?
+    var signIn: SignIn?
+    var statusCode: Int?
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         iconTF()
+        emailTF.delegate = self
+        pwTF.delegate = self
     }
     
     func viewWillApear(_ animated: Bool) {
@@ -36,17 +41,35 @@ class AskerLoginViewController: UIViewController {
     
     // 일반 로그인
     @IBAction func tappedLoginButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
-        self.present(viewController, animated: true)
-//        self.navigationController?.show(viewController, sender: nil)
+        guard let email = emailTF.text else {return}
+        guard let password = pwTF.text else {return}
+        
+        UserSigninService.shared.login(email: email, password: password) {
+            signIn, statusCode in
+            
+            switch statusCode {
+            case 200:
+                self.signIn = signIn
+                self.statusCode = statusCode
+                
+                UserDefaults.standard.set(signIn.data.token, forKey: "token")
+                
+                
+                //화면 이동
+                let storyboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
+                self.present(viewController, animated: true)
+            default:
+                break;
+            }
+        }
     }
     
     // 페이스북 로그인
     @IBAction func facebookBtnAction(_ sender: Any) {
         var getEmail = ""
         let fbLoginManager : LoginManager = LoginManager()
-
+        
         fbLoginManager.logIn(permissions: ["public_profile","email"], from: self) { (result, error) in
             
             if (error == nil){
@@ -88,7 +111,7 @@ class AskerLoginViewController: UIViewController {
                 }
             }
         }
-
+        
     }
     
     @IBAction func kakaotalkBtnAction(_ sender: Any) {
@@ -161,39 +184,9 @@ class AskerLoginViewController: UIViewController {
     }
     
     
-    @IBAction func signinBtnAction(_ sender: Any) {
-        guard let email = emailTF.text else {return}
-        guard let password = pwTF.text else {return}
-        
-        UserSigninService.shared.login(email, password) {
-            data in
-            
-            switch data {
-            case .success(let token):
-                UserDefaults.standard.set(token, forKey: "token")
-                
-                let dvc = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "AskerSignUpNC") as! UINavigationController
-                self.present(dvc, animated: true, completion: nil)
-                
-                break
-            case .requestErr(let err):
-                self.simpleAlert(title: "로그인 실패", message: err as! String)
-                break
-            case .pathErr:
-                // 대체로 경로를 잘못 쓴 경우입니다.
-                // 오타를 확인해보세요.
-                print("경로 에러")
-                break
-            case .serverErr:
-                // 서버의 문제인 경우입니다.
-                // 여기에서 동작할 행동을 정의해주시면 됩니다.
-                print("서버 에러")
-                break
-            case .networkFail:
-                self.simpleAlert(title: "통신 실패", message: "네트워크 상태를 확인하세요.")
-                break
-            } //로직은 클라이언트가 아닌 서버파트에서 담당해야 함
-        }
+    @IBAction func signupBtnAction(_ sender: Any) {
+        let dvc = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "AskerSignUpNC") as! UINavigationController
+        self.present(dvc, animated: true, completion: nil)
     }
     
     // MARK: - Methods
@@ -219,6 +212,7 @@ class AskerLoginViewController: UIViewController {
         imageView2.image = image2
         pwTF.leftView = imageView2
     }
+    
     func snsSignup() {
         let dvc = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "AskerSNSSignUpViewController") as! AskerSNSSignUpViewController
         
@@ -226,4 +220,15 @@ class AskerLoginViewController: UIViewController {
         self.present(dvc, animated: true, completion: nil)
     }
     
+}
+
+extension AskerLoginViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if emailTF.text == "email" {
+            emailTF.text = nil
+        }
+        if pwTF.text == "password" {
+            pwTF.text = nil
+        }
+    }
 }
