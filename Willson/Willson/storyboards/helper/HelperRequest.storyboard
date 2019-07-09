@@ -317,12 +317,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dnu-4C-jkF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dnu-4C-jkF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProblemDetailTitleTableViewCell" rowHeight="315" id="ZLJ-wi-HPD" customClass="ProblemDetailTitleTableViewCell" customModule="Willson" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="315"/>
+                                        <rect key="frame" x="0.0" y="40" width="414" height="315"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZLJ-wi-HPD" id="6DC-Zs-sRo">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="314.5"/>
@@ -464,7 +465,7 @@
                                         <viewLayoutGuide key="safeArea" id="QoT-rC-m3F"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProblemDetailTableViewCell" rowHeight="42" id="YPc-2o-JHo" customClass="ProblemDetailTableViewCell" customModule="Willson" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="343" width="414" height="42"/>
+                                        <rect key="frame" x="0.0" y="355" width="414" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YPc-2o-JHo" id="orT-um-iNt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>

@@ -90,11 +90,11 @@ extension ProblemDetailViewController: UITableViewDataSource {
         case 5:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
             switch indexPath.row {
-            case 1:
+            case 0:
                 cell.contentLabel.text = "성별: 여자"
-            case 2:
+            case 1:
                 cell.contentLabel.text = "성격: #감성적인, #신중한"
-            case 3:
+            case 2:
                 cell.contentLabel.text = "경험: #이별, #다툼, #우울"
             default: break
             }
@@ -117,5 +117,14 @@ extension ProblemDetailViewController: UITableViewDataSource {
         case 6: return "원하는 대화 방향은 무엇인가요?"
         default: return nil
         }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.backgroundView?.backgroundColor = .white
+        header.textLabel?.textColor = #colorLiteral(red: 0.1843137255, green: 0.1843137255, blue: 0.1843137255, alpha: 1)
+        header.textLabel?.font = UIFont(name: "NanumSquareL", size: 16)
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .left
     }
 }
