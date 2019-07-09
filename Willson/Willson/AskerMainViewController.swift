@@ -32,7 +32,6 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         // helper story networking
         getHelperStory()
     }
@@ -74,7 +73,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         // UINavagationBar right button - Switch Asker
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "btnSwitch"), for: .normal)
-        button.setTitle("질문자전환", for: .normal)
+        button.setTitle("헬퍼전환", for: .normal)
         button.titleLabel?.font = UIFont(name: "NanumSquareB", size: 12)
         button.tintColor = #colorLiteral(red: 0.1725490196, green: 0.1725490196, blue: 0.3019607843, alpha: 1)
         button.sizeToFit()
@@ -99,6 +98,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         self.tabBarController?.tabBar.backgroundImage = UIImage()
     }
     
+    
     // MARK: - IBAction
     @IBAction func userTransition(_ sender: Any) {
         let storyboard  = UIStoryboard(name: "HelperTabbar", bundle: nil)
@@ -115,32 +115,19 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         present(viewController, animated: true)
     }
     
-    func getHelperStory() {/*
-        HelperStoryService.shared.getHelperStory { [ weak self] data in
-            guard let `self` = self else { return }
-            
-            switch data {
-            case .success(let res):
-//                guard let helperStoryList: HelperStory = res as? HelperStory else { return }
-                self.helperStory = res as? HelperStory
+    func getHelperStory() {
+        HelperStoryService.shared.getHelperStory() { helperStory, statusCode in
+            switch statusCode {
+            case 200:
+                self.helperStory = helperStory
                 self.dataList = self.helperStory?.data
                 self.scrollView.reloadInputViews()
-                
-                break
-            case .requestErr(let err):
-                print(".requestErr(\(err)")
-                break
-            case .pathErr:
-                print("경로 에러")
-                break
-            case .serverErr:
-                print("서버 에러")
-                break
-            case .networkFail:
-                self.simpleAlert(title: "통신 실패", message: "네트워크 상태로 확인하세요.")
-                break
+                break;
+            default:
+                //self.simpleAlert(title: "통신 실패", message: "네트워크 상태로 확인하세요.")
+                break;
             }
-        }*/
+        }
     }
     
     @objc func tappedconcern1(_ gesture: UITapGestureRecognizer) {
@@ -155,32 +142,35 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func createSlides() -> [Slide] {
+        var appendSlide = Slide()
+        var num = 0
         
-        /*
-        guard let list = helperStory?.data else { return [Slide]() }
-        for data in list {
-            let slide = Slide()
-            slide.name.text = data.nickname
-            slide.category.text = data.category_name
-            slide.content.text = data.content
-            slideList.append(slide)
-        }
-         */
-        /*
-        guard let list = dataList else { return [Slide]() }
-        for data in list {
-            let slide = Slide()
+        for data in dataList ?? [HelperStoryData]() {
+            let slide:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
             slide.name.text = data.nickname
             slide.category.text = data.categoryName
             slide.content.text = data.content
             slideList.append(slide)
+            if(num == 0){
+                appendSlide = slide
+                num = num + 1
+            }
+        }
+        slideList.append(appendSlide)
+        
+        scrollView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
+        scrollView.contentSize = CGSize(width: scrollView.frame.width * CGFloat(slideList.count), height: scrollView.frame.height)
+        scrollView.isPagingEnabled = true
+        
+        for i in 0 ..< slideList.count {
+            slideList[i].frame = CGRect(x: scrollView.frame.width * CGFloat(i), y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
+            scrollView.addSubview(slideList[i])
         }
         
-        print(slideList)
         return slideList
-        */
         
-        let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+        
+        /*let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.name.text = "앱잼파이팅 헬퍼님"
         slide1.category.text = "연애"
         slide1.content.text = "- 20대에 억단위를 벌어본 경험\n- 3년간 투병생활\n- 20년간 어머니를 병간호한 경험"
@@ -209,19 +199,12 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slide6.name.text = "앱잼파이팅 헬퍼님"
         slide6.category.text = "연애"
         slide6.content.text = "- 20대에 억단위를 벌어본 경험\n- 3년간 투병생활\n- 20년간 어머니를 병간호한 경험"
-        
-        return [slide1, slide2, slide3, slide4, slide5, slide6]
+ 
+        return [slide1, slide2, slide3, slide4, slide5, slide6]*/
     }
     
     func setupSlideScrollView(slides : [Slide]) {
-        scrollView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
-        scrollView.contentSize = CGSize(width: scrollView.frame.width * CGFloat(slides.count), height: scrollView.frame.height)
-        scrollView.isPagingEnabled = true
-        
-        for i in 0 ..< slides.count {
-            slides[i].frame = CGRect(x: scrollView.frame.width * CGFloat(i), y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
-            scrollView.addSubview(slides[i])
-        }
+       
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -89,18 +89,6 @@
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7N-43-EOp" customClass="DLRadioButton">
-                                                <rect key="frame" x="33" y="591" width="309" height="28"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="윌슨의 이용약관 및 개인정보취급방침에 동의합니다.">
-                                                    <color key="titleColor" name="darkPurple"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="btnRadioNonactive"/>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="나이를 선택해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPI-wR-Rt1">
                                                 <rect key="frame" x="33" y="503" width="309" height="40"/>
                                                 <constraints>
@@ -183,11 +171,22 @@
                                                 <rect key="frame" x="26" y="733" width="310" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0US-9K-tt9">
+                                                <rect key="frame" x="33" y="591" width="284" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
+                                                <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="윌슨의 이용약관 및 개인정보취급방침에 동의합니다." image="btnCheckNonactive">
+                                                    <color key="titleColor" name="bdbdbd"/>
+                                                </state>
+                                                <state key="selected" title="윌슨의 이용약관 및 개인정보취급방침에 동의합니다." image="btnCheckActive">
+                                                    <color key="titleColor" name="middlePurple"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="0xd-n7-UJC" firstAttribute="top" secondItem="F3Q-xm-EDa" secondAttribute="bottom" constant="10" id="1cW-5B-DWb"/>
-                                            <constraint firstItem="V7N-43-EOp" firstAttribute="top" secondItem="XPI-wR-Rt1" secondAttribute="bottom" constant="48" id="9GB-s2-DVD"/>
                                             <constraint firstItem="a7p-LK-WlL" firstAttribute="top" secondItem="x8a-Qf-1aq" secondAttribute="top" constant="636" id="Bka-9h-wsN"/>
                                             <constraint firstItem="Ih9-2Z-Kc3" firstAttribute="top" secondItem="Bh0-LM-1vO" secondAttribute="bottom" constant="25" id="CQ3-jX-cmm"/>
                                             <constraint firstItem="FDd-hL-BU6" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="Dgo-XO-aoc"/>
@@ -199,8 +198,6 @@
                                             <constraint firstAttribute="trailing" secondItem="a7p-LK-WlL" secondAttribute="trailing" constant="33" id="PnM-dh-wOK"/>
                                             <constraint firstItem="AZ4-v3-MvS" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="QCq-Ib-uba"/>
                                             <constraint firstItem="XPI-wR-Rt1" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="R4h-9I-Gbw"/>
-                                            <constraint firstItem="a7p-LK-WlL" firstAttribute="top" secondItem="V7N-43-EOp" secondAttribute="bottom" constant="17" id="RYM-OJ-RUe"/>
-                                            <constraint firstAttribute="trailing" secondItem="V7N-43-EOp" secondAttribute="trailing" constant="33" id="RsZ-vN-JfP"/>
                                             <constraint firstItem="Ih9-2Z-Kc3" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="YoF-NR-W23"/>
                                             <constraint firstItem="iMQ-4I-qlt" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="YtO-4q-7g0"/>
                                             <constraint firstItem="AZ4-v3-MvS" firstAttribute="top" secondItem="iMQ-4I-qlt" secondAttribute="bottom" constant="10" id="aCI-bK-eYm"/>
@@ -212,7 +209,6 @@
                                             <constraint firstAttribute="trailing" secondItem="oad-OR-RG6" secondAttribute="trailing" constant="33" id="h7M-3g-rkw"/>
                                             <constraint firstItem="0xd-n7-UJC" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="jbP-wp-fbF"/>
                                             <constraint firstItem="iMQ-4I-qlt" firstAttribute="top" secondItem="oad-OR-RG6" secondAttribute="bottom" constant="25" id="jws-rB-GPH"/>
-                                            <constraint firstItem="V7N-43-EOp" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="kNp-ao-X89"/>
                                             <constraint firstItem="oad-OR-RG6" firstAttribute="top" secondItem="Ih9-2Z-Kc3" secondAttribute="bottom" constant="10" id="kn8-pj-rEu"/>
                                             <constraint firstItem="xc3-Xk-brt" firstAttribute="centerY" secondItem="Tte-mC-M4H" secondAttribute="centerY" id="mn0-tS-UUD"/>
                                             <constraint firstItem="6J2-Ye-TAt" firstAttribute="leading" secondItem="x8a-Qf-1aq" secondAttribute="leading" constant="33" id="ngM-v9-ydg"/>
@@ -251,8 +247,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="cof-sw-1Js"/>
                     <connections>
+                        <outlet property="agreeChk" destination="0US-9K-tt9" id="GDq-mc-yz9"/>
+                        <outlet property="emailTF" destination="Bh0-LM-1vO" id="uax-57-jeW"/>
+                        <outlet property="mSex" destination="xc3-Xk-brt" id="Mjo-rf-axE"/>
                         <outlet property="nextBtn" destination="a7p-LK-WlL" id="c2T-Q0-1WP"/>
+                        <outlet property="nicknameTF" destination="0xd-n7-UJC" id="h9R-GC-C02"/>
+                        <outlet property="passwordTF" destination="oad-OR-RG6" id="m6W-RT-tp6"/>
+                        <outlet property="passwordTF2" destination="AZ4-v3-MvS" id="rEc-eL-pap"/>
                         <outlet property="pickerTextField" destination="XPI-wR-Rt1" id="soc-Az-pVI"/>
+                        <outlet property="wSex" destination="Tte-mC-M4H" id="Gfa-UT-U8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLW-qJ-wEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -558,6 +561,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btnCheckActive" width="20" height="20"/>
+        <image name="btnCheckNonactive" width="20" height="20"/>
         <image name="btnRadioActive" width="15" height="15"/>
         <image name="btnRadioNonactive" width="15" height="15"/>
         <namedColor name="bdbdbd">
@@ -579,4 +584,5 @@
             <color red="0.21568627450980393" green="0.21568627450980393" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
