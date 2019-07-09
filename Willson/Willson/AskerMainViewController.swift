@@ -33,10 +33,13 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         // helper story networking
-        getHelperStory()
+        DispatchQueue.global().sync{
+            getHelperStory()
+        }
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // 카테고리 UIView에 touch Action 추가
@@ -44,11 +47,13 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         concern1View.addGestureRecognizer(concern1Gesture)
         
         //헬퍼
-        scrollView.delegate = self
         
-        slideList = createSlides()
-        setupSlideScrollView(slides: slideList)
-        
+        //getHelperStory()
+        DispatchQueue.global().async{
+            self.slideList = self.createSlides()
+            self.setupSlideScrollView(slides: self.slideList)
+            self.scrollView.delegate = self
+        }
 //        pageControl.numberOfPages = slides.count - 1
 //        pageControl.currentPage = 0
 //        scrollView.bringSubviewToFront(pageControl)
@@ -115,20 +120,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         present(viewController, animated: true)
     }
     
-    func getHelperStory() {
-        HelperStoryService.shared.getHelperStory() { helperStory, statusCode in
-            switch statusCode {
-            case 200:
-                self.helperStory = helperStory
-                self.dataList = self.helperStory?.data
-                self.scrollView.reloadInputViews()
-                break;
-            default:
-                //self.simpleAlert(title: "통신 실패", message: "네트워크 상태로 확인하세요.")
-                break;
-            }
-        }
-    }
+   
     
     @objc func tappedconcern1(_ gesture: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "AskerList", bundle: nil)
@@ -141,6 +133,22 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         self.AskerScrollView.setContentOffset(CGPoint(x: self.AskerScrollView.contentOffset.x + AskerScrollView.frame.width, y: 0), animated: true)
     }
 
+    //통신 함수
+    func getHelperStory() {
+        HelperStoryService.shared.getHelperStory() { helperStory, statusCode in
+            switch statusCode {
+            case 200:
+                self.helperStory = helperStory
+                self.dataList = self.helperStory?.data
+                //self.scrollView.reloadInputViews()
+                break;
+            default:
+                //self.simpleAlert(title: "통신 실패", message: "네트워크 상태로 확인하세요.")
+                break;
+            }
+        }
+    }
+    
     func createSlides() -> [Slide] {
         var appendSlide = Slide()
         var num = 0
@@ -168,39 +176,6 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         }
         
         return slideList
-        
-        
-        /*let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.name.text = "앱잼파이팅 헬퍼님"
-        slide1.category.text = "연애"
-        slide1.content.text = "- 20대에 억단위를 벌어본 경험\n- 3년간 투병생활\n- 20년간 어머니를 병간호한 경험"
-        
-        let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide2.name.text = "헬퍼2"
-        slide2.category.text = "진로"
-        slide2.content.text = "22222222222"
-        
-        let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.name.text = "헬퍼3"
-        slide3.category.text = "심리"
-        slide3.content.text = "333333333333"
-        
-        let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide4.name.text = "헬퍼4"
-        slide4.category.text = "인간관계"
-        slide4.content.text = "4444444444444"
-        
-        let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide5.name.text = "헬퍼5"
-        slide5.category.text = "일상"
-        slide5.content.text = "55555555555"
-        
-        let slide6:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide6.name.text = "앱잼파이팅 헬퍼님"
-        slide6.category.text = "연애"
-        slide6.content.text = "- 20대에 억단위를 벌어본 경험\n- 3년간 투병생활\n- 20년간 어머니를 병간호한 경험"
- 
-        return [slide1, slide2, slide3, slide4, slide5, slide6]*/
     }
     
     func setupSlideScrollView(slides : [Slide]) {

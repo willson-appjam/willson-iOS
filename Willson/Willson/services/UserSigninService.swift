@@ -35,7 +35,7 @@ struct UserSigninService { //APIConstant.swift파일 만들어 정적인 전역�
                         let signindata = try JSONDecoder().decode(SignIn.self, from: data)
                         guard let statusCode = dataResponse.response?.statusCode else { return }
                         completionHandler(signindata, statusCode)
-                        print("~~~~~~~~~~~~~~~~~~~yeahahdhhahaha~~~~~~~~~~~~~~~~~~~")
+                        print("**************login success*************")
                     } catch {
                         print("Got and error: \(error)")
                     }

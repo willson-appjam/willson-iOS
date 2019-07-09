@@ -25,7 +25,7 @@ struct HelperStoryService {
                                 let helperStory = try JSONDecoder().decode(HelperStory.self, from: data)
                                 guard let statusCode = response.response?.statusCode else { return }
                                 completionHandler(helperStory, statusCode)
-                                print("~~~~~~~~~~~~~~~~~~hohohoooohohoa~~~~~~~~~~~~~~~~~~~")
+                                print("**************helper story success*************")
                             } catch {
                                 print("Got and error: \(error)")
                                 }

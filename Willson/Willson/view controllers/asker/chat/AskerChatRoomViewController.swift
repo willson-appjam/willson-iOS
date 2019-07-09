@@ -17,12 +17,14 @@ class AskerChatRoomViewController: UIViewController {
     var messageArray = ["속상하셨겠어요ㅠㅠㅠ", "지금은 그래도 나아지셨다하니 더 잘될 거에요!", "감사합니다..", "ㅎ"]
     var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
     var userArray = [0, 0, 1, 1]
+    //var cellBottom: NSLayoutConstraint!
     
     // MARK: - IBOutlet
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textFieldViewBottom: NSLayoutConstraint!
+    
     
     // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +50,8 @@ class AskerChatRoomViewController: UIViewController {
         view.addGestureRecognizer(tap)
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
         
+        //textFieldViewTop = cellBottom
+        
         chatRoomTableView.reloadData()
         //유동적 셀높이 조정
         // 이거 한줄이면 됨... 왜?
@@ -67,12 +71,20 @@ class AskerChatRoomViewController: UIViewController {
         userArray.append(1)
         
         let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
-        self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.fade)
         
         textField.text = "" //텍스트 필드 초기화
+        scrollToBottomOfChat()
     }
     
     // MARK: - Methods
+    func scrollToBottomOfChat(){
+        let indexPath = IndexPath(row: self.messageArray.count - 1, section: 0)
+        
+        chatRoomTableView.scrollToRow(at: indexPath, at: .none, animated: false)
+      
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }

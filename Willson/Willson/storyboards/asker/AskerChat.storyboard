@@ -317,7 +317,7 @@
                                 <rect key="frame" x="35.5" y="360.5" width="343" height="175"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상담이 종료되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsj-tN-tL1">
-                                        <rect key="frame" x="98" y="28" width="147" height="19"/>
+                                        <rect key="frame" x="94.5" y="28" width="154.5" height="18"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -341,7 +341,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-LM-FYh">
-                                        <rect key="frame" x="51" y="70" width="241.5" height="28"/>
+                                        <rect key="frame" x="46" y="69" width="251" height="27"/>
                                         <string key="text">헬퍼와의 상담을 통해 조금이나마 보탬이 되었나요?
 후기를 남겨서 더 나은 윌슨을 만들어주세요!</string>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
