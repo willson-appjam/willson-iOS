@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JnZ-ME-naL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sNl-RF-ga2">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,27 +94,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cCT-df-IUj">
-                                <rect key="frame" x="153" y="52" width="108" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="L0y-iq-oTR"/>
-                                    <constraint firstAttribute="height" constant="37" id="fbB-px-s1a"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="같은 고민이 있었다면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeL-uQ-v7y">
-                                <rect key="frame" x="21" y="146.5" width="209" height="27"/>
+                                <rect key="frame" x="21" y="146.5" width="200.5" height="28"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="24"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 대화해주시겠어요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmr-LJ-nFj">
-                                <rect key="frame" x="21" y="178.5" width="238" height="27"/>
+                                <rect key="frame" x="21" y="179.5" width="228" height="28"/>
                                 <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="24"/>
                                 <color key="textColor" name="lightPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T5i-mJ-Mtr">
-                                <rect key="frame" x="0.0" y="230.5" width="414" height="631.5"/>
+                                <rect key="frame" x="0.0" y="232.5" width="414" height="629.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ier-po-rYM">
                                     <size key="itemSize" width="333" height="264"/>
@@ -263,38 +256,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4Z-4B-dPI">
-                                <rect key="frame" x="318" y="63.5" width="66" height="14"/>
-                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="12"/>
-                                <state key="normal" title="질문자전환" image="btnSwitch">
-                                    <color key="titleColor" name="darkPurple"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oeL-uQ-v7y" firstAttribute="leading" secondItem="GGp-Ou-20I" secondAttribute="leading" constant="21" id="6oV-MT-3wf"/>
                             <constraint firstItem="T5i-mJ-Mtr" firstAttribute="leading" secondItem="GGp-Ou-20I" secondAttribute="leading" id="B8j-7F-hIz"/>
-                            <constraint firstItem="F4Z-4B-dPI" firstAttribute="centerY" secondItem="cCT-df-IUj" secondAttribute="centerY" id="DMG-ks-ZxB"/>
-                            <constraint firstItem="GGp-Ou-20I" firstAttribute="trailing" secondItem="F4Z-4B-dPI" secondAttribute="trailing" constant="30" id="DTw-oC-1xe"/>
                             <constraint firstItem="GGp-Ou-20I" firstAttribute="trailing" secondItem="T5i-mJ-Mtr" secondAttribute="trailing" id="J7e-gG-wbp"/>
-                            <constraint firstItem="cCT-df-IUj" firstAttribute="top" secondItem="EeF-H5-1za" secondAttribute="centerY" multiplier="45:389" id="UWE-gJ-Vez"/>
                             <constraint firstItem="oeL-uQ-v7y" firstAttribute="top" secondItem="EeF-H5-1za" secondAttribute="centerY" multiplier="127:389" id="aYh-0e-eSC"/>
                             <constraint firstItem="xmr-LJ-nFj" firstAttribute="top" secondItem="oeL-uQ-v7y" secondAttribute="bottom" constant="5" id="ad9-lg-kt0"/>
-                            <constraint firstItem="cCT-df-IUj" firstAttribute="centerX" secondItem="EeF-H5-1za" secondAttribute="centerX" id="e83-5L-0BW"/>
                             <constraint firstItem="xmr-LJ-nFj" firstAttribute="leading" secondItem="oeL-uQ-v7y" secondAttribute="leading" id="lrw-ZY-M1N"/>
                             <constraint firstItem="T5i-mJ-Mtr" firstAttribute="top" secondItem="xmr-LJ-nFj" secondAttribute="bottom" constant="25" id="seH-S3-2vR"/>
                             <constraint firstItem="GGp-Ou-20I" firstAttribute="bottom" secondItem="T5i-mJ-Mtr" secondAttribute="bottom" id="wlz-dp-RY0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GGp-Ou-20I"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FDW-EK-Mgv"/>
                     <connections>
                         <outlet property="helperRequestCollectionView" destination="T5i-mJ-Mtr" id="lZD-zT-5dw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2o9-0h-H03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221.73913043478262" y="902.67857142857133"/>
+            <point key="canvasLocation" x="1131.8840579710145" y="902.67857142857133"/>
         </scene>
         <!--Helper No Request View Controller-->
         <scene sceneID="hkv-tm-4CN">
@@ -372,6 +355,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrr-pB-UiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1194" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DAd-bG-XIr">
+            <objects>
+                <navigationController storyboardIdentifier="helperRequestNavi" automaticallyAdjustsScrollViewInsets="NO" id="sNl-RF-ga2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nQC-dV-Nhr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JnZ-ME-naL" kind="relationship" relationship="rootViewController" id="t2i-C8-h4Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wu-fV-kSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.73913043478262" y="902.67857142857133"/>
         </scene>
     </scenes>
     <resources>

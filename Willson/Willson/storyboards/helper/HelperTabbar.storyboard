@@ -57,6 +57,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="darkPurple"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="gk4-XU-k3c" kind="relationship" relationship="viewControllers" id="OYr-vE-FNv"/>
@@ -137,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="-1454" y="-592"/>
         </scene>
-        <!--HelperRequestViewController-->
+        <!--helperRequestNavi-->
         <scene sceneID="yZV-gg-dof">
             <objects>
-                <viewControllerPlaceholder storyboardName="HelperRequest" referencedIdentifier="HelperRequestViewController" id="jTZ-cb-AoD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HelperRequest" referencedIdentifier="helperRequestNavi" id="jTZ-cb-AoD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="EBs-os-1uG"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEf-2G-pPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
