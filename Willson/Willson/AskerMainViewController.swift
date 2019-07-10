@@ -20,6 +20,9 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     var helperStory: HelperStory?
     var dataList: [HelperStoryData]?
     
+    var reviewStory: ReviewStory?
+    var reviewStoryData: [ReviewStoryData]?
+    
     private var rightBarButton = UIBarButtonItem()
 
     // MARK: - IBOutlet
@@ -37,11 +40,11 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        // helper story networking
         
+        // helper story networking
         getHelperStory()
-//        self.slideList = self.createSlides()
-//        self.setupSlideScrollView(slides: self.slideList)
+        // review story networking
+        getReviewStory()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,12 +52,18 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         slideList = createSlides()
         setupSlideScrollView(slides: slideList)
+        
+        reviewSlides = createReviewSlides()
+        setupReviewSlideScrollView(reviewSlides: reviewSlides)
+        
+        scrollView.delegate = self
+        AskerScrollView.delegate = self
     }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-//        getHelperStory()
+
         // 카테고리 UIView에 touch Action 추가
         let concern1Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
         let concern2Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
@@ -78,7 +87,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
 //        slideList = createSlides()
 //        setupSlideScrollView(slides: slideList)
         
-        scrollView.delegate = self
+        
         
 //        pageControl.numberOfPages = slides.count - 1
 //        pageControl.currentPage = 0
@@ -86,10 +95,9 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         
         
         //질문자
-        AskerScrollView.delegate = self
         
-        reviewSlides = createReviewSlides()
-        setupReviewSlideScrollView(reviewSlides: reviewSlides)
+        
+        
         
 //        ReviewPageControl.numberOfPages = reviewSlides.count - 1
 //        ReviewPageControl.currentPage = 0
@@ -149,6 +157,8 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         let storyboard = UIStoryboard(name: "AskerList", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "AskerListStartViewController") as? AskerListStartViewController else { return }
         let navi = UINavigationController(rootViewController: vc)
+        navi.navigationBar.tintColor = .black
+        
         let v = gesture.view!
     
         vc.tag = v.tag
@@ -177,30 +187,23 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
                 break;
             }
         }
-        //slideList = createSlides()
-        
+    }
+    
+    func getReviewStory() {
+        ReviewStoryService.shared.getReviewStory() {
+            reviewStory, statusCode in
+            switch statusCode {
+            case 200:
+                self.reviewStory = reviewStory
+                self.reviewStoryData = self.reviewStory?.data
+                break;
+            default:
+                break;
+            }
+        }
     }
     
     func createSlides() -> [Slide] {
-//        var appendSlide = Slide()
-//        var num = 0
-        
-        /*
-        //DispatchQueue.main.async{
-        for data in self.dataList ?? [HelperStoryData]() {
-            let slide: Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as? Slide ?? Slide()
-            slide.name.text = data.nickname
-            slide.category.text = data.categoryName
-            slide.content.text = data.content
-            self.slideList.append(slide)
-            if(num == 0) {
-                appendSlide = slide
-                num = num + 1
-            }
-        }
-        //}
-        */
-        
         let Slide0:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         
         Slide0.name.text = dataList?[0].nickname
@@ -238,11 +241,6 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         Slide5.category.text = dataList?[0].categoryName
         
         return [Slide0, Slide1, Slide2, Slide3, Slide4, Slide5]
-        
-        
-//        slideList.append(appendSlide)
-        
-//        return slideList
     }
     
     func setupSlideScrollView(slides : [Slide]) {
@@ -303,39 +301,39 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     func createReviewSlides() -> [ReviewSlide] {
         let ReviewSlide1:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
        
-        ReviewSlide1.category.text = "일상"
-        ReviewSlide1.content.text = "11질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다."
-        ReviewSlide1.asker.text = "- 기계과 전공으로 진로에 대해 고민 중인 윌슨님-"
+        ReviewSlide1.category.text = reviewStoryData?[0].categoryName
+        ReviewSlide1.content.text = reviewStoryData?[0].content
+        ReviewSlide1.asker.text = "- \(reviewStoryData?[0].nickname)님-"
         
         let ReviewSlide2:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
-        ReviewSlide2.category.text = "연애"
-        ReviewSlide2.content.text = "22큰 기대하지 않고 진로에 대한 고민을 신청했는데 답변자님이 정말 진지하게 전문적으로 상담해주셔서 너무 도움이 되었습니다. 감사합니다. ”"
-        ReviewSlide2.asker.text = "- 컴퓨터공학과 전공으로 연애에 대해 고민 중인 릴라님-"
+        ReviewSlide2.category.text = reviewStoryData?[1].categoryName
+        ReviewSlide2.content.text = reviewStoryData?[1].content
+        ReviewSlide2.asker.text = "- \(reviewStoryData?[1].nickname)님-"
         
         let ReviewSlide3:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
-        ReviewSlide3.category.text = "진로"
-        ReviewSlide3.content.text = "33“ 안녕안녕안녕앙년아녀안연연여낭녀아연아녀 ”"
-        ReviewSlide3.asker.text = "- 화학과 전공으로 진로에 대해 고민 중인 릴라님-"
+        ReviewSlide3.category.text = reviewStoryData?[2].categoryName
+        ReviewSlide3.content.text = reviewStoryData?[2].content
+        ReviewSlide3.asker.text = "- \(reviewStoryData?[2].nickname)님-"
         
         let ReviewSlide4:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
-        ReviewSlide4.category.text = "진로"
-        ReviewSlide4.content.text = "44“ 큰 기대하지 않고 진로에 대한 고민을 신청했는데 답변자님이 정말 진지하게 전문적으로 상담해주셔서 너무 도움이 되었습니다. 감사합니다. ”"
-        ReviewSlide4.asker.text = "- 수학과 전공으로 진로에 대해 고민 중인 릴라님-"
+        ReviewSlide4.category.text = reviewStoryData?[3].categoryName
+        ReviewSlide4.content.text = reviewStoryData?[3].content
+        ReviewSlide4.asker.text = "- \(reviewStoryData?[3].nickname)님-"
         
         let ReviewSlide5:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
-        ReviewSlide5.category.text = "진로"
-        ReviewSlide5.content.text = "55“ ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅂㅈㄷㄱㅂㅈ더ㅣ;ㅓ만어라ㅣㅓㅂ쟏;버ㅓㅏ. ”"
-        ReviewSlide5.asker.text = "- 중문과 전공으로 진로에 대해 고민 중인 릴라님-"
+        ReviewSlide5.category.text = reviewStoryData?[4].categoryName
+        ReviewSlide5.content.text = reviewStoryData?[4].content
+        ReviewSlide5.asker.text = "- \(reviewStoryData?[4].nickname)님-"
         
         let ReviewSlide6:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
-        ReviewSlide6.category.text = "일상"
-        ReviewSlide6.content.text = "11질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다.질문자들의 후기입니다."
-        ReviewSlide6.asker.text = "- 기계과 전공으로 진로에 대해 고민 중인 윌슨님-"
+        ReviewSlide6.category.text = reviewStoryData?[5].categoryName
+        ReviewSlide6.content.text = reviewStoryData?[5].content
+        ReviewSlide6.asker.text = "- \(reviewStoryData?[5].nickname)님-"
         
         return [ReviewSlide1, ReviewSlide2, ReviewSlide3, ReviewSlide4, ReviewSlide5, ReviewSlide6]
     }

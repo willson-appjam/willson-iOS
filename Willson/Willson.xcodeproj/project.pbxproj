@@ -29,6 +29,10 @@
 		6636406B22D5D64700FADC9F /* ConcernCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */; };
 		6636406D22D660F500FADC9F /* ConcernFeeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406C22D660F500FADC9F /* ConcernFeeling.swift */; };
 		6636406F22D6611900FADC9F /* ConcernFeelingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406E22D6611800FADC9F /* ConcernFeelingService.swift */; };
+		6636407122D66FE400FADC9F /* ReviewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636407022D66FE300FADC9F /* ReviewStory.swift */; };
+		6636407322D6707500FADC9F /* ReviewStoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636407222D6707500FADC9F /* ReviewStoryService.swift */; };
+		6636407522D6815900FADC9F /* ConcernPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636407422D6815900FADC9F /* ConcernPersonality.swift */; };
+		6636407722D6818400FADC9F /* ConcernPersonalityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636407622D6818400FADC9F /* ConcernPersonalityService.swift */; };
 		663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835B422C9BAE3003265C7 /* AskerMainViewController.swift */; };
 		663835B922C9BC30003265C7 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835B822C9BC30003265C7 /* Slide.swift */; };
 		663835BB22C9C82D003265C7 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663835BA22C9C82C003265C7 /* Slide.xib */; };
@@ -148,6 +152,10 @@
 		6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCategoryService.swift; sourceTree = "<group>"; };
 		6636406C22D660F500FADC9F /* ConcernFeeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernFeeling.swift; sourceTree = "<group>"; };
 		6636406E22D6611800FADC9F /* ConcernFeelingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernFeelingService.swift; sourceTree = "<group>"; };
+		6636407022D66FE300FADC9F /* ReviewStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStory.swift; sourceTree = "<group>"; };
+		6636407222D6707500FADC9F /* ReviewStoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStoryService.swift; sourceTree = "<group>"; };
+		6636407422D6815900FADC9F /* ConcernPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernPersonality.swift; sourceTree = "<group>"; };
+		6636407622D6818400FADC9F /* ConcernPersonalityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernPersonalityService.swift; sourceTree = "<group>"; };
 		663835B422C9BAE3003265C7 /* AskerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerMainViewController.swift; path = Willson/AskerMainViewController.swift; sourceTree = SOURCE_ROOT; };
 		663835B822C9BC30003265C7 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slide.swift; path = main/Slide.swift; sourceTree = SOURCE_ROOT; };
 		663835BA22C9C82C003265C7 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Slide.xib; path = main/Slide.xib; sourceTree = SOURCE_ROOT; };
@@ -399,6 +407,8 @@
 				6633E3F022D3D63100DF81AC /* UserSigninService.swift */,
 				6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */,
 				6636406E22D6611800FADC9F /* ConcernFeelingService.swift */,
+				6636407222D6707500FADC9F /* ReviewStoryService.swift */,
+				6636407622D6818400FADC9F /* ConcernPersonalityService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -414,6 +424,8 @@
 				66D7E07222D4F19300AC0C9B /* SignUpData.swift */,
 				6636406422D5D3DB00FADC9F /* ConcernCategory.swift */,
 				6636406C22D660F500FADC9F /* ConcernFeeling.swift */,
+				6636407022D66FE300FADC9F /* ReviewStory.swift */,
+				6636407422D6815900FADC9F /* ConcernPersonality.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -804,6 +816,7 @@
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
 				66316A2A22D20EED0033B519 /* UILabel_extension.swift in Sources */,
+				6636407322D6707500FADC9F /* ReviewStoryService.swift in Sources */,
 				D98BA5C022D0119800E72C02 /* HelperRequestViewController.swift in Sources */,
 				D9162FAC22D4F4B80018E471 /* HelperRequestTitleCollectionViewCell.swift in Sources */,
 				669624F722CC5F2D00599E96 /* HelperReviewCollectionViewCell.swift in Sources */,
@@ -840,7 +853,9 @@
 				D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */,
 				D9BA14B422D2A3E5001FEC6D /* NoChatListTableViewCell.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
+				6636407722D6818400FADC9F /* ConcernPersonalityService.swift in Sources */,
 				D9209D5C22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift in Sources */,
+				6636407522D6815900FADC9F /* ConcernPersonality.swift in Sources */,
 				D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */,
 				D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */,
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
@@ -852,6 +867,7 @@
 				D9AC037422CE1A1100E16AD8 /* AskerList7_HelperExperienceViewController.swift in Sources */,
 				D918A54B22D3ACD2001DCCBE /* HelperStory.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
+				6636407122D66FE400FADC9F /* ReviewStory.swift in Sources */,
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
 				D9AC036C22CE18F500E16AD8 /* AskerList4_DetailViewController.swift in Sources */,
 				6633E3FF22D4947100DF81AC /* HelperStoryData.swift in Sources */,

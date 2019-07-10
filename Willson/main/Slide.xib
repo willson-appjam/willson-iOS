@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wo-ho-qWW">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="391"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROf-SA-Hg8">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROf-SA-Hg8" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                             <rect key="frame" x="38" y="133" width="299" height="197"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱잼파이팅 헬퍼님" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKz-XP-vY9">
@@ -43,11 +43,11 @@
                                     <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y52-PA-SJI" customClass="CustonView" customModule="Willson" customModuleProvider="target">
-                                    <rect key="frame" x="128" y="69" width="43" height="23"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y52-PA-SJI" customClass="CustonView" customModule="Willson" customModuleProvider="target">
+                                    <rect key="frame" x="129.5" y="69" width="40" height="23"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZz-0A-Uox">
-                                            <rect key="frame" x="0.0" y="4" width="43" height="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZz-0A-Uox">
+                                            <rect key="frame" x="8" y="4" width="24" height="14"/>
                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
                                             <color key="textColor" name="lightPurple"/>
                                             <nil key="highlightedColor"/>
@@ -55,10 +55,10 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="OZz-0A-Uox" firstAttribute="leading" secondItem="y52-PA-SJI" secondAttribute="leading" constant="8" id="DDc-wa-Eci"/>
                                         <constraint firstAttribute="bottom" secondItem="OZz-0A-Uox" secondAttribute="bottom" constant="5" id="cuc-N2-JrR"/>
                                         <constraint firstItem="OZz-0A-Uox" firstAttribute="top" secondItem="y52-PA-SJI" secondAttribute="top" constant="4" id="gPv-BV-F97"/>
-                                        <constraint firstItem="OZz-0A-Uox" firstAttribute="leading" secondItem="y52-PA-SJI" secondAttribute="leading" id="n7w-1G-kL4"/>
-                                        <constraint firstAttribute="trailing" secondItem="OZz-0A-Uox" secondAttribute="trailing" id="ogO-cD-vP6"/>
+                                        <constraint firstAttribute="trailing" secondItem="OZz-0A-Uox" secondAttribute="trailing" constant="8" id="oMe-jz-9vc"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -86,6 +86,11 @@
                                 <constraint firstItem="y52-PA-SJI" firstAttribute="top" secondItem="ROf-SA-Hg8" secondAttribute="top" constant="69" id="qOs-fW-ILw"/>
                                 <constraint firstAttribute="bottom" secondItem="y52-PA-SJI" secondAttribute="bottom" constant="105" id="r5U-jL-yed"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -79,13 +79,5 @@ extension AskerList2_FeelViewController: UICollectionViewDataSource {
 }
 
 extension AskerList2_FeelViewController: UICollectionViewDelegateFlowLayout {
-    /*
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let cell: FeelCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: feelCollectionViewCellIdentifier, for: indexPath) as? FeelCollectionViewCell else { return CGSize(width: 0, height: 0) }
-        cell.feelLabel.text = feelArray[indexPath.item]
-        cell.feelLabel.sizeToFit()
-        let width = cell.feelLabel.bounds.width
-        return CGSize(width: width, height: 32)
-    }
- */
+    
 }

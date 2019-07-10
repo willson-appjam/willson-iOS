@@ -1,19 +1,19 @@
 //
-//  HelperStoryService.swift
+//  ReviewStoryService.swift
 //  Willson
 //
-//  Created by JHKim on 09/07/2019.
+//  Created by 박지수 on 11/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-struct HelperStoryService {
-    static let shared = HelperStoryService()
+struct ReviewStoryService {
+    static let shared = ReviewStoryService()
     
-    func getHelperStory(completionHandler: @escaping (HelperStory, Int) -> Void) {
-        let URL = "\(SERVER_URL)/helper/story"
+    func getReviewStory(completionHandler: @escaping (ReviewStory, Int) -> Void) {
+        let URL = "\(SERVER_URL)/review/story"
         
         Alamofire.request(URL,
                           method: .get,
@@ -22,16 +22,16 @@ struct HelperStoryService {
                           headers: nil).responseData { response in
                             switch response.result {
                             case .success(let data): do {
-                                let helperStory = try JSONDecoder().decode(HelperStory.self, from: data)
+                                let reviewStory = try JSONDecoder().decode(ReviewStory.self, from: data)
                                 guard let statusCode = response.response?.statusCode else { return }
-                                completionHandler(helperStory, statusCode)
-                                print("**************helper story success*************")
+                                completionHandler(reviewStory, statusCode)
+                                print("**************review story success*************")
                             } catch {
                                 print("Got and error: \(error)")
                                 }
                             case .failure(let err):
                                 print(err.localizedDescription)
-                                
+
                                 break
                             }
         }
