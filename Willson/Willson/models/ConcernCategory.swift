@@ -12,11 +12,11 @@ import Foundation
 struct ConcernCategory: Codable {
     let code: Int
     let message: String
-    let data: DataClass
+    let data: ConcernCategoryData
 }
 
 // MARK: - DataClass
-struct DataClass: Codable {
+struct ConcernCategoryData: Codable {
     let categoryList: [CategoryList]
 }
 

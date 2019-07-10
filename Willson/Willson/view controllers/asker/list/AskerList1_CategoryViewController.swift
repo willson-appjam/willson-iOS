@@ -17,7 +17,7 @@ class AskerList1_CategoryViewController: UIViewController {
     var categoryTitle: String!
     
     var concernCategory: ConcernCategory?
-    var dataList: DataClass?
+    var dataList: ConcernCategoryData?
     // MARK: - IBOutlet
     @IBOutlet weak var concernCollectionView: UICollectionView!
 
@@ -27,9 +27,6 @@ class AskerList1_CategoryViewController: UIViewController {
     }
     
     // MARK: - life cycle
-    func viewWillAppear() {
-        getCategory()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

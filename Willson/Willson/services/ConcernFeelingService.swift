@@ -1,19 +1,19 @@
 //
-//  ConcernCategoryService.swift
+//  ConcernFeelingService.swift
 //  Willson
 //
-//  Created by 박지수 on 10/07/2019.
+//  Created by 박지수 on 11/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-struct ConcernCategoryService {
-    static let shared = ConcernCategoryService()
+struct ConcernFeelingService {
+    static let shared = ConcernFeelingService()
     
-    func getCategory(categoryID: Int, completionHandler: @escaping (ConcernCategory, Int) -> Void) {
-        let URL = "\(SERVER_URL)/concern/category/\(String(categoryID))"
+    func getFeeling(completionHandler: @escaping(ConcernFeeling, Int) -> Void) {
+        let URL = "\(SERVER_URL)/concern/feeling"
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let header = [
             "user_session" : token
@@ -25,10 +25,10 @@ struct ConcernCategoryService {
                           headers: header).responseData { response in
                             switch response.result {
                             case .success(let data): do {
-                                let concernCategory = try JSONDecoder().decode(ConcernCategory.self, from: data)
+                                let concernFeeling = try JSONDecoder().decode(ConcernFeeling.self, from: data)
                                 guard let statusCode = response.response?.statusCode else { return }
-                                completionHandler(concernCategory, statusCode)
-                                print("**************concern category success*************")
+                                completionHandler(concernFeeling, statusCode)
+                                print("**************concern feeling success*************")
                             } catch {
                                 print("Got and error: \(error)")
                                 }

@@ -13,7 +13,8 @@ class AskerList2_FeelViewController: UIViewController {
     // MARK: - properties
     let feelCollectionViewCellIdentifier: String = "FeelCollectionViewCell"
     
-    let feelArray = ["#신남", "#행복", "#자신감", "#자랑스러운", "#당황스러운", "#지친", "#슬픈", "#두려운", "#무기력한", "#어색한", "#걱정스러운", "#질투나는", "#무서운", "#아픈"]
+    var concernFeeling: ConcernFeeling?
+    var concernFeelingData: ConcernFeelingData?
     
     // MARK: - IBOutlet
     @IBOutlet weak var feelCollectionView: UICollectionView!
@@ -24,15 +25,32 @@ class AskerList2_FeelViewController: UIViewController {
     }
     
     // MARK: - life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getFeeling()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         // UICollectionView delegate, datasource
         feelCollectionView.delegate = self
         feelCollectionView.dataSource = self
     }
-    
     // MARK: - Methods
+    
+    func getFeeling() {
+        ConcernFeelingService.shared.getFeeling() {
+            concernFeeling, statusCode in
+            switch statusCode {
+            case 200:
+                self.concernFeeling = concernFeeling
+                self.concernFeelingData = self.concernFeeling?.data
+                break;
+            default:
+                break;
+            }
+        }
+    }
 }
 
 extension AskerList2_FeelViewController: UICollectionViewDelegate {
@@ -41,14 +59,14 @@ extension AskerList2_FeelViewController: UICollectionViewDelegate {
 
 extension AskerList2_FeelViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return feelArray.count
+        return (concernFeelingData?.feelingList.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: FeelCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: feelCollectionViewCellIdentifier, for: indexPath) as? FeelCollectionViewCell else { return UICollectionViewCell() }
         
         if let label = cell.feelLabel {
-            label.text = feelArray[indexPath.item]
+            label.text = "#\(concernFeelingData?.feelingList[indexPath.item].feelingName ?? "")"
         }
         
         cell.feelLabel.sizeToFit()
