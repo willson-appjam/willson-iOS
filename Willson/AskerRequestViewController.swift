@@ -84,7 +84,7 @@ class AskerRequestViewController: UIViewController {
     
     func timeLimitStop() {
         
-        var vc = UIApplication.topViewController()
+//        var vc = UIApplication.topViewController()
         
         //startTimer = false
         timer.invalidate()
@@ -92,54 +92,36 @@ class AskerRequestViewController: UIViewController {
         if (extended == false) { //처음 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
                 "CantFindHelperViewController") as! CantFindHelperViewController
+            /*
             vc?.addChild(popOverVC)
             
             popOverVC.view.frame = (vc?.view.frame)!
             vc?.view.addSubview(popOverVC.view)
             popOverVC.didMove(toParent: vc)
+            */
+//            popOverVC.preferredContentSize.width = self.view.frame.width
+//            popOverVC.preferredContentSize.height = self.view.frame.height / 2
+            popOverVC.preferredContentSize.width = 323
+            popOverVC.preferredContentSize.height = 304
+            
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            alert.setValue(popOverVC, forKey: "contentViewController")
+            
+            self.present(alert, animated: true)
+
         }
         else { //두번째 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
                 "CantFindHelperViewController") as! CantFindHelperViewController
+            /*
             vc?.addChild(popOverVC)
             
             popOverVC.view.frame = (vc?.view.frame)!
             vc?.view.addSubview(popOverVC.view)
             popOverVC.didMove(toParent: vc)
+            */
         }
     }
-    
-    /*
-    func registerCVC() {
-        let nibName = UINib(nibName: "HelperCollectionViewCell", bundle: nil)
-        helperCollectionView.register(nibName, forCellWithReuseIdentifier: "HelperCollectionViewCell")
-    }
-    
-    func getHelper() -> [HelperCollectionViewCell] {
-        //===================================
-        //임시 데이터 저장 코드
-        let helper1:HelperCollectionViewCell = Bundle.main.loadNibNamed("HelperCollectionViewCell", owner: self, options: nil)?.first as! HelperCollectionViewCell
-        helper1.category.text = "안녕"
-        helper1.name.text = "세인트버나드"
-        helper1.detailInfo.text = "남자 / 10대 초반"
-        helper1.content.text = "배가 고파요.. 졸려요.."
-        
-        let helper2:HelperCollectionViewCell = Bundle.main.loadNibNamed("HelperCollectionViewCell", owner: self, options: nil)?.first as! HelperCollectionViewCell
-        helper2.category.text = "일상"
-        helper2.name.text = "골든리트리버"
-        helper2.detailInfo.text = "여자 / 30대 초반"
-        helper2.content.text = "회사가기 싫어용ㅠㅠ"
-        
-        let helper3:HelperCollectionViewCell = Bundle.main.loadNibNamed("HelperCollectionViewCell", owner: self, options: nil)?.first as! HelperCollectionViewCell
-        helper3.category.text = "일상"
-        helper3.name.text = "푸들"
-        helper3.detailInfo.text = "여자 / 20대 초반"
-        helper3.content.text = "밥먹자"
-        //===================================
-        
-        return [helper1, helper2, helper3]
-    }
-     */
     
 }
 

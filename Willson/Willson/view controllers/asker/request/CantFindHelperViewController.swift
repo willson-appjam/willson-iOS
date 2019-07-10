@@ -28,9 +28,19 @@ class CantFindHelperViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func tappedSearchOneMore(_ sender: Any) {
+        let tabbarStoryboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
+        guard let tabBarController: UITabBarController = tabbarStoryboard.instantiateViewController(withIdentifier: "AskerTabbar") as? UITabBarController else { return }
+        tabBarController.selectedIndex = 1
+        
+        let requestStoryboard = UIStoryboard(name: "AskerRequest", bundle: nil)
+        guard let vc: AskerRequestViewController = requestStoryboard.instantiateViewController(withIdentifier: "AskerRequestViewController") as? AskerRequestViewController else { return }
+        vc.extended = true
+        self.present(tabBarController, animated: true)
+        
     }
     
     @IBAction func tappedCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
