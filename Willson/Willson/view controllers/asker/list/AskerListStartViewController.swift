@@ -31,5 +31,16 @@ class AskerListStartViewController: UIViewController {
         print(imgName)
         labelCategory.text = label
         imgCategory.image = UIImage(named: imgName)
+        
     }
+    
+    @IBAction func startActionBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AskerList", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AskerList1_CategoryViewController") as! AskerList1_CategoryViewController
+        viewController.categoryID = tag
+        viewController.categoryTitle = label
+        
+        present(viewController, animated: true)
+    }
+    
 }

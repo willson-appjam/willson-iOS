@@ -13,6 +13,11 @@ class AskerList1_CategoryViewController: UIViewController {
     // MARK: - properties
     let concernCollectionCellIdentifier: String = "ConcernCollectionViewCell"
     var placeHolder = ""
+    var categoryID: Int = 2
+    var categoryTitle: String!
+    
+    var concernCategory: ConcernCategory?
+    var dataList: ConcernCategoryData?
     // MARK: - IBOutlet
     @IBOutlet weak var concernCollectionView: UICollectionView!
 
@@ -23,6 +28,7 @@ class AskerList1_CategoryViewController: UIViewController {
     
     // MARK: - life cycle
     override func viewDidLoad() {
+        getCategory()
         super.viewDidLoad()
 
         // UICollectionView delegate, datasource
@@ -33,6 +39,24 @@ class AskerList1_CategoryViewController: UIViewController {
         
         view.addGestureRecognizer(tap) //밖의 뷰를 탭했을 경우
         //concernCell.addGestureRecognizer(tap) //셀을 탭했을 경우
+    }
+    
+    func viewWillAppear() {
+        //guard let token = AccessToken.current else { return }
+        getCategory()
+    }
+    
+    func getCategory() {
+        ConcernCategoryService.shared.getCategory(categoryID: categoryID) { concernCategory, statusCode in
+            switch statusCode {
+            case 200:
+                self.concernCategory = concernCategory
+                self.dataList = self.concernCategory?.data
+                break;
+            default:
+                break;
+            }
+        }
     }
     
     @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
@@ -52,7 +76,7 @@ extension AskerList1_CategoryViewController: UICollectionViewDelegate {
 
 extension AskerList1_CategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return (dataList?.categoryList.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
