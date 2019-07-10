@@ -59,6 +59,9 @@
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <accessibility key="accessibilityConfiguration" label="연애">
+                                                                            <bool key="isElement" value="YES"/>
+                                                                        </accessibility>
                                                                         <constraints>
                                                                             <constraint firstItem="MAD-0X-gUt" firstAttribute="leading" secondItem="IvJ-sp-ufn" secondAttribute="leading" id="1Cc-au-7TP"/>
                                                                             <constraint firstAttribute="width" constant="79" id="Mci-z4-zuX"/>
@@ -87,6 +90,9 @@
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <accessibility key="accessibilityConfiguration" label="진로">
+                                                                            <bool key="isElement" value="YES"/>
+                                                                        </accessibility>
                                                                         <constraints>
                                                                             <constraint firstItem="w94-4V-jKo" firstAttribute="leading" secondItem="hlA-Tx-enb" secondAttribute="leading" id="Er4-D9-gwa"/>
                                                                             <constraint firstAttribute="height" constant="98" id="HY7-Wk-iRz"/>
@@ -117,6 +123,9 @@
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <accessibility key="accessibilityConfiguration" label="심리">
+                                                                            <bool key="isElement" value="YES"/>
+                                                                        </accessibility>
                                                                         <constraints>
                                                                             <constraint firstItem="3Gi-C6-Jzv" firstAttribute="leading" secondItem="3mh-pf-vaI" secondAttribute="leading" id="0WW-Ma-WSU"/>
                                                                             <constraint firstItem="ccv-OI-t6Q" firstAttribute="centerX" secondItem="3mh-pf-vaI" secondAttribute="centerX" id="Ar5-v8-2wC"/>
@@ -151,6 +160,9 @@
                                                                             </label>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <accessibility key="accessibilityConfiguration" label="인간관계">
+                                                                            <bool key="isElement" value="YES"/>
+                                                                        </accessibility>
                                                                         <constraints>
                                                                             <constraint firstItem="CtE-Wt-1eT" firstAttribute="leading" secondItem="E3P-w2-QXI" secondAttribute="leading" id="FVk-ao-Ubk"/>
                                                                             <constraint firstAttribute="width" constant="79" id="cZW-Fy-0re"/>
@@ -179,6 +191,9 @@
                                                                             </label>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <accessibility key="accessibilityConfiguration" label="일상">
+                                                                            <bool key="isElement" value="YES"/>
+                                                                        </accessibility>
                                                                         <constraints>
                                                                             <constraint firstItem="tXj-ag-qus" firstAttribute="centerX" secondItem="1s1-HI-WP2" secondAttribute="centerX" id="24A-K7-n7j"/>
                                                                             <constraint firstItem="tXj-ag-qus" firstAttribute="top" secondItem="1s1-HI-WP2" secondAttribute="top" constant="15" id="2Ky-oh-X51"/>
@@ -207,6 +222,9 @@
                                                                             </label>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <accessibility key="accessibilityConfiguration" label="기타">
+                                                                            <bool key="isElement" value="YES"/>
+                                                                        </accessibility>
                                                                         <constraints>
                                                                             <constraint firstItem="5Xo-ts-ihd" firstAttribute="leading" secondItem="uis-gi-Nb8" secondAttribute="leading" id="IM6-xd-eDe"/>
                                                                             <constraint firstItem="Yw8-YS-8jy" firstAttribute="top" secondItem="uis-gi-Nb8" secondAttribute="top" constant="15" id="PsB-aU-5ae"/>

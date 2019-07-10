@@ -138,10 +138,41 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         present(viewController, animated: true)
     }
     
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navigationController = segue.destination as? UINavigationController,
+            let vc = navigationController.viewControllers.first as? AskerListStartViewController {
+            vc.contact = contact
+        }
+    }*/
+    
     @objc func tappedconcern(_ gesture: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "AskerList", bundle: nil)
+        var vc = storyboard.instantiateViewController(withIdentifier: "AskerListStartViewController") as! AskerListStartViewController
+        
+        let v = gesture.view!
+       // let vc2 = vc.navigationController!.viewControllers.first as! AskerListStartViewController
+        vc.tag = v.tag
+        vc.label = v.accessibilityLabel
+        
+        navigationController?.pushViewController(vc, animated: true)
+        //present(vc, animated: true)
+        
+        
+        
+        /*
+        performSegue(withIdentifier: "showItemSegue", sender: {tag;, label})
+        
+        
+        if let navigationController = segue.destinationViewController as? UINavigationController {
+            if let ViewController = navigationController.viewControllers.first as? AskerListStartViewController {
+                
+                
+            }
+        }
+        
         let storyboard: UIStoryboard = UIStoryboard(name: "AskerList", bundle: nil)
-        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AskerListNavi")
-        present(viewcontroller, animated: true)
+        let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AskerListNavi") as! AskerListStartViewController
+        present(viewcontroller, animated: true)*/
     }
     
     @objc func autoScroll() {

@@ -24,12 +24,12 @@
         <!--리스트 작성-->
         <scene sceneID="heU-54-MPh">
             <objects>
-                <viewController id="xtR-kD-yCZ" customClass="AskerListStartViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerListStartViewController" id="xtR-kD-yCZ" customClass="AskerListStartViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qCt-9I-CT6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listImgCategory01Love" translatesAutoresizingMaskIntoConstraints="NO" id="oL5-eV-8nI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listImgCategory01" translatesAutoresizingMaskIntoConstraints="NO" id="oL5-eV-8nI">
                                 <rect key="frame" x="130" y="238" width="115" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="1U4-bk-BJo"/>
@@ -98,6 +98,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgCategory" destination="oL5-eV-8nI" id="i3V-Dq-mJa"/>
+                        <outlet property="labelCategory" destination="0L9-Xs-3X4" id="8bL-Nc-2QC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCK-bX-wxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2295,7 +2299,7 @@
         <image name="btnRadioActive" width="15" height="15"/>
         <image name="btnRadioNonactive" width="15" height="15"/>
         <image name="listImgAlertWillson" width="92.666664123535156" height="81.333335876464844"/>
-        <image name="listImgCategory01Love" width="119" height="118"/>
+        <image name="listImgCategory01" width="119" height="118"/>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

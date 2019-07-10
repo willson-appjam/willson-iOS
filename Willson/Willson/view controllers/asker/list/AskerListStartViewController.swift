@@ -9,6 +9,11 @@
 import UIKit
 
 class AskerListStartViewController: UIViewController {
+    var tag: Int!
+    var label: String!
+    
+    @IBOutlet weak var labelCategory: UILabel!
+    @IBOutlet weak var imgCategory: UIImageView!
     
     // MARK: - IBAction
     @IBAction func tappedCancelButton(_ sender: Any) {
@@ -19,6 +24,11 @@ class AskerListStartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        var imgName = "listImgCategory0\(tag)"
+        labelCategory.text = label
+        imgCategory.image = UIImage(named: imgName)
     }
 }
