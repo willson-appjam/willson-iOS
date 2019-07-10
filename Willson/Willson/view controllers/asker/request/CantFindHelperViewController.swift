@@ -9,7 +9,16 @@
 import UIKit
 
 class CantFindHelperViewController: UIViewController {
-
+    
+    // MARK: - properties
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var titleImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var mainButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

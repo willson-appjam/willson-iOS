@@ -2,27 +2,25 @@
 //  HelperCollectionViewCell.swift
 //  Willson
 //
-//  Created by 박지수 on 01/07/2019.
+//  Created by JHKim on 10/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
 
 class HelperCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var category: UILabel!
-    @IBOutlet weak var profileImg: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var detailInfo: UILabel!
-    @IBOutlet weak var reviewNum: UILabel!
-    @IBOutlet weak var starIcon: UIImageView!
-    @IBOutlet weak var content: UITextView!
+
+    @IBOutlet var category: UILabel!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var detailInfo: UILabel!
+    @IBOutlet var content: UITextView!
+    @IBOutlet var tag1: UILabel!
+    @IBOutlet var tag2: UILabel!
+    @IBOutlet var tag3: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        category.sizeToFit()
-        name.sizeToFit()
-        detailInfo.sizeToFit()
-        reviewNum.sizeToFit()
+        // Initialization code
     }
+
 }
