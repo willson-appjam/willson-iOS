@@ -13,7 +13,7 @@ class AskerList1_CategoryViewController: UIViewController {
     // MARK: - properties
     let concernCollectionCellIdentifier: String = "ConcernCollectionViewCell"
     var placeHolder = ""
-    var categoryID: Int = 2
+    var categoryID: Int!
     var categoryTitle: String!
     
     var concernCategory: ConcernCategory?
@@ -27,12 +27,14 @@ class AskerList1_CategoryViewController: UIViewController {
     }
     
     // MARK: - life cycle
+    func viewWillAppear() {
+        getCategory()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getCategory()
         // UICollectionView delegate, datasource
-        concernCollectionView.delegate = self
-        concernCollectionView.dataSource = self
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         
@@ -40,10 +42,9 @@ class AskerList1_CategoryViewController: UIViewController {
         //concernCell.addGestureRecognizer(tap) //셀을 탭했을 경우
     }
     
-     func viewWillAppear() {
-       // super.viewWillAppear(animated)
-        //guard let token = AccessToken.current else { return }
-        getCategory()
+    override func viewDidAppear(_ animated: Bool) {
+        concernCollectionView.delegate = self
+        concernCollectionView.dataSource = self
     }
     
     func getCategory() {
@@ -83,37 +84,21 @@ extension AskerList1_CategoryViewController: UICollectionViewDelegate {
 
 extension AskerList1_CategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return (dataList?.categoryList.count)!
-        return 5
+        return (dataList?.categoryList.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: ConcernCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: concernCollectionCellIdentifier, for: indexPath) as? ConcernCollectionViewCell else { return UICollectionViewCell() }
     
-        
-        switch indexPath.row {
-        case 0:
-            cell.concernLabel.isHidden = false
-            cell.concernTextField.isHidden = true
-            cell.concernLabel.text = "짝사랑"
-        case 1:
-            cell.concernLabel.isHidden = false
-            cell.concernTextField.isHidden = true
-            cell.concernLabel.text = "썸"
-        case 2:
-            cell.concernLabel.isHidden = false
-            cell.concernTextField.isHidden = true
-            cell.concernLabel.text = "갈등"
-        case 3:
-            cell.concernLabel.isHidden = false
-            cell.concernTextField.isHidden = true
-            cell.concernLabel.text = "이별"
-        case 4:
+        switch indexPath.item {
+        case (dataList?.categoryList.count ?? 0) - 1:
             cell.concernLabel.isHidden = true
             cell.concernTextField.isHidden = false
             cell.concernTextField.text = "+ 직접입력"
         default:
-            return cell
+            cell.concernLabel.isHidden = false
+            cell.concernTextField.isHidden = true
+            cell.concernLabel.text = dataList?.categoryList[indexPath.item].categoryListName
         }
         
         return cell
