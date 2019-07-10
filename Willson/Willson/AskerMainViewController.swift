@@ -24,6 +24,11 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: - IBOutlet
     @IBOutlet weak var concern1View: UIView!
+    @IBOutlet weak var concern2View: UIView!
+    @IBOutlet weak var concern3View: UIView!
+    @IBOutlet weak var concern4View: UIView!
+    @IBOutlet weak var concern5View: UIView!
+    @IBOutlet weak var concern6View: UIView!
     
     @IBOutlet weak var scrollView: UIScrollView! //헬퍼들의 이야기 좌우스크롤뷰
     @IBOutlet weak var AskerScrollView: UIScrollView!
@@ -44,8 +49,20 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 //        getHelperStory()
         // 카테고리 UIView에 touch Action 추가
-        let concern1Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern1(_:)))
+        let concern1Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
+        let concern2Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
+        let concern3Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
+        let concern4Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
+        let concern5Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
+        let concern6Gesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedconcern(_:)))
+        
+        
         concern1View.addGestureRecognizer(concern1Gesture)
+        concern2View.addGestureRecognizer(concern2Gesture)
+        concern3View.addGestureRecognizer(concern3Gesture)
+        concern4View.addGestureRecognizer(concern4Gesture)
+        concern5View.addGestureRecognizer(concern5Gesture)
+        concern6View.addGestureRecognizer(concern6Gesture)
         
         //헬퍼
         
@@ -121,7 +138,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         present(viewController, animated: true)
     }
     
-    @objc func tappedconcern1(_ gesture: UITapGestureRecognizer) {
+    @objc func tappedconcern(_ gesture: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "AskerList", bundle: nil)
         let viewcontroller = storyboard.instantiateViewController(withIdentifier: "AskerListNavi")
         present(viewcontroller, animated: true)

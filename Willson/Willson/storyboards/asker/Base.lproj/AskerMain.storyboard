@@ -403,6 +403,11 @@
                     <connections>
                         <outlet property="AskerScrollView" destination="4r5-qV-AxQ" id="LzC-4A-jvd"/>
                         <outlet property="concern1View" destination="IvJ-sp-ufn" id="D9X-dO-aHV"/>
+                        <outlet property="concern2View" destination="hlA-Tx-enb" id="56U-fu-OM2"/>
+                        <outlet property="concern3View" destination="3mh-pf-vaI" id="eXw-TV-usp"/>
+                        <outlet property="concern4View" destination="E3P-w2-QXI" id="B98-Aw-iIi"/>
+                        <outlet property="concern5View" destination="1s1-HI-WP2" id="OiJ-1F-IfN"/>
+                        <outlet property="concern6View" destination="uis-gi-Nb8" id="49M-bq-G1j"/>
                         <outlet property="scrollView" destination="NYN-4y-fUw" id="NVq-B7-gya"/>
                     </connections>
                 </viewController>
