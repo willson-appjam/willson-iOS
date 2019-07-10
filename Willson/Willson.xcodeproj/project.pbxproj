@@ -27,8 +27,6 @@
 		6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344822C7BEE600D419EC /* AskerSignUpViewController1.swift */; };
 		6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344A22C7BF0300D419EC /* AskerSignUpViewController2.swift */; };
 		6636406522D5D3DB00FADC9F /* ConcernCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406422D5D3DB00FADC9F /* ConcernCategory.swift */; };
-		6636406722D5D3F400FADC9F /* ConcernCategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406622D5D3F400FADC9F /* ConcernCategoryData.swift */; };
-		6636406922D5D40E00FADC9F /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406822D5D40E00FADC9F /* CategoryList.swift */; };
 		6636406B22D5D64700FADC9F /* ConcernCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */; };
 		663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835B422C9BAE3003265C7 /* AskerMainViewController.swift */; };
 		663835B922C9BC30003265C7 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835B822C9BC30003265C7 /* Slide.swift */; };
@@ -145,8 +143,6 @@
 		6634344822C7BEE600D419EC /* AskerSignUpViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSignUpViewController1.swift; path = "Willson/supporting files/fonts/AskerSignUpViewController1.swift"; sourceTree = SOURCE_ROOT; };
 		6634344A22C7BF0300D419EC /* AskerSignUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSignUpViewController2.swift; path = "Willson/supporting files/fonts/AskerSignUpViewController2.swift"; sourceTree = SOURCE_ROOT; };
 		6636406422D5D3DB00FADC9F /* ConcernCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCategory.swift; sourceTree = "<group>"; };
-		6636406622D5D3F400FADC9F /* ConcernCategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCategoryData.swift; sourceTree = "<group>"; };
-		6636406822D5D40E00FADC9F /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCategoryService.swift; sourceTree = "<group>"; };
 		663835B422C9BAE3003265C7 /* AskerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerMainViewController.swift; path = Willson/AskerMainViewController.swift; sourceTree = SOURCE_ROOT; };
 		663835B822C9BC30003265C7 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slide.swift; path = main/Slide.swift; sourceTree = SOURCE_ROOT; };
@@ -410,8 +406,6 @@
 				66D7E07022D4F16300AC0C9B /* SignUp.swift */,
 				66D7E07222D4F19300AC0C9B /* SignUpData.swift */,
 				6636406422D5D3DB00FADC9F /* ConcernCategory.swift */,
-				6636406622D5D3F400FADC9F /* ConcernCategoryData.swift */,
-				6636406822D5D40E00FADC9F /* CategoryList.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -838,7 +832,6 @@
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
 				D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */,
 				D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */,
-				6636406722D5D3F400FADC9F /* ConcernCategoryData.swift in Sources */,
 				6633E3F122D3D63100DF81AC /* UserSigninService.swift in Sources */,
 				66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */,
 				D9AC037422CE1A1100E16AD8 /* AskerList7_HelperExperienceViewController.swift in Sources */,
@@ -851,7 +844,6 @@
 				D915535622D20EC400A38390 /* CustomButton.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
 				D9162FB422D519D20018E471 /* ProblemDetailTableViewCell.swift in Sources */,
-				6636406922D5D40E00FADC9F /* CategoryList.swift in Sources */,
 				D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */,
 				663835C422CA2A09003265C7 /* AskerRequestViewController.swift in Sources */,
 				66C661CE22CC8F3D008A451F /* PopUpViewController3.swift in Sources */,

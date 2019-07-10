@@ -140,14 +140,15 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     
     @objc func tappedconcern(_ gesture: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "AskerList", bundle: nil)
-        var vc = storyboard.instantiateViewController(withIdentifier: "AskerListStartViewController") as! AskerListStartViewController
-        
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "AskerListStartViewController") as? AskerListStartViewController else { return }
+        let navi = UINavigationController(rootViewController: vc)
         let v = gesture.view!
     
         vc.tag = v.tag
         vc.label = v.accessibilityLabel
         
-        navigationController?.pushViewController(vc, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
+        self.present(navi, animated: true)
     }
     
     @objc func autoScroll() {

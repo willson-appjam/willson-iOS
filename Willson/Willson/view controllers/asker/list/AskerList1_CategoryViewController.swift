@@ -17,7 +17,7 @@ class AskerList1_CategoryViewController: UIViewController {
     var categoryTitle: String!
     
     var concernCategory: ConcernCategory?
-    var dataList: ConcernCategoryData?
+    var dataList: DataClass?
     // MARK: - IBOutlet
     @IBOutlet weak var concernCollectionView: UICollectionView!
 
@@ -28,9 +28,8 @@ class AskerList1_CategoryViewController: UIViewController {
     
     // MARK: - life cycle
     override func viewDidLoad() {
-        getCategory()
         super.viewDidLoad()
-
+        getCategory()
         // UICollectionView delegate, datasource
         concernCollectionView.delegate = self
         concernCollectionView.dataSource = self
@@ -41,7 +40,8 @@ class AskerList1_CategoryViewController: UIViewController {
         //concernCell.addGestureRecognizer(tap) //셀을 탭했을 경우
     }
     
-    func viewWillAppear() {
+     func viewWillAppear() {
+       // super.viewWillAppear(animated)
         //guard let token = AccessToken.current else { return }
         getCategory()
     }
@@ -62,6 +62,13 @@ class AskerList1_CategoryViewController: UIViewController {
     @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "" {
+//            guard let nextVC: AskerList2_FeelViewController = segue.destination as? AskerList2_FeelViewController else { return }
+//            nextv
+//        }
+//    }
 }
 
 extension AskerList1_CategoryViewController: UICollectionViewDelegate {
@@ -76,12 +83,14 @@ extension AskerList1_CategoryViewController: UICollectionViewDelegate {
 
 extension AskerList1_CategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (dataList?.categoryList.count)!
+//        return (dataList?.categoryList.count)!
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: ConcernCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: concernCollectionCellIdentifier, for: indexPath) as? ConcernCollectionViewCell else { return UICollectionViewCell() }
     
+        
         switch indexPath.row {
         case 0:
             cell.concernLabel.isHidden = false

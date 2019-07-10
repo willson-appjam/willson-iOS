@@ -40,7 +40,7 @@ class AskerListStartViewController: UIViewController {
         viewController.categoryID = tag
         viewController.categoryTitle = label
         
-        present(viewController, animated: true)
+        navigationController?.show(viewController, sender: nil)
     }
     
 }

@@ -12,7 +12,23 @@ import Foundation
 struct ConcernCategory: Codable {
     let code: Int
     let message: String
-    let data: ConcernCategoryData
+    let data: DataClass
+}
+
+// MARK: - DataClass
+struct DataClass: Codable {
+    let categoryList: [CategoryList]
+}
+
+// MARK: - CategoryList
+struct CategoryList: Codable {
+    let categoryListIdx: Int
+    let categoryListName: String
+    
+    enum CodingKeys: String, CodingKey {
+        case categoryListIdx = "categoryList_idx"
+        case categoryListName = "categoryList_name"
+    }
 }
 
 
