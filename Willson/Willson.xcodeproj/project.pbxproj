@@ -72,7 +72,7 @@
 		D9209D5C22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5B22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift */; };
 		D9209D5E22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5D22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift */; };
 		D9209D6322D607A9001CA9F8 /* HelperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D6122D607A9001CA9F8 /* HelperCollectionViewCell.swift */; };
-		D9209D6422D607A9001CA9F8 /* HelperRequestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9209D6222D607A9001CA9F8 /* HelperRequestCollectionViewCell.xib */; };
+		D9209D6422D607A9001CA9F8 /* HelperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9209D6222D607A9001CA9F8 /* HelperCollectionViewCell.xib */; };
 		D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */; };
 		D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */; };
 		D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */; };
@@ -189,7 +189,7 @@
 		D9209D5B22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = After5SearcingWillsonViewController.swift; sourceTree = "<group>"; };
 		D9209D5D22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyMatchHelperViewController.swift; sourceTree = "<group>"; };
 		D9209D6122D607A9001CA9F8 /* HelperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperCollectionViewCell.swift; sourceTree = "<group>"; };
-		D9209D6222D607A9001CA9F8 /* HelperRequestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperRequestCollectionViewCell.xib; sourceTree = "<group>"; };
+		D9209D6222D607A9001CA9F8 /* HelperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperCollectionViewCell.xib; sourceTree = "<group>"; };
 		D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishChatViewController.swift; sourceTree = "<group>"; };
 		D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteReviewViewController.swift; sourceTree = "<group>"; };
 		D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExaminHelperViewController.swift; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 				D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */,
 				D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */,
 				D9209D6122D607A9001CA9F8 /* HelperCollectionViewCell.swift */,
-				D9209D6222D607A9001CA9F8 /* HelperRequestCollectionViewCell.xib */,
+				D9209D6222D607A9001CA9F8 /* HelperCollectionViewCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -726,7 +726,7 @@
 				D965853122C4EB4F0072CC5E /* AskerRequest.storyboard in Resources */,
 				663835BB22C9C82D003265C7 /* Slide.xib in Resources */,
 				D965853B22C4EBC00072CC5E /* HelperMypage.storyboard in Resources */,
-				D9209D6422D607A9001CA9F8 /* HelperRequestCollectionViewCell.xib in Resources */,
+				D9209D6422D607A9001CA9F8 /* HelperCollectionViewCell.xib in Resources */,
 				D9AC038E22CE8B9300E16AD8 /* ChatListTableViewCell.xib in Resources */,
 				6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */,
 				D98BA5C522D0131500E72C02 /* HelperRequestCollectionViewCell.xib in Resources */,
