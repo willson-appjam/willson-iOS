@@ -40,8 +40,15 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         // helper story networking
         
         getHelperStory()
-        self.slideList = self.createSlides()
-        self.setupSlideScrollView(slides: self.slideList)
+//        self.slideList = self.createSlides()
+//        self.setupSlideScrollView(slides: self.slideList)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        slideList = createSlides()
+        setupSlideScrollView(slides: slideList)
     }
     
     override func viewDidLoad() {

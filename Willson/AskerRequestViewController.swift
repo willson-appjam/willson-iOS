@@ -33,14 +33,14 @@ class AskerRequestViewController: UIViewController {
         startTimer = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AskerRequestViewController.timeLimit), userInfo: nil, repeats: true)
         
-        registerCVC()
-        helpers = getHelper()
+//        registerCVC()
+//        helpers = getHelper()
         helperCollectionView.delegate = self
         helperCollectionView.dataSource = self
         
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
         
-        self.helperCollectionView.addGestureRecognizer(gesture)
+//        self.helperCollectionView.addGestureRecognizer(gesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,15 +54,17 @@ class AskerRequestViewController: UIViewController {
     }
     
     // MARK: - Methods
+    /*
     @objc func goPage(sender:UIGestureRecognizer)
         
     {
         let storyboard  = UIStoryboard(name: "AskerRequest", bundle: nil)
    
-        let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController") as! HelperProfileViewController
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController") as? HelperProfileViewController else { return }
         
         self.navigationController?.show(vc, sender: nil)
     }
+     */
     
     @objc func timeLimit() {
         let dateFormatter = DateFormatter()
@@ -89,7 +91,7 @@ class AskerRequestViewController: UIViewController {
         
         if (extended == false) { //처음 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
-                "bPopUpID") as! PopUpViewController
+                "CantFindHelperViewController") as! CantFindHelperViewController
             vc?.addChild(popOverVC)
             
             popOverVC.view.frame = (vc?.view.frame)!
@@ -98,7 +100,7 @@ class AskerRequestViewController: UIViewController {
         }
         else { //두번째 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
-                "bPopUp3ID") as! PopUpViewController3
+                "CantFindHelperViewController") as! CantFindHelperViewController
             vc?.addChild(popOverVC)
             
             popOverVC.view.frame = (vc?.view.frame)!
@@ -107,6 +109,7 @@ class AskerRequestViewController: UIViewController {
         }
     }
     
+    /*
     func registerCVC() {
         let nibName = UINib(nibName: "HelperCollectionViewCell", bundle: nil)
         helperCollectionView.register(nibName, forCellWithReuseIdentifier: "HelperCollectionViewCell")
@@ -136,6 +139,7 @@ class AskerRequestViewController: UIViewController {
         
         return [helper1, helper2, helper3]
     }
+     */
     
 }
 
@@ -143,12 +147,13 @@ extension AskerRequestViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return helpers.count
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HelperCollectionViewCell", for: indexPath) as! HelperCollectionViewCell
         
+        /*
         let helper = helpers[indexPath.row]
         
         cell.content.text = helper.content.text
@@ -156,7 +161,7 @@ extension AskerRequestViewController: UICollectionViewDataSource {
         cell.detailInfo.text = helper.detailInfo.text
         cell.category.text = helper.category.text
         
-        
+        */
         return cell
     }
 }
