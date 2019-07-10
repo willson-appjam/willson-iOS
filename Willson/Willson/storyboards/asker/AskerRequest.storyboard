@@ -428,12 +428,12 @@
                                 <rect key="frame" x="86.666666666666671" y="218" width="201.66666666666663" height="46.666666666666686"/>
                                 <string key="text">당신을 도와줄 헬퍼들을
 모으는 중이에요!</string>
-                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
+                                <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1fU-Ft-H1Z">
-                                <rect key="frame" x="153.33333333333334" y="299.66666666666669" width="68.333333333333343" height="18"/>
+                                <rect key="frame" x="152.66666666666666" y="299.66666666666669" width="70" height="18"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTimer" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-Ef-OWW">
                                         <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
@@ -443,8 +443,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHH-Hb-f9U">
-                                        <rect key="frame" x="25.000000000000004" y="0.0" width="43.333333333333343" height="18"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                        <rect key="frame" x="25" y="0.0" width="45" height="18"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                         <color key="textColor" name="middlePurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -490,52 +490,48 @@
             </objects>
             <point key="canvasLocation" x="25" y="-861"/>
         </scene>
-        <!--View Controller-->
+        <!--Asker No Request View Controller-->
         <scene sceneID="Yz2-kh-X3z">
             <objects>
-                <viewController id="S6O-r6-Qaw" sceneMemberID="viewController">
+                <viewController id="S6O-r6-Qaw" customClass="AskerNoRequestViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ijo-rp-JUQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="받은요청" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYK-LG-UwU">
-                                <rect key="frame" x="149.33333333333334" y="55" width="76.666666666666657" height="23"/>
-                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="21"/>
-                                <color key="textColor" name="black"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-fK-W07">
-                                <rect key="frame" x="35" y="328" width="305" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="waQ-fK-W07" secondAttribute="height" multiplier="305:48" id="ZGN-IV-oew"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-fK-W07">
+                                <rect key="frame" x="20" y="342.33333333333331" width="335" height="40"/>
                                 <string key="text">아직 요청중인 매칭이 없습니다. 
 고민 리스트를 먼저 작성해보세요!</string>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-Ys-0hb">
-                                <rect key="frame" x="104" y="398" width="175" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-Ys-0hb">
+                                <rect key="frame" x="100" y="404.33333333333331" width="175" height="43"/>
                                 <color key="backgroundColor" name="buttonLeft"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="CCP-Ys-0hb" secondAttribute="height" multiplier="175:43" constant="37" id="xhP-ZC-NhL"/>
+                                    <constraint firstAttribute="width" constant="175" id="ik7-AS-3XK"/>
+                                    <constraint firstAttribute="height" constant="43" id="yXV-U8-w5x"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                 <state key="normal" title="홈으로 돌아가기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="goHome:" destination="blm-ca-469" eventType="touchUpInside" id="ukF-53-Tgo"/>
+                                    <action selector="tappedGoToHome:" destination="S6O-r6-Qaw" eventType="touchUpInside" id="59C-ue-Nn7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="waQ-fK-W07" firstAttribute="top" secondItem="aYK-LG-UwU" secondAttribute="bottom" constant="250" id="4cH-Pi-fmT"/>
-                            <constraint firstItem="aYK-LG-UwU" firstAttribute="top" secondItem="xFS-ZZ-qvg" secondAttribute="top" constant="11" id="9oY-2h-knE"/>
-                            <constraint firstItem="aYK-LG-UwU" firstAttribute="centerX" secondItem="xFS-ZZ-qvg" secondAttribute="centerX" id="Yeg-b7-bt6"/>
-                            <constraint firstItem="waQ-fK-W07" firstAttribute="centerX" secondItem="xFS-ZZ-qvg" secondAttribute="centerX" id="oc9-ue-oZL"/>
+                            <constraint firstItem="waQ-fK-W07" firstAttribute="top" secondItem="ijo-rp-JUQ" secondAttribute="centerY" multiplier="328:389" id="4cH-Pi-fmT"/>
+                            <constraint firstItem="waQ-fK-W07" firstAttribute="leading" secondItem="xFS-ZZ-qvg" secondAttribute="leading" constant="20" id="Dh8-hI-asm"/>
+                            <constraint firstItem="xFS-ZZ-qvg" firstAttribute="trailing" secondItem="waQ-fK-W07" secondAttribute="trailing" constant="20" id="b4S-Zr-ipH"/>
                             <constraint firstItem="CCP-Ys-0hb" firstAttribute="centerX" secondItem="xFS-ZZ-qvg" secondAttribute="centerX" id="rz4-Ez-jtm"/>
                             <constraint firstItem="CCP-Ys-0hb" firstAttribute="top" secondItem="waQ-fK-W07" secondAttribute="bottom" constant="22" id="zhc-m2-nRT"/>
                         </constraints>
@@ -897,10 +893,10 @@
             </objects>
             <point key="canvasLocation" x="1728.8" y="-291.13300492610841"/>
         </scene>
-        <!--Pop Up View Controller-->
+        <!--Cant Find Helper View Controller-->
         <scene sceneID="eZ8-qD-cx8">
             <objects>
-                <viewController storyboardIdentifier="bPopUpID" id="Wwn-lJ-psx" customClass="PopUpViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bPopUpID" id="Wwn-lJ-psx" customClass="CantFindHelperViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7t9-rL-lM8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -926,13 +922,13 @@
                                             <color key="titleColor" name="brownishGrey"/>
                                         </state>
                                         <connections>
-                                            <action selector="removePopUpBtn:" destination="Wwn-lJ-psx" eventType="touchUpInside" id="vUb-Tc-Qsc"/>
+                                            <action selector="tappedCancel:" destination="Wwn-lJ-psx" eventType="touchUpInside" id="7at-2C-LNB"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKq-WW-6Sz">
-                                        <rect key="frame" x="94.333333333333329" y="164" width="134.66666666666669" height="31"/>
-                                        <string key="text">아직 결정하지 못했다면
-5분 더 찾아보실래요?</string>
+                                        <rect key="frame" x="26.333333333333343" y="164" width="270.33333333333326" height="31"/>
+                                        <string key="text">지금 접속중인 헬퍼가 적은 것 같아요.
+윌슨이 도와드릴게요. 같이 좀 더 기다려볼까요?</string>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
@@ -944,17 +940,22 @@
                                             <constraint firstAttribute="height" constant="38" id="bIe-rF-28P"/>
                                             <constraint firstAttribute="width" constant="183" id="k9r-4h-G2Q"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
                                         <state key="normal" title="한번 더 찾아보기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="extendBtn:" destination="Wwn-lJ-psx" eventType="touchUpInside" id="f0Y-hP-prd"/>
+                                            <action selector="tappedSearchOneMore:" destination="Wwn-lJ-psx" eventType="touchUpInside" id="r30-oM-oVr"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주어진 시간이 다 지났어요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wss-3c-wxp">
-                                        <rect key="frame" x="74" y="129" width="175" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 헬퍼를 찾지 못했어요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wss-3c-wxp">
+                                        <rect key="frame" x="56.333333333333329" y="129" width="210.33333333333337" height="20"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -964,7 +965,6 @@
                                     <constraint firstAttribute="bottom" secondItem="zHM-E5-BQS" secondAttribute="bottom" constant="21" id="3hM-lS-fWb"/>
                                     <constraint firstItem="DRI-TO-Tvy" firstAttribute="centerX" secondItem="T23-i6-JKO" secondAttribute="centerX" id="4Hb-7k-NvR"/>
                                     <constraint firstItem="zHM-E5-BQS" firstAttribute="top" secondItem="Z6h-Ev-uYv" secondAttribute="bottom" constant="14" id="BLG-JO-vBf"/>
-                                    <constraint firstItem="DRI-TO-Tvy" firstAttribute="leading" secondItem="T23-i6-JKO" secondAttribute="leading" constant="116" id="E9f-16-gUM"/>
                                     <constraint firstItem="DRI-TO-Tvy" firstAttribute="top" secondItem="T23-i6-JKO" secondAttribute="top" constant="28" id="GR7-dJ-W32"/>
                                     <constraint firstItem="Wss-3c-wxp" firstAttribute="top" secondItem="DRI-TO-Tvy" secondAttribute="bottom" constant="21" id="XvL-LG-hWg"/>
                                     <constraint firstItem="Wss-3c-wxp" firstAttribute="centerX" secondItem="T23-i6-JKO" secondAttribute="centerX" id="YjT-Rp-684"/>
@@ -980,8 +980,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="T23-i6-JKO" firstAttribute="centerX" secondItem="ITs-nK-tZs" secondAttribute="centerX" id="INm-1g-yGl"/>
-                            <constraint firstItem="ITs-nK-tZs" firstAttribute="trailing" secondItem="Z6h-Ev-uYv" secondAttribute="trailing" constant="96" id="Rm5-Xf-zY1"/>
-                            <constraint firstItem="Z6h-Ev-uYv" firstAttribute="leading" secondItem="ITs-nK-tZs" secondAttribute="leading" constant="96" id="TQG-kc-R7C"/>
                             <constraint firstItem="T23-i6-JKO" firstAttribute="centerY" secondItem="ITs-nK-tZs" secondAttribute="centerY" constant="-32.5" id="TQz-Ig-ijC"/>
                             <constraint firstItem="Z6h-Ev-uYv" firstAttribute="centerX" secondItem="ITs-nK-tZs" secondAttribute="centerX" id="VIc-BH-SwW"/>
                         </constraints>
@@ -1018,10 +1016,10 @@
             </objects>
             <point key="canvasLocation" x="5.5999999999999996" y="-162.5615763546798"/>
         </scene>
-        <!--Pop Up View Controller2-->
+        <!--After5 Searcing Willson View Controller-->
         <scene sceneID="kbi-MZ-BNj">
             <objects>
-                <viewController storyboardIdentifier="bPopUp2ID" id="blm-ca-469" customClass="PopUpViewController2" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bPopUp2ID" id="blm-ca-469" customClass="After5SearcingWillsonViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RyZ-PJ-iJd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1029,57 +1027,71 @@
                             <view contentMode="scaleToFill" restorationIdentifier="sbPopUp2ID" translatesAutoresizingMaskIntoConstraints="NO" id="CTw-Tz-91b">
                                 <rect key="frame" x="26" y="226" width="323" height="299"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="requestImgAlertWillson2" translatesAutoresizingMaskIntoConstraints="NO" id="sC0-J7-ONC">
-                                        <rect key="frame" x="109.66666666666667" y="23" width="104.00000000000004" height="106"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="requestImgAlertReservewillson" translatesAutoresizingMaskIntoConstraints="NO" id="sC0-J7-ONC">
+                                        <rect key="frame" x="109.66666666666666" y="23" width="104" height="96"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="106" id="Gkx-tf-2Wa"/>
                                             <constraint firstAttribute="width" constant="103.99999999999997" id="gx1-VB-COy"/>
+                                            <constraint firstAttribute="height" constant="96" id="uqE-Vv-ded"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="다음에 한 번 더 찾아주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zat-Rk-Kf8">
-                                        <rect key="frame" x="21" y="154" width="281" height="20"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간이 지났지만 윌슨이 찾아드릴게요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zat-Rk-Kf8">
+                                        <rect key="frame" x="23.666666666666657" y="134" width="275.66666666666674" height="20"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-Jg-tkf">
-                                        <rect key="frame" x="21" y="190" width="281" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="281" id="05K-87-RXq"/>
-                                            <constraint firstAttribute="height" constant="31" id="EhH-nt-590"/>
-                                        </constraints>
-                                        <string key="text">많은 헬퍼들이 활동하는
-저녁 7-8시에 다시 요청해보세요.</string>
+                                        <rect key="frame" x="73.666666666666671" y="167" width="175.66666666666663" height="26.666666666666657"/>
+                                        <string key="text">요청을 남겨주시면 고민에 딱 맞는
+헬퍼를 찾아 3일 안에 연락드릴게요!</string>
                                         <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="12"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-VV-AUf">
-                                        <rect key="frame" x="56" y="235" width="212" height="43"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-VV-AUf">
+                                        <rect key="frame" x="70" y="205.66666666666669" width="183" height="38"/>
                                         <color key="backgroundColor" name="buttonLeft"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="yl4-VV-AUf" secondAttribute="height" multiplier="175:43" constant="37" id="9hd-g3-8x5"/>
+                                            <constraint firstAttribute="width" constant="183" id="JGe-Cd-sfz"/>
+                                            <constraint firstAttribute="height" constant="38" id="edh-ZJ-lWO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
-                                        <state key="normal" title="홈으로 돌아가기">
+                                        <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
+                                        <state key="normal" title="요청 남기기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="goHome:" destination="blm-ca-469" eventType="touchUpInside" id="DdB-JB-OpA"/>
+                                            <action selector="tappedCreateRequest:" destination="blm-ca-469" eventType="touchUpInside" id="yZx-hy-4mi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfi-zu-jll">
+                                        <rect key="frame" x="134.66666666666666" y="257.66666666666669" width="54" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="Cle-Zs-pBD"/>
+                                            <constraint firstAttribute="width" constant="54" id="dMd-G2-fkj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                        <state key="normal" title="취소하기">
+                                            <color key="titleColor" name="brownishGrey"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedCancel:" destination="Wwn-lJ-psx" eventType="touchUpInside" id="1ZB-5o-0sc"/>
+                                            <action selector="tappedCancel:" destination="blm-ca-469" eventType="touchUpInside" id="jCq-Kz-wHj"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="6cj-Jg-tkf" firstAttribute="top" secondItem="zat-Rk-Kf8" secondAttribute="bottom" constant="16" id="97Z-vJ-3fF"/>
                                     <constraint firstItem="sC0-J7-ONC" firstAttribute="centerX" secondItem="CTw-Tz-91b" secondAttribute="centerX" id="AKt-hk-rLU"/>
                                     <constraint firstAttribute="height" constant="299" id="E2E-E0-XH0"/>
                                     <constraint firstItem="zat-Rk-Kf8" firstAttribute="centerX" secondItem="CTw-Tz-91b" secondAttribute="centerX" id="Fav-CB-qIl"/>
+                                    <constraint firstItem="zat-Rk-Kf8" firstAttribute="top" secondItem="sC0-J7-ONC" secondAttribute="bottom" constant="15" id="NRm-yD-v24"/>
                                     <constraint firstItem="6cj-Jg-tkf" firstAttribute="centerX" secondItem="CTw-Tz-91b" secondAttribute="centerX" id="ajO-yD-6TE"/>
-                                    <constraint firstItem="zat-Rk-Kf8" firstAttribute="top" secondItem="sC0-J7-ONC" secondAttribute="bottom" constant="25" id="bvj-KO-h6U"/>
+                                    <constraint firstItem="6cj-Jg-tkf" firstAttribute="top" secondItem="zat-Rk-Kf8" secondAttribute="bottom" constant="13" id="bhe-hg-K9j"/>
                                     <constraint firstItem="sC0-J7-ONC" firstAttribute="top" secondItem="CTw-Tz-91b" secondAttribute="top" constant="23" id="fcK-Bq-kDy"/>
-                                    <constraint firstItem="yl4-VV-AUf" firstAttribute="top" secondItem="6cj-Jg-tkf" secondAttribute="bottom" constant="14" id="lpa-Nc-csj"/>
+                                    <constraint firstItem="yl4-VV-AUf" firstAttribute="top" secondItem="6cj-Jg-tkf" secondAttribute="bottom" constant="12" id="hqw-xA-zec"/>
+                                    <constraint firstItem="qfi-zu-jll" firstAttribute="top" secondItem="yl4-VV-AUf" secondAttribute="bottom" constant="14" id="pQs-ay-0f7"/>
                                     <constraint firstItem="yl4-VV-AUf" firstAttribute="centerX" secondItem="CTw-Tz-91b" secondAttribute="centerX" id="rfZ-bV-3jc"/>
+                                    <constraint firstItem="qfi-zu-jll" firstAttribute="centerX" secondItem="CTw-Tz-91b" secondAttribute="centerX" id="sXS-HI-9Cm"/>
                                     <constraint firstAttribute="width" constant="323" id="xTV-XX-IGm"/>
                                 </constraints>
                             </view>
@@ -1295,87 +1307,10 @@
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="895.56650246305423"/>
         </scene>
-        <!--Pop Up View Controller3-->
-        <scene sceneID="R1s-tG-Oy0">
-            <objects>
-                <viewController storyboardIdentifier="bPopUp3ID" id="4PM-g3-aIB" customClass="PopUpViewController3" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xPV-pT-DBk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" restorationIdentifier="sbPopUp3ID" translatesAutoresizingMaskIntoConstraints="NO" id="pkp-Yn-0Tk">
-                                <rect key="frame" x="26" y="226" width="323" height="278"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="requestImgAlertWillson" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-rB-Eym">
-                                        <rect key="frame" x="116" y="27" width="91" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="6cL-ZU-PDa"/>
-                                            <constraint firstAttribute="width" constant="91" id="cHV-Qg-ijr"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfC-x8-Iwn">
-                                        <rect key="frame" x="21" y="164" width="281" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="281" id="OX5-qj-ZS6"/>
-                                            <constraint firstAttribute="height" constant="36" id="rzd-zb-l4D"/>
-                                        </constraints>
-                                        <string key="text">더 나은 윌슨이 될게요 :)
-다음에 다시 요청해보세요</string>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
-                                        <color key="textColor" name="black"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-Rf-U63">
-                                        <rect key="frame" x="70" y="216" width="183" height="38"/>
-                                        <color key="backgroundColor" name="buttonLeft"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="84n-pL-bao"/>
-                                            <constraint firstAttribute="width" constant="183" id="MTR-Z9-ZWr"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
-                                        <state key="normal" title="홈으로 돌아가기">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주어진 시간이 다 지났어요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ma-fr-26G">
-                                        <rect key="frame" x="74" y="132" width="175" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="GfC-x8-Iwn" firstAttribute="centerX" secondItem="pkp-Yn-0Tk" secondAttribute="centerX" id="4Xd-kC-CN8"/>
-                                    <constraint firstItem="4ma-fr-26G" firstAttribute="centerX" secondItem="pkp-Yn-0Tk" secondAttribute="centerX" id="FWW-ni-b5L"/>
-                                    <constraint firstItem="4ma-fr-26G" firstAttribute="top" secondItem="xBE-rB-Eym" secondAttribute="bottom" constant="25" id="WBE-Sa-BTw"/>
-                                    <constraint firstItem="GfC-x8-Iwn" firstAttribute="top" secondItem="4ma-fr-26G" secondAttribute="bottom" constant="12" id="WgE-LI-Pmp"/>
-                                    <constraint firstItem="PIt-Rf-U63" firstAttribute="centerX" secondItem="pkp-Yn-0Tk" secondAttribute="centerX" id="YY8-TI-xR3"/>
-                                    <constraint firstAttribute="width" constant="323" id="evo-qc-dlD"/>
-                                    <constraint firstItem="xBE-rB-Eym" firstAttribute="leading" secondItem="pkp-Yn-0Tk" secondAttribute="leading" constant="116" id="ieA-DI-aAf"/>
-                                    <constraint firstItem="PIt-Rf-U63" firstAttribute="top" secondItem="GfC-x8-Iwn" secondAttribute="bottom" constant="16" id="poK-n0-lxJ"/>
-                                    <constraint firstItem="xBE-rB-Eym" firstAttribute="top" secondItem="pkp-Yn-0Tk" secondAttribute="top" constant="27" id="ss8-1w-fnJ"/>
-                                    <constraint firstAttribute="height" constant="278" id="uvP-8Q-OKI"/>
-                                    <constraint firstItem="xBE-rB-Eym" firstAttribute="centerX" secondItem="pkp-Yn-0Tk" secondAttribute="centerX" id="vMF-qE-HJj"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="pkp-Yn-0Tk" firstAttribute="centerY" secondItem="INQ-bT-v3n" secondAttribute="centerY" constant="-46" id="CNE-IH-O77"/>
-                            <constraint firstItem="pkp-Yn-0Tk" firstAttribute="centerX" secondItem="INQ-bT-v3n" secondAttribute="centerX" id="PSx-wI-CVN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="INQ-bT-v3n"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JIE-ij-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="948" y="1221"/>
-        </scene>
-        <!--Pop Up View Controller4-->
+        <!--Already Match Helper View Controller-->
         <scene sceneID="oit-9G-AQp">
             <objects>
-                <viewController storyboardIdentifier="bPopUp4ID" id="nxu-L5-hcb" customClass="PopUpViewController4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bPopUp4ID" id="nxu-L5-hcb" customClass="AlreadyMatchHelperViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ph4-Ad-aqb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1384,7 +1319,7 @@
                                 <rect key="frame" x="26" y="320" width="323" height="173"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rda-Hx-Rin">
-                                        <rect key="frame" x="21" y="61" width="281" height="36"/>
+                                        <rect key="frame" x="21" y="60" width="281" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="XJL-31-Nke"/>
                                             <constraint firstAttribute="height" constant="36" id="pPi-kO-QF4"/>
@@ -1396,7 +1331,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-WH-SGo">
-                                        <rect key="frame" x="70" y="112" width="183" height="38"/>
+                                        <rect key="frame" x="70" y="111" width="183" height="38"/>
                                         <color key="backgroundColor" name="buttonLeft"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="183" id="13y-aR-T3t"/>
@@ -1406,9 +1341,12 @@
                                         <state key="normal" title="확인">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedConfirm:" destination="nxu-L5-hcb" eventType="touchUpInside" id="1P7-tn-ttV"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앗! 이미 매칭된 헬퍼입니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-qi-8Ki">
-                                        <rect key="frame" x="21" y="28" width="281" height="21"/>
+                                        <rect key="frame" x="21" y="28" width="281" height="20"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>
@@ -1438,7 +1376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68v-HF-8BK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="1221"/>
+            <point key="canvasLocation" x="2462" y="567"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3aP-cy-zkm">
@@ -1620,6 +1558,7 @@
         <image name="helperImgChatAlarm" width="125.66666412353516" height="165.66667175292969"/>
         <image name="imgTimer" width="18" height="18"/>
         <image name="imgTimerYellow" width="18" height="18"/>
+        <image name="requestImgAlertReservewillson" width="104" height="96"/>
         <image name="requestImgAlertWillson" width="92.333335876464844" height="81"/>
         <image name="requestImgAlertWillson2" width="105.66666412353516" height="107.66666412353516"/>
         <image name="requestImgListprofile" width="55" height="55"/>

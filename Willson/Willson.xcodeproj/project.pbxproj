@@ -13,7 +13,6 @@
 		66316A2A22D20EED0033B519 /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66316A2922D20EED0033B519 /* UILabel_extension.swift */; };
 		6632768222D10671005DC6DC /* ChatHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6632768122D10671005DC6DC /* ChatHeaderTVC.swift */; };
 		6632768422D10686005DC6DC /* ChatHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6632768322D10686005DC6DC /* ChatHeaderTVC.xib */; };
-		663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663368C922CD36D800C3C694 /* PopUpViewController4.swift */; };
 		6633E3EB22D3CAE600DF81AC /* ServerString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3EA22D3CAE600DF81AC /* ServerString.swift */; };
 		6633E3F122D3D63100DF81AC /* UserSigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F022D3D63100DF81AC /* UserSigninService.swift */; };
 		6633E3F922D436D400DF81AC /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6633E3F822D436D300DF81AC /* SignIn.swift */; };
@@ -36,7 +35,6 @@
 		663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835C922CA3E54003265C7 /* HelperCollectionViewCell.swift */; };
 		663835CC22CA3EBC003265C7 /* HelperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663835CB22CA3EBC003265C7 /* HelperCollectionViewCell.xib */; };
 		663835D022CA6A53003265C7 /* HelperProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835CF22CA6A53003265C7 /* HelperProfileViewController.swift */; };
-		663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835D122CA87A8003265C7 /* PopUpViewController.swift */; };
 		663835D422CAFDD7003265C7 /* AskerSNSSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663835D322CAFDD7003265C7 /* AskerSNSSignUpViewController.swift */; };
 		663F829622CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */; };
 		663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */; };
@@ -51,10 +49,8 @@
 		66AF81B222CFAA7000722FF2 /* UINavigationbar_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B122CFAA6F00722FF2 /* UINavigationbar_Extension.swift */; };
 		66AF81B422CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */; };
 		66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */; };
-		66C661CE22CC8F3D008A451F /* PopUpViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */; };
 		66D7E07122D4F16300AC0C9B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7E07022D4F16300AC0C9B /* SignUp.swift */; };
 		66D7E07322D4F19300AC0C9B /* SignUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7E07222D4F19300AC0C9B /* SignUpData.swift */; };
-		66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */; };
 		66E5E78222CB809C00B43D93 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E78122CB809C00B43D93 /* PopUpVC.swift */; };
 		66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */; };
 		D915535222D1FB9C00A38390 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D915535122D1FB9C00A38390 /* Splash.storyboard */; };
@@ -73,6 +69,10 @@
 		D918A54B22D3ACD2001DCCBE /* HelperStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54A22D3ACD2001DCCBE /* HelperStory.swift */; };
 		D918A54D22D3ADC3001DCCBE /* HelperStoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */; };
 		D9209D5622D5D7C6001CA9F8 /* SearchingHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5522D5D7C6001CA9F8 /* SearchingHelperViewController.swift */; };
+		D9209D5822D5DABE001CA9F8 /* AskerNoRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5722D5DABE001CA9F8 /* AskerNoRequestViewController.swift */; };
+		D9209D5A22D5DB67001CA9F8 /* CantFindHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5922D5DB67001CA9F8 /* CantFindHelperViewController.swift */; };
+		D9209D5C22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5B22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift */; };
+		D9209D5E22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5D22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift */; };
 		D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */; };
 		D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */; };
 		D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */; };
@@ -128,7 +128,6 @@
 		66316A2922D20EED0033B519 /* UILabel_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel_extension.swift; sourceTree = "<group>"; };
 		6632768122D10671005DC6DC /* ChatHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderTVC.swift; sourceTree = "<group>"; };
 		6632768322D10686005DC6DC /* ChatHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatHeaderTVC.xib; sourceTree = "<group>"; };
-		663368C922CD36D800C3C694 /* PopUpViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController4.swift; sourceTree = "<group>"; };
 		6633E3EA22D3CAE600DF81AC /* ServerString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerString.swift; sourceTree = "<group>"; };
 		6633E3F022D3D63100DF81AC /* UserSigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninService.swift; sourceTree = "<group>"; };
 		6633E3F822D436D300DF81AC /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -151,7 +150,6 @@
 		663835C922CA3E54003265C7 /* HelperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperCollectionViewCell.swift; sourceTree = "<group>"; };
 		663835CB22CA3EBC003265C7 /* HelperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperCollectionViewCell.xib; sourceTree = "<group>"; };
 		663835CF22CA6A53003265C7 /* HelperProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperProfileViewController.swift; sourceTree = "<group>"; };
-		663835D122CA87A8003265C7 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		663835D322CAFDD7003265C7 /* AskerSNSSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSNSSignUpViewController.swift; path = Willson/AskerSNSSignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		663F829522CFFD9000EAD932 /* HelperEnrollExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollExperienceViewController.swift; path = "Willson/view controllers/helper/HelperEnrollExperienceViewController.swift"; sourceTree = SOURCE_ROOT; };
 		663F829722D0606800EAD932 /* HelperEnrollIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollIntroViewController.swift; path = "Willson/view controllers/helper/HelperEnrollIntroViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -166,10 +164,8 @@
 		66AF81B122CFAA6F00722FF2 /* UINavigationbar_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationbar_Extension.swift; sourceTree = "<group>"; };
 		66AF81B322CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollCategoryViewController.swift; path = "Willson/view controllers/helper/HelperEnrollCategoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		66AF81B522CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelperEnrollDetailCategoryViewController.swift; path = "Willson/view controllers/helper/HelperEnrollDetailCategoryViewController.swift"; sourceTree = SOURCE_ROOT; };
-		66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController3.swift; sourceTree = "<group>"; };
 		66D7E07022D4F16300AC0C9B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		66D7E07222D4F19300AC0C9B /* SignUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpData.swift; sourceTree = "<group>"; };
-		66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController2.swift; sourceTree = "<group>"; };
 		66E5E78122CB809C00B43D93 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		66E5E78322CBC2DC00B43D93 /* UIViewController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Extension.swift; sourceTree = "<group>"; };
 		9794B654C502E453FEF56F6A /* Pods_Willson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Willson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +186,10 @@
 		D918A54A22D3ACD2001DCCBE /* HelperStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStory.swift; sourceTree = "<group>"; };
 		D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStoryService.swift; sourceTree = "<group>"; };
 		D9209D5522D5D7C6001CA9F8 /* SearchingHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingHelperViewController.swift; sourceTree = "<group>"; };
+		D9209D5722D5DABE001CA9F8 /* AskerNoRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerNoRequestViewController.swift; sourceTree = "<group>"; };
+		D9209D5922D5DB67001CA9F8 /* CantFindHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CantFindHelperViewController.swift; sourceTree = "<group>"; };
+		D9209D5B22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = After5SearcingWillsonViewController.swift; sourceTree = "<group>"; };
+		D9209D5D22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyMatchHelperViewController.swift; sourceTree = "<group>"; };
 		D92C2C4A22CFFCEA004F7CAB /* FinishChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishChatViewController.swift; sourceTree = "<group>"; };
 		D92C2C4C22CFFD05004F7CAB /* CompleteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteReviewViewController.swift; sourceTree = "<group>"; };
 		D92C2C4E22D00A52004F7CAB /* ExaminHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExaminHelperViewController.swift; sourceTree = "<group>"; };
@@ -491,11 +491,11 @@
 				663835C822CA3A64003265C7 /* views */,
 				663835C322CA2A09003265C7 /* AskerRequestViewController.swift */,
 				663835CF22CA6A53003265C7 /* HelperProfileViewController.swift */,
-				663835D122CA87A8003265C7 /* PopUpViewController.swift */,
-				66E5E77F22CB500400B43D93 /* PopUpViewController2.swift */,
-				66C661CD22CC8F3D008A451F /* PopUpViewController3.swift */,
-				663368C922CD36D800C3C694 /* PopUpViewController4.swift */,
 				D9209D5522D5D7C6001CA9F8 /* SearchingHelperViewController.swift */,
+				D9209D5722D5DABE001CA9F8 /* AskerNoRequestViewController.swift */,
+				D9209D5922D5DB67001CA9F8 /* CantFindHelperViewController.swift */,
+				D9209D5B22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift */,
+				D9209D5D22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift */,
 			);
 			path = request;
 			sourceTree = "<group>";
@@ -816,6 +816,7 @@
 				D915F8A422CDCE60009DA734 /* AskerChatListViewController.swift in Sources */,
 				D9162FA922D4F4750018E471 /* ProblemDetailViewController.swift in Sources */,
 				663835D422CAFDD7003265C7 /* AskerSNSSignUpViewController.swift in Sources */,
+				D9209D5E22D5DE7C001CA9F8 /* AlreadyMatchHelperViewController.swift in Sources */,
 				663835D022CA6A53003265C7 /* HelperProfileViewController.swift in Sources */,
 				6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */,
 				66D7E07322D4F19300AC0C9B /* SignUpData.swift in Sources */,
@@ -823,11 +824,13 @@
 				D92C2C4B22CFFCEA004F7CAB /* FinishChatViewController.swift in Sources */,
 				D9BA14B422D2A3E5001FEC6D /* NoChatListTableViewCell.swift in Sources */,
 				6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */,
+				D9209D5C22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift in Sources */,
 				D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */,
 				D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */,
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
 				D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */,
 				D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */,
+				D9209D5A22D5DB67001CA9F8 /* CantFindHelperViewController.swift in Sources */,
 				6633E3F122D3D63100DF81AC /* UserSigninService.swift in Sources */,
 				66AF81B622CFC09100722FF2 /* HelperEnrollDetailCategoryViewController.swift in Sources */,
 				D9AC037422CE1A1100E16AD8 /* AskerList7_HelperExperienceViewController.swift in Sources */,
@@ -843,19 +846,16 @@
 				D9162FB422D519D20018E471 /* ProblemDetailTableViewCell.swift in Sources */,
 				D982BCC722CA0B2A00458662 /* AskerList2_FeelViewController.swift in Sources */,
 				663835C422CA2A09003265C7 /* AskerRequestViewController.swift in Sources */,
-				66C661CE22CC8F3D008A451F /* PopUpViewController3.swift in Sources */,
 				663F82A022D0A76800EAD932 /* HelperChatRoomViewController.swift in Sources */,
 				663835B522C9BAE3003265C7 /* AskerMainViewController.swift in Sources */,
 				D9162FB022D511870018E471 /* ProblemDetailTitleTableViewCell.swift in Sources */,
 				66E5E78422CBC2DC00B43D93 /* UIViewController_Extension.swift in Sources */,
 				66316A2622D202790033B519 /* AskerChatRoomViewController.swift in Sources */,
 				D9AC038622CE601C00E16AD8 /* FeelCollectionViewCell.swift in Sources */,
-				663835D222CA87A8003265C7 /* PopUpViewController.swift in Sources */,
-				66E5E78022CB500400B43D93 /* PopUpViewController2.swift in Sources */,
 				66AF81B222CFAA7000722FF2 /* UINavigationbar_Extension.swift in Sources */,
+				D9209D5822D5DABE001CA9F8 /* AskerNoRequestViewController.swift in Sources */,
 				D98BA5C422D0131500E72C02 /* HelperRequestCollectionViewCell.swift in Sources */,
 				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,
-				663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */,
 				663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */,
 				663F82AB22D0D7F700EAD932 /* ChatTableViewCell.swift in Sources */,
 				D918A54D22D3ADC3001DCCBE /* HelperStoryService.swift in Sources */,
