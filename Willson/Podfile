@@ -18,6 +18,8 @@ target 'Willson' do
   pod 'SwiftGifOrigin', '~> 1.7.0'  
   pod 'Toast-Swift', '~> 5.0.0'
   pod 'Firebase/Analytics', '~> 5.20.2'
+  pod 'Firebase/Auth', '~> 5.20.2'
+  pod 'Firebase/Database' 
   # Pods for Willson
 
 end

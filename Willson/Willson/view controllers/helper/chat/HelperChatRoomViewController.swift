@@ -7,12 +7,30 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import Alamofire
 
 class HelperChatRoomViewController: UIViewController {
 
     // MARK: - properties
+    // UITableViewCell Identifier
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     let chatHeaderTableViewCellIdentifier: String = "ChatHeaderTVC"
+    
+    // chatting
+    var uid : String?
+    var chatRoomUid : String?
+    
+    var comments : [ChatModel.Comment] = []
+    var destinationUserModel :UserModel?
+    
+    var databaseRef : DatabaseReference?
+    var observe : UInt?
+    var peopleCount : Int?
+    
+    
     //var isKeyboardAppear = false
     var isTextFieldActive = false
     
@@ -40,22 +58,33 @@ class HelperChatRoomViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = "리트리버" + " 님"
         
-        chatRoomTableView.delegate = self
-        chatRoomTableView.dataSource = self
-        
         textField.delegate = self
         
+        // 빈 화면 탭 하면 키보드 내리기
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         view.addGestureRecognizer(tap)
+        
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
+        
+        // chatting
+        uid = Auth.auth().currentUser?.uid
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // UITableView delegate, dataSource
+        chatRoomTableView.delegate = self
+        chatRoomTableView.dataSource = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-
+        
+        databaseRef?.removeObserver(withHandle: observe!)
     }
     
     // MARK: - IBAction
@@ -71,15 +100,6 @@ class HelperChatRoomViewController: UIViewController {
     // MARK: - Methods
     @objc func keyboardWillShow(notification: NSNotification) {
         /*
-        if isTextFieldActive {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y == 0{
-                    //self.view.frame.origin.y -= keyboardSize.height
-                    self.keyboardView.frame.origin.y -= keyboardSize.height
-                }
-            }
-        }
-         */
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
         
@@ -91,37 +111,37 @@ class HelperChatRoomViewController: UIViewController {
             self.textFieldViewBottom.constant = -keyboardHeight
         })
         self.view.layoutIfNeeded()
-
+         */
+        
+        if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+            self.textFieldViewBottom.constant = keyboardSize.height
+        }
+        
+        UIView.animate(withDuration: 0, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: {
+            (complete) in
+            
+            if self.comments.count > 0{
+                self.chatRoomTableView.scrollToRow(at: IndexPath(item:self.comments.count - 1,section:0), at: UITableView.ScrollPosition.bottom, animated: true)
+            }
+        })
     }
     
     
     @objc func keyboardWillHide(notification: NSNotification) {
         /*
-        if !isTextFieldActive {
-                if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                   //if self.view.frame.origin.y != 0{
-                        //self.view.frame.origin.y += keyboardSize.height
-                        self.keyboardView.frame.origin.y += keyboardSize.height
-                    //}
-                }
-        }
-         */
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             self.textFieldViewBottom.constant = 0
         })
+        */
         
+        self.textFieldViewBottom.constant = 0
         self.view.layoutIfNeeded()
 
     }
-   /*
-    func keyboardWasShown(notification: NSNotification) {
-        let info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        
-            keyboardView.bottomConstraint.constant = keyboardFrame.size.height + 20
-    }*/
 }
 
 // MARK: - UITableViewDelegate
@@ -146,7 +166,7 @@ extension HelperChatRoomViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension HelperChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageArray.count
+        return comments.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -155,6 +175,7 @@ extension HelperChatRoomViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
+        
         
         if userArray[indexPath.item] == 0 {
             if(indexPath.item != 0) {
@@ -182,6 +203,7 @@ extension HelperChatRoomViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         cell.separatorInset = UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
         return cell
+ 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

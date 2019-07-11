@@ -38,6 +38,9 @@ class HelperProfileViewController: UIViewController {
     var personalities: [HelperPersonality]?
     var helperID = 1
     
+    func viewWillAppear() {
+//        getHelperProfile()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         getHelperProfile()
@@ -55,9 +58,6 @@ class HelperProfileViewController: UIViewController {
         HelperReviewCV.dataSource = self
     }
     
-    func viewWillAppear() {
-         //getHelperProfile()
-    }
     func setNavigationBar() {
         self.navigationItem.title = "헬퍼 프로필"
     }
