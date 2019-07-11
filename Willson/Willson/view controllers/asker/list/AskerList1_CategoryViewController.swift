@@ -15,12 +15,15 @@ class AskerList1_CategoryViewController: UIViewController {
     var placeHolder = ""
     var categoryID: Int!
     var categoryTitle: String!
+    var tapCnt = 0
     
     var concernCategory: ConcernCategory?
     var dataList: ConcernCategoryData?
+    
     // MARK: - IBOutlet
     @IBOutlet weak var concernCollectionView: UICollectionView!
-
+    @IBOutlet weak var nextBtn: UIButton!
+    
     // MARK: - IBAction
     @IBAction func tappedCancelBarButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -33,10 +36,12 @@ class AskerList1_CategoryViewController: UIViewController {
         getCategory()
         // UICollectionView delegate, datasource
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
+        //let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         
-        view.addGestureRecognizer(tap) //밖의 뷰를 탭했을 경우
+        //view.addGestureRecognizer(tap) //밖의 뷰를 탭했을 경우
         //concernCell.addGestureRecognizer(tap) //셀을 탭했을 경우
+        //enableBtn()
+        concernCollectionView.allowsMultipleSelection = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,10 +61,22 @@ class AskerList1_CategoryViewController: UIViewController {
             }
         }
     }
-    
-    @objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
-        view.endEditing(true)
+
+    func enableBtn() {
+        if(tapCnt == 0 ) {
+            nextBtn.backgroundColor = #colorLiteral(red: 0.6196078431, green: 0.6196078431, blue: 0.6196078431, alpha: 1)
+            nextBtn.isEnabled = false
+        } else {
+            nextBtn.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
+            nextBtn.isEnabled = true
+        }
     }
+    
+    /*@objc func viewDidTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+        
+        
+    }*/
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "" {
@@ -75,6 +92,23 @@ extension AskerList1_CategoryViewController: UICollectionViewDelegate {
         
         cell.concernTextField.text = ""
         placeHolder = cell.concernTextField.text ?? ""
+        
+         cell.isSelected = !cell.isSelected
+        if (cell.isSelected)
+        {
+            cell.view.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
+            cell.concernLabel.textColor = UIColor.white
+            tapCnt = tapCnt - 1
+        }
+        else
+        {
+            cell.view.backgroundColor = UIColor.white
+            cell.concernLabel.textColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
+            tapCnt = tapCnt + 1
+        }
+        //cell.isSelected = !cell.isSelected
+       
+        print(tapCnt)
     }
     
 }
