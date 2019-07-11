@@ -98,12 +98,12 @@ extension HelperRequestViewController: UICollectionViewDelegate {
 extension HelperRequestViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return (concernListData?.concernInfo.count) ?? 0
+        return 2
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0: return 1
-        case 1: return 5
+        case 1: return (concernListData?.concernInfo.count) ?? 0
         default: return 0
         }
     }

@@ -22,7 +22,7 @@ struct ConcernListService {
                           method: .get,
                           parameters: nil,
                           encoding: JSONEncoding.default,
-                          headers: nil).responseData { response in
+                          headers: header).responseData { response in
                             switch response.result {
                             case .success(let data): do {
                                 let concernList = try JSONDecoder().decode(ConcernList.self, from: data)
