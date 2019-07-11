@@ -16,13 +16,37 @@ class HelperProfileViewController: UIViewController {
     @IBOutlet weak var startBtn: MDCFloatingButton!
     @IBOutlet weak var HelperReviewCV: UICollectionView!
     
+    //헬퍼 프로필 변수
+    @IBOutlet weak var nickname: UILabel!
+    @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var reviewCount: UILabel!
+    @IBOutlet weak var categoryName: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var personality1: UILabel!
+    @IBOutlet weak var personality2: UILabel!
+    @IBOutlet weak var personality3: UILabel!
+    @IBOutlet weak var stars: UILabel!
+    @IBOutlet weak var experiences: UILabel!
+    
+    
     var count = 0
     var reviews:[HelperReviewCollectionViewCell] = [];
+    var helperProfile: HelperProfile?
+    var helperProfileData: HelperProfileData?
+    var helper: [Helper]?
+    var experience: [Experience]?
+    var personalities: [HelperPersonality]?
+    var helperID = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getHelperProfile()
+        //setHelperProfile()
         setNavigationBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setHelperProfile()
         
         registerCVC()
         reviews = getReview()
@@ -30,15 +54,44 @@ class HelperProfileViewController: UIViewController {
         HelperReviewCV.dataSource = self
     }
     
+    func viewWillAppear() {
+         getHelperProfile()
+    }
     func setNavigationBar() {
         self.navigationItem.title = "헬퍼 프로필"
-        //self.setBackBtn(color: UIColor.black)
-        //self.setNavigationBarShadow()
+    }
+    
+    func getHelperProfile() {
+        HelperProfileService.shared.getProfile(helperID : helperID) {
+            helperProfile, statusCode  in
+            switch statusCode {
+            case 200:
+                self.helperProfile = helperProfile
+                self.helperProfileData = helperProfile.data
+                break;
+            default:
+                break;
+            }
+        }
     }
     
     func registerCVC() {
         let nibName = UINib(nibName: "HelperReviewCollectionViewCell", bundle: nil)
         HelperReviewCV.register(nibName, forCellWithReuseIdentifier: "HelperReviewCollectionViewCell")
+    }
+    
+    func setHelperProfile() {
+        nickname.text = helper?[0].nickname
+        info.text = "\(helper?[0].gender) / \(helper?[0].age)"
+        reviewCount.text = helper?[0].reviewCount
+        categoryName.text = helper?[0].categoryName
+        titleLabel.text = helper?[0].title
+        personality1.text = personalities?[0].personalityName
+        personality2.text = personalities?[1].personalityName
+        personality3.text = personalities?[2].personalityName
+        stars.text = helper?[0].stars
+        experiences.text = "# \(experience?[0])  # \(experience?[1])  #\(experience?[2])"
+        content.text = helper?[0].content
     }
     
     func getReview() -> [HelperReviewCollectionViewCell] {

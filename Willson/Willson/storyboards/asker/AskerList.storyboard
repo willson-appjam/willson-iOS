@@ -61,7 +61,7 @@
                                 <color key="backgroundColor" name="buttonRight"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyS-Zq-7mk">
-                                <rect key="frame" x="16" y="439" width="343" height="46.666666666666686"/>
+                                <rect key="frame" x="16" y="439" width="343" height="49"/>
                                 <string key="text">알맞은 헬퍼를 찾기 위해 간단한
 고민 리스트를 작성해주세요! </string>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
@@ -182,16 +182,16 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-U8-Jxi" customClass="CustonView" customModule="Willson" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="51"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="50"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+ 직접입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p76-A0-frK">
-                                                            <rect key="frame" x="0.0" y="16" width="154" height="19"/>
+                                                            <rect key="frame" x="0.0" y="15.666666666666664" width="154" height="19"/>
                                                             <color key="textColor" name="lightPurple"/>
                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aie-6k-pfT">
-                                                            <rect key="frame" x="0.0" y="16.666666666666668" width="154" height="18.000000000000004"/>
+                                                            <rect key="frame" x="0.0" y="16" width="154" height="18"/>
                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                             <color key="textColor" name="lightPurple"/>
                                                             <nil key="highlightedColor"/>
@@ -295,7 +295,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-Y1-wap">
-                                        <rect key="frame" x="37.333333333333329" y="131" width="248.33333333333337" height="40"/>
+                                        <rect key="frame" x="42.666666666666671" y="131" width="237.66666666666663" height="42"/>
                                         <string key="text">정말 그만두시겠어요?
 아직 하나도 작성하지 않으셨어요!</string>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
@@ -303,7 +303,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFf-cT-nyk">
-                                        <rect key="frame" x="70" y="188" width="183" height="38"/>
+                                        <rect key="frame" x="70" y="190" width="183" height="38"/>
                                         <color key="backgroundColor" name="buttonRight"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="183" id="Rh8-Zu-F2s"/>
@@ -321,7 +321,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-Tl-7jk">
-                                        <rect key="frame" x="137.66666666666666" y="241" width="48" height="27"/>
+                                        <rect key="frame" x="139" y="243" width="45" height="28"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="13"/>
                                         <state key="normal" title="취소하기">
                                             <color key="titleColor" name="brownishGrey"/>
@@ -379,19 +379,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 감정을 느꼈나요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-KJ-mzg">
-                                <rect key="frame" x="22" y="201.33333333333334" width="184.66666666666666" height="22.333333333333343"/>
+                                <rect key="frame" x="22" y="201.33333333333334" width="178" height="23.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1개만 선택해주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="867-mD-YBR">
-                                <rect key="frame" x="21.999999999999993" y="231.66666666666666" width="124.33333333333331" height="18"/>
+                                <rect key="frame" x="21.999999999999993" y="232.66666666666666" width="124.33333333333331" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="brownishGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GgO-lT-rDB">
-                                <rect key="frame" x="20" y="279.66666666666674" width="335" height="334.33333333333326"/>
+                                <rect key="frame" x="20" y="280.66666666666674" width="335" height="333.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pNC-00-AaH">
                                     <size key="itemSize" width="100" height="36"/>
@@ -535,25 +535,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일상에 얼마나 많은 영향을 주고 있나요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pz-nj-aVW">
-                                <rect key="frame" x="22" y="201.33333333333334" width="327.33333333333331" height="22.333333333333343"/>
+                                <rect key="frame" x="22" y="201.33333333333334" width="316" height="23.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영향이 클수록 큰 숫자를 골라주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-9z-bFH">
-                                <rect key="frame" x="21.999999999999986" y="231.66666666666666" width="225.66666666666663" height="18.666666666666657"/>
+                                <rect key="frame" x="21.999999999999986" y="232.66666666666666" width="225.66666666666663" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="brownishGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="1ZB-gG-7Su">
-                                <rect key="frame" x="45" y="305.33333333333331" width="285" height="39"/>
+                                <rect key="frame" x="45" y="306.33333333333331" width="285" height="39"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="00Z-mI-Vwf">
                                         <rect key="frame" x="0.0" y="0.0" width="32.333333333333336" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmh-qI-iFP">
-                                                <rect key="frame" x="11" y="0.0" width="10" height="17"/>
+                                                <rect key="frame" x="11.666666666666664" y="0.0" width="9" height="17"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
@@ -582,7 +582,7 @@
                                         <rect key="frame" x="63.333333333333329" y="0.0" width="32" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OK-QA-FBz">
-                                                <rect key="frame" x="11" y="0.0" width="10" height="17"/>
+                                                <rect key="frame" x="11.333333333333343" y="0.0" width="9" height="17"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
@@ -611,7 +611,7 @@
                                         <rect key="frame" x="126.33333333333333" y="0.0" width="32.333333333333329" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-vJ-cSc">
-                                                <rect key="frame" x="11.333333333333314" y="0.0" width="10" height="17"/>
+                                                <rect key="frame" x="11.666666666666657" y="0.0" width="9" height="17"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
@@ -640,7 +640,7 @@
                                         <rect key="frame" x="189.66666666666666" y="0.0" width="32" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-yf-1MN">
-                                                <rect key="frame" x="11" y="0.0" width="10" height="17"/>
+                                                <rect key="frame" x="11.666666666666686" y="0.0" width="9" height="17"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
@@ -669,7 +669,7 @@
                                         <rect key="frame" x="252.66666666666671" y="0.0" width="32.333333333333343" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2w-Df-YC0">
-                                                <rect key="frame" x="11.333333333333314" y="0.0" width="10" height="17"/>
+                                                <rect key="frame" x="11.666666666666629" y="0.0" width="9" height="17"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
@@ -767,7 +767,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구체적으로 어떤 내용인가요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-vj-e1a">
-                                <rect key="frame" x="22.000000000000014" y="201.33333333333334" width="239.33333333333337" height="22.333333333333343"/>
+                                <rect key="frame" x="22" y="201.33333333333334" width="230" height="22.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
@@ -1113,19 +1113,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 헬퍼와 이야기하고 싶나요? (3/3)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxf-Qc-ebx">
-                                <rect key="frame" x="22" y="201.33333333333334" width="314.33333333333331" height="22.333333333333343"/>
+                                <rect key="frame" x="22" y="201.33333333333334" width="297.66666666666669" height="23.333333333333343"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이런 경험을 가진 헬퍼를 원해요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fN-Gd-1Dl">
-                                <rect key="frame" x="22" y="268.33333333333331" width="231" height="20"/>
+                                <rect key="frame" x="21.999999999999986" y="268.33333333333331" width="222.66666666666663" height="21"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드를 작성해주시면 더 알맞은 헬퍼를 매칭해드릴게요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGA-3k-Hfw">
-                                <rect key="frame" x="22" y="294.33333333333331" width="331" height="37.333333333333314"/>
+                                <rect key="frame" x="22" y="295.33333333333331" width="331" height="37.333333333333314"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="brownishGrey"/>
                                 <nil key="highlightedColor"/>
@@ -1163,7 +1163,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-an-zmr">
-                                                <rect key="frame" x="0.0" y="7" width="30" height="18"/>
+                                                <rect key="frame" x="0.0" y="6.6666666666666288" width="30" height="18.666666666666668"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="ph4-wi-4Zh"/>
                                                 </constraints>
@@ -1204,7 +1204,7 @@
                                         <rect key="frame" x="0.0" y="43" width="329" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYc-6M-9WK">
-                                                <rect key="frame" x="0.0" y="7" width="30" height="18"/>
+                                                <rect key="frame" x="0.0" y="6.6666666666666288" width="30" height="18.666666666666668"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="PNX-OY-LZj"/>
                                                 </constraints>
@@ -1245,7 +1245,7 @@
                                         <rect key="frame" x="0.0" y="86" width="329" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Y-Z5-JVU">
-                                                <rect key="frame" x="0.0" y="7" width="30" height="18"/>
+                                                <rect key="frame" x="0.0" y="6.6666666666666288" width="30" height="18.666666666666668"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="F6I-CY-Sp0"/>
                                                 </constraints>
@@ -1338,7 +1338,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3개를 선택해주세요." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqD-Bm-anU">
-                                <rect key="frame" x="22" y="296.33333333333331" width="128.66666666666666" height="18"/>
+                                <rect key="frame" x="22" y="296.33333333333331" width="134" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="brownishGrey"/>
                                 <nil key="highlightedColor"/>
@@ -1537,37 +1537,37 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 대화 방향은 무엇인가요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7e-8V-1kq">
-                                                <rect key="frame" x="22" y="97" width="262.66666666666669" height="22.333333333333329"/>
+                                                <rect key="frame" x="22" y="97" width="253" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중요할수록 큰 숫자를 골라주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk4-bU-KoB">
-                                                <rect key="frame" x="22" y="125.33333333333336" width="207.33333333333334" height="18.666666666666671"/>
+                                                <rect key="frame" x="22" y="126.33333333333336" width="207.33333333333334" height="18.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="brownishGrey"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제 얘기에 대한 공감과 위로로 감정을 해소하고 싶어요." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-gZ-FRr">
-                                                <rect key="frame" x="22" y="226" width="331" height="37.333333333333314"/>
+                                                <rect key="frame" x="22" y="227" width="331" height="37.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="middlePurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공감을 얻고싶어요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV6-zp-giS">
-                                                <rect key="frame" x="22" y="197" width="135.66666666666666" height="20"/>
+                                                <rect key="frame" x="22" y="197" width="129.66666666666666" height="21"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-dZ-tEQ">
-                                                <rect key="frame" x="22" y="277.33333333333331" width="331" height="39"/>
+                                                <rect key="frame" x="22" y="278.33333333333331" width="331" height="39"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="253-bS-yGr">
                                                         <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EW-OJ-FQ8">
-                                                                <rect key="frame" x="15.666666666666664" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333336" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1596,7 +1596,7 @@
                                                         <rect key="frame" x="72.333333333333329" y="0.0" width="41.333333333333329" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-pZ-qXK">
-                                                                <rect key="frame" x="15.666666666666671" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333343" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1625,7 +1625,7 @@
                                                         <rect key="frame" x="144.66666666666666" y="0.0" width="41.666666666666657" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-dY-fIG">
-                                                                <rect key="frame" x="16" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333343" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1654,7 +1654,7 @@
                                                         <rect key="frame" x="217.33333333333334" y="0.0" width="41.333333333333343" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPP-Gn-tEn">
-                                                                <rect key="frame" x="15.666666666666657" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1683,7 +1683,7 @@
                                                         <rect key="frame" x="289.66666666666669" y="0.0" width="41.333333333333314" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5W-87-3qF">
-                                                                <rect key="frame" x="15.666666666666629" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1711,7 +1711,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuz-Xa-2uH">
-                                                <rect key="frame" x="22" y="410.33333333333331" width="331" height="37.333333333333314"/>
+                                                <rect key="frame" x="22" y="412.33333333333331" width="331" height="37.333333333333314"/>
                                                 <string key="text">저의 고민에 대한 현실적인 조언이 필요해요. 
 </string>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
@@ -1719,19 +1719,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="문제를 해결하고 싶어요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMQ-Od-gbb">
-                                                <rect key="frame" x="22" y="381.33333333333331" width="331" height="20"/>
+                                                <rect key="frame" x="22" y="382.33333333333331" width="331" height="21"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="YZJ-D3-FiV">
-                                                <rect key="frame" x="22" y="461.66666666666669" width="331" height="39"/>
+                                                <rect key="frame" x="22" y="463.66666666666669" width="331" height="39"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7sF-nY-UAs">
                                                         <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-Iq-v6U">
-                                                                <rect key="frame" x="15.666666666666664" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333336" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1760,7 +1760,7 @@
                                                         <rect key="frame" x="72.333333333333329" y="0.0" width="41.333333333333329" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zr-IV-Z50">
-                                                                <rect key="frame" x="15.666666666666671" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333343" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1789,7 +1789,7 @@
                                                         <rect key="frame" x="144.66666666666666" y="0.0" width="41.666666666666657" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um2-av-cPR">
-                                                                <rect key="frame" x="16" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333343" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1818,7 +1818,7 @@
                                                         <rect key="frame" x="217.33333333333334" y="0.0" width="41.333333333333343" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-fM-Mo9">
-                                                                <rect key="frame" x="15.666666666666657" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1847,7 +1847,7 @@
                                                         <rect key="frame" x="289.66666666666669" y="0.0" width="41.333333333333314" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WY-m5-Q1g">
-                                                                <rect key="frame" x="15.666666666666629" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1875,25 +1875,25 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저와 비슷한 상황에서 답변자분이 겪은 경험을 듣고 싶어요." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ux-Ea-OpM">
-                                                <rect key="frame" x="22" y="594.66666666666663" width="331" height="37.333333333333371"/>
+                                                <rect key="frame" x="22" y="597.66666666666663" width="331" height="37.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                                 <color key="textColor" name="middlePurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비슷한 경험을 듣고싶어요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAq-Uv-RX8">
-                                                <rect key="frame" x="22" y="565.66666666666663" width="331" height="20"/>
+                                                <rect key="frame" x="22" y="567.66666666666663" width="331" height="21"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="18"/>
                                                 <color key="textColor" name="darkPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="vlb-47-OOe">
-                                                <rect key="frame" x="22" y="646" width="331" height="39"/>
+                                                <rect key="frame" x="22" y="649" width="331" height="39"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qPx-61-rdE">
                                                         <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiI-yz-erZ">
-                                                                <rect key="frame" x="15.666666666666664" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333336" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1922,7 +1922,7 @@
                                                         <rect key="frame" x="72.333333333333329" y="0.0" width="41.333333333333329" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-na-edr">
-                                                                <rect key="frame" x="15.666666666666671" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333343" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1951,7 +1951,7 @@
                                                         <rect key="frame" x="144.66666666666666" y="0.0" width="41.666666666666657" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyN-e2-H9J">
-                                                                <rect key="frame" x="16" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16.333333333333343" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -1980,7 +1980,7 @@
                                                         <rect key="frame" x="217.33333333333334" y="0.0" width="41.333333333333343" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLK-A8-izj">
-                                                                <rect key="frame" x="15.666666666666657" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -2009,7 +2009,7 @@
                                                         <rect key="frame" x="289.66666666666669" y="0.0" width="41.333333333333314" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2p-id-Esr">
-                                                                <rect key="frame" x="15.666666666666629" y="0.0" width="10" height="17"/>
+                                                                <rect key="frame" x="16" y="0.0" width="9" height="17"/>
                                                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="16"/>
                                                                 <color key="textColor" name="darkPurple"/>
                                                                 <nil key="highlightedColor"/>
@@ -2158,7 +2158,7 @@
                                 <rect key="frame" x="0.0" y="96" width="375" height="602"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="윌슨 상담 동의서" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlK-XO-ChR">
-                                        <rect key="frame" x="22" y="49" width="331" height="23.333333333333329"/>
+                                        <rect key="frame" x="22" y="49" width="331" height="24.666666666666671"/>
                                         <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
                                         <color key="textColor" name="darkPurple"/>
                                         <nil key="highlightedColor"/>

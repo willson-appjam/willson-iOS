@@ -17,7 +17,7 @@ target 'Willson' do
   pod 'MaterialComponents/Buttons+Theming', '~> 85.2.0'
   pod 'SwiftGifOrigin', '~> 1.7.0'  
   pod 'Toast-Swift', '~> 5.0.0'
-  pod 'FirebaseAnalytics', '~> 5.8.1'
+  pod 'Firebase/Analytics', '~> 5.20.2'
   # Pods for Willson
 
 end

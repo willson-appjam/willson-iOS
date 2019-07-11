@@ -893,8 +893,18 @@
                     <size key="freeformSize" width="375" height="1300"/>
                     <connections>
                         <outlet property="HelperReviewCV" destination="2Gl-di-Ic0" id="oQN-Ft-v5F"/>
+                        <outlet property="categoryName" destination="1MO-J1-uCs" id="Chs-dB-N2b"/>
                         <outlet property="content" destination="M9y-I7-Ofp" id="05u-qI-eP8"/>
+                        <outlet property="experiences" destination="ADd-l6-B9v" id="q8a-iW-ecU"/>
+                        <outlet property="info" destination="Rcl-Ns-GK6" id="Gj1-bE-t3K"/>
+                        <outlet property="nickname" destination="3eO-Ow-eTW" id="BbR-hM-WJB"/>
+                        <outlet property="personality1" destination="Q4L-fs-bKK" id="blY-eI-964"/>
+                        <outlet property="personality2" destination="0CD-Vb-dkU" id="mSk-nb-rL2"/>
+                        <outlet property="personality3" destination="Btu-HQ-MyK" id="bFC-O1-M90"/>
+                        <outlet property="reviewCount" destination="NVb-b6-7fO" id="lP5-AF-NS6"/>
+                        <outlet property="stars" destination="NVb-b6-7fO" id="sUi-gQ-tkM"/>
                         <outlet property="startBtn" destination="8kV-kX-GNs" id="JSh-vL-1ca"/>
+                        <outlet property="titleLabel" destination="gbo-Pc-MpH" id="1pc-fE-U0O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9e-6l-1WT" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -93,7 +93,7 @@ extension AskerList1_CategoryViewController: UICollectionViewDelegate {
         cell.concernTextField.text = ""
         placeHolder = cell.concernTextField.text ?? ""
         
-         cell.isSelected = !cell.isSelected
+        cell.isSelected = !cell.isSelected
         if (cell.isSelected)
         {
             cell.view.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)

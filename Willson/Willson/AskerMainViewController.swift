@@ -53,8 +53,8 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slideList = createSlides()
         setupSlideScrollView(slides: slideList)
         
-        reviewSlides = createReviewSlides()
-        setupReviewSlideScrollView(reviewSlides: reviewSlides)
+        //reviewSlides = createReviewSlides()
+        //setupReviewSlideScrollView(reviewSlides: reviewSlides)
         
         scrollView.delegate = self
         AskerScrollView.delegate = self
@@ -298,8 +298,8 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    func createReviewSlides() -> [ReviewSlide] {
-        let ReviewSlide1:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
+    /*func createReviewSlides() -> [ReviewSlide] {
+       /let ReviewSlide1:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
        
         ReviewSlide1.category.text = reviewStoryData?[0].categoryName
         ReviewSlide1.content.text = reviewStoryData?[0].content
@@ -347,7 +347,7 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
             reviewSlides[i].frame = CGRect(x: AskerScrollView.frame.width * CGFloat(i), y: 0, width: AskerScrollView.frame.width, height: AskerScrollView.frame.height)
             AskerScrollView.addSubview(reviewSlides[i])
         }
-    }
+    }*/
     
     @objc func AskerScrollViewDidScroll(_ AskerScrollView: UIScrollView) {
         let pageIndex = round(AskerScrollView.contentOffset.x/view.frame.width)

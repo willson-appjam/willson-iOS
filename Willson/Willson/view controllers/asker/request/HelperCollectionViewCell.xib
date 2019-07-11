@@ -136,6 +136,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="profileBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="qZG-4e-cCO"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-hu-vre">
                                 <rect key="frame" x="58.5" y="137" width="216" height="24"/>

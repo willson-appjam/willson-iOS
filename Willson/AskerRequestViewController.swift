@@ -14,12 +14,13 @@ class AskerRequestViewController: UIViewController {
     //===================================
     //임시 데이터 저장 코드
     var helpers:[HelperCollectionViewCell] = [];
-    //var count = 300
-    var count = 10
+    var count = 300
     var timer = Timer()
     var startTimer = false
     var extended = false
     var completionHandlers: [() -> Void] = []
+    
+   
     //===================================
     
     // MARK: - IBOutlet
@@ -38,7 +39,7 @@ class AskerRequestViewController: UIViewController {
         helperCollectionView.delegate = self
         helperCollectionView.dataSource = self
         
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
         
 //        self.helperCollectionView.addGestureRecognizer(gesture)
     }
@@ -54,7 +55,7 @@ class AskerRequestViewController: UIViewController {
     }
     
     // MARK: - Methods
-    /*
+    
     @objc func goPage(sender:UIGestureRecognizer)
         
     {
@@ -64,7 +65,6 @@ class AskerRequestViewController: UIViewController {
         
         self.navigationController?.show(vc, sender: nil)
     }
-     */
     
     @objc func timeLimit() {
         let dateFormatter = DateFormatter()
