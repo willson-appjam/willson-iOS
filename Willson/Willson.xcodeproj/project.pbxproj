@@ -865,8 +865,6 @@
 				D98BA5C422D0131500E72C02 /* HelperRequestCollectionViewCell.swift in Sources */,
 				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,
 				6636406B22D5D64700FADC9F /* ConcernCategoryService.swift in Sources */,
-				663368CA22CD36D800C3C694 /* PopUpViewController4.swift in Sources */,
-				663835CA22CA3E54003265C7 /* HelperCollectionViewCell.swift in Sources */,
 				663F82AB22D0D7F700EAD932 /* ChatTableViewCell.swift in Sources */,
 				D918A54D22D3ADC3001DCCBE /* HelperStoryService.swift in Sources */,
 				6633E3EB22D3CAE600DF81AC /* ServerString.swift in Sources */,
@@ -1027,7 +1025,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3V828TVJJT;
+				DEVELOPMENT_TEAM = 3R397P7C4Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1085,7 +1083,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3V828TVJJT;
+				DEVELOPMENT_TEAM = 3R397P7C4Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
