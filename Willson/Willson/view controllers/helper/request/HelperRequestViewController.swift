@@ -17,6 +17,8 @@ class HelperRequestViewController: UIViewController {
     private var rightBarButton = UIBarButtonItem()
     var concernList: ConcernList?
     var concernListData: ConcernListData?
+    var concernInfoList: [ConcernInfo]?
+    
     // MARK: - IBOutlet
     @IBOutlet weak var helperRequestCollectionView: UICollectionView!
     
@@ -73,7 +75,7 @@ class HelperRequestViewController: UIViewController {
             case 200:
                 self.concernList = concernList
                 self.concernListData = self.concernList?.data
-                //self.concernInfo = self.concernListData?.concernInfo
+                self.concernInfoList = self.concernListData?.concernInfo
                 break;
             default:
                 break;
@@ -114,11 +116,16 @@ extension HelperRequestViewController: UICollectionViewDataSource {
             guard let cell: HelperRequestTitleCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestTitleCollectionCellIdentifier, for: indexPath) as? HelperRequestTitleCollectionViewCell else { return UICollectionViewCell() }
             return cell
         case 1:
+            let userInfo: UserInfo = self.concernInfoList?[indexPath.item].userInfo ?? UserInfo(userIdx: 0, nickname: "", gender: "", age: "")
+            let questionInfo: QuestionInfo = self.concernInfoList?[indexPath.item].questionInfo ?? QuestionInfo(title: "", questionIdx: 0, createTime: "", selected: "")
+            let categoryInfo: CategoryInfo = concernInfoList?[indexPath.item].categoryInfo ?? CategoryInfo(categoryIdx: 0, categoryName: "")
+            
             guard let cell: HelperRequestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell else { return UICollectionViewCell() }
-            cell.nickname.text = concernListData?.concernInfo[indexPath.item].userInfo.nickname ?? ""
-            cell.detailInfo.text = "(\(concernListData?.concernInfo[indexPath.item].userInfo.gender ?? "") / \(String(describing: concernListData?.concernInfo[indexPath.item].userInfo.age)))"
-            cell.category.text = concernListData?.concernInfo[indexPath.item].categoryInfo.categoryName ?? ""
-            cell.content.text = concernListData?.concernInfo[indexPath.item].questionInfo.title
+            
+            cell.nickname.text = userInfo.nickname
+            cell.detailInfo.text = "\(userInfo.gender) / \(userInfo.gender)"
+            cell.category.text = categoryInfo.categoryName
+            cell.content.text = "\"\(questionInfo.title)\""
             
             return cell
         default:

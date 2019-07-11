@@ -44,7 +44,7 @@ struct QuestionInfo: Codable {
     let title: String
     let questionIdx: Int
     let createTime: String
-    let selected: Selected
+    let selected: String
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -54,31 +54,15 @@ struct QuestionInfo: Codable {
     }
 }
 
-enum Selected: String, Codable {
-    case n = "N"
-    case y = "Y"
-}
-
 // MARK: - UserInfo
 struct UserInfo: Codable {
     let userIdx: Int
     let nickname: String
     let gender: String
-    let age: Age
+    let age: String
     
     enum CodingKeys: String, CodingKey {
         case userIdx = "user_idx"
         case nickname, gender, age
     }
 }
-
-enum Age: String, Codable {
-    case the20대중반 = "20대 중반"
-    case the20대초반 = "20대 초반"
-    case the20대후반 = "20대 후반"
-}
-
-enum Gender: String, Codable {
-    case 여성 = "여성"
-}
-
