@@ -14,13 +14,20 @@ class ProblemDetailViewController: UIViewController {
     let problemDetailTitleTableViewCellIdentifier = "ProblemDetailTitleTableViewCell"
     let problemDetailTableViewCellIdnetifier = "ProblemDetailTableViewCell"
     
+    var userProfile: UserProfile?
+    var userProfileData: UserProfileData?
+    var user: User?
+    var userPersonality: [Personality]?
+    var question: UserQuestion?
+    var userID = 1
+    
     // MARK: - IBOutlet
     @IBOutlet weak var problemDetailTableView: UITableView!
 
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getUserProfile()
         // UITableView delegate, dataSource
         problemDetailTableView.delegate = self
         problemDetailTableView.dataSource = self
@@ -28,10 +35,28 @@ class ProblemDetailViewController: UIViewController {
         self.problemDetailTableView.separatorStyle = .none
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
     // MARK: - IBAction
     
     // MARK: - Methods
-
+    func getUserProfile() {
+        UserProfileService.shared.getProfile(userID: userID) {
+            userProfile, statusCode in
+            switch statusCode {
+            case 200:
+                self.userProfile = userProfile
+                self.userProfileData = userProfile.data
+                self.user = self.userProfileData?.user
+                self.userPersonality = self.userProfileData?.userPersonality
+                self.question = self.userProfileData?.question
+                break;
+            default:
+                break;
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -70,32 +95,36 @@ extension ProblemDetailViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell: ProblemDetailTitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTitleTableViewCellIdentifier, for: indexPath) as? ProblemDetailTitleTableViewCell else { return UITableViewCell() }
+            cell.nickname.text = user?.nickname
+            cell.detailInfo.text = "\(user?.gender ?? "") / \(user?.age ?? "")"
+            
             return cell
         case 1:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
-            cell.contentLabel.text = "#짝사랑"
+            cell.contentLabel.text = "# \(question?.categoryListName ?? "")"
             return cell
         case 2:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
-            cell.contentLabel.text = "#어색한, #질투나는, #슬픈, #무기력한"
+            cell.contentLabel.text = "#\(question?.questionFeeling[0].feelingName ?? ""), #\(question?.questionFeeling[1].feelingName ?? ""), #\(question?.questionFeeling[2].feelingName ?? "")"
             return cell
         case 3:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
-            cell.contentLabel.text = "3: 일상생활에 지장을 주는 정도"
+            var weight = question?.weight 
+            cell.contentLabel.text = "\(String(describing: weight))) / 5 "
             return cell
         case 4:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
-            cell.contentLabel.text = "학창시절 음악이 너무나도 하고 싶었던 저는 부모님의 반대에 부딪혀 많이 좌절하곤 했었습니다."
+            cell.contentLabel.text = "\(question?.content ?? "")"
             return cell
         case 5:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
             switch indexPath.row {
             case 0:
-                cell.contentLabel.text = "성별: 여자"
+                cell.contentLabel.text = "성별: \(question?.helperGender ?? "")"
             case 1:
-                cell.contentLabel.text = "성격: #감성적인, #신중한"
+                cell.contentLabel.text = "성격: #\(question?.questionPersonality[0].personalityName ?? ""), #\(question?.questionPersonality[0].personalityName ?? ""), ##\(question?.questionPersonality[0].personalityName ?? "")"
             case 2:
-                cell.contentLabel.text = "경험: #이별, #다툼, #우울"
+                cell.contentLabel.text = "경험: #\(question?.questionFeeling[0].feelingName ?? ""), #\(question?.questionFeeling[1].feelingName ?? ""), #\(question?.questionFeeling[2].feelingName ?? "")"
             default: break
             }
             return cell

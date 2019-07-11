@@ -167,6 +167,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="category" destination="Cwz-sE-Thl" id="qr4-pZ-e2r"/>
+                <outlet property="content" destination="9bh-X3-MBH" id="IOz-gm-wsH"/>
+                <outlet property="detailInfo" destination="O2G-rO-5Tv" id="MvZ-th-xbS"/>
+                <outlet property="nickname" destination="Cnv-Ul-HdO" id="C3O-JV-jR8"/>
+                <outlet property="personality1" destination="pT1-ro-rDJ" id="YRo-sE-x97"/>
+                <outlet property="personality2" destination="RZJ-Gi-SU1" id="gc1-aH-JNg"/>
+                <outlet property="personality3" destination="7ZF-I0-Gcb" id="FhR-zl-VFm"/>
+            </connections>
             <point key="canvasLocation" x="138.40579710144928" y="116.85267857142857"/>
         </tableViewCell>
     </objects>
