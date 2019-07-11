@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import Alamofire
 
 class HelperChatRoomViewController: UIViewController {
 
     // MARK: - properties
+    // UITableViewCell Identifier
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     let chatHeaderTableViewCellIdentifier: String = "ChatHeaderTVC"
+    
+    // chatting
+    var uid : String?
+    var chatRoomUid : String?
+    
+//    var comments : [ChatModel.Comment] = []
+//    var destinationUserModel :UserModel?
+    
+//    var databaseRef : DatabaseReference?
+    var observe : UInt?
+    var peopleCount : Int?
+    
+    
     //var isKeyboardAppear = false
     var isTextFieldActive = false
     
@@ -40,22 +57,33 @@ class HelperChatRoomViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = "리트리버" + " 님"
         
-        chatRoomTableView.delegate = self
-        chatRoomTableView.dataSource = self
-        
         textField.delegate = self
         
+        // 빈 화면 탭 하면 키보드 내리기
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         view.addGestureRecognizer(tap)
+        
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
+        
+        // chatting
+        uid = Auth.auth().currentUser?.uid
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // UITableView delegate, dataSource
+        chatRoomTableView.delegate = self
+        chatRoomTableView.dataSource = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-
+        
+//        databaseRef?.removeObserver(withHandle: observe!)
     }
     
     // MARK: - IBAction
