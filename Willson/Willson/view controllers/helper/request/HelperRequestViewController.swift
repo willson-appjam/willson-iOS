@@ -15,17 +15,17 @@ class HelperRequestViewController: UIViewController {
     let requestCollectionCellIdentifier: String = "HelperRequestCollectionViewCell"
     
     private var rightBarButton = UIBarButtonItem()
-
+    var concernList: ConcernList?
+    var concernListData: ConcernListData?
     // MARK: - IBOutlet
     @IBOutlet weak var helperRequestCollectionView: UICollectionView!
     
     // MARK: - life cycle
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // UICollectionView delegate, dataSource
-        helperRequestCollectionView.delegate = self
-        helperRequestCollectionView.dataSource = self
+         getConcernList()
         
         // UINavagationBar Title Logo
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "imgLogo"))
@@ -58,9 +58,29 @@ class HelperRequestViewController: UIViewController {
         self.tabBarController?.tabBar.backgroundImage = UIImage()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // UICollectionView delegate, dataSource
+        helperRequestCollectionView.delegate = self
+        helperRequestCollectionView.dataSource = self
+    }
     // MARK: - IBAction
     
     // MARK: - Methods
+    func getConcernList() {
+        ConcernListService.shared.getConcernList() {
+            concernList, statusCode in
+            switch statusCode {
+            case 200:
+                self.concernList = concernList
+                self.concernListData = self.concernList?.data
+                //self.concernInfo = self.concernListData?.concernInfo
+                break;
+            default:
+                break;
+            }
+        }
+    }
+    
     @objc func someAction() {
         let storyboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
@@ -78,7 +98,7 @@ extension HelperRequestViewController: UICollectionViewDelegate {
 extension HelperRequestViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return (concernListData?.concernInfo.count) ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
@@ -95,6 +115,11 @@ extension HelperRequestViewController: UICollectionViewDataSource {
             return cell
         case 1:
             guard let cell: HelperRequestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell else { return UICollectionViewCell() }
+            cell.nickname.text = concernListData?.concernInfo[indexPath.item].userInfo.nickname ?? ""
+            cell.detailInfo.text = "(\(concernListData?.concernInfo[indexPath.item].userInfo.gender ?? "") / \(String(describing: concernListData?.concernInfo[indexPath.item].userInfo.age)))"
+            cell.category.text = concernListData?.concernInfo[indexPath.item].categoryInfo.categoryName ?? ""
+            cell.content.text = concernListData?.concernInfo[indexPath.item].questionInfo.title
+            
             return cell
         default:
             return UICollectionViewCell()

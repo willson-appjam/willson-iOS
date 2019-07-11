@@ -25,18 +25,22 @@ class ProblemDetailViewController: UIViewController {
     @IBOutlet weak var problemDetailTableView: UITableView!
 
     // MARK: - life cycle
+    override func viewWillAppear(_ animated: Bool) {
+        getUserProfile()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUserProfile()
+        //getUserProfile()
         // UITableView delegate, dataSource
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         problemDetailTableView.delegate = self
         problemDetailTableView.dataSource = self
         
         self.problemDetailTableView.separatorStyle = .none
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
     }
     // MARK: - IBAction
     
@@ -95,7 +99,7 @@ extension ProblemDetailViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell: ProblemDetailTitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTitleTableViewCellIdentifier, for: indexPath) as? ProblemDetailTitleTableViewCell else { return UITableViewCell() }
-            cell.nickname.text = user?.nickname
+            cell.nickname.text = user?.nickname ?? ""
             cell.detailInfo.text = "\(user?.gender ?? "") / \(user?.age ?? "")"
             
             return cell

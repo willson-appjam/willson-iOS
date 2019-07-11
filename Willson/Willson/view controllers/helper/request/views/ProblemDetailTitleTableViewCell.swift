@@ -25,10 +25,10 @@ class ProblemDetailTitleTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        category.sizeToFit()
-        personality1.sizeToFit()
-        personality2.sizeToFit()
-        personality3.sizeToFit()
+        //category.sizeToFit()
+//        personality1.sizeToFit()
+//        personality2.sizeToFit()
+//        personality3.sizeToFit()
     }
     
 }

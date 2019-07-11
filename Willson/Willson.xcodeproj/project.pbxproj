@@ -25,6 +25,8 @@
 		6634344722C755B500D419EC /* AskerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344622C755B500D419EC /* AskerLoginViewController.swift */; };
 		6634344922C7BEE600D419EC /* AskerSignUpViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344822C7BEE600D419EC /* AskerSignUpViewController1.swift */; };
 		6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6634344A22C7BF0300D419EC /* AskerSignUpViewController2.swift */; };
+		6635960A22D78FCC005A29A1 /* ConcernList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6635960922D78FCC005A29A1 /* ConcernList.swift */; };
+		6635960C22D78FF5005A29A1 /* ConcernListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6635960B22D78FF5005A29A1 /* ConcernListService.swift */; };
 		6636406522D5D3DB00FADC9F /* ConcernCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406422D5D3DB00FADC9F /* ConcernCategory.swift */; };
 		6636406B22D5D64700FADC9F /* ConcernCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */; };
 		6636406D22D660F500FADC9F /* ConcernFeeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636406C22D660F500FADC9F /* ConcernFeeling.swift */; };
@@ -153,6 +155,8 @@
 		6634344622C755B500D419EC /* AskerLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerLoginViewController.swift; path = Willson/AskerLoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		6634344822C7BEE600D419EC /* AskerSignUpViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSignUpViewController1.swift; path = "Willson/supporting files/fonts/AskerSignUpViewController1.swift"; sourceTree = SOURCE_ROOT; };
 		6634344A22C7BF0300D419EC /* AskerSignUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AskerSignUpViewController2.swift; path = "Willson/supporting files/fonts/AskerSignUpViewController2.swift"; sourceTree = SOURCE_ROOT; };
+		6635960922D78FCC005A29A1 /* ConcernList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernList.swift; sourceTree = "<group>"; };
+		6635960B22D78FF5005A29A1 /* ConcernListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernListService.swift; sourceTree = "<group>"; };
 		6636406422D5D3DB00FADC9F /* ConcernCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCategory.swift; sourceTree = "<group>"; };
 		6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCategoryService.swift; sourceTree = "<group>"; };
 		6636406C22D660F500FADC9F /* ConcernFeeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernFeeling.swift; sourceTree = "<group>"; };
@@ -421,6 +425,7 @@
 				6636407622D6818400FADC9F /* ConcernPersonalityService.swift */,
 				6677EA4822D7214000A34D32 /* UserProfileService.swift */,
 				6677EA4C22D72FC000A34D32 /* HelperProfileService.swift */,
+				6635960B22D78FF5005A29A1 /* ConcernListService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				6677EA4422D71F3200A34D32 /* ConcernQuestion.swift */,
 				6677EA4622D7207800A34D32 /* UserProfile.swift */,
 				6677EA4A22D72F6000A34D32 /* HelperProfile.swift */,
+				6635960922D78FCC005A29A1 /* ConcernList.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -826,6 +832,7 @@
 			files = (
 				6636406522D5D3DB00FADC9F /* ConcernCategory.swift in Sources */,
 				D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */,
+				6635960C22D78FF5005A29A1 /* ConcernListService.swift in Sources */,
 				6633E3F922D436D400DF81AC /* SignIn.swift in Sources */,
 				660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
@@ -909,6 +916,7 @@
 				D98BA5C422D0131500E72C02 /* HelperRequestCollectionViewCell.swift in Sources */,
 				D9AC036A22CDEB7200E16AD8 /* HelperModeProfileViewController.swift in Sources */,
 				6636406B22D5D64700FADC9F /* ConcernCategoryService.swift in Sources */,
+				6635960A22D78FCC005A29A1 /* ConcernList.swift in Sources */,
 				663F82AB22D0D7F700EAD932 /* ChatTableViewCell.swift in Sources */,
 				D918A54D22D3ADC3001DCCBE /* HelperStoryService.swift in Sources */,
 				6633E3EB22D3CAE600DF81AC /* ServerString.swift in Sources */,

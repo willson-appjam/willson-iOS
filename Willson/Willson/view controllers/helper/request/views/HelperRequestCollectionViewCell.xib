@@ -173,6 +173,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="256" height="246"/>
+            <connections>
+                <outlet property="category" destination="fJW-4D-hAX" id="bZF-2D-sn7"/>
+                <outlet property="content" destination="ZK5-eH-XKJ" id="j7i-Lg-BvS"/>
+                <outlet property="detailInfo" destination="4Ig-BI-WFR" id="Xk5-fo-hYs"/>
+                <outlet property="nickname" destination="uhI-A7-tU4" id="jQx-6v-4jT"/>
+                <outlet property="timer" destination="aM4-Ew-02U" id="rgx-09-eLy"/>
+            </connections>
             <point key="canvasLocation" x="286.23188405797106" y="68.303571428571431"/>
         </collectionViewCell>
     </objects>

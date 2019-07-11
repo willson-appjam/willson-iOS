@@ -10,6 +10,13 @@ import UIKit
 
 class HelperRequestCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var timer: UIView!
+    @IBOutlet weak var nickname: UILabel!
+    @IBOutlet weak var detailInfo: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var content: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
