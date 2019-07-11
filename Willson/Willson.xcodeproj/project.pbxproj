@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		46BD78418D4087C1A660D9DE /* Pods_Willson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794B654C502E453FEF56F6A /* Pods_Willson.framework */; };
 		660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */; };
+		6630B3B322D7C38600E397BA /* HelperList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630B3B222D7C38600E397BA /* HelperList.swift */; };
+		6630B3B522D7C3C100E397BA /* HelperListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630B3B422D7C3C100E397BA /* HelperListService.swift */; };
 		66316A2622D202790033B519 /* AskerChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66316A2522D202790033B519 /* AskerChatRoomViewController.swift */; };
 		66316A2A22D20EED0033B519 /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66316A2922D20EED0033B519 /* UILabel_extension.swift */; };
 		6632768222D10671005DC6DC /* ChatHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6632768122D10671005DC6DC /* ChatHeaderTVC.swift */; };
@@ -142,6 +144,8 @@
 /* Begin PBXFileReference section */
 		1BAEDD6E774F4EB08452D077 /* Pods-Willson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Willson.release.xcconfig"; path = "Target Support Files/Pods-Willson/Pods-Willson.release.xcconfig"; sourceTree = "<group>"; };
 		660D086222CCEAAC00FD3F5C /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = Willson/MyPageViewController.swift; sourceTree = SOURCE_ROOT; };
+		6630B3B222D7C38600E397BA /* HelperList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperList.swift; sourceTree = "<group>"; };
+		6630B3B422D7C3C100E397BA /* HelperListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperListService.swift; sourceTree = "<group>"; };
 		66316A2522D202790033B519 /* AskerChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerChatRoomViewController.swift; sourceTree = "<group>"; };
 		66316A2922D20EED0033B519 /* UILabel_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel_extension.swift; sourceTree = "<group>"; };
 		6632768122D10671005DC6DC /* ChatHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderTVC.swift; sourceTree = "<group>"; };
@@ -433,6 +437,7 @@
 				6677EA4822D7214000A34D32 /* UserProfileService.swift */,
 				6677EA4C22D72FC000A34D32 /* HelperProfileService.swift */,
 				6635960B22D78FF5005A29A1 /* ConcernListService.swift */,
+				6630B3B422D7C3C100E397BA /* HelperListService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 				6635960922D78FCC005A29A1 /* ConcernList.swift */,
 				D9B9E8C922D7A6790058B8E7 /* ChatModel.swift */,
 				D9B9E8CB22D7A8110058B8E7 /* UserModel.swift */,
+				6630B3B222D7C38600E397BA /* HelperList.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -859,6 +865,8 @@
 				D9AC038222CE1DA400E16AD8 /* ConcernCollectionViewCell.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6636406F22D6611900FADC9F /* ConcernFeelingService.swift in Sources */,
+				6630B3B522D7C3C100E397BA /* HelperListService.swift in Sources */,
+				6630B3B322D7C38600E397BA /* HelperList.swift in Sources */,
 				66AF81B022CFA4DC00722FF2 /* HelperEnrollStartViewController.swift in Sources */,
 				66AF81B422CFAB9600722FF2 /* HelperEnrollCategoryViewController.swift in Sources */,
 				66D7E07122D4F16300AC0C9B /* SignUp.swift in Sources */,
