@@ -71,6 +71,8 @@ class HelperChatRoomViewController: UIViewController {
         
         // chatting
         uid = Auth.auth().currentUser?.uid
+        
+        createRoom()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,6 +81,9 @@ class HelperChatRoomViewController: UIViewController {
         // UITableView delegate, dataSource
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
+        
+        // chatting
+        checkChatRoom()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

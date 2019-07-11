@@ -26,7 +26,7 @@ struct HelperListService {
                           headers: header).responseData { response in
                             switch response.result {
                             case .success(let data): do {
-                                let concernCategory = try JSONDecoder().decode(HelperList.self, from: data)
+                                let helperList = try JSONDecoder().decode(HelperList.self, from: data)
                                 guard let statusCode = response.response?.statusCode else { return }
                                 completionHandler(helperList, statusCode)
                                 print("**************helper list success*************")
