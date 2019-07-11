@@ -388,6 +388,7 @@
                     <connections>
                         <outlet property="chatRoomTableView" destination="uRM-dt-heb" id="V8D-Zj-wBd"/>
                         <outlet property="keyboardView" destination="Ky8-DU-Vfe" id="FbQ-5e-8dm"/>
+                        <outlet property="sendButton" destination="xz1-YR-yzW" id="fSF-NR-R1a"/>
                         <outlet property="textField" destination="iKQ-7N-Qaf" id="znc-an-3Pc"/>
                         <outlet property="textFieldViewBottom" destination="p1r-i8-MUF" id="Exj-4n-3Gv"/>
                     </connections>
