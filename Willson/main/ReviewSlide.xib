@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uQ-II-WSx" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="333" height="205"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P9m-lM-r84">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9m-lM-r84">
                             <rect key="frame" x="0.0" y="76.333333333333329" width="333" height="56.666666666666671"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <string key="text">“ 큰 기대하지 않고 진로에 대한 고민을 신청했는데

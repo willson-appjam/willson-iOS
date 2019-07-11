@@ -201,7 +201,7 @@
                                                                         <constraint firstAttribute="height" constant="1" id="bQg-xu-Gbv"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-9O-GjN">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-9O-GjN">
                                                                     <rect key="frame" x="15" y="175" width="303" height="41"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <string key="text">“ 진로 선택에 있어
@@ -728,7 +728,7 @@
                                                         <color key="textColor" name="darkPurple"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9y-I7-Ofp">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9y-I7-Ofp">
                                                         <rect key="frame" x="16" y="501" width="343" height="202"/>
                                                         <color key="backgroundColor" name="bgColor"/>
                                                         <constraints>

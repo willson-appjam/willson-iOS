@@ -55,7 +55,7 @@ class HelperProfileViewController: UIViewController {
     }
     
     func viewWillAppear() {
-         getHelperProfile()
+         //getHelperProfile()
     }
     func setNavigationBar() {
         self.navigationItem.title = "헬퍼 프로필"
