@@ -43,6 +43,7 @@ class HelperProfileViewController: UIViewController {
         getHelperProfile()
         //setHelperProfile()
         setNavigationBar()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,6 +69,9 @@ class HelperProfileViewController: UIViewController {
             case 200:
                 self.helperProfile = helperProfile
                 self.helperProfileData = helperProfile.data
+                self.helper = self.helperProfileData?.helper
+                self.experience = self.helperProfileData?.experience
+                self.personalities = self.helperProfileData?.personality
                 break;
             default:
                 break;
@@ -82,15 +86,15 @@ class HelperProfileViewController: UIViewController {
     
     func setHelperProfile() {
         nickname.text = helper?[0].nickname
-        info.text = "\(helper?[0].gender) / \(helper?[0].age)"
+        info.text = "\(helper?[0].gender ?? "") / \(helper?[0].age ?? "")"
         reviewCount.text = helper?[0].reviewCount
         categoryName.text = helper?[0].categoryName
         titleLabel.text = helper?[0].title
-        personality1.text = personalities?[0].personalityName
-        personality2.text = personalities?[1].personalityName
-        personality3.text = personalities?[2].personalityName
+        personality1.text = "# \(personalities?[0].personalityName ?? "")"
+        personality2.text = "# \(personalities?[1].personalityName ?? "")"
+        personality3.text = "# \(personalities?[2].personalityName ?? "")"
         stars.text = helper?[0].stars
-        experiences.text = "# \(experience?[0])  # \(experience?[1])  #\(experience?[2])"
+        experiences.text = "# \(experience?[0].experienceName ?? "")  # \(experience?[1].experienceName ?? "")  #\(experience?[2].experienceName ?? "")"
         content.text = helper?[0].content
     }
     

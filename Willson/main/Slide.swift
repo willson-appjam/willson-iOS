@@ -17,9 +17,7 @@ class Slide: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
-        
+           
         name.sizeToFit()
         category.sizeToFit()
         content.sizeToFit()

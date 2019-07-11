@@ -53,8 +53,8 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
         slideList = createSlides()
         setupSlideScrollView(slides: slideList)
         
-        //reviewSlides = createReviewSlides()
-        //setupReviewSlideScrollView(reviewSlides: reviewSlides)
+        reviewSlides = createReviewSlides()
+        setupReviewSlideScrollView(reviewSlides: reviewSlides)
         
         scrollView.delegate = self
         AskerScrollView.delegate = self
@@ -303,37 +303,37 @@ class AskerMainViewController: UIViewController, UIScrollViewDelegate {
        
         ReviewSlide1.category.text = reviewStoryData?[0].categoryName
         ReviewSlide1.content.text = reviewStoryData?[0].content
-        ReviewSlide1.asker.text = "- \(reviewStoryData?[0].nickname)님-"
+        ReviewSlide1.asker.text = "- \(reviewStoryData?[0].nickname ?? "")님-"
         
         let ReviewSlide2:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide2.category.text = reviewStoryData?[1].categoryName
         ReviewSlide2.content.text = reviewStoryData?[1].content
-        ReviewSlide2.asker.text = "- \(reviewStoryData?[1].nickname)님-"
+        ReviewSlide2.asker.text = "- \(reviewStoryData?[1].nickname ?? "")님-"
         
         let ReviewSlide3:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide3.category.text = reviewStoryData?[2].categoryName
         ReviewSlide3.content.text = reviewStoryData?[2].content
-        ReviewSlide3.asker.text = "- \(reviewStoryData?[2].nickname)님-"
+        ReviewSlide3.asker.text = "- \(reviewStoryData?[2].nickname ?? "")님-"
         
         let ReviewSlide4:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide4.category.text = reviewStoryData?[3].categoryName
         ReviewSlide4.content.text = reviewStoryData?[3].content
-        ReviewSlide4.asker.text = "- \(reviewStoryData?[3].nickname)님-"
+        ReviewSlide4.asker.text = "- \(reviewStoryData?[3].nickname ?? "")님-"
         
         let ReviewSlide5:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
         ReviewSlide5.category.text = reviewStoryData?[4].categoryName
         ReviewSlide5.content.text = reviewStoryData?[4].content
-        ReviewSlide5.asker.text = "- \(reviewStoryData?[4].nickname)님-"
+        ReviewSlide5.asker.text = "- \(reviewStoryData?[4].nickname ?? "")님-"
         
         let ReviewSlide6:ReviewSlide = Bundle.main.loadNibNamed("ReviewSlide", owner: self, options: nil)?.first as! ReviewSlide
         
-        ReviewSlide6.category.text = reviewStoryData?[5].categoryName
-        ReviewSlide6.content.text = reviewStoryData?[5].content
-        ReviewSlide6.asker.text = "- \(reviewStoryData?[5].nickname)님-"
+        ReviewSlide6.category.text = reviewStoryData?[0].categoryName
+        ReviewSlide6.content.text = reviewStoryData?[0].content
+        ReviewSlide6.asker.text = "- \(reviewStoryData?[0].nickname ?? "")님-"
         
         return [ReviewSlide1, ReviewSlide2, ReviewSlide3, ReviewSlide4, ReviewSlide5, ReviewSlide6]
     }
