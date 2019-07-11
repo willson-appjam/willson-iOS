@@ -81,6 +81,7 @@
 		D918A54922D3A97D001DCCBE /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */; };
 		D918A54B22D3ACD2001DCCBE /* HelperStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54A22D3ACD2001DCCBE /* HelperStory.swift */; };
 		D918A54D22D3ADC3001DCCBE /* HelperStoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */; };
+		D91BD71422D7627300923FBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D91BD71322D7627200923FBF /* GoogleService-Info.plist */; };
 		D9209D5622D5D7C6001CA9F8 /* SearchingHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5522D5D7C6001CA9F8 /* SearchingHelperViewController.swift */; };
 		D9209D5822D5DABE001CA9F8 /* AskerNoRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5722D5DABE001CA9F8 /* AskerNoRequestViewController.swift */; };
 		D9209D5A22D5DB67001CA9F8 /* CantFindHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9209D5922D5DB67001CA9F8 /* CantFindHelperViewController.swift */; };
@@ -128,6 +129,8 @@
 		D9AC038D22CE8B9300E16AD8 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038B22CE8B9300E16AD8 /* ChatListTableViewCell.swift */; };
 		D9AC038E22CE8B9300E16AD8 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC038C22CE8B9300E16AD8 /* ChatListTableViewCell.xib */; };
 		D9AC039022CE917200E16AD8 /* ReviewStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038F22CE917200E16AD8 /* ReviewStarViewController.swift */; };
+		D9B9E8CA22D7A6790058B8E7 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9E8C922D7A6790058B8E7 /* ChatModel.swift */; };
+		D9B9E8CC22D7A8110058B8E7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9E8CB22D7A8110058B8E7 /* UserModel.swift */; };
 		D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */; };
 		D9BA14B422D2A3E5001FEC6D /* NoChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BA14B222D2A3E5001FEC6D /* NoChatListTableViewCell.swift */; };
 		D9BA14B522D2A3E5001FEC6D /* NoChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BA14B322D2A3E5001FEC6D /* NoChatListTableViewCell.xib */; };
@@ -213,6 +216,7 @@
 		D918A54822D3A97D001DCCBE /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		D918A54A22D3ACD2001DCCBE /* HelperStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStory.swift; sourceTree = "<group>"; };
 		D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStoryService.swift; sourceTree = "<group>"; };
+		D91BD71322D7627200923FBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9209D5522D5D7C6001CA9F8 /* SearchingHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingHelperViewController.swift; sourceTree = "<group>"; };
 		D9209D5722D5DABE001CA9F8 /* AskerNoRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerNoRequestViewController.swift; sourceTree = "<group>"; };
 		D9209D5922D5DB67001CA9F8 /* CantFindHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CantFindHelperViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 		D9AC038B22CE8B9300E16AD8 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 		D9AC038C22CE8B9300E16AD8 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		D9AC038F22CE917200E16AD8 /* ReviewStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStarViewController.swift; sourceTree = "<group>"; };
+		D9B9E8C922D7A6790058B8E7 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		D9B9E8CB22D7A8110058B8E7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRequestViewController.swift; sourceTree = "<group>"; };
 		D9BA14B222D2A3E5001FEC6D /* NoChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoChatListTableViewCell.swift; sourceTree = "<group>"; };
 		D9BA14B322D2A3E5001FEC6D /* NoChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoChatListTableViewCell.xib; sourceTree = "<group>"; };
@@ -393,6 +399,7 @@
 				D965850C22C4E7E60072CC5E /* Assets.xcassets */,
 				D965850E22C4E7E60072CC5E /* LaunchScreen.storyboard */,
 				D965851122C4E7E60072CC5E /* Info.plist */,
+				D91BD71322D7627200923FBF /* GoogleService-Info.plist */,
 				663835C522CA33F9003265C7 /* CustonView.swift */,
 				D915535522D20EC400A38390 /* CustomButton.swift */,
 				66E5E78122CB809C00B43D93 /* PopUpVC.swift */,
@@ -447,6 +454,8 @@
 				6677EA4622D7207800A34D32 /* UserProfile.swift */,
 				6677EA4A22D72F6000A34D32 /* HelperProfile.swift */,
 				6635960922D78FCC005A29A1 /* ConcernList.swift */,
+				D9B9E8C922D7A6790058B8E7 /* ChatModel.swift */,
+				D9B9E8CB22D7A8110058B8E7 /* UserModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -772,6 +781,7 @@
 				663835BB22C9C82D003265C7 /* Slide.xib in Resources */,
 				D965853B22C4EBC00072CC5E /* HelperMypage.storyboard in Resources */,
 				D9209D6422D607A9001CA9F8 /* HelperCollectionViewCell.xib in Resources */,
+				D91BD71422D7627300923FBF /* GoogleService-Info.plist in Resources */,
 				D9AC038E22CE8B9300E16AD8 /* ChatListTableViewCell.xib in Resources */,
 				6634344422C67EE300D419EC /* NanumSquareR.ttf in Resources */,
 				D98BA5C522D0131500E72C02 /* HelperRequestCollectionViewCell.xib in Resources */,
@@ -834,6 +844,7 @@
 				D92C2C4D22CFFD05004F7CAB /* CompleteReviewViewController.swift in Sources */,
 				6635960C22D78FF5005A29A1 /* ConcernListService.swift in Sources */,
 				6633E3F922D436D400DF81AC /* SignIn.swift in Sources */,
+				D9B9E8CA22D7A6790058B8E7 /* ChatModel.swift in Sources */,
 				660D086322CCEAAC00FD3F5C /* MyPageViewController.swift in Sources */,
 				D982BCC322C9F9A300458662 /* AskerListStartViewController.swift in Sources */,
 				6634344B22C7BF0300D419EC /* AskerSignUpViewController2.swift in Sources */,
@@ -880,6 +891,7 @@
 				6636407722D6818400FADC9F /* ConcernPersonalityService.swift in Sources */,
 				D9209D5C22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift in Sources */,
 				6636407522D6815900FADC9F /* ConcernPersonality.swift in Sources */,
+				D9B9E8CC22D7A8110058B8E7 /* UserModel.swift in Sources */,
 				D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */,
 				D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */,
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
