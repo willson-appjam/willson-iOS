@@ -31,7 +31,8 @@ class HelperChatListViewController: UIViewController {
         
         chatListTableView.tableFooterView = UIView()
         chatListTableView.rowHeight = 92
-        
+        chatListTableView.delegate = self
+        chatListTableView.dataSource = self
         // chatting
         self.uid = Auth.auth().currentUser?.uid ?? ""
         self.getChatroomsList()
@@ -40,8 +41,7 @@ class HelperChatListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        chatListTableView.delegate = self
-        chatListTableView.dataSource = self
+        
     }
     
     // MARK: - Methods
@@ -62,7 +62,7 @@ class HelperChatListViewController: UIViewController {
 }
 
 extension HelperChatListViewController: UITableViewDelegate {
-    
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -72,17 +72,19 @@ extension HelperChatListViewController: UITableViewDelegate {
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+ */
     
 }
 
 extension HelperChatListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.chatrooms.count
+//        return self.chatrooms.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ChatListTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatListTableViewCellIdentifier, for: indexPath) as? ChatListTableViewCell else { return UITableViewCell() }
-        
+        /*
         var destinationUid :String?
         
         for item in chatrooms[indexPath.row].users{
@@ -102,7 +104,7 @@ extension HelperChatListViewController: UITableViewDataSource {
             let unixTime = self.chatrooms[indexPath.row].comments[lastMessagekey[0]]?.timestamp
             cell.timeLabel.text = unixTime?.toDayTime
         })
-        
+        */
         cell.selectionStyle = .none
         cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return cell

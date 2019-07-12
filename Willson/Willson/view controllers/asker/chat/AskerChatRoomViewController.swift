@@ -33,9 +33,9 @@ class AskerChatRoomViewController: UIViewController {
     var observe : UInt?
     var peopleCount : Int?
     
-    var messageArray = ["속상하셨겠어요ㅠㅠㅠ", "지금은 그래도 나아지셨다하니 더 잘될 거에요!", "감사합니다..", "ㅎ"]
-    var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
-    var userArray = [0, 0, 1, 1]
+    var messageArray = ["안녕하세요, 솝트님", "요즘 하고 계시는 고민이 취업 쪽이시던데 어떤가요?", "안녕하세요!", "요즘 고민이 많아요ㅠㅠㅠ", "구체적으로 상황 설명 부탁드려요"]
+    var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13", "PM 07:15"]
+    var userArray = [0, 0, 1, 1, 0]
     
     // MARK: - IBOutlet
     @IBOutlet weak var keyboardView: UIView!
