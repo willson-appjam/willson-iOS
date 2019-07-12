@@ -28,9 +28,6 @@ class HelperChatListViewController: UIViewController {
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        chatListTableView.delegate = self
-        chatListTableView.dataSource = self
         
         chatListTableView.tableFooterView = UIView()
         chatListTableView.rowHeight = 92
@@ -38,6 +35,13 @@ class HelperChatListViewController: UIViewController {
         // chatting
         self.uid = Auth.auth().currentUser?.uid
         self.getChatroomsList()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        chatListTableView.delegate = self
+        chatListTableView.dataSource = self
     }
     
     // MARK: - Methods
