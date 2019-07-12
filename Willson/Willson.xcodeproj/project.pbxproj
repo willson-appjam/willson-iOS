@@ -12,6 +12,8 @@
 		6630B3B322D7C38600E397BA /* HelperList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630B3B222D7C38600E397BA /* HelperList.swift */; };
 		6630B3B522D7C3C100E397BA /* HelperListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630B3B422D7C3C100E397BA /* HelperListService.swift */; };
 		6630B3B922D8E32700E397BA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630B3B822D8E32700E397BA /* CustomTextField.swift */; };
+		6630B3BB22D913B800E397BA /* HelperMyprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630B3BA22D913B800E397BA /* HelperMyprofile.swift */; };
+		6630B3BD22D9146C00E397BA /* HelperMyprofileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630B3BC22D9146C00E397BA /* HelperMyprofileService.swift */; };
 		66316A2622D202790033B519 /* AskerChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66316A2522D202790033B519 /* AskerChatRoomViewController.swift */; };
 		66316A2A22D20EED0033B519 /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66316A2922D20EED0033B519 /* UILabel_extension.swift */; };
 		6632768222D10671005DC6DC /* ChatHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6632768122D10671005DC6DC /* ChatHeaderTVC.swift */; };
@@ -150,6 +152,8 @@
 		6630B3B222D7C38600E397BA /* HelperList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperList.swift; sourceTree = "<group>"; };
 		6630B3B422D7C3C100E397BA /* HelperListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperListService.swift; sourceTree = "<group>"; };
 		6630B3B822D8E32700E397BA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		6630B3BA22D913B800E397BA /* HelperMyprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMyprofile.swift; sourceTree = "<group>"; };
+		6630B3BC22D9146C00E397BA /* HelperMyprofileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMyprofileService.swift; sourceTree = "<group>"; };
 		66316A2522D202790033B519 /* AskerChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerChatRoomViewController.swift; sourceTree = "<group>"; };
 		66316A2922D20EED0033B519 /* UILabel_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel_extension.swift; sourceTree = "<group>"; };
 		6632768122D10671005DC6DC /* ChatHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderTVC.swift; sourceTree = "<group>"; };
@@ -446,6 +450,8 @@
 				6677EA4822D7214000A34D32 /* UserProfileService.swift */,
 				6677EA4C22D72FC000A34D32 /* HelperProfileService.swift */,
 				6635960B22D78FF5005A29A1 /* ConcernListService.swift */,
+				6630B3B422D7C3C100E397BA /* HelperListService.swift */,
+				6630B3BC22D9146C00E397BA /* HelperMyprofileService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				D9B9E8C922D7A6790058B8E7 /* ChatModel.swift */,
 				D9B9E8CB22D7A8110058B8E7 /* UserModel.swift */,
 				6630B3B222D7C38600E397BA /* HelperList.swift */,
+				6630B3BA22D913B800E397BA /* HelperMyprofile.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -911,6 +918,7 @@
 				D9209D5C22D5DD7D001CA9F8 /* After5SearcingWillsonViewController.swift in Sources */,
 				6636407522D6815900FADC9F /* ConcernPersonality.swift in Sources */,
 				D9B9E8CC22D7A8110058B8E7 /* UserModel.swift in Sources */,
+				6630B3BB22D913B800E397BA /* HelperMyprofile.swift in Sources */,
 				D9E64E4B22CDDF1A003265E4 /* HelperChatListViewController.swift in Sources */,
 				D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */,
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
@@ -954,6 +962,7 @@
 				6633E3EB22D3CAE600DF81AC /* ServerString.swift in Sources */,
 				663F829E22D07AF000EAD932 /* HelperEnrollCertificateViewController.swift in Sources */,
 				D9AC039022CE917200E16AD8 /* ReviewStarViewController.swift in Sources */,
+				6630B3BD22D9146C00E397BA /* HelperMyprofileService.swift in Sources */,
 				663835C622CA33F9003265C7 /* CustonView.swift in Sources */,
 				D982BCC522CA025200458662 /* AskerList1_CategoryViewController.swift in Sources */,
 				D92C2C5122D00A70004F7CAB /* HelperNoRequestViewController.swift in Sources */,
