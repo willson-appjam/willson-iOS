@@ -23,7 +23,7 @@ class AskerRequestViewController: UIViewController {
     var helperList: HelperList?
     var helperListData: HelperListData?
     var helperElements: [HelperListElement]?
-    var questionID = 38
+    var questionID = 3
     //===================================
     
     // MARK: - IBOutlet
@@ -36,26 +36,31 @@ class AskerRequestViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
         //getHelperList()
+       
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        getHelperList()
+        
+        startTimer = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AskerRequestViewController.timeLimit), userInfo: nil, repeats: true)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
+        helperCollectionView.reloadData()
+        helperCollectionView.delegate = self
+        helperCollectionView.dataSource = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        
-        helperCollectionView.delegate = self
-        helperCollectionView.dataSource = self
+        helperCollectionView.reloadData()
+        //helperCollectionView.delegate = self
+        //helperCollectionView.dataSource = self
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getHelperList()
-        startTimer = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AskerRequestViewController.timeLimit), userInfo: nil, repeats: true)
-        
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
-        
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -70,8 +75,12 @@ class AskerRequestViewController: UIViewController {
                 self.helperList = helperList
                 self.helperListData = self.helperList?.data
                 self.helperElements = self.helperListData?.helperList
+                self.helperCollectionView.reloadData()
                 break;
             default:
+                let storyboard  = UIStoryboard(name: "AskerRequest", bundle: nil)
+                guard let vc = storyboard.instantiateViewController(withIdentifier: "AskerNoRequestViewController") as? AskerNoRequestViewController else { return }
+                self.present(vc, animated: true)
                 break;
             }
         }

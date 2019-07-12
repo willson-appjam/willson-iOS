@@ -65,9 +65,10 @@ class AskerLoginViewController: UIViewController {
                 let storyboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
                 self.present(viewController, animated: true)
-            default:
+            default :
                 self.view.makeToast("다시 입력해주세요", duration: 3.0, position: .top)
                 self.view.showToast(self.loginView)
+                print("다시 입력해주세요")
                 break;
             }
         }

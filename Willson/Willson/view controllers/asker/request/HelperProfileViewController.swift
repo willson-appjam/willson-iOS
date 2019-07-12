@@ -39,12 +39,12 @@ class HelperProfileViewController: UIViewController {
     var helperID = 1
     
     func viewWillAppear() {
-//        getHelperProfile()
+       //getHelperProfile()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         getHelperProfile()
-        //setHelperProfile()
+        setHelperProfile()
         setNavigationBar()
         
     }

@@ -27,7 +27,7 @@ class HelperRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         getConcernList()
+        getConcernList()
         
         // UINavagationBar Title Logo
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "imgLogo"))
