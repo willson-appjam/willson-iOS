@@ -33,12 +33,14 @@ class ProblemDetailViewController: UIViewController {
         super.viewDidLoad()
         //getUserProfile()
         // UITableView delegate, dataSource
+        problemDetailTableView.delegate = self
+        problemDetailTableView.dataSource = self
        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        problemDetailTableView.delegate = self
-        problemDetailTableView.dataSource = self
+//        problemDetailTableView.delegate = self
+//        problemDetailTableView.dataSource = self
         
         self.problemDetailTableView.separatorStyle = .none
     }
@@ -101,23 +103,32 @@ extension ProblemDetailViewController: UITableViewDataSource {
             guard let cell: ProblemDetailTitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTitleTableViewCellIdentifier, for: indexPath) as? ProblemDetailTitleTableViewCell else { return UITableViewCell() }
             cell.nickname.text = user?.nickname ?? ""
             cell.detailInfo.text = "\(user?.gender ?? "") / \(user?.age ?? "")"
-            
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            cell.selectionStyle = .none
             return cell
         case 1:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
             cell.contentLabel.text = "# \(question?.categoryListName ?? "")"
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            cell.selectionStyle = .none
             return cell
         case 2:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
             cell.contentLabel.text = "#\(question?.questionFeeling[0].feelingName ?? ""), #\(question?.questionFeeling[1].feelingName ?? ""), #\(question?.questionFeeling[2].feelingName ?? "")"
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            cell.selectionStyle = .none
             return cell
         case 3:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
             cell.contentLabel.text = "\(String(question?.weight ?? 0)) / 5 "
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            cell.selectionStyle = .none
             return cell
         case 4:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
             cell.contentLabel.text = "\(question?.content ?? "")"
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            cell.selectionStyle = .none
             return cell
         case 5:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
@@ -130,10 +141,14 @@ extension ProblemDetailViewController: UITableViewDataSource {
                 cell.contentLabel.text = "경험: #\(question?.questionFeeling[0].feelingName ?? ""), #\(question?.questionFeeling[1].feelingName ?? ""), #\(question?.questionFeeling[2].feelingName ?? "")"
             default: break
             }
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            cell.selectionStyle = .none
             return cell
         case 6:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
             cell.contentLabel.text = "정서적 지지: 1, 문제 해결 조력: 3, 경험 제공: 5"
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            cell.selectionStyle = .none
             return cell
         default: return UITableViewCell()
         }
