@@ -98,13 +98,13 @@ class HelperRequestViewController: UIViewController {
 // MARK: - UICollectionViiewDelegate
 extension HelperRequestViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell: HelperRequestCollectionViewCell = (collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell)!
         
         let storyboard  = UIStoryboard(name: "HelperRequest", bundle: nil)
         
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ProblemDetailViewController") as? ProblemDetailViewController else { return }
         
-        vc.userID = cell.userID
+        vc.userID = self.concernInfoList?[indexPath.item].userInfo.userIdx
+        //print(vc.userID)
         self.navigationController?.show(vc, sender: nil)
     }
 }
@@ -135,7 +135,6 @@ extension HelperRequestViewController: UICollectionViewDataSource {
             
             guard let cell: HelperRequestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell else { return UICollectionViewCell() }
             
-            cell.userID = userInfo.userIdx
             cell.nickname.text = userInfo.nickname
             cell.detailInfo.text = "(\(userInfo.gender) / \(userInfo.age))"
             cell.category.text = categoryInfo.categoryName

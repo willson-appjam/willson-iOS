@@ -31,7 +31,7 @@ class ProblemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getUserProfile()
+        getUserProfile()
         // UITableView delegate, dataSource
        
     }
