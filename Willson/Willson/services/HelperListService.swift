@@ -12,9 +12,9 @@ import Alamofire
 struct HelperListService {
     static let shared = HelperListService()
     
-    func getHelperList(helperID: Int, completionHandler: @escaping
+    func getHelperList(questionID: Int, completionHandler: @escaping
         (HelperList, Int) -> Void) {
-        let URL = "\(SERVER_URL)/helper/list/\(String(helperID))"
+        let URL = "\(SERVER_URL)/helper/list/\(String(questionID))"
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let header = [
             "user_session" : token
@@ -26,7 +26,7 @@ struct HelperListService {
                           headers: header).responseData { response in
                             switch response.result {
                             case .success(let data): do {
-                                let concernCategory = try JSONDecoder().decode(HelperList.self, from: data)
+                                let helperList = try JSONDecoder().decode(HelperList.self, from: data)
                                 guard let statusCode = response.response?.statusCode else { return }
                                 completionHandler(helperList, statusCode)
                                 print("**************helper list success*************")

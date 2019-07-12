@@ -49,15 +49,10 @@ class HelperRequestViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        // UITabBar hide line
-        /* 적용이 안돼요
-        self.tabBarController?.tabBar.layer.shadowColor = UIColor.black.cgColor
-        self.tabBarController?.tabBar.layer.shadowOffset = CGSize(width: 3.0, height: 0.0)
-        self.tabBarController?.tabBar.layer.shadowRadius = 6
-        self.tabBarController?.tabBar.layer.shadowOpacity = 0.16
-         */
         self.tabBarController?.tabBar.shadowImage = UIImage()
         self.tabBarController?.tabBar.backgroundImage = UIImage()
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(HelperRequestViewController.goPage))
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,11 +84,29 @@ class HelperRequestViewController: UIViewController {
         present(viewController, animated: true)
     }
     
+    @objc func goPage(sender:UIGestureRecognizer)
+        
+    {
+        let storyboard  = UIStoryboard(name: "HelperRequest", bundle: nil)
+        
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ProblemViewController") as? ProblemDetailViewController else { return }
+        
+        self.navigationController?.show(vc, sender: nil)
+    }
 }
 
 // MARK: - UICollectionViiewDelegate
 extension HelperRequestViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell: HelperRequestCollectionViewCell = (collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell)!
+        
+        let storyboard  = UIStoryboard(name: "HelperRequest", bundle: nil)
+        
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ProblemDetailViewController") as? ProblemDetailViewController else { return }
+        
+        vc.userID = cell.userID
+        self.navigationController?.show(vc, sender: nil)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -122,8 +135,9 @@ extension HelperRequestViewController: UICollectionViewDataSource {
             
             guard let cell: HelperRequestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCollectionCellIdentifier, for: indexPath) as? HelperRequestCollectionViewCell else { return UICollectionViewCell() }
             
+            cell.userID = userInfo.userIdx
             cell.nickname.text = userInfo.nickname
-            cell.detailInfo.text = "\(userInfo.gender) / \(userInfo.gender)"
+            cell.detailInfo.text = "(\(userInfo.gender) / \(userInfo.age))"
             cell.category.text = categoryInfo.categoryName
             cell.content.text = "\"\(questionInfo.title)\""
             
@@ -132,6 +146,7 @@ extension HelperRequestViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
     }
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

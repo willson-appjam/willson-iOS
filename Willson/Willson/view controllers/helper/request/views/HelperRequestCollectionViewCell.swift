@@ -15,7 +15,7 @@ class HelperRequestCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var detailInfo: UILabel!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var content: UILabel!
-    
+    var userID: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()

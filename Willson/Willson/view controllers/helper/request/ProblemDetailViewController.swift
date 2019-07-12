@@ -19,7 +19,7 @@ class ProblemDetailViewController: UIViewController {
     var user: User?
     var userPersonality: [Personality]?
     var question: UserQuestion?
-    var userID = 1
+    var userID: Int?
     
     // MARK: - IBOutlet
     @IBOutlet weak var problemDetailTableView: UITableView!
@@ -46,7 +46,7 @@ class ProblemDetailViewController: UIViewController {
     
     // MARK: - Methods
     func getUserProfile() {
-        UserProfileService.shared.getProfile(userID: userID) {
+        UserProfileService.shared.getProfile(userID: userID!) {
             userProfile, statusCode in
             switch statusCode {
             case 200:
@@ -113,8 +113,7 @@ extension ProblemDetailViewController: UITableViewDataSource {
             return cell
         case 3:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }
-            var weight = question?.weight 
-            cell.contentLabel.text = "\(String(describing: weight))) / 5 "
+            cell.contentLabel.text = "\(String(question?.weight ?? 0)) / 5 "
             return cell
         case 4:
             guard let cell: ProblemDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: problemDetailTableViewCellIdnetifier, for: indexPath) as? ProblemDetailTableViewCell else { return UITableViewCell() }

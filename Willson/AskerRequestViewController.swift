@@ -20,7 +20,9 @@ class AskerRequestViewController: UIViewController {
     var extended = false
     var completionHandlers: [() -> Void] = []
     
-   
+    var helperList: HelperList?
+    var helperListData: [HelperListData]?
+    var questionID = 1
     //===================================
     
     // MARK: - IBOutlet
@@ -30,6 +32,8 @@ class AskerRequestViewController: UIViewController {
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getHelperList()
         
         startTimer = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AskerRequestViewController.timeLimit), userInfo: nil, repeats: true)
@@ -55,6 +59,19 @@ class AskerRequestViewController: UIViewController {
     }
     
     // MARK: - Methods
+    func getHelperList() {
+        HelperListService.shared.getHelperList(questionID: questionID) {
+            helperList, statusCode in
+            switch statusCode {
+            case 200:
+                self.helperList = helperList
+                self.helperListData = self.helperList?.data
+                break;
+            default:
+                break;
+            }
+        }
+    }
     
     @objc func goPage(sender:UIGestureRecognizer)
         
@@ -83,24 +100,12 @@ class AskerRequestViewController: UIViewController {
     }
     
     func timeLimitStop() {
-        
-//        var vc = UIApplication.topViewController()
-        
-        //startTimer = false
         timer.invalidate()
         
         if (extended == false) { //처음 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
                 "CantFindHelperViewController") as! CantFindHelperViewController
-            /*
-            vc?.addChild(popOverVC)
-            
-            popOverVC.view.frame = (vc?.view.frame)!
-            vc?.view.addSubview(popOverVC.view)
-            popOverVC.didMove(toParent: vc)
-            */
-//            popOverVC.preferredContentSize.width = self.view.frame.width
-//            popOverVC.preferredContentSize.height = self.view.frame.height / 2
+
             popOverVC.preferredContentSize.width = 323
             popOverVC.preferredContentSize.height = 304
             
@@ -113,13 +118,7 @@ class AskerRequestViewController: UIViewController {
         else { //두번째 5분 연장했을 때의 팝업창
             let popOverVC = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier:
                 "CantFindHelperViewController") as! CantFindHelperViewController
-            /*
-            vc?.addChild(popOverVC)
             
-            popOverVC.view.frame = (vc?.view.frame)!
-            vc?.view.addSubview(popOverVC.view)
-            popOverVC.didMove(toParent: vc)
-            */
         }
     }
     
@@ -130,12 +129,14 @@ extension AskerRequestViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return 5
+            
+            //helperListData!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HelperCollectionViewCell", for: indexPath) as! HelperCollectionViewCell
         
-        /*
+    
         let helper = helpers[indexPath.row]
         
         cell.content.text = helper.content.text
@@ -143,7 +144,7 @@ extension AskerRequestViewController: UICollectionViewDataSource {
         cell.detailInfo.text = helper.detailInfo.text
         cell.category.text = helper.category.text
         
-        */
+        
         return cell
     }
 }
