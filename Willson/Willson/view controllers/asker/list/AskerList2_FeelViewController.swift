@@ -16,6 +16,9 @@ class AskerList2_FeelViewController: UIViewController {
     var concernFeeling: ConcernFeeling?
     var concernFeelingData: ConcernFeelingData?
     
+    // Concern Question Post
+    var categoryListIdx: Int = 0
+    
     // MARK: - IBOutlet
     @IBOutlet weak var feelCollectionView: UICollectionView!
     
@@ -54,12 +57,17 @@ class AskerList2_FeelViewController: UIViewController {
 }
 
 extension AskerList2_FeelViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList3_ImpactViewController") as? AskerList3_ImpactViewController else { return }
+        
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray.append(concernFeelingData?.feelingList[indexPath.item].feelingIdx ?? 0)
+    }
 }
 
 extension AskerList2_FeelViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (concernFeelingData?.feelingList.count)!
+        return (concernFeelingData?.feelingList.count) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,8 +82,6 @@ extension AskerList2_FeelViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
 }
 
 extension AskerList2_FeelViewController: UICollectionViewDelegateFlowLayout {

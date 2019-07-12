@@ -358,7 +358,7 @@
         <!--리스트 작성-->
         <scene sceneID="c1U-Bz-6gf">
             <objects>
-                <viewController id="uh3-4E-OH7" customClass="AskerList2_FeelViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList2_FeelViewController" id="uh3-4E-OH7" customClass="AskerList2_FeelViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hpC-MS-K5M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -514,7 +514,7 @@
         <!--리스트 작성-->
         <scene sceneID="fcA-4U-2b1">
             <objects>
-                <viewController id="Lo6-wb-r96" customClass="AskerList3_ImpactViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList3_ImpactViewController" id="Lo6-wb-r96" customClass="AskerList3_ImpactViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iw1-aZ-h0a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,6 +570,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapped1Btn:" destination="Lo6-wb-r96" eventType="touchUpInside" id="Npq-h6-GV1"/>
                                                     <outletCollection property="otherButtons" destination="Ylg-Qy-qyn" id="XXx-no-ERJ"/>
                                                     <outletCollection property="otherButtons" destination="wCq-Qr-bkT" id="lQe-bT-c6i"/>
                                                     <outletCollection property="otherButtons" destination="yuf-nT-0fp" id="xPR-oX-b8Y"/>
@@ -599,6 +600,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapped2Btn:" destination="Lo6-wb-r96" eventType="touchUpInside" id="Dmx-zD-eea"/>
                                                     <outletCollection property="otherButtons" destination="JmW-c4-l5W" id="Xc6-IK-cIH"/>
                                                     <outletCollection property="otherButtons" destination="wCq-Qr-bkT" id="pDx-xb-tEb"/>
                                                     <outletCollection property="otherButtons" destination="yuf-nT-0fp" id="Ode-5e-Mc6"/>
@@ -628,6 +630,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapped3Btn:" destination="Lo6-wb-r96" eventType="touchUpInside" id="HcF-Iw-srn"/>
                                                     <outletCollection property="otherButtons" destination="JmW-c4-l5W" id="NRn-PW-Gxl"/>
                                                     <outletCollection property="otherButtons" destination="Ylg-Qy-qyn" id="zCa-Lt-tcd"/>
                                                     <outletCollection property="otherButtons" destination="yuf-nT-0fp" id="2N1-gB-l3a"/>
@@ -657,6 +660,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapped4Btn:" destination="Lo6-wb-r96" eventType="touchUpInside" id="zrs-bs-Bch"/>
                                                     <outletCollection property="otherButtons" destination="JmW-c4-l5W" id="7A4-iF-79p"/>
                                                     <outletCollection property="otherButtons" destination="Ylg-Qy-qyn" id="miM-rG-LiY"/>
                                                     <outletCollection property="otherButtons" destination="wCq-Qr-bkT" id="UgE-lK-fCV"/>
@@ -686,6 +690,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapped5Btn:" destination="Lo6-wb-r96" eventType="touchUpInside" id="1L2-dz-6hQ"/>
                                                     <outletCollection property="otherButtons" destination="JmW-c4-l5W" id="Sd3-9O-nSc"/>
                                                     <outletCollection property="otherButtons" destination="Ylg-Qy-qyn" id="yPf-jJ-2QO"/>
                                                     <outletCollection property="otherButtons" destination="wCq-Qr-bkT" id="hvE-eE-eOn"/>
@@ -761,7 +766,7 @@
         <!--리스트 작성-->
         <scene sceneID="evT-Mc-1IC">
             <objects>
-                <viewController id="rLB-h8-yXn" customClass="AskerList4_DetailViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList4_DetailViewController" id="rLB-h8-yXn" customClass="AskerList4_DetailViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c2H-nT-Ycz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -821,7 +826,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="e9e-vH-2nt" kind="show" id="GgE-55-4R6"/>
+                                    <segue destination="e9e-vH-2nt" kind="show" identifier="4To5" id="GgE-55-4R6"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-x2-cWA" customClass="CustonView" customModule="Willson" customModuleProvider="target">
@@ -922,7 +927,7 @@
         <!--리스트 작성-->
         <scene sceneID="3t0-sb-IdX">
             <objects>
-                <viewController id="e9e-vH-2nt" customClass="AskerList5_HelperSexViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList5_HelperSexViewController" id="e9e-vH-2nt" customClass="AskerList5_HelperSexViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uNS-gZ-cIr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1092,7 +1097,7 @@
         <!--리스트 작성-->
         <scene sceneID="hIp-1h-R3S">
             <objects>
-                <viewController id="Qnd-kO-6bg" customClass="AskerList7_HelperExperienceViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList7_HelperExperienceViewController" id="Qnd-kO-6bg" customClass="AskerList7_HelperExperienceViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzL-E0-q2R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1147,7 +1152,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="pxu-Aa-dEn" kind="show" id="3Tx-yD-M3K"/>
+                                    <segue destination="pxu-Aa-dEn" kind="show" identifier="7To8" id="3Tx-yD-M3K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ex) #이별, #다툼, #화해" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFU-dn-zHc">
@@ -1318,6 +1323,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textField1" destination="7gL-AW-dKC" id="U5K-hb-lQF"/>
+                        <outlet property="textField2" destination="uG3-nW-sGp" id="eRN-Du-Xs8"/>
+                        <outlet property="textField3" destination="qgB-HX-oeQ" id="Gx6-2x-C4U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27B-h4-Aga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1326,7 +1336,7 @@
         <!--리스트 작성-->
         <scene sceneID="JT4-Ok-JUE">
             <objects>
-                <viewController id="s0K-Rz-nPo" customClass="AskerList6_HelperCharacterViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList6_HelperCharacterViewController" id="s0K-Rz-nPo" customClass="AskerList6_HelperCharacterViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e4c-uH-0td">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1490,7 +1500,7 @@
         <!--리스트 작성-->
         <scene sceneID="2q1-Bt-1JX">
             <objects>
-                <viewController id="pxu-Aa-dEn" customClass="AskerList8_ChatDirectionViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList8_ChatDirectionViewController" id="pxu-Aa-dEn" customClass="AskerList8_ChatDirectionViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="74U-tm-xzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1533,7 +1543,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="ABL-cv-Xjz" kind="show" id="2FD-eF-GTO"/>
+                                                    <segue destination="ABL-cv-Xjz" kind="show" identifier="8To9" id="2FD-eF-GTO"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 대화 방향은 무엇인가요?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7e-8V-1kq">
@@ -1584,6 +1594,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped1emotion:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="tSB-xi-OBy"/>
                                                                     <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="BuZ-Hr-cRq"/>
                                                                     <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="XaR-qN-7eo"/>
                                                                     <outletCollection property="otherButtons" destination="5fK-fm-r8B" id="4O4-mc-QYc"/>
@@ -1613,6 +1624,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped2emotion:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="b6U-lJ-uWj"/>
                                                                     <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="KXi-oX-Wbd"/>
                                                                     <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="e5g-du-UOF"/>
                                                                     <outletCollection property="otherButtons" destination="5fK-fm-r8B" id="bOV-FA-Gck"/>
@@ -1642,6 +1654,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped3emotion:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="LOh-6Z-0hs"/>
                                                                     <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="Cbj-Iz-S9L"/>
                                                                     <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="5AI-Zs-W10"/>
                                                                     <outletCollection property="otherButtons" destination="5fK-fm-r8B" id="o2E-RP-1Zo"/>
@@ -1671,6 +1684,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped4emotion:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="zcs-ac-OOE"/>
                                                                     <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="y5c-Nc-eVI"/>
                                                                     <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="b54-xe-QSI"/>
                                                                     <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="miV-NW-9JM"/>
@@ -1700,6 +1714,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped5emotion:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="kPX-1u-3j0"/>
                                                                     <outletCollection property="otherButtons" destination="AHn-XB-cMj" id="PWg-bD-lr3"/>
                                                                     <outletCollection property="otherButtons" destination="POY-cw-4Wc" id="YY3-u3-NUe"/>
                                                                     <outletCollection property="otherButtons" destination="R8z-DA-bZW" id="D8m-DM-FdG"/>
@@ -1748,6 +1763,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped1advice:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="yeb-xX-VwN"/>
                                                                     <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="44n-Lw-x2w"/>
                                                                     <outletCollection property="otherButtons" destination="bmK-de-EqR" id="T4U-tX-54p"/>
                                                                     <outletCollection property="otherButtons" destination="cV7-Fd-rP2" id="LR7-DB-c7L"/>
@@ -1777,6 +1793,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped2advice:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="3Bc-2x-s0b"/>
                                                                     <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="25Q-MH-cru"/>
                                                                     <outletCollection property="otherButtons" destination="bmK-de-EqR" id="UIL-jm-ya4"/>
                                                                     <outletCollection property="otherButtons" destination="cV7-Fd-rP2" id="5c1-aF-9bG"/>
@@ -1806,6 +1823,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped3advice:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="pfQ-g5-SH8"/>
                                                                     <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="jQb-lX-HaR"/>
                                                                     <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="Cce-Qt-Xqt"/>
                                                                     <outletCollection property="otherButtons" destination="cV7-Fd-rP2" id="mMF-IS-lyd"/>
@@ -1835,6 +1853,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped4advice:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="4BP-E2-zqF"/>
                                                                     <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="X2g-ES-qUu"/>
                                                                     <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="O5U-Zo-hLk"/>
                                                                     <outletCollection property="otherButtons" destination="bmK-de-EqR" id="QvO-Mf-Xdy"/>
@@ -1864,6 +1883,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped5advice:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="Upj-ft-GFs"/>
                                                                     <outletCollection property="otherButtons" destination="7c7-9G-c5c" id="zg3-cY-nWp"/>
                                                                     <outletCollection property="otherButtons" destination="E6c-w4-3fi" id="g4A-fG-hBn"/>
                                                                     <outletCollection property="otherButtons" destination="bmK-de-EqR" id="1th-iT-rXV"/>
@@ -1910,6 +1930,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped1experience:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="ucf-Ba-mgd"/>
                                                                     <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="Mbw-ca-st8"/>
                                                                     <outletCollection property="otherButtons" destination="7me-c5-JsX" id="vUZ-PT-VHw"/>
                                                                     <outletCollection property="otherButtons" destination="kZl-cc-lmr" id="D62-Gk-YpQ"/>
@@ -1939,6 +1960,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped2experience:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="xjJ-fm-eJR"/>
                                                                     <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="jgE-GA-KtP"/>
                                                                     <outletCollection property="otherButtons" destination="7me-c5-JsX" id="bo0-dv-Ypi"/>
                                                                     <outletCollection property="otherButtons" destination="kZl-cc-lmr" id="aKi-dJ-Vz7"/>
@@ -1968,6 +1990,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped3experience:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="1df-n7-0l0"/>
                                                                     <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="VIM-Oi-D3d"/>
                                                                     <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="Wcf-gm-UOR"/>
                                                                     <outletCollection property="otherButtons" destination="kZl-cc-lmr" id="JSQ-H6-AfC"/>
@@ -1997,6 +2020,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped4experience:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="FNr-Ih-sRn"/>
                                                                     <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="g93-91-hKS"/>
                                                                     <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="qgD-U9-fc4"/>
                                                                     <outletCollection property="otherButtons" destination="7me-c5-JsX" id="VwZ-gd-1Wn"/>
@@ -2026,6 +2050,7 @@
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="btnRadioActive"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="tapped5experience:" destination="pxu-Aa-dEn" eventType="touchUpInside" id="bxk-lt-acu"/>
                                                                     <outletCollection property="otherButtons" destination="ycE-Yx-2cq" id="L1H-2u-KKK"/>
                                                                     <outletCollection property="otherButtons" destination="bQ6-jz-mGV" id="h4a-0z-BVW"/>
                                                                     <outletCollection property="otherButtons" destination="7me-c5-JsX" id="I2D-Us-xGJ"/>
@@ -2117,7 +2142,7 @@
         <!--리스트 작성-->
         <scene sceneID="3h7-PX-JpS">
             <objects>
-                <viewController id="ABL-cv-Xjz" customClass="AskerList9_AgreementViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerList9_AgreementViewController" id="ABL-cv-Xjz" customClass="AskerList9_AgreementViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fe0-BD-gTe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2138,6 +2163,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedComplete:" destination="ABL-cv-Xjz" eventType="touchUpInside" id="4VX-9K-dkA"/>
+                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="iYt-vK-ajT">
                                 <rect key="frame" x="0.0" y="44" width="375" height="7"/>
@@ -2214,6 +2242,9 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="btnCheckNonactive"/>
                                         <state key="selected" image="btnCheckActive"/>
+                                        <connections>
+                                            <action selector="tappedAgree1:" destination="ABL-cv-Xjz" eventType="touchUpInside" id="5lR-yi-k3k"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1o-nJ-EN6">
                                         <rect key="frame" x="37" y="490.66666666666663" width="20" height="20"/>
@@ -2223,6 +2254,9 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="btnCheckNonactive"/>
                                         <state key="selected" image="btnCheckActive"/>
+                                        <connections>
+                                            <action selector="tappedAgree2:" destination="ABL-cv-Xjz" eventType="touchUpInside" id="d6X-bD-wkl"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상담 내용은 제 3자에게 공개가 불가하며, 상담 내용 유출 시 법적 제재를 받을 수 있음을 이해하였습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ7-JQ-2XL">
                                         <rect key="frame" x="66" y="490.66666666666663" width="272" height="26.666666666666629"/>
@@ -2283,6 +2317,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="agreeButton1" destination="Zqw-ZM-BBI" id="Mc5-5c-fA6"/>
+                        <outlet property="agreeButton2" destination="B1o-nJ-EN6" id="hzH-Df-L3c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJD-r7-hau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

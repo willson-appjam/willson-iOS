@@ -341,8 +341,6 @@ extension HelperChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 138
     }
-    
-   
 }
 
 // MARK: UITextFieldDelegate
@@ -363,14 +361,11 @@ extension HelperChatRoomViewController: UITextFieldDelegate {
 }
 
 extension Int{
-    
     var toDayTime :String{
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "ko_KR")
         dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
         let date = Date(timeIntervalSince1970: Double(self)/1000)
         return dateFormatter.string(from: date)
-        
     }
-    
 }

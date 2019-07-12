@@ -9,6 +9,14 @@
 import UIKit
 
 class AskerList5_HelperSexViewController: UIViewController {
+    
+    // MARK: - properties
+    // Concern Question Post
+    var categoryListIdx: Int = 0
+    var feelingArray: [Int] = []
+    var weight: Int = 0
+    var content: String = ""
+    
     // MARK: - IBAction
     @IBAction func tappedCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -18,21 +26,37 @@ class AskerList5_HelperSexViewController: UIViewController {
       
             let button : UIButton = (sender as? UIButton)!
             changeBtnColor(button: button)
-       
+        
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList6_HelperCharacterViewController") as? AskerList6_HelperCharacterViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = self.weight
+        vc.content = self.content
+        vc.gender = "남성"
     }
     
     @IBAction func btn2Action(_ sender: Any) {
       
             let button : UIButton = (sender as? UIButton)!
             changeBtnColor(button: button)
-        
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList6_HelperCharacterViewController") as? AskerList6_HelperCharacterViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = self.weight
+        vc.content = self.content
+        vc.gender = "여성"
     }
     
     @IBAction func btn3Action(_ sender: Any) {
        
             let button : UIButton = (sender as? UIButton)!
             changeBtnColor(button: button)
-        
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList6_HelperCharacterViewController") as? AskerList6_HelperCharacterViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = self.weight
+        vc.content = self.content
+        vc.gender = "모두"
     }
     
     func changeBtnColor(button: UIButton) {

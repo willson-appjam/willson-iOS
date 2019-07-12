@@ -13,8 +13,8 @@ class AskerList1_CategoryViewController: UIViewController {
     // MARK: - properties
     let concernCollectionCellIdentifier: String = "ConcernCollectionViewCell"
     var placeHolder = ""
-    var categoryID: Int!
-    var categoryTitle: String!
+    var categoryID: Int = 0
+    var categoryTitle: String = ""
     var tapCnt = 0
     
     var concernCategory: ConcernCategory?
@@ -34,14 +34,6 @@ class AskerList1_CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCategory()
-        // UICollectionView delegate, datasource
-        
-        //let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
-        
-        //view.addGestureRecognizer(tap) //밖의 뷰를 탭했을 경우
-        //concernCell.addGestureRecognizer(tap) //셀을 탭했을 경우
-        //enableBtn()
-        concernCollectionView.allowsMultipleSelection = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,6 +78,7 @@ class AskerList1_CategoryViewController: UIViewController {
 //    }
 }
 
+// MARK: - UICollectionViewDelegate
 extension AskerList1_CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell: ConcernCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: concernCollectionCellIdentifier, for: indexPath) as? ConcernCollectionViewCell else { return }
@@ -93,29 +86,15 @@ extension AskerList1_CategoryViewController: UICollectionViewDelegate {
         cell.concernTextField.text = ""
         placeHolder = cell.concernTextField.text ?? ""
         
-        cell.isSelected = !cell.isSelected
-        if (cell.isSelected)
-        {
-            cell.view.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
-            cell.concernLabel.textColor = UIColor.white
-            tapCnt = tapCnt - 1
-        }
-        else
-        {
-            cell.view.backgroundColor = UIColor.white
-            cell.concernLabel.textColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
-            tapCnt = tapCnt + 1
-        }
-        //cell.isSelected = !cell.isSelected
-       
-        print(tapCnt)
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList2_FeelViewController") as? AskerList2_FeelViewController else { return }
+        vc.categoryListIdx = self.dataList?.categoryList[indexPath.item].categoryListIdx ?? 0
     }
-    
 }
 
+// MARK: - UICollectionViewDataSource
 extension AskerList1_CategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (dataList?.categoryList.count)!
+        return (dataList?.categoryList.count) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
