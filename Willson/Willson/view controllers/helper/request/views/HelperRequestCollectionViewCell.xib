@@ -36,14 +36,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-qS-vQl" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="264"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvH-yI-hEo">
-                                <rect key="frame" x="293" y="16" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="c0C-h8-pFg"/>
-                                    <constraint firstAttribute="width" constant="24" id="cm9-Au-brb"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="btnCancel"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM4-Ew-02U" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                                 <rect key="frame" x="129" y="19" width="75" height="30"/>
                                 <subviews>
@@ -159,8 +151,6 @@
                             <constraint firstItem="sKk-7L-Eql" firstAttribute="top" secondItem="6g9-dS-FNf" secondAttribute="bottom" constant="18" id="9Wg-jn-26B"/>
                             <constraint firstAttribute="bottom" secondItem="Sq8-fy-LBV" secondAttribute="bottom" constant="20" id="MjU-sf-Jtn"/>
                             <constraint firstItem="aM4-Ew-02U" firstAttribute="top" secondItem="I7G-qS-vQl" secondAttribute="top" constant="19" id="UoM-AU-hdh"/>
-                            <constraint firstItem="KvH-yI-hEo" firstAttribute="top" secondItem="I7G-qS-vQl" secondAttribute="top" constant="16" id="VZM-pF-Awd"/>
-                            <constraint firstAttribute="trailing" secondItem="KvH-yI-hEo" secondAttribute="trailing" constant="16" id="VvO-HX-RUp"/>
                             <constraint firstItem="ZK5-eH-XKJ" firstAttribute="leading" secondItem="I7G-qS-vQl" secondAttribute="leading" constant="15" id="dgP-6r-Hen"/>
                             <constraint firstItem="6g9-dS-FNf" firstAttribute="centerX" secondItem="I7G-qS-vQl" secondAttribute="centerX" id="eKf-6s-IPz"/>
                             <constraint firstItem="aM4-Ew-02U" firstAttribute="centerX" secondItem="I7G-qS-vQl" secondAttribute="centerX" id="jdR-rn-KOL"/>
@@ -206,7 +196,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="btnCancel" width="24" height="24"/>
         <image name="imgTimerYellow" width="18" height="18"/>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -108,10 +108,13 @@ class AskerLoginViewController: UIViewController {
                                     
                                     
                                     //회원정보가 서버에 존재하지 않을 경우 회원가입 창으로 이동(데이터로 이메일 정보 전송)
+                                    //let viewController = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "snsSignUpNavi")
+                                   
                                     let dvc = UIStoryboard(name: "AskerSignUp", bundle: nil).instantiateViewController(withIdentifier: "AskerSNSSignUpViewController") as! AskerSNSSignUpViewController
+                                     let navi = UINavigationController(rootViewController: dvc)
                                     
                                     dvc.snsEmail = getEmail
-                                    self.present(dvc, animated: true, completion: nil)
+                                    self.present(navi, animated: true, completion: nil)
                                 }
                             })
                         }
