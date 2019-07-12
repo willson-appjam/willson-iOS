@@ -440,7 +440,6 @@
 			isa = PBXGroup;
 			children = (
 				6633E3F022D3D63100DF81AC /* UserSigninService.swift */,
-				6630B3B422D7C3C100E397BA /* HelperListService.swift */,
 				D918A54C22D3ADC3001DCCBE /* HelperStoryService.swift */,
 				6636407222D6707500FADC9F /* ReviewStoryService.swift */,
 				6636406A22D5D64700FADC9F /* ConcernCategoryService.swift */,
