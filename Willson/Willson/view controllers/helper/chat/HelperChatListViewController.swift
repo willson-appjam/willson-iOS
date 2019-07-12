@@ -18,8 +18,8 @@ class HelperChatListViewController: UIViewController {
     let chatListTableViewCellIdentifier: String = "ChatListTableViewCell"
     
     // chatting
-    var uid : String!
-    var chatrooms : [ChatModel]! = []
+    var uid : String = ""
+    var chatrooms : [ChatModel] = []
     var destinationUsers : [String] = []
     
     // MARK: - IBOutlet
@@ -33,7 +33,7 @@ class HelperChatListViewController: UIViewController {
         chatListTableView.rowHeight = 92
         
         // chatting
-        self.uid = Auth.auth().currentUser?.uid
+        self.uid = Auth.auth().currentUser?.uid ?? ""
         self.getChatroomsList()
     }
     
@@ -48,12 +48,12 @@ class HelperChatListViewController: UIViewController {
     func getChatroomsList(){
         
         Database.database().reference().child("chatrooms").queryOrdered(byChild: "users/"+uid).queryEqual(toValue: true).observeSingleEvent(of: DataEventType.value, with: {(datasnapshot) in
-            
-            for item in datasnapshot.children.allObjects as! [DataSnapshot]{
+            guard let allObject = datasnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for item in allObject {
                 self.chatrooms.removeAll()
                 if let chatroomdic = item.value as? [String:AnyObject]{
-                    let chatModel = ChatModel(JSON: chatroomdic)
-                    self.chatrooms.append(chatModel!)
+                    guard let chatModel = ChatModel(JSON: chatroomdic) else { return }
+                    self.chatrooms.append(chatModel)
                 }
             }
             self.chatListTableView.reloadData()
@@ -96,12 +96,6 @@ extension HelperChatListViewController: UITableViewDataSource {
             userModel.setValuesForKeys(datasnapshot.value as! [String:AnyObject])
             
             cell.textLabel?.text = userModel.userName
-            //            let url = URL(string:userModel.profileImageUrl!)
-            
-            //            cell.imageview.layer.cornerRadius = cell.imageview.frame.width/2
-            //            cell.imageview.layer.masksToBounds = true
-            //            cell.imageview.kf.setImage(with: url)
-            
             
             let lastMessagekey = self.chatrooms[indexPath.row].comments.keys.sorted(){$0>$1}
             cell.detailLabel.text = self.chatrooms[indexPath.row].comments[lastMessagekey[0]]?.message
@@ -113,6 +107,5 @@ extension HelperChatListViewController: UITableViewDataSource {
         cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return cell
     }
-    
     
 }
