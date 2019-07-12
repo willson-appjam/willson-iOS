@@ -25,7 +25,7 @@ class ConcernCollectionViewCell: UICollectionViewCell {
 
     }
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        self.isSelected = false
+        self.isSelected = !self.isSelected
         
         self.concernTextField.text = ""
         

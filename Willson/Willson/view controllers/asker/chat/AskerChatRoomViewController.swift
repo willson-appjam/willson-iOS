@@ -33,6 +33,10 @@ class AskerChatRoomViewController: UIViewController {
     var observe : UInt?
     var peopleCount : Int?
     
+    var messageArray = ["속상하셨겠어요ㅠㅠㅠ", "지금은 그래도 나아지셨다하니 더 잘될 거에요!", "감사합니다..", "ㅎ"]
+    var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
+    var userArray = [0, 0, 1, 1]
+    
     // MARK: - IBOutlet
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
@@ -63,9 +67,9 @@ class AskerChatRoomViewController: UIViewController {
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
         
         // chatting
-        uid = Auth.auth().currentUser?.uid
+//        uid = Auth.auth().currentUser?.uid
         
-        createRoom()
+//        createRoom()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -75,7 +79,7 @@ class AskerChatRoomViewController: UIViewController {
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
         
-        checkChatRoom()
+//        checkChatRoom()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -85,7 +89,7 @@ class AskerChatRoomViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        databaseRef?.removeObserver(withHandle: observe ?? 0)
+//        databaseRef?.removeObserver(withHandle: observe ?? 0)
     }
     
     // MARK: - IBAction
@@ -94,6 +98,7 @@ class AskerChatRoomViewController: UIViewController {
             // toast message
             self.view.makeToast("내용을 입력해주세요.", duration: 3.0, position: .bottom)
         }else {
+            /*
             let value :Dictionary<String,Any> = [
                 "uid" : uid!,
                 "message" : textField.text!,
@@ -102,10 +107,18 @@ class AskerChatRoomViewController: UIViewController {
             Database.database().reference().child("chatRooms").child(roomKey ?? "").child("comments").childByAutoId().setValue(value, withCompletionBlock: { (err, ref) in
                 self.textField.text = ""
             })
+ */
+            messageArray.append(textField.text!)
+            timeArray.append("PM 07:52")
+            userArray.append(1)
+            
+            let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
+            self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.fade)
         }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
+        /*
         if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
             self.textFieldViewBottom.constant = keyboardSize.height
         }
@@ -119,11 +132,28 @@ class AskerChatRoomViewController: UIViewController {
                 self.chatRoomTableView.scrollToRow(at: IndexPath(item:self.comments.count - 1,section:0), at: UITableView.ScrollPosition.bottom, animated: true)
             }
         })
+ */
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
+        
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.textFieldViewBottom.constant = -keyboardHeight
+            self.view.layoutIfNeeded()
+        })
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
+        /*
         self.textFieldViewBottom.constant = 0
         self.view.layoutIfNeeded()
+ */
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.textFieldViewBottom.constant = 0
+        })
     }
     
     func createRoom(){
@@ -273,38 +303,56 @@ extension AskerChatRoomViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension AskerChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comments.count
+//        return comments.count
+        return messageArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
         
-        if self.comments[indexPath.row].uid == uid {
+//        if self.comments[indexPath.row].uid == uid {
+        if userArray[indexPath.item] == 0 {
             if(indexPath.item != 0) {
                 if(indexPath.item - 1 == 0) {
                     cell.profileImg.isHidden = true
                 }
+            } else {
+                cell.profileImg.isHidden = false
             }
             
             cell.ownText.isHidden = true
             cell.ownView.isHidden = true
             cell.ownTime.isHidden = true
+            cell.oppoText.isHidden = false
+            cell.oppoView.isHidden = false
+            cell.oppoTime.isHidden = false
             //상대방
+            /*
             cell.oppoText.text = self.comments[indexPath.row].message
             if let time = self.comments[indexPath.row].timestamp {
                 cell.oppoTime.text = time.toDayTime
             }
+ */
+            cell.oppoText.text = messageArray[indexPath.item]
+            cell.oppoTime.text = timeArray[indexPath.item]
             
         } else {
             cell.profileImg.isHidden = true
+            cell.ownText.isHidden = false
+            cell.ownView.isHidden = false
+            cell.ownTime.isHidden = false
             cell.oppoText.isHidden = true
             cell.oppoView.isHidden = true
             cell.oppoTime.isHidden = true
             //자신
+            /*
             cell.ownText.text = self.comments[indexPath.row].message
             if let time = self.comments[indexPath.row].timestamp {
                 cell.ownTime.text = time.toDayTime
             }
+ */
+            cell.ownText.text = messageArray[indexPath.item]
+            cell.ownTime.text = timeArray[indexPath.item]
         }
         
         cell.selectionStyle = .none
@@ -315,6 +363,7 @@ extension AskerChatRoomViewController: UITableViewDataSource {
         return cell
     }
     
+    /*
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         guard let headerView: ChatHeaderTVC = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChatHeaderTVC.reuseIdentifier) as? ChatHeaderTVC else { return UIView() }
@@ -327,6 +376,7 @@ extension AskerChatRoomViewController: UITableViewDataSource {
         
         return headerView
     }
+ */
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let headerView: ChatHeaderTVC = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChatHeaderTVC.reuseIdentifier) as? ChatHeaderTVC else { return }

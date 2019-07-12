@@ -165,7 +165,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u19-S7-QVU">
-                                <rect key="frame" x="27" y="303" width="321" height="231"/>
+                                <rect key="frame" x="27" y="303" width="321" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rA1-kw-vcb">
                                     <size key="itemSize" width="154" height="50"/>
@@ -243,7 +243,7 @@
                             <constraint firstItem="dYg-iz-k7b" firstAttribute="top" secondItem="oIt-l5-VcJ" secondAttribute="bottom" constant="12" id="37E-s0-rhY"/>
                             <constraint firstItem="dYg-iz-k7b" firstAttribute="leading" secondItem="X2R-KN-BdG" secondAttribute="leading" constant="16" id="4eQ-J2-7w3"/>
                             <constraint firstItem="X2R-KN-BdG" firstAttribute="trailing" secondItem="u19-S7-QVU" secondAttribute="trailing" constant="27" id="5aa-Xt-9dP"/>
-                            <constraint firstItem="ILd-GN-lbz" firstAttribute="top" secondItem="u19-S7-QVU" secondAttribute="bottom" constant="180" id="9PO-IX-cJO"/>
+                            <constraint firstItem="ILd-GN-lbz" firstAttribute="top" secondItem="u19-S7-QVU" secondAttribute="bottom" constant="30" id="9PO-IX-cJO"/>
                             <constraint firstAttribute="trailing" secondItem="oIt-l5-VcJ" secondAttribute="trailing" id="J09-PX-pML"/>
                             <constraint firstItem="LaT-a9-sj9" firstAttribute="leading" secondItem="X2R-KN-BdG" secondAttribute="leading" constant="22" id="NsM-s4-reW"/>
                             <constraint firstItem="oIt-l5-VcJ" firstAttribute="leading" secondItem="FlC-6g-b3u" secondAttribute="leading" id="PWf-Ny-OWG"/>
@@ -391,7 +391,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GgO-lT-rDB">
-                                <rect key="frame" x="20" y="279.66666666666674" width="335" height="334.33333333333326"/>
+                                <rect key="frame" x="20" y="279.66666666666674" width="335" height="404.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pNC-00-AaH">
                                     <size key="itemSize" width="100" height="36"/>
@@ -482,7 +482,7 @@
                             <constraint firstItem="GgO-lT-rDB" firstAttribute="leading" secondItem="rWN-E7-Gy6" secondAttribute="leading" constant="20" id="9J5-i8-AhE"/>
                             <constraint firstItem="rWN-E7-Gy6" firstAttribute="trailing" secondItem="WFH-lr-UFi" secondAttribute="trailing" constant="16" id="9Ug-cH-8hu"/>
                             <constraint firstItem="867-mD-YBR" firstAttribute="leading" secondItem="rWN-E7-Gy6" secondAttribute="leading" constant="22" id="Jwv-0W-DeX"/>
-                            <constraint firstItem="CAD-o0-xxu" firstAttribute="top" secondItem="GgO-lT-rDB" secondAttribute="bottom" constant="100" id="Ssm-Hh-luD"/>
+                            <constraint firstItem="CAD-o0-xxu" firstAttribute="top" secondItem="GgO-lT-rDB" secondAttribute="bottom" constant="30" id="Ssm-Hh-luD"/>
                             <constraint firstItem="Ew7-KJ-mzg" firstAttribute="top" secondItem="hpC-MS-K5M" secondAttribute="centerY" multiplier="193:389" id="U7b-ZW-Bsa"/>
                             <constraint firstItem="E0d-xT-jyC" firstAttribute="top" secondItem="rWN-E7-Gy6" secondAttribute="top" id="Vsz-Ie-wro"/>
                             <constraint firstItem="Ew7-KJ-mzg" firstAttribute="leading" secondItem="rWN-E7-Gy6" secondAttribute="leading" constant="22" id="c2E-Ws-dP2"/>

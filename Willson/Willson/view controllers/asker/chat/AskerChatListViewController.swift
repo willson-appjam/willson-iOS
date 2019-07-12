@@ -31,19 +31,22 @@ class AskerChatListViewController: UIViewController {
 
 //        self.tabBarController?.tabBar.isHidden = false
         
+        chatListTableView.delegate = self
+        chatListTableView.dataSource = self
+        
         chatListTableView.tableFooterView = UIView()
         chatListTableView.rowHeight = 92
         
         // chatting
-        self.uid = Auth.auth().currentUser?.uid
-        self.getChatroomsList()
+//        self.uid = Auth.auth().currentUser?.uid
+//        self.getChatroomsList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        chatListTableView.delegate = self
-        chatListTableView.dataSource = self
+//        chatListTableView.delegate = self
+//        chatListTableView.dataSource = self
     }
     
     // MARK: - Methods
@@ -64,24 +67,28 @@ class AskerChatListViewController: UIViewController {
 }
 
 extension AskerChatListViewController: UITableViewDelegate {
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let destinationUid = self.destinationUsers[indexPath.row]
-        guard let viewController: HelperChatRoomViewController = UIStoryboard(name: "AskerChat", bundle: nil).instantiateViewController(withIdentifier: "AskerChatRoomViewController") as? HelperChatRoomViewController else { return }
-        viewController.destinationUid = destinationUid
+//        let destinationUid = self.destinationUsers[indexPath.row]
+        guard let viewController: AskerChatRoomViewController = UIStoryboard(name: "AskerChat", bundle: nil).instantiateViewController(withIdentifier: "AskerChatRoomViewController") as? AskerChatRoomViewController else { return }
+//        viewController.destinationUid = destinationUid
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+ */
 }
 
 extension AskerChatListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.chatrooms.count
+//        return self.chatrooms.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ChatListTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatListTableViewCellIdentifier, for: indexPath) as? ChatListTableViewCell else { return UITableViewCell() }
         
+        /*
         var destinationUid :String?
         
         for item in chatrooms[indexPath.row].users{
@@ -101,7 +108,7 @@ extension AskerChatListViewController: UITableViewDataSource {
             let unixTime = self.chatrooms[indexPath.row].comments[lastMessagekey[0]]?.timestamp
             cell.timeLabel.text = unixTime?.toDayTime
         })
-        
+        */
         cell.selectionStyle = .none
         cell.separatorInset = UIEdgeInsets(top: 3, left: 0, bottom: 3, right: 0)
         return cell
