@@ -104,6 +104,7 @@
                 <outlet property="notificationTitle" destination="zd1-DM-NoQ" id="KgV-20-0AG"/>
                 <outlet property="timeStamp" destination="SKg-Mb-yAr" id="nEu-U6-Tvv"/>
             </connections>
+            <point key="canvasLocation" x="43" y="78"/>
         </tableViewCell>
     </objects>
     <resources>

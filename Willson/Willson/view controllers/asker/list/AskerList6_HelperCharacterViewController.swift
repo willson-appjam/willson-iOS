@@ -23,6 +23,13 @@ class AskerList6_HelperCharacterViewController: UIViewController {
     //let characterArray = ["#신중한", "#호의적인", "#경쟁심있는", "#절제하는", "#열정적인", "#상냥한", "#단호한", "#내향적인", "#사교적인", "#충동적인", "#변덕스러운", "#독립적인", "#고집있는", "#모험적인", "#분석적인", "#주저하는", "#낙천적인", "#감성적인", "#대담한", "#우유부단한", "#솔직한" ,"#이끌어가는"]
     //var tabCnt: Int = 0
     
+    // Concern Question Post
+    var categoryListIdx: Int = 0
+    var feelingArray: [Int] = []
+    var weight: Int = 0
+    var content: String = ""
+    var gender: String = ""
+    
     // MARK: - IBOutlet
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var characterCollectionView: UICollectionView!
@@ -91,6 +98,14 @@ extension AskerList6_HelperCharacterViewController: UICollectionViewDelegate {
         guard let cell: FeelCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: characterCollectionViewCellIdentifier, for: indexPath) as? FeelCollectionViewCell else { return }
         cell.view.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
         cell.feelLabel.textColor = UIColor.white
+        
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList7_HelperExperienceViewController") as? AskerList7_HelperExperienceViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = self.weight
+        vc.content = self.content
+        vc.gender = self.gender
+        vc.personalityArray.append(concernPersonalityData?.personalityList[indexPath.item].personalityIdx ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -125,7 +140,7 @@ extension AskerList6_HelperCharacterViewController: UICollectionViewDelegate {
 extension AskerList6_HelperCharacterViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (concernPersonalityData?.personalityList.count)!
+        return (concernPersonalityData?.personalityList.count) ?? 0 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

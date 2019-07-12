@@ -128,7 +128,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-qa-Lpk" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                                                                     <rect key="frame" x="17.999999999999996" y="16" width="39.666666666666657" height="24"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StP-Tt-akv">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StP-Tt-akv">hi0712
                                                                             <rect key="frame" x="8.0000000000000018" y="4.666666666666667" width="23.666666666666671" height="14.666666666666664"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
                                                                             <color key="textColor" name="lightPurple"/>
@@ -164,7 +164,7 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-36-0q9">
                                                                     <rect key="frame" x="83" y="62" width="157" height="35.333333333333343"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리트리버 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OY-DU-Cnv">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리트리버 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OY-DU-Cnv">zhi0712
                                                                             <rect key="frame" x="0.0" y="0.0" width="157" height="15.666666666666666"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="157" id="xL7-mY-sHi"/>
@@ -173,7 +173,7 @@
                                                                             <color key="textColor" name="black"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여성 / 20대 후반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peW-jY-xgc">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여성 / 20대 후반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peW-jY-xgc"> zhi0712
                                                                             <rect key="frame" x="0.0" y="19.666666666666671" width="96.666666666666671" height="15.666666666666664"/>
                                                                             <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                                                             <color key="textColor" name="black"/>
@@ -293,7 +293,7 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xp-Gh-pMf" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                                                                             <rect key="frame" x="166" y="0.0" width="50" height="24"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#음악" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNI-bU-ToE">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#음악" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNI-bU-ToE"> zhi0712
                                                                                     <rect key="frame" x="8" y="4.6666666666666563" width="34" height="14.666666666666664"/>
                                                                                     <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="13"/>
                                                                                     <color key="textColor" name="lightPurple"/>

@@ -33,6 +33,10 @@ class AskerChatListViewController: UIViewController {
         
         chatListTableView.tableFooterView = UIView()
         chatListTableView.rowHeight = 92
+        
+        // chatting
+        self.uid = Auth.auth().currentUser?.uid
+        self.getChatroomsList()
     }
     
     override func viewDidAppear(_ animated: Bool) {

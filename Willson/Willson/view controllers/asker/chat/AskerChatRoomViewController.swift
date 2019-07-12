@@ -19,11 +19,6 @@ class AskerChatRoomViewController: UIViewController {
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     var isTextFieldActive = false
     
-//    var messageArray = ["속상하셨겠어요ㅠㅠㅠ", "지금은 그래도 나아지셨다하니 더 잘될 거에요!", "감사합니다..", "ㅎ"]
-//    var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
-//    var userArray = [0, 0, 1, 1]
-    //var cellBottom: NSLayoutConstraint!
-    
     // chatting
     var uid : String?
     var roomKey : String?
@@ -60,22 +55,12 @@ class AskerChatRoomViewController: UIViewController {
 //        self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = "리트리버" + " 님"
         
-        chatRoomTableView.delegate = self
-        chatRoomTableView.dataSource = self
-        //chatRoomTableView.rowHeight = 40
-        
         textField.delegate = self
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         view.addGestureRecognizer(tap)
+        
         self.chatRoomTableView.register(UINib(nibName: ChatHeaderTVC.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ChatHeaderTVC.reuseIdentifier)
-        
-        //textFieldViewTop = cellBottom
-        
-        chatRoomTableView.reloadData()
-        //유동적 셀높이 조정
-        // 이거 한줄이면 됨... 왜?
-        //chatRoomTableView.estimatedRowHeight = 40
         
         // chatting
         uid = Auth.auth().currentUser?.uid
@@ -100,15 +85,14 @@ class AskerChatRoomViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        databaseRef?.removeObserver(withHandle: observe!)
+        databaseRef?.removeObserver(withHandle: observe ?? 0)
     }
     
     // MARK: - IBAction
     @IBAction func sendMessageAction(_ sender: Any) {
-        
         if !self.textField.hasText {
             // toast message
-            
+            self.view.makeToast("내용을 입력해주세요.", duration: 3.0, position: .bottom)
         }else {
             let value :Dictionary<String,Any> = [
                 "uid" : uid!,
@@ -116,14 +100,12 @@ class AskerChatRoomViewController: UIViewController {
                 "timestamp" : ServerValue.timestamp()
             ]
             Database.database().reference().child("chatRooms").child(roomKey ?? "").child("comments").childByAutoId().setValue(value, withCompletionBlock: { (err, ref) in
-                //                self.sendGcm()
                 self.textField.text = ""
             })
         }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
             self.textFieldViewBottom.constant = keyboardSize.height
         }
@@ -139,9 +121,7 @@ class AskerChatRoomViewController: UIViewController {
         })
     }
     
-    
     @objc func keyboardWillHide(notification: NSNotification) {
-
         self.textFieldViewBottom.constant = 0
         self.view.layoutIfNeeded()
     }
@@ -237,12 +217,13 @@ class AskerChatRoomViewController: UIViewController {
         observe = databaseRef?.observe(DataEventType.value, with: { (datasnapshot) in
             self.comments.removeAll()
             var readUserDic : Dictionary<String,AnyObject> = [:]
-            for item in datasnapshot.children.allObjects as! [DataSnapshot]{
+            guard let allObject = datasnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for item in allObject {
                 let key = item.key as String
                 let comment = ChatModel.Comment(JSON: item.value as! [String:AnyObject])
                 let comment_motify = ChatModel.Comment(JSON: item.value as! [String:AnyObject])
                 comment_motify?.readUsers[self.uid!] = true
-                readUserDic[key] = comment_motify?.toJSON() as! NSDictionary
+                readUserDic[key] = comment_motify?.toJSON() as NSDictionary?
                 self.comments.append(comment!)
             }
             
@@ -305,7 +286,6 @@ extension AskerChatRoomViewController: UITableViewDataSource {
                 }
             }
             
-//            cell.profileImg.image = UIImage(named: "chatImgHelperprofile")
             cell.ownText.isHidden = true
             cell.ownView.isHidden = true
             cell.ownTime.isHidden = true
@@ -315,7 +295,6 @@ extension AskerChatRoomViewController: UITableViewDataSource {
                 cell.oppoTime.text = time.toDayTime
             }
             
-           //chatRoomTableView.rowHeight = CGFloat(cell.oppoText.numberOfVisibleLines * 40) //레이블 높이 조정
         } else {
             cell.profileImg.isHidden = true
             cell.oppoText.isHidden = true

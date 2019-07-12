@@ -25,22 +25,16 @@ class ConcernCollectionViewCell: UICollectionViewCell {
 
     }
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        self.isSelected = !self.isSelected
+        self.isSelected = false
         
         self.concernTextField.text = ""
-        //placeHolder = self.concernTextField.text ?? ""
         
-        if (self.isSelected)
-        {
+        if (self.isSelected) {
             view.backgroundColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
             concernLabel.textColor = UIColor.white
-            //btnCount = btnCount - 1
-        }
-        else
-        {
+        } else {
             view.backgroundColor = UIColor.white
             concernLabel.textColor = #colorLiteral(red: 0.3215686275, green: 0.3215686275, blue: 0.631372549, alpha: 1)
-            //btnCount = btnCount + 1
         }
     }
 }

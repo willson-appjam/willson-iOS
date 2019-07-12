@@ -11,6 +11,11 @@ import DLRadioButton
 
 class AskerList3_ImpactViewController: UIViewController {
     
+    // MARK: - properties
+    // Concern Question Post
+    var categoryListIdx: Int = 0
+    var feelingArray: [Int] = []
+    
     // MARK: - IBOutlet
     @IBOutlet weak var radioButton_1: DLRadioButton!
     @IBOutlet weak var radioButton_2: DLRadioButton!
@@ -23,22 +28,46 @@ class AskerList3_ImpactViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func tapped1Btn(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList4_DetailViewController") as? AskerList4_DetailViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = 1
+    }
+    
+    @IBAction func tapped2Btn(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList4_DetailViewController") as? AskerList4_DetailViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = 2
+    }
+    
+    @IBAction func tapped3Btn(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList4_DetailViewController") as? AskerList4_DetailViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = 3
+    }
+    
+    @IBAction func tapped4Btn(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList4_DetailViewController") as? AskerList4_DetailViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = 4
+    }
+    
+    @IBAction func tapped5Btn(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList4_DetailViewController") as? AskerList4_DetailViewController else { return }
+        vc.categoryListIdx = self.categoryListIdx
+        vc.feelingArray = self.feelingArray
+        vc.weight = 5
+    }
+    
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

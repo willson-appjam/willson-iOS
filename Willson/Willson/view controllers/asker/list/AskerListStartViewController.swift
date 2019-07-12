@@ -27,7 +27,7 @@ class AskerListStartViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        var imgName = "listImgCategory0\(String(tag))"
+        let imgName = "listImgCategory0\(String(tag))"
         print(imgName)
         labelCategory.text = label
         imgCategory.image = UIImage(named: imgName)

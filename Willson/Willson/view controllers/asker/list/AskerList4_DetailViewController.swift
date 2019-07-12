@@ -10,6 +10,13 @@ import UIKit
 
 class AskerList4_DetailViewController: UIViewController {
 
+    // MARK: - properties
+    // Concern Question Post
+    var categoryListIdx: Int = 0
+    var feelingArray: [Int] = []
+    var weight: Int = 0
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var detailText: UITextView!
     @IBOutlet weak var countLabel: UILabel!
     // MARK: - IBAction
@@ -31,7 +38,16 @@ class AskerList4_DetailViewController: UIViewController {
     }
     
 
-    // MARK: - Navigation
+    // MARK: - Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "4To5" {
+            guard let vc = UIStoryboard(name: "AskerList", bundle: nil).instantiateViewController(withIdentifier: "AskerList5_HelperSexViewController") as? AskerList5_HelperSexViewController else { return }
+            vc.categoryListIdx = self.categoryListIdx
+            vc.feelingArray = self.feelingArray
+            vc.weight = self.weight
+            vc.content = self.detailText.text
+        }
+    }
     
 }
 

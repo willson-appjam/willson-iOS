@@ -18,27 +18,21 @@ class HelperChatRoomViewController: UIViewController {
     // UITableViewCell Identifier
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     let chatHeaderTableViewCellIdentifier: String = "ChatHeaderTVC"
+    var isTextFieldActive = false
     
     // chatting
     var uid : String?
-    var chatRoomUid : String?
+    var roomKey : String?
     
     public var destinationUid :String? // 나중에 내가 채팅할 대상의 uid
     
     var comments : [ChatModel.Comment] = []
     var destinationUserModel :UserModel?
+    var willsonUserModel: UserModel?
     
     var databaseRef : DatabaseReference?
     var observe : UInt?
     var peopleCount : Int?
-    
-    
-    //var isKeyboardAppear = false
-    var isTextFieldActive = false
-    
-//    var messageArray = ["안녕하세유-", "리트리버님?", "반가워용", "^^"]
-//    var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13"]
-//    var userArray = [0, 0, 1, 1]
     
     // MARK: - IBOutlet
     @IBOutlet weak var keyboardView: UIView!
@@ -92,36 +86,28 @@ class HelperChatRoomViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        databaseRef?.removeObserver(withHandle: observe!)
+        databaseRef?.removeObserver(withHandle: observe ?? 0)
     }
     
     // MARK: - IBAction
     @IBAction func sendMessageAction(_ sender: Any) {
-//        messageArray.append(textField.text!)
-//        timeArray.append("PM 07:13")
-//        userArray.append(1)
-        /*
-        let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
-        self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-         */
+        if !self.textField.hasText {
+            // toast message
+            self.view.makeToast("내용을 입력해주세요.", duration: 3.0, position: .bottom)
+        }else {
+            let value :Dictionary<String,Any> = [
+                "uid" : uid ?? "",
+                "message" : textField.text ?? "",
+                "timestamp" : ServerValue.timestamp()
+            ]
+            Database.database().reference().child("chatRooms").child(roomKey ?? "").child("comments").childByAutoId().setValue(value, withCompletionBlock: { (err, ref) in
+                self.textField.text = ""
+            })
+        }
     }
     
     // MARK: - Methods
     @objc func keyboardWillShow(notification: NSNotification) {
-        /*
-        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
-        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
-        
-        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        
-        let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
-        
-        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-            self.textFieldViewBottom.constant = -keyboardHeight
-        })
-        self.view.layoutIfNeeded()
-         */
-        
         if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
             self.textFieldViewBottom.constant = keyboardSize.height
         }
@@ -139,62 +125,42 @@ class HelperChatRoomViewController: UIViewController {
     
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        /*
-        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
-        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
-        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-            self.textFieldViewBottom.constant = 0
-        })
-        */
-        
         self.textFieldViewBottom.constant = 0
         self.view.layoutIfNeeded()
 
     }
     
     func createRoom(){
-        let createRoomInfo : Dictionary<String,Any> = [ "users" : [
-            uid!: true,
-            destinationUid! :true
-            ]
-        ]
-        
-        
-        if(chatRoomUid == nil){
-            self.sendButton.isEnabled = false
-            // 방 생성 코드
-            Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo, withCompletionBlock: { (err, ref) in
-                if(err == nil){
-                    self.checkChatRoom()
+        Database.database().reference().child("chatRooms").queryOrderedByKey().queryEqual(toValue: roomKey).observeSingleEvent(of: DataEventType.value, with: { (dataSnapshot) in
+            if dataSnapshot.value == nil {
+                let createRoomInfo : Dictionary<String,Any> = [ "users" : [
+                    self.uid!: true,
+                    self.destinationUid! :true
+                    ]
+                ]
+                Database.database().reference().child("chatRooms").child(self.roomKey ?? "").setValue(createRoomInfo) { (error: Error?, ref: DatabaseReference) in
+                    if let error = error {
+                        print("Data could not be saved: \(error).")
+                    } else {
+                        self.checkChatRoom()
+                        print("Data saved successfully!")
+                    }
                 }
-            })
+                return
+            }
             
-        }else{
-            let value :Dictionary<String,Any> = [
-                
-                "uid" : uid!,
-                "message" : textField.text!,
-                "timestamp" : ServerValue.timestamp()
-            ]
-            
-            Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value, withCompletionBlock: { (err, ref) in
-//                self.sendGcm()
-                self.textField.text = ""
-            })
-        }
+        })
     }
     
     func checkChatRoom(){
-        
-        Database.database().reference().child("chatrooms").queryOrdered(byChild: "users/"+uid!).queryEqual(toValue: true).observeSingleEvent(of: DataEventType.value,with: { (datasnapshot) in
-            for item in datasnapshot.children.allObjects as! [DataSnapshot]{
+        Database.database().reference().child("chatRooms").queryOrderedByKey().queryEqual(toValue: roomKey).observeSingleEvent(of: DataEventType.value,with: { (datasnapshot) in
+            guard let allObjects = datasnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for item in allObjects {
                 
                 if let chatRoomdic = item.value as? [String:AnyObject]{
                     
                     let chatModel = ChatModel(JSON: chatRoomdic)
-                    if(chatModel?.users[self.destinationUid!] == true){
-                        self.chatRoomUid = item.key
-                        self.sendButton.isEnabled = true
+                    if(chatModel?.users[self.destinationUid ?? ""] == true){
                         self.getDestinationInfo()
                     }
                 }
@@ -203,26 +169,63 @@ class HelperChatRoomViewController: UIViewController {
     }
     
     func getDestinationInfo(){
-        
-        Database.database().reference().child("users").child(self.destinationUid!).observeSingleEvent(of: DataEventType.value, with: { (datasnapshot) in
+        Database.database().reference().child("users").child(self.destinationUid ?? "").observeSingleEvent(of: DataEventType.value, with: { (datasnapshot) in
             self.destinationUserModel = UserModel()
-            self.destinationUserModel?.setValuesForKeys(datasnapshot.value as! [String:Any])
+            self.destinationUserModel?.setValuesForKeys(datasnapshot.value as? [String:Any] ?? [String:Any]())
             self.getMessageList()
             
         })
     }
     
+    func getUserData() {
+        Database.database().reference(withPath: "users").child(uid ?? "").observeSingleEvent(of: DataEventType.value, with: { dataSnapshot in
+            self.willsonUserModel = UserModel()
+            self.willsonUserModel?.setValuesForKeys(dataSnapshot.value as? [String:Any] ?? [String:Any]())
+            
+        })
+        
+        Database.database().reference(withPath: "willsonUsers").child(destinationUid ?? "").observeSingleEvent(of: DataEventType.value, with: { dataSnapshot in
+            self.destinationUserModel = UserModel()
+            self.destinationUserModel?.setValuesForKeys(dataSnapshot.value as? [String:Any] ?? [String:Any]())
+            
+        })
+    }
+    
+    func makeUserData() {
+        let askerProfile: Dictionary<String, String> = [
+            "uid" : self.uid ?? "",
+            "nickName" : self.destinationUserModel?.userName ?? ""
+        ]
+        let willProfile: Dictionary<String, String> = [
+            "uid" : self.uid ?? "",
+            "nickName" : self.willsonUserModel?.userName ?? ""
+        ]
+        
+        Database.database().reference().child("chatRooms").child(roomKey ?? "").child("askerUser").setValue(askerProfile)
+        Database.database().reference().child("chatRooms").child(roomKey ?? "").child("willsonUser").setValue(willProfile)
+    }
+    
+    func setRoomkey(willsonUser: String, askerUser: String, roomKey: String) {
+        let setRoomkey: Dictionary<String, Any> = [
+            "roomKey" : roomKey
+        ]
+        
+        Database.database().reference(withPath: "willsonUsers").child(willsonUser).updateChildValues(setRoomkey)
+        Database.database().reference(withPath: "users").child(askerUser).updateChildValues(setRoomkey)
+    }
+    
     func getMessageList(){
-        databaseRef = Database.database().reference().child("chatrooms").child(self.chatRoomUid!).child("comments")
+        databaseRef = Database.database().reference().child("chatrooms").child(self.roomKey ?? "").child("comments")
         observe = databaseRef?.observe(DataEventType.value, with: { (datasnapshot) in
             self.comments.removeAll()
             var readUserDic : Dictionary<String,AnyObject> = [:]
-            for item in datasnapshot.children.allObjects as! [DataSnapshot]{
+            guard let allObject = datasnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for item in allObject {
                 let key = item.key as String
                 let comment = ChatModel.Comment(JSON: item.value as! [String:AnyObject])
                 let comment_motify = ChatModel.Comment(JSON: item.value as! [String:AnyObject])
                 comment_motify?.readUsers[self.uid!] = true
-                readUserDic[key] = comment_motify?.toJSON() as! NSDictionary
+                readUserDic[key] = comment_motify?.toJSON() as NSDictionary?
                 self.comments.append(comment!)
             }
             
@@ -236,27 +239,17 @@ class HelperChatRoomViewController: UIViewController {
                     
                     if self.comments.count > 0{
                         self.chatRoomTableView.scrollToRow(at: IndexPath(item:self.comments.count - 1,section:0), at: UITableView.ScrollPosition.bottom, animated: true)
-                        
                     }
-                    
                 })
             }else{
                 self.chatRoomTableView.reloadData()
                 
                 if self.comments.count > 0{
                     self.chatRoomTableView.scrollToRow(at: IndexPath(item:self.comments.count - 1,section:0), at: UITableView.ScrollPosition.bottom, animated: true)
-                    
                 }
             }
-            
-            
-            
-            
-            
         })
-        
     }
-
 }
 
 // MARK: - UITableViewDelegate
@@ -291,7 +284,6 @@ extension HelperChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
         
-        
         if self.comments[indexPath.row].uid == uid {
             if(indexPath.item != 0) {
                 if(indexPath.item - 1 == 0) {
@@ -308,7 +300,6 @@ extension HelperChatRoomViewController: UITableViewDataSource {
                 cell.oppoTime.text = time.toDayTime
             }
             
-//            setReadCount(label: view.label_read_counter, position: indexPath.row)
         } else {
             cell.profileImg.isHidden = true
             cell.oppoText.isHidden = true
@@ -323,8 +314,10 @@ extension HelperChatRoomViewController: UITableViewDataSource {
         
         cell.selectionStyle = .none
         cell.separatorInset = UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
+        
+        cell.translatesAutoresizingMaskIntoConstraints = false
+        
         return cell
- 
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -348,8 +341,6 @@ extension HelperChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 138
     }
-    
-   
 }
 
 // MARK: UITextFieldDelegate
@@ -370,14 +361,11 @@ extension HelperChatRoomViewController: UITextFieldDelegate {
 }
 
 extension Int{
-    
     var toDayTime :String{
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "ko_KR")
         dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
         let date = Date(timeIntervalSince1970: Double(self)/1000)
         return dateFormatter.string(from: date)
-        
     }
-    
 }
