@@ -38,6 +38,7 @@ class AskerList9_AgreementViewController: UIViewController {
     }
     
     @IBAction func tappedComplete(_ sender: Any) {
+        /*
         let question = Question(content: content, weight: weight, emotion: emotion, advise: advise, experience: experience, agreement: "agree", categoryListIdx: categoryListIdx, helperGender: gender)
        concernQuestionPost = ConcernQuestionPost(question: question, feeling: feelingArray, personality: personalityArray, experience: experienceArray)
         ConcernQuestionService.shared.postConcernQuestionService(concernQuestionPost: concernQuestionPost!) { concernQuestion, statusCode in
@@ -59,6 +60,19 @@ class AskerList9_AgreementViewController: UIViewController {
                 break;
             }
         }
+ */
+        let tabbarStoryboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
+        guard let tabBarController: UITabBarController = tabbarStoryboard.instantiateViewController(withIdentifier: "AskerTabbar") as? UITabBarController else { return }
+        
+        guard let vc = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier: "searchingHelperNavi") as? UINavigationController else { return }
+        
+        tabBarController.selectedIndex = 1
+        tabBarController.viewControllers?[1] = vc
+        tabBarController.tabBar.selectionIndicatorImage = UIImage(named: "tab02RequestActive")
+        tabBarController.tabBarItem.title = "받은요청"
+        
+        self.present(tabBarController, animated: true)
+        
     }
     
     @IBAction func tappedAgree1(_ sender: Any) {
