@@ -16,7 +16,7 @@ struct ConcernPersonalityService {
         let URL = "\(SERVER_URL)/concern/personality"
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let header = [
-            "user_session" : token
+            "willson-token" : token
         ]
         Alamofire.request(URL,
                           method: .get,

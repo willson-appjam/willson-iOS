@@ -18,6 +18,7 @@ struct ConcernCategory: Codable {
 // MARK: - DataClass
 struct ConcernCategoryData: Codable {
     let categoryList: [CategoryList]
+    let size: Int
 }
 
 // MARK: - CategoryList
