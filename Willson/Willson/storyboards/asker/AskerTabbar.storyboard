@@ -43,7 +43,7 @@
         <!--받은요청-->
         <scene sceneID="mb7-Sf-tQl">
             <objects>
-                <viewController id="RZl-Q2-DCt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="askerTab2" id="RZl-Q2-DCt" customClass="AskerTab2ViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdd-JC-o6g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,9 @@
                         <viewLayoutGuide key="safeArea" id="Bkr-zk-e9P"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="받은요청" image="tab02Request" selectedImage="tab02RequestActive" id="mZc-xE-aV4"/>
+                    <connections>
+                        <outlet property="containerView" destination="KfV-ML-IHM" id="Sqx-aC-TIy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlT-xn-24s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="404" y="-439"/>
         </scene>
-        <!--askerRequestNavi-->
+        <!--askerNoRequestNavi-->
         <scene sceneID="LUn-sm-1ek">
             <objects>
-                <viewControllerPlaceholder storyboardName="AskerRequest" referencedIdentifier="askerRequestNavi" id="pcM-cA-fsU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AskerRequest" referencedIdentifier="askerNoRequestNavi" id="pcM-cA-fsU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="EtG-bL-LdN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjP-St-9og" userLabel="First Responder" sceneMemberID="firstResponder"/>

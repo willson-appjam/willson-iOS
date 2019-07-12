@@ -64,12 +64,13 @@ class AskerList9_AgreementViewController: UIViewController {
         let tabbarStoryboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
         guard let tabBarController: UITabBarController = tabbarStoryboard.instantiateViewController(withIdentifier: "AskerTabbar") as? UITabBarController else { return }
         
-        guard let vc = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier: "searchingHelperNavi") as? UINavigationController else { return }
-        
         tabBarController.selectedIndex = 1
-        tabBarController.viewControllers?[1] = vc
-        tabBarController.tabBar.selectionIndicatorImage = UIImage(named: "tab02RequestActive")
-        tabBarController.tabBarItem.title = "받은요청"
+        
+        guard let container = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier: "searchingHelperNavi") as? UINavigationController else { return }
+
+        tabBarController.viewControllers?[1] = container
+        tabBarController.tabBar.items?[1].image = UIImage(named: "tab02RequestActive")
+        tabBarController.tabBar.items?[1].title = "받은요청"
         
         self.present(tabBarController, animated: true)
         

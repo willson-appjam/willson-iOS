@@ -136,6 +136,7 @@
 		D9AC038D22CE8B9300E16AD8 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038B22CE8B9300E16AD8 /* ChatListTableViewCell.swift */; };
 		D9AC038E22CE8B9300E16AD8 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC038C22CE8B9300E16AD8 /* ChatListTableViewCell.xib */; };
 		D9AC039022CE917200E16AD8 /* ReviewStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC038F22CE917200E16AD8 /* ReviewStarViewController.swift */; };
+		D9AE52EB22D937B300FA7C67 /* AskerTab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE52EA22D937B300FA7C67 /* AskerTab2ViewController.swift */; };
 		D9B9E8CA22D7A6790058B8E7 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9E8C922D7A6790058B8E7 /* ChatModel.swift */; };
 		D9B9E8CC22D7A8110058B8E7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9E8CB22D7A8110058B8E7 /* UserModel.swift */; };
 		D9BA14B122D29C11001FEC6D /* CompleteRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */; };
@@ -280,6 +281,7 @@
 		D9AC038B22CE8B9300E16AD8 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 		D9AC038C22CE8B9300E16AD8 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		D9AC038F22CE917200E16AD8 /* ReviewStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStarViewController.swift; sourceTree = "<group>"; };
+		D9AE52EA22D937B300FA7C67 /* AskerTab2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerTab2ViewController.swift; sourceTree = "<group>"; };
 		D9B9E8C922D7A6790058B8E7 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		D9B9E8CB22D7A8110058B8E7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D9BA14B022D29C11001FEC6D /* CompleteRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRequestViewController.swift; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 		D965851E22C4E9010072CC5E /* asker */ = {
 			isa = PBXGroup;
 			children = (
+				D9AE52E922D9379500FA7C67 /* tabbar */,
 				D965852622C4EA2C0072CC5E /* mypage */,
 				D965852522C4EA270072CC5E /* chat */,
 				D965852422C4EA220072CC5E /* request */,
@@ -713,6 +716,14 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		D9AE52E922D9379500FA7C67 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D9AE52EA22D937B300FA7C67 /* AskerTab2ViewController.swift */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -923,6 +934,7 @@
 				663F829822D0606800EAD932 /* HelperEnrollIntroViewController.swift in Sources */,
 				D92C2C4F22D00A52004F7CAB /* ExaminHelperViewController.swift in Sources */,
 				D9E64E4F22CDDF76003265E4 /* HelperMypageViewController.swift in Sources */,
+				D9AE52EB22D937B300FA7C67 /* AskerTab2ViewController.swift in Sources */,
 				D9209D5A22D5DB67001CA9F8 /* CantFindHelperViewController.swift in Sources */,
 				6677EA4D22D72FC000A34D32 /* HelperProfileService.swift in Sources */,
 				6633E3F122D3D63100DF81AC /* UserSigninService.swift in Sources */,

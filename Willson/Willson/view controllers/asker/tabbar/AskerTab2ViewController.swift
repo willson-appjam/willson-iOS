@@ -1,17 +1,18 @@
 //
-//  AskerNoRequestViewController.swift
+//  AskerTab2ViewController.swift
 //  Willson
 //
-//  Created by JHKim on 10/07/2019.
+//  Created by JHKim on 13/07/2019.
 //  Copyright © 2019 JaehuiKim. All rights reserved.
 //
 
 import UIKit
 
-class AskerNoRequestViewController: UIViewController {
-    
-    // MARK: - IBOutlet
+class AskerTab2ViewController: UIViewController {
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var containerView: UIView!
+    
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,4 @@ class AskerNoRequestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    // MARK: - IBAction
-    @IBAction func tappedGoToHome(_ sender: Any) {
-    }
 }
