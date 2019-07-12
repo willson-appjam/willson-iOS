@@ -31,32 +31,29 @@ class AskerRequestViewController: UIViewController {
     @IBOutlet weak var helperCollectionView: UICollectionView!
     
     // MARK: - life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
-        getHelperList()
-        
-        startTimer = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AskerRequestViewController.timeLimit), userInfo: nil, repeats: true)
-        
-//        registerCVC()
-//        helpers = getHelper()
-        
-        
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
-        
-//        self.helperCollectionView.addGestureRecognizer(gesture)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        //getHelperList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        
         helperCollectionView.delegate = self
         helperCollectionView.dataSource = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         getHelperList()
+        startTimer = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AskerRequestViewController.timeLimit), userInfo: nil, repeats: true)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -135,7 +132,7 @@ extension AskerRequestViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return helperListData!.size
+        return 1
             
             //helperListData!.count
     }
@@ -166,7 +163,13 @@ extension AskerRequestViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension AskerRequestViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard  = UIStoryboard(name: "AskerRequest", bundle: nil)
         
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "HelperProfileViewController") as? HelperProfileViewController else { return }
+        
+        //vc.userID = self.concernInfoList?[indexPath.item].userInfo.userIdx
+        //print(vc.userID)
+        self.navigationController?.show(vc, sender: nil)
     }
 }
 

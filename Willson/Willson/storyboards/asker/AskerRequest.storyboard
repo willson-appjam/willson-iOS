@@ -201,7 +201,7 @@
                                                                         <constraint firstAttribute="height" constant="1" id="6S9-UQ-UQ3"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rBe-Er-sO9">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBe-Er-sO9">
                                                                     <rect key="frame" x="15" y="175" width="303" height="41"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <string key="text">“ 진로 선택에 있어
@@ -502,7 +502,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-fK-W07">
-                                <rect key="frame" x="20" y="342.33333333333331" width="335" height="42"/>
+                                <rect key="frame" x="20" y="342.33333333333331" width="335" height="40"/>
                                 <string key="text">아직 요청중인 매칭이 없습니다. 
 고민 리스트를 먼저 작성해보세요!</string>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="18"/>
@@ -510,7 +510,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-Ys-0hb">
-                                <rect key="frame" x="100" y="406.33333333333331" width="175" height="43"/>
+                                <rect key="frame" x="100" y="404.33333333333331" width="175" height="43"/>
                                 <color key="backgroundColor" name="buttonLeft"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="ik7-AS-3XK"/>
