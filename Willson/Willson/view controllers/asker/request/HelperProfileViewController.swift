@@ -12,6 +12,7 @@ import MaterialComponents.MaterialButtons_Theming
 
 class HelperProfileViewController: UIViewController {
    
+    // MARK: - IBOutlet
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var startBtn: MDCFloatingButton!
     @IBOutlet weak var HelperReviewCV: UICollectionView!
@@ -28,7 +29,7 @@ class HelperProfileViewController: UIViewController {
     @IBOutlet weak var stars: UILabel!
     @IBOutlet weak var experiences: UILabel!
     
-    
+    // MARK: - properties
     var count = 0
     var reviews:[HelperReviewCollectionViewCell] = [];
     var helperProfile: HelperProfile?
@@ -38,6 +39,7 @@ class HelperProfileViewController: UIViewController {
     var personalities: [HelperPersonality]?
     var helperID = 1
     
+    // MARK: - life cycle
     func viewWillAppear() {
        //getHelperProfile()
     }
@@ -58,6 +60,13 @@ class HelperProfileViewController: UIViewController {
         HelperReviewCV.dataSource = self
     }
     
+    // MARK: - IBAction
+    @IBAction func tappedDecisionHelper(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "AskerRequest", bundle: nil).instantiateViewController(withIdentifier: "CompleteRequestViewController") as? CompleteRequestViewController else { return }
+        self.present(vc, animated: true)
+    }
+    
+    // MARK: - Methods
     func setNavigationBar() {
         self.navigationItem.title = "헬퍼 프로필"
     }

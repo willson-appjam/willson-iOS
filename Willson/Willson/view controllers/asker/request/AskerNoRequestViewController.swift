@@ -21,5 +21,7 @@ class AskerNoRequestViewController: UIViewController {
 
     // MARK: - IBAction
     @IBAction func tappedGoToHome(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "AskerTabbar", bundle: nil).instantiateViewController(withIdentifier: "AskerTabbar") as? UITabBarController else { return }
+        self.present(vc, animated: true)
     }
 }
