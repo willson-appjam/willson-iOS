@@ -12,7 +12,7 @@ import SwiftGifOrigin
 class SplashViewController: UIViewController {
     
     // MARK: - properties
-    let delayInSeconds = 4.0 //스플래시 딜레이 시간
+    let delayInSeconds = 3.5 //스플래시 딜레이 시간
     
     @IBOutlet weak var splashImageView: UIImageView!
     
