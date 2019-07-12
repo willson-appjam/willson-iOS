@@ -218,6 +218,7 @@ class AskerLoginViewController: UIViewController {
         imageView.image = image
         emailTF.leftView = imageView
         
+        
         pwTF.leftViewMode = UITextField.ViewMode.always
         let imageView2 = UIImageView(frame: CGRect(x: 21, y: 17, width: 13, height: 14))
         let image2 = UIImage(named: "loginImgPassword")

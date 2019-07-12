@@ -33,7 +33,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="264"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-qS-vQl">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-qS-vQl" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="264"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvH-yI-hEo">
@@ -44,7 +44,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="btnCancel"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM4-Ew-02U">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM4-Ew-02U" customClass="CustonView" customModule="Willson" customModuleProvider="target">
                                 <rect key="frame" x="129" y="19" width="75" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTimerYellow" translatesAutoresizingMaskIntoConstraints="NO" id="T40-co-nAC">
@@ -70,6 +70,17 @@
                                     <constraint firstItem="Aej-Dq-LnK" firstAttribute="leading" secondItem="T40-co-nAC" secondAttribute="trailing" constant="4" id="alI-x1-IRP"/>
                                     <constraint firstAttribute="width" constant="75" id="wVk-py-zx9"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="yellow"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-dS-FNf">
                                 <rect key="frame" x="90" y="63" width="153" height="15.5"/>
@@ -161,6 +172,17 @@
                             <constraint firstItem="sKk-7L-Eql" firstAttribute="leading" secondItem="I7G-qS-vQl" secondAttribute="leading" constant="15" id="z3k-I2-9lE"/>
                             <constraint firstItem="aJK-Np-87F" firstAttribute="top" secondItem="sKk-7L-Eql" secondAttribute="bottom" constant="17" id="zK2-ka-5qU"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" name="black20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -189,6 +211,9 @@
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="black20">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="buttonRight">
             <color red="0.28627450980392155" green="0.28627450980392155" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -197,6 +222,9 @@
         </namedColor>
         <namedColor name="veryLightPink">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="1" green="0.76470588235294112" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
