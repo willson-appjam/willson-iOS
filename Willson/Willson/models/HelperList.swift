@@ -11,18 +11,35 @@ import Foundation
 struct HelperList: Codable {
     let code: Int
     let message: String
-    let data: [HelperListData]
+    let data: HelperListData
 }
 
-// MARK: - Datum
+// MARK: - DataClass
 struct HelperListData: Codable {
-    let age, gender: String
+    let helperList: [HelperListElement]
+    let size: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case helperList = "helper_list"
+        case size
+    }
+}
+
+// MARK: - HelperListElement
+struct HelperListElement: Codable {
+    let helper: Helper2
+    let experience: [String]
+}
+
+// MARK: - Helper
+struct Helper2: Codable {
+    let nickname, age, gender: String
     let categoryIdx, categoryListIdx: Int
     let title, content, stars, reviewCount: String
     let helperIdx: Int
     
     enum CodingKeys: String, CodingKey {
-        case age, gender
+        case nickname, age, gender
         case categoryIdx = "category_idx"
         case categoryListIdx = "categoryList_idx"
         case title, content, stars

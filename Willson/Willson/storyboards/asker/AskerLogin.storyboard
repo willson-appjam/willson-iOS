@@ -257,6 +257,7 @@
                         <outlet property="kakaotalkBtn" destination="Nem-AM-iMK" id="Myz-ax-1zI"/>
                         <outlet property="pwTF" destination="s49-kc-BBM" id="AY8-qM-2tM"/>
                         <outlet property="signupBtn" destination="PGC-w6-UMS" id="TJg-Gu-Uaa"/>
+                        <outlet property="view" destination="3sR-7k-gDg" id="ekR-sh-w9e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueE-ie-5mG" userLabel="First Responder" sceneMemberID="firstResponder"/>

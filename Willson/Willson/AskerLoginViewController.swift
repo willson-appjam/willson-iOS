@@ -19,6 +19,7 @@ class AskerLoginViewController: UIViewController {
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var kakaotalkBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
+    @IBOutlet var loginView: UIView!
     
     var model: UserSigninService?
     var signIn: SignIn?
@@ -65,6 +66,8 @@ class AskerLoginViewController: UIViewController {
                 let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
                 self.present(viewController, animated: true)
             default:
+                self.view.makeToast("다시 입력해주세요", duration: 3.0, position: .top)
+                self.view.showToast(self.loginView)
                 break;
             }
         }

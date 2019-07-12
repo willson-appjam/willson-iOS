@@ -136,9 +136,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="profileBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="qZG-4e-cCO"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-hu-vre">
                                 <rect key="frame" x="58.5" y="137" width="216" height="24"/>
@@ -277,6 +274,7 @@
                 <outlet property="content" destination="fEE-Oz-Nj5" id="FIX-Ih-rhN"/>
                 <outlet property="detailInfo" destination="5IQ-hq-cGl" id="GNC-UK-uct"/>
                 <outlet property="name" destination="XB4-vu-7S8" id="7ZK-CY-PSf"/>
+                <outlet property="reviewCount" destination="Vnd-xI-EwJ" id="sjn-Bq-EMv"/>
                 <outlet property="tag1" destination="dqM-U8-cUy" id="wag-rd-4Ek"/>
                 <outlet property="tag2" destination="VO9-OI-X0s" id="zUu-h8-Gee"/>
                 <outlet property="tag3" destination="x4a-7N-tTe" id="A3S-ng-Q8f"/>

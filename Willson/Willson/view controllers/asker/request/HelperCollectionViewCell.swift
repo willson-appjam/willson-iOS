@@ -17,6 +17,7 @@ class HelperCollectionViewCell: UICollectionViewCell {
     @IBOutlet var tag1: UILabel!
     @IBOutlet var tag2: UILabel!
     @IBOutlet var tag3: UILabel!
+    @IBOutlet weak var reviewCount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

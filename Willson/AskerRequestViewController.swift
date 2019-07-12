@@ -21,8 +21,9 @@ class AskerRequestViewController: UIViewController {
     var completionHandlers: [() -> Void] = []
     
     var helperList: HelperList?
-    var helperListData: [HelperListData]?
-    var questionID = 1
+    var helperListData: HelperListData?
+    var helperElements: [HelperListElement]?
+    var questionID = 38
     //===================================
     
     // MARK: - IBOutlet
@@ -40,17 +41,22 @@ class AskerRequestViewController: UIViewController {
         
 //        registerCVC()
 //        helpers = getHelper()
-        helperCollectionView.delegate = self
-        helperCollectionView.dataSource = self
+        
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(AskerRequestViewController.goPage))
         
 //        self.helperCollectionView.addGestureRecognizer(gesture)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        helperCollectionView.delegate = self
+        helperCollectionView.dataSource = self
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        getHelperList()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,6 +72,7 @@ class AskerRequestViewController: UIViewController {
             case 200:
                 self.helperList = helperList
                 self.helperListData = self.helperList?.data
+                self.helperElements = self.helperListData?.helperList
                 break;
             default:
                 break;
@@ -128,7 +135,7 @@ extension AskerRequestViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return helperListData!.size
             
             //helperListData!.count
     }
@@ -137,12 +144,19 @@ extension AskerRequestViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HelperCollectionViewCell", for: indexPath) as! HelperCollectionViewCell
         
     
-        let helper = helpers[indexPath.row]
+        //let helper: Helper2 = self.helperElements?[indexPath.item].helper ?? Helper2(nickname: "", age="", gender="", categoryIdx=0, categoryListIdx=0, title="", content="", stars="", reviewCount="", helperIdx=0))
         
-        cell.content.text = helper.content.text
-        cell.name.text = helper.name.text
-        cell.detailInfo.text = helper.detailInfo.text
-        cell.category.text = helper.category.text
+        
+        cell.content.text = self.helperElements?[indexPath.item].helper.title ?? ""
+        cell.name.text = self.helperElements?[indexPath.item].helper.nickname ?? ""
+        cell.detailInfo.text = self.helperElements?[indexPath.item].helper.content
+        
+        let category = ["연애", "진로", "심리", "인간관계", "일상", "기타"]
+        cell.category.text = category[ self.helperElements?[indexPath.item].helper.categoryIdx ?? 1 - 1]
+        cell.reviewCount.text = "(\(self.helperElements?[indexPath.item].helper.reviewCount ?? "")개의 후기)"
+        cell.tag1.text = "#\(self.helperElements?[indexPath.item].experience[0] ?? "")"
+        cell.tag2.text = "#\(self.helperElements?[indexPath.item].experience[1] ?? "")"
+        cell.tag3.text = "#\(self.helperElements?[indexPath.item].experience[2] ?? "")"
         
         
         return cell
