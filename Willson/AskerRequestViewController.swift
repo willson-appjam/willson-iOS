@@ -23,7 +23,7 @@ class AskerRequestViewController: UIViewController {
     var helperList: HelperList?
     var helperListData: HelperListData?
     var helperElements: [HelperListElement]?
-    var questionID = 3
+    var questionID = 1
     //===================================
     
     // MARK: - IBOutlet

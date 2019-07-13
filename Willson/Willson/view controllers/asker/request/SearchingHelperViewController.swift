@@ -18,12 +18,16 @@ class SearchingHelperViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var searchingImageView: UIImageView!
+    
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // timer
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
+        
+        searchingImageView.image = UIImage.gif(asset: "glassWillson")
     }
 
     // MARK: - Methods

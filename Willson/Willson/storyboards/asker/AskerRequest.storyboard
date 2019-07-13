@@ -486,6 +486,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="받은요청" id="DBF-Hz-uUX"/>
                     <connections>
+                        <outlet property="searchingImageView" destination="Hq3-tN-qcK" id="wgs-UE-VNl"/>
                         <outlet property="timeLabel" destination="yHH-Hb-f9U" id="gBC-dg-0rd"/>
                     </connections>
                 </viewController>
@@ -1250,13 +1251,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대화가 확정되었습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvE-zA-VPR">
-                                <rect key="frame" x="91" y="138.66666666666666" width="193" height="24"/>
+                                <rect key="frame" x="86.333333333333329" y="138.66666666666666" width="202.66666666666669" height="24"/>
                                 <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="21"/>
                                 <color key="textColor" name="darkPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금 바로 대화를 시작해보세요 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id1-77-Oke">
-                                <rect key="frame" x="84.333333333333329" y="170.66666666666666" width="206.33333333333337" height="18"/>
+                                <rect key="frame" x="80.000000000000014" y="170.66666666666666" width="215.33333333333337" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
@@ -1269,19 +1270,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세인트버나드 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVw-gI-g0s">
-                                <rect key="frame" x="115.00000000000001" y="418" width="145.33333333333337" height="21"/>
+                                <rect key="frame" x="111.66666666666669" y="418" width="152" height="20"/>
                                 <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="18"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남성 / 20대 중반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAM-Iz-mwd">
-                                <rect key="frame" x="141.33333333333334" y="447" width="92.666666666666657" height="16"/>
+                                <rect key="frame" x="139.33333333333334" y="446" width="96.666666666666657" height="16"/>
                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helperImgChatAlarm" translatesAutoresizingMaskIntoConstraints="NO" id="ce5-ng-JOQ">
-                                <rect key="frame" x="125.66666666666669" y="677" width="124" height="135"/>
+                                <rect key="frame" x="125.66666666666667" y="677" width="124.00000000000004" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="RL5-7q-LiT"/>
                                     <constraint firstAttribute="height" constant="135" id="fyQ-8b-eav"/>
@@ -1309,7 +1310,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연애" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-8E-fJE">
-                                <rect key="frame" x="173.66666666666666" y="477" width="28" height="18"/>
+                                <rect key="frame" x="173" y="476" width="29.333333333333343" height="18"/>
                                 <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
                                 <color key="textColor" name="lightPurple"/>
                                 <nil key="highlightedColor"/>
