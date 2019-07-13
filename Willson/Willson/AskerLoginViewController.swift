@@ -50,27 +50,43 @@ class AskerLoginViewController: UIViewController {
         guard let email = emailTF.text else {return}
         guard let password = pwTF.text else {return}
         
+        if !emailTF.hasText {
+            self.view.makeToast("다시 입력해주세요", duration: 3.0, position: .bottom)
+            self.emailTF.text = ""
+            self.pwTF.text = ""
+            self.emailTF.resignFirstResponder()
+        }
+        if !pwTF.hasText {
+            self.view.makeToast("다시 입력해주세요", duration: 3.0, position: .bottom)
+            self.emailTF.text = ""
+            self.pwTF.text = ""
+            self.pwTF.resignFirstResponder()
+        }
+        
         UserSigninService.shared.login(email: email, password: password) {
             signIn, statusCode in
             
             switch statusCode {
+            case 202:
+                self.view.makeToast("다시 입력해주세요", duration: 3.0, position: .bottom)
+                self.emailTF.text = ""
+                self.pwTF.text = ""
+                self.emailTF.resignFirstResponder()
+                self.pwTF.resignFirstResponder()
             case 200:
                 self.signIn = signIn
                 self.statusCode = statusCode
                 //print(signIn.message)
                 UserDefaults.standard.set(signIn.data.token, forKey: "token")
                 
-                
                 //화면 이동
                 let storyboard = UIStoryboard(name: "AskerTabbar", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "AskerTabbar")
                 self.present(viewController, animated: true)
             default :
-                self.view.makeToast("다시 입력해주세요", duration: 3.0, position: .top)
-                self.view.showToast(self.loginView)
-                print("다시 입력해주세요")
                 break;
             }
+            
         }
     }
     
