@@ -67,7 +67,7 @@ class AskerChatListViewController: UIViewController {
 }
 
 extension AskerChatListViewController: UITableViewDelegate {
-    /*
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
 //        let destinationUid = self.destinationUsers[indexPath.row]
@@ -76,7 +76,7 @@ extension AskerChatListViewController: UITableViewDelegate {
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
- */
+ 
 }
 
 extension AskerChatListViewController: UITableViewDataSource {

@@ -19,6 +19,10 @@ class AskerChatRoomViewController: UIViewController {
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     var isTextFieldActive = false
     
+    var timer = Timer()
+    var count = 3600
+    var completionHandlers: [() -> Void] = []
+    
     // chatting
     var uid : String?
     var roomKey : String?
@@ -45,6 +49,8 @@ class AskerChatRoomViewController: UIViewController {
     
     @IBOutlet weak var sendButton: UIButton!
     
+    @IBOutlet weak var timeButton: UIBarButtonItem!
+    
     // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -70,22 +76,26 @@ class AskerChatRoomViewController: UIViewController {
 //        uid = Auth.auth().currentUser?.uid
         
 //        createRoom()
+        
+        // UITableView delegate, dataSource
+        chatRoomTableView.delegate = self
+        chatRoomTableView.dataSource = self
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        // UITableView delegate, dataSource
-        chatRoomTableView.delegate = self
-        chatRoomTableView.dataSource = self
+//        // UITableView delegate, dataSource
+//        chatRoomTableView.delegate = self
+//        chatRoomTableView.dataSource = self
         
 //        checkChatRoom()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        
-        super.viewDidDisappear(true)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         
@@ -97,6 +107,7 @@ class AskerChatRoomViewController: UIViewController {
         if !self.textField.hasText {
             // toast message
             self.view.makeToast("내용을 입력해주세요.", duration: 3.0, position: .bottom)
+            textField.resignFirstResponder()
         }else {
             /*
             let value :Dictionary<String,Any> = [
@@ -114,10 +125,56 @@ class AskerChatRoomViewController: UIViewController {
             
             let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
             self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            
+            self.textField.text = ""
+            scrollToBottomOfChat()
         }
     }
     
+    // MARK: - Methods
+    @objc func timeLimit() {
+        let dateFormatter = DateFormatter()
+        
+        if count > 0 {
+            count -= 1
+            timeButton.title = "\(count/60):\(count%60)"
+            dateFormatter.dateFormat = "mm:ss"
+            
+            let formattime = dateFormatter.date(from:timeButton.title!)
+            timeButton.title = dateFormatter.string(from: formattime!)
+            
+        } else {
+            timeLimitStop()
+        }
+    }
+    
+    func timeLimitStop() {
+        timer.invalidate()
+        
+    }
+    
+    func scrollToBottomOfChat(){
+        let indexPath = IndexPath(row: self.messageArray.count - 1, section: 0)
+        
+        chatRoomTableView.scrollToRow(at: indexPath, at: .none, animated: false)
+        
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
+        
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
+        
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        let tabbarHeight = tabBarController?.tabBar.frame.size.height ?? 0
+        
+        let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
+        
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            self.textFieldViewBottom.constant = -keyboardHeight + tabbarHeight
+        })
+        self.view.layoutIfNeeded()
         /*
         if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
             self.textFieldViewBottom.constant = keyboardSize.height
@@ -133,27 +190,20 @@ class AskerChatRoomViewController: UIViewController {
             }
         })
  */
-        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
-        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
-        
-        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
-        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-            self.textFieldViewBottom.constant = -keyboardHeight
-            self.view.layoutIfNeeded()
-        })
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        /*
-        self.textFieldViewBottom.constant = 0
-        self.view.layoutIfNeeded()
- */
         guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             self.textFieldViewBottom.constant = 0
         })
+        
+        self.view.layoutIfNeeded()
+        /*
+        self.textFieldViewBottom.constant = 0
+        self.view.layoutIfNeeded()
+ */
     }
     
     func createRoom(){
@@ -307,6 +357,10 @@ extension AskerChatRoomViewController: UITableViewDataSource {
         return messageArray.count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: chatTableViewCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
         
@@ -377,7 +431,7 @@ extension AskerChatRoomViewController: UITableViewDataSource {
         return headerView
     }
  */
-    
+    /*
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let headerView: ChatHeaderTVC = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChatHeaderTVC.reuseIdentifier) as? ChatHeaderTVC else { return }
         
@@ -386,13 +440,14 @@ extension AskerChatRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 138
     }
+ */
 }
 
 // MARK: - UITextFieldDelegate
 extension AskerChatRoomViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         isTextFieldActive = true
-        //keyboardWillShow()
+//        keyboardWillShow()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

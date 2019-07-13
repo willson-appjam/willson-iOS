@@ -62,17 +62,17 @@ class HelperChatListViewController: UIViewController {
 }
 
 extension HelperChatListViewController: UITableViewDelegate {
-    /*
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let destinationUid = self.destinationUsers[indexPath.row]
+//        let destinationUid = self.destinationUsers[indexPath.row]
         guard let viewController: HelperChatRoomViewController = UIStoryboard(name: "HelperChat", bundle: nil).instantiateViewController(withIdentifier: "HelperChatRoomViewController") as? HelperChatRoomViewController else { return }
-        viewController.destinationUid = destinationUid
+//        viewController.destinationUid = destinationUid
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
- */
+ 
     
 }
 

@@ -38,12 +38,18 @@ class HelperChatRoomViewController: UIViewController {
     var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13", "PM 07:15", "PM 07:17"]
     var userArray = [0, 0, 0, 1, 1, 0]
     
+    var timer = Timer()
+    var count = 3600
+    var completionHandlers: [() -> Void] = []
+    
     // MARK: - IBOutlet
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textFieldViewBottom: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
+    
+    @IBOutlet weak var timeButton: UIBarButtonItem!
     
     // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -56,7 +62,7 @@ class HelperChatRoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarController?.tabBar.isHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = "리트리버" + " 님"
         
         textField.delegate = self
@@ -75,6 +81,8 @@ class HelperChatRoomViewController: UIViewController {
         // UITableView delegate, dataSource
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -102,6 +110,7 @@ class HelperChatRoomViewController: UIViewController {
         if !self.textField.hasText {
             // toast message
             self.view.makeToast("내용을 입력해주세요.", duration: 3.0, position: .bottom)
+            textField.resignFirstResponder()
         }else {
             /*
             let value :Dictionary<String,Any> = [
@@ -119,7 +128,38 @@ class HelperChatRoomViewController: UIViewController {
             
             let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
             self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            
+            self.textField.text = ""
+            scrollToBottomOfChat()
         }
+    }
+    
+    // MARK: - Methods
+    @objc func timeLimit() {
+        let dateFormatter = DateFormatter()
+        
+        if count > 0 {
+            count -= 1
+            timeButton.title = "\(count/60):\(count%60)"
+            dateFormatter.dateFormat = "mm:ss"
+            
+            let formattime = dateFormatter.date(from:timeButton.title!)
+            timeButton.title = dateFormatter.string(from: formattime!)
+            
+        } else {
+            timeLimitStop()
+        }
+    }
+        
+        func timeLimitStop() {
+            
+        }
+        
+    func scrollToBottomOfChat(){
+        let indexPath = IndexPath(row: self.messageArray.count - 1, section: 0)
+        
+        chatRoomTableView.scrollToRow(at: indexPath, at: .none, animated: false)
+        
     }
     
     // MARK: - Methods
@@ -142,11 +182,15 @@ class HelperChatRoomViewController: UIViewController {
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
         
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        let tabbarHeight = tabBarController?.tabBar.frame.size.height ?? 0
+        
         let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
+        
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-            self.textFieldViewBottom.constant = -keyboardHeight
-            self.view.layoutIfNeeded()
+            self.textFieldViewBottom.constant = -keyboardHeight + tabbarHeight
         })
+        self.view.layoutIfNeeded()
     }
     
     
@@ -158,6 +202,8 @@ class HelperChatRoomViewController: UIViewController {
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             self.textFieldViewBottom.constant = 0
         })
+        
+        self.view.layoutIfNeeded()
     }
     
     func createRoom(){
