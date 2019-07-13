@@ -19,6 +19,10 @@ class AskerChatRoomViewController: UIViewController {
     let chatTableViewCellIdentifier: String = "ChatTableViewCell"
     var isTextFieldActive = false
     
+    var timer = Timer()
+    var count = 3600
+    var completionHandlers: [() -> Void] = []
+    
     // chatting
     var uid : String?
     var roomKey : String?
@@ -44,6 +48,8 @@ class AskerChatRoomViewController: UIViewController {
     @IBOutlet weak var textFieldViewBottom: NSLayoutConstraint!
     
     @IBOutlet weak var sendButton: UIButton!
+    
+    @IBOutlet weak var timeButton: UIBarButtonItem!
     
     // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -74,6 +80,8 @@ class AskerChatRoomViewController: UIViewController {
         // UITableView delegate, dataSource
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -121,6 +129,28 @@ class AskerChatRoomViewController: UIViewController {
             self.textField.text = ""
             scrollToBottomOfChat()
         }
+    }
+    
+    // MARK: - Methods
+    @objc func timeLimit() {
+        let dateFormatter = DateFormatter()
+        
+        if count > 0 {
+            count -= 1
+            timeButton.title = "\(count/60):\(count%60)"
+            dateFormatter.dateFormat = "mm:ss"
+            
+            let formattime = dateFormatter.date(from:timeButton.title!)
+            timeButton.title = dateFormatter.string(from: formattime!)
+            
+        } else {
+            timeLimitStop()
+        }
+    }
+    
+    func timeLimitStop() {
+        timer.invalidate()
+        
     }
     
     func scrollToBottomOfChat(){

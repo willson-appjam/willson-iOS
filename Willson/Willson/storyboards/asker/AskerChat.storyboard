@@ -720,6 +720,7 @@
                         <outlet property="sendButton" destination="i2N-PH-MH3" id="BJN-l8-oti"/>
                         <outlet property="textField" destination="pdT-EF-obJ" id="W0e-j4-y62"/>
                         <outlet property="textFieldViewBottom" destination="X29-Ct-mHu" id="gNo-X5-U8M"/>
+                        <outlet property="timeButton" destination="dm9-Ht-HEb" id="fsu-jA-04D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGQ-GL-qH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
