@@ -91,7 +91,6 @@
                                             <outlet property="helperNameLabel" destination="d15-wz-lAa" id="GgS-ev-Q2j"/>
                                             <outlet property="helperProfileImageView" destination="OXQ-f2-pud" id="JBe-TI-NP5"/>
                                             <outlet property="timeLabel" destination="5tU-76-zn1" id="Tbu-VW-tH6"/>
-                                            <segue destination="X4Q-25-H5H" kind="show" id="yHP-HR-2T1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,13 +128,13 @@
         <!--리트리버 님-->
         <scene sceneID="pY8-Dh-EDo">
             <objects>
-                <viewController id="X4Q-25-H5H" customClass="HelperChatRoomViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelperChatRoomViewController" id="X4Q-25-H5H" customClass="HelperChatRoomViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGi-a2-hE3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uRM-dt-heb">
-                                <rect key="frame" x="0.0" y="88" width="375" height="635"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="679"/>
                                 <color key="backgroundColor" name="bgColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -56,7 +56,7 @@ class HelperChatRoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarController?.tabBar.isHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.title = "리트리버" + " 님"
         
         textField.delegate = self
@@ -154,10 +154,12 @@ class HelperChatRoomViewController: UIViewController {
         
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         
+        let tabbarHeight = tabBarController?.tabBar.frame.size.height ?? 0
+        
         let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
         
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-            self.textFieldViewBottom.constant = -keyboardHeight
+            self.textFieldViewBottom.constant = -keyboardHeight + tabbarHeight
         })
         self.view.layoutIfNeeded()
     }
