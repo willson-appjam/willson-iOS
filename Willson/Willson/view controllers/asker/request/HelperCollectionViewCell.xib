@@ -70,7 +70,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ftw-Tg-O5b">
-                                <rect key="frame" x="83" y="62" width="157" height="35"/>
+                                <rect key="frame" x="83" y="62" width="162.5" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리트리버 헬퍼님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XB4-vu-7S8">
                                         <rect key="frame" x="0.0" y="0.0" width="157" height="15.5"/>
@@ -248,6 +248,7 @@
                             <constraint firstAttribute="bottom" secondItem="dhY-Pw-SRd" secondAttribute="bottom" constant="19" id="VHl-kz-BJb"/>
                             <constraint firstItem="gL9-hu-vre" firstAttribute="centerX" secondItem="YcD-wp-SN2" secondAttribute="centerX" id="VU4-Vy-Iej"/>
                             <constraint firstItem="fEE-Oz-Nj5" firstAttribute="leading" secondItem="YcD-wp-SN2" secondAttribute="leading" constant="15" id="aWa-8R-82S"/>
+                            <constraint firstItem="Vnd-xI-EwJ" firstAttribute="leading" secondItem="ftw-Tg-O5b" secondAttribute="trailing" constant="5" id="bvX-di-hq6"/>
                             <constraint firstItem="LLl-eQ-j28" firstAttribute="top" secondItem="tyd-up-QwQ" secondAttribute="bottom" constant="12" id="hiY-el-bOZ"/>
                             <constraint firstItem="fEE-Oz-Nj5" firstAttribute="top" secondItem="gL9-hu-vre" secondAttribute="bottom" constant="14" id="iJv-MM-bVq"/>
                             <constraint firstItem="ftw-Tg-O5b" firstAttribute="centerY" secondItem="tyd-up-QwQ" secondAttribute="centerY" id="m6D-N2-z0Q"/>
@@ -257,6 +258,15 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" name="black20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="12"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -287,6 +297,9 @@
         <image name="requestImgListprofile" width="55" height="55"/>
         <namedColor name="black">
             <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black20">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonLeft">
             <color red="0.3843137254901961" green="0.3843137254901961" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
