@@ -102,6 +102,7 @@ class HelperChatRoomViewController: UIViewController {
         if !self.textField.hasText {
             // toast message
             self.view.makeToast("내용을 입력해주세요.", duration: 3.0, position: .bottom)
+            textField.resignFirstResponder()
         }else {
             /*
             let value :Dictionary<String,Any> = [
@@ -119,7 +120,17 @@ class HelperChatRoomViewController: UIViewController {
             
             let indexPath = IndexPath(row: self.messageArray.count-1, section:0)
             self.chatRoomTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            
+            self.textField.text = ""
+            scrollToBottomOfChat()
         }
+    }
+    
+    func scrollToBottomOfChat(){
+        let indexPath = IndexPath(row: self.messageArray.count - 1, section: 0)
+        
+        chatRoomTableView.scrollToRow(at: indexPath, at: .none, animated: false)
+        
     }
     
     // MARK: - Methods
@@ -142,11 +153,13 @@ class HelperChatRoomViewController: UIViewController {
         guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
         
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
         let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
+        
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             self.textFieldViewBottom.constant = -keyboardHeight
-            self.view.layoutIfNeeded()
         })
+        self.view.layoutIfNeeded()
     }
     
     
@@ -158,6 +171,8 @@ class HelperChatRoomViewController: UIViewController {
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
             self.textFieldViewBottom.constant = 0
         })
+        
+        self.view.layoutIfNeeded()
     }
     
     func createRoom(){
