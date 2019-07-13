@@ -390,6 +390,7 @@
                         <outlet property="sendButton" destination="xz1-YR-yzW" id="fSF-NR-R1a"/>
                         <outlet property="textField" destination="iKQ-7N-Qaf" id="znc-an-3Pc"/>
                         <outlet property="textFieldViewBottom" destination="p1r-i8-MUF" id="Exj-4n-3Gv"/>
+                        <outlet property="timeButton" destination="G57-uV-NwV" id="hFs-zJ-rvc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2O-tz-Dnf" userLabel="First Responder" sceneMemberID="firstResponder"/>

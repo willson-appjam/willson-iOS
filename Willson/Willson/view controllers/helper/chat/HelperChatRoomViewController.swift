@@ -38,12 +38,18 @@ class HelperChatRoomViewController: UIViewController {
     var timeArray = ["PM 07:11", "PM 07:11", "PM 07:12", "PM 07:13", "PM 07:15", "PM 07:17"]
     var userArray = [0, 0, 0, 1, 1, 0]
     
+    var timer = Timer()
+    var count = 3600
+    var completionHandlers: [() -> Void] = []
+    
     // MARK: - IBOutlet
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var chatRoomTableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textFieldViewBottom: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
+    
+    @IBOutlet weak var timeButton: UIBarButtonItem!
     
     // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +81,8 @@ class HelperChatRoomViewController: UIViewController {
         // UITableView delegate, dataSource
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -126,6 +134,27 @@ class HelperChatRoomViewController: UIViewController {
         }
     }
     
+    // MARK: - Methods
+    @objc func timeLimit() {
+        let dateFormatter = DateFormatter()
+        
+        if count > 0 {
+            count -= 1
+            timeButton.title = "\(count/60):\(count%60)"
+            dateFormatter.dateFormat = "mm:ss"
+            
+            let formattime = dateFormatter.date(from:timeButton.title!)
+            timeButton.title = dateFormatter.string(from: formattime!)
+            
+        } else {
+            timeLimitStop()
+        }
+    }
+        
+        func timeLimitStop() {
+            
+        }
+        
     func scrollToBottomOfChat(){
         let indexPath = IndexPath(row: self.messageArray.count - 1, section: 0)
         
