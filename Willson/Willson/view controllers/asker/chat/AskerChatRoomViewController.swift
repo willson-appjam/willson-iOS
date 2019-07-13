@@ -137,10 +137,12 @@ class AskerChatRoomViewController: UIViewController {
         
         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         
+        let tabbarHeight = tabBarController?.tabBar.frame.size.height ?? 0
+        
         let keyboardHeight: CGFloat = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
         
         UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
-            self.textFieldViewBottom.constant = -keyboardHeight
+            self.textFieldViewBottom.constant = -keyboardHeight + tabbarHeight
         })
         self.view.layoutIfNeeded()
         /*

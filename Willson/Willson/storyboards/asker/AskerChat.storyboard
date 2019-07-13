@@ -101,7 +101,6 @@
                                             <outlet property="helperNameLabel" destination="rnV-x2-BYR" id="Srh-IS-LpC"/>
                                             <outlet property="helperProfileImageView" destination="Fou-eG-Ex5" id="8f2-XY-0NB"/>
                                             <outlet property="timeLabel" destination="bVq-cI-LPq" id="4YK-RJ-wVo"/>
-                                            <segue destination="3kT-6r-BmA" kind="show" id="pyE-VT-D37"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -460,13 +459,13 @@
         <!--리트리버 님-->
         <scene sceneID="Yxo-oH-a9Y">
             <objects>
-                <viewController id="3kT-6r-BmA" customClass="AskerChatRoomViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskerChatRoomViewController" id="3kT-6r-BmA" customClass="AskerChatRoomViewController" customModule="Willson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HHA-bb-Xtu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i25-JJ-fJL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="723"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="767"/>
                                 <color key="backgroundColor" name="bgColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
