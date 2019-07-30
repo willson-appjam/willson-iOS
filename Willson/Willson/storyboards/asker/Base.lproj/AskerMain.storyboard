@@ -47,7 +47,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연애" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAD-0X-gUt">
                                                                                 <rect key="frame" x="0.0" y="72" width="79" height="18"/>
                                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                                                                <color key="textColor" name="darkPurple"/>
+                                                                                <color key="textColor" name="darkNavy"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImgCategory01Love" translatesAutoresizingMaskIntoConstraints="NO" id="NaJ-vg-ukl">
@@ -78,7 +78,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w94-4V-jKo">
                                                                                 <rect key="frame" x="0.0" y="72" width="79" height="18"/>
                                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                                                                <color key="textColor" name="darkPurple"/>
+                                                                                <color key="textColor" name="darkNavy"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImgCategory02Job" translatesAutoresizingMaskIntoConstraints="NO" id="FBn-A5-REP">
@@ -109,7 +109,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="심리" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gi-C6-Jzv">
                                                                                 <rect key="frame" x="0.0" y="72" width="79" height="18"/>
                                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                                                                <color key="textColor" name="darkPurple"/>
+                                                                                <color key="textColor" name="darkNavy"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImgCategory03Mind" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-OI-t6Q">
@@ -155,7 +155,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인간관계" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtE-Wt-1eT">
                                                                                 <rect key="frame" x="0.0" y="72" width="79" height="18"/>
                                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                                                                <color key="textColor" name="darkPurple"/>
+                                                                                <color key="textColor" name="darkNavy"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -186,7 +186,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일상" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-uT-2FL">
                                                                                 <rect key="frame" x="0.0" y="72" width="79" height="18"/>
                                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                                                                <color key="textColor" name="darkPurple"/>
+                                                                                <color key="textColor" name="darkNavy"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -217,7 +217,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기타" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xo-ts-ihd">
                                                                                 <rect key="frame" x="0.0" y="72" width="79" height="18"/>
                                                                                 <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
-                                                                                <color key="textColor" name="darkPurple"/>
+                                                                                <color key="textColor" name="darkNavy"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -245,7 +245,7 @@
                                                             <constraint firstAttribute="height" constant="26" id="xWZ-Db-69B"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="24"/>
-                                                        <color key="textColor" name="lightPurple"/>
+                                                        <color key="textColor" name="middleNavy"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해보실래요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmN-PJ-wnn">
@@ -296,7 +296,7 @@
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </scrollView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="buttonRight, 73%"/>
+                                                        <color key="backgroundColor" red="0.078431372549019607" green="0.17647058823529413" blue="0.51764705882352946" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="헬퍼" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so4-74-wIg">
                                                         <rect key="frame" x="21" y="32" width="44" height="26.666666666666671"/>
@@ -350,7 +350,7 @@
                                                             <constraint firstAttribute="height" constant="26" id="Hro-oK-kO9"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="24"/>
-                                                        <color key="textColor" name="lightPurple"/>
+                                                        <color key="textColor" name="middleNavy"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-pe-y6h">
@@ -470,14 +470,17 @@
         <namedColor name="buttonRight, 73%">
             <color red="0.28627450980392155" green="0.28627450980392155" blue="0.61568627450980395" alpha="0.73000001907348633" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="darkNavy">
+            <color red="0.070588235294117646" green="0.12156862745098039" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="darkPurple">
             <color red="0.17254901960784313" green="0.17254901960784313" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="lightPurple">
-            <color red="0.32156862745098042" green="0.32156862745098042" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="middleNavy">
+            <color red="0.078431372549019607" green="0.17647058823529413" blue="0.51764705882352946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="yellow">
-            <color red="1" green="0.76470588235294112" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.78823529411764703" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
