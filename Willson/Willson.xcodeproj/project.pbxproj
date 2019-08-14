@@ -1128,6 +1128,7 @@
 			baseConfigurationReference = ABF23D3E76D75D4A1670D121 /* Pods-Willson.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R397P7C4Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
@@ -1186,6 +1187,7 @@
 			baseConfigurationReference = 1BAEDD6E774F4EB08452D077 /* Pods-Willson.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R397P7C4Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Willson/supporting files/Info.plist";
