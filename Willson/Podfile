@@ -20,6 +20,7 @@ target 'Willson' do
   pod 'Firebase/Analytics', '~> 5.20.2'
   pod 'Firebase/Auth', '~> 5.20.2'
   pod 'Firebase/Database' 
+  pod 'GoogleSignIn', '~> 5.0.0'
   # Pods for Willson
 
 end
